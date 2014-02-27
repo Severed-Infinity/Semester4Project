@@ -10,7 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-@SuppressWarnings ("serial") public class TimetableLogin extends JFrame {
+@SuppressWarnings("serial")
+public class TimetableLogin extends JFrame {
 
     private JTextField textField;
     private JPasswordField passwordField;
