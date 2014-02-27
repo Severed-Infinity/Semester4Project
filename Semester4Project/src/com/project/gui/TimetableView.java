@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+import java.awt.CardLayout;
 
 @SuppressWarnings ("serial") public class TimetableView extends JFrame {
 	private JTextField txtSearch;
@@ -22,8 +23,8 @@ import javax.swing.SwingConstants;
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Timetable");
-        // setLocationRelativeTo(null);
-        setSize(680, 400);
+        setLocationRelativeTo(null);
+        setSize(800, 500);
         setResizable(false);
 
         JMenuBar menuBar = new JMenuBar();
@@ -65,29 +66,33 @@ import javax.swing.SwingConstants;
         
         JLabel lblUser = new JLabel("User");
         header.add(lblUser, BorderLayout.EAST);
+        
+        JPanel mainView = new JPanel();
+        getContentPane().add(mainView, BorderLayout.CENTER);
+        mainView.setLayout(new CardLayout(0, 0));
 
-        JPanel panel = new JPanel();
-        getContentPane().add(panel, BorderLayout.CENTER);
-        panel.setLayout(new GridLayout(5, 1, 5, 0));
+        JPanel timetableView = new JPanel();
+        mainView.add(timetableView, "name_109576600023605");
+        timetableView.setLayout(new GridLayout(5, 1, 5, 0));
 
         JPanel monday = new JPanel();
-        panel.add(monday);
+        timetableView.add(monday);
         monday.setLayout(new GridLayout(0, 8, 5, 0));
 
         JPanel tuseday = new JPanel();
-        panel.add(tuseday);
+        timetableView.add(tuseday);
         tuseday.setLayout(new GridLayout(0, 8, 5, 0));
 
         JPanel wednesday = new JPanel();
-        panel.add(wednesday);
+        timetableView.add(wednesday);
         wednesday.setLayout(new GridLayout(0, 8, 5, 0));
 
         JPanel thursday = new JPanel();
-        panel.add(thursday);
+        timetableView.add(thursday);
         thursday.setLayout(new GridLayout(0, 8, 0, 0));
 
         JPanel friday = new JPanel();
-        panel.add(friday);
+        timetableView.add(friday);
         friday.setLayout(new GridLayout(0, 8, 5, 0));
 
         // TODO Auto-generated constructor stub
