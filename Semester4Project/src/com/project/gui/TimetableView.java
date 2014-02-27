@@ -10,8 +10,13 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 @SuppressWarnings ("serial") public class TimetableView extends JFrame {
+	private JTextField txtSearch;
 
     public TimetableView () throws HeadlessException {
 
@@ -41,31 +46,49 @@ import javax.swing.JPanel;
 
         JMenuItem mntmUpdateTimetable = new JMenuItem("Update timetable");
         mnEdit.add(mntmUpdateTimetable);
+        
+        JMenuItem mntmUpdateUsers = new JMenuItem("Update Users");
+        mnEdit.add(mntmUpdateUsers);
         getContentPane().setLayout(new BorderLayout(0, 0));
+        
+        JPanel header = new JPanel();
+        getContentPane().add(header, BorderLayout.NORTH);
+        header.setLayout(new BorderLayout(0, 0));
+        
+        JButton btnHome = new JButton("Home");
+        header.add(btnHome, BorderLayout.WEST);
+        
+        txtSearch = new JTextField();
+        txtSearch.setText("Search");
+        header.add(txtSearch, BorderLayout.CENTER);
+        txtSearch.setColumns(40);
+        
+        JLabel lblUser = new JLabel("User");
+        header.add(lblUser, BorderLayout.EAST);
 
         JPanel panel = new JPanel();
         getContentPane().add(panel, BorderLayout.CENTER);
         panel.setLayout(new GridLayout(5, 1, 5, 0));
 
-        JPanel panel_2 = new JPanel();
-        panel.add(panel_2);
-        panel_2.setLayout(new GridLayout(0, 8, 5, 0));
+        JPanel monday = new JPanel();
+        panel.add(monday);
+        monday.setLayout(new GridLayout(0, 8, 5, 0));
 
-        JPanel panel_3 = new JPanel();
-        panel.add(panel_3);
-        panel_3.setLayout(new GridLayout(0, 8, 5, 0));
+        JPanel tuseday = new JPanel();
+        panel.add(tuseday);
+        tuseday.setLayout(new GridLayout(0, 8, 5, 0));
 
-        JPanel panel_4 = new JPanel();
-        panel.add(panel_4);
-        panel_4.setLayout(new GridLayout(0, 8, 5, 0));
+        JPanel wednesday = new JPanel();
+        panel.add(wednesday);
+        wednesday.setLayout(new GridLayout(0, 8, 5, 0));
 
-        JPanel panel_5 = new JPanel();
-        panel.add(panel_5);
-        panel_5.setLayout(new GridLayout(0, 8, 0, 0));
+        JPanel thursday = new JPanel();
+        panel.add(thursday);
+        thursday.setLayout(new GridLayout(0, 8, 0, 0));
 
-        JPanel panel_1 = new JPanel();
-        panel.add(panel_1);
-        panel_1.setLayout(new GridLayout(0, 8, 5, 0));
+        JPanel friday = new JPanel();
+        panel.add(friday);
+        friday.setLayout(new GridLayout(0, 8, 5, 0));
 
         // TODO Auto-generated constructor stub
     }
