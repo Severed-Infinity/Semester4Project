@@ -234,11 +234,11 @@ import javax.swing.border.TitledBorder;
         User.add(panel_4, gbc_panel_4);
         panel_4.setLayout(new FlowLayout(FlowLayout.LEFT, 5, 5));
 
-        JButton button_4 = new JButton("Add New Module");
-        panel_4.add(button_4);
+        JButton btnAddNewUser = new JButton("Add New User");
+        panel_4.add(btnAddNewUser);
 
-        JButton button_8 = new JButton("Update Module");
-        panel_4.add(button_8);
+        JButton btnUpdateUser = new JButton("Update User");
+        panel_4.add(btnUpdateUser);
 
         JPanel panel_5 = new JPanel();
         GridBagConstraints gbc_panel_5 = new GridBagConstraints();
