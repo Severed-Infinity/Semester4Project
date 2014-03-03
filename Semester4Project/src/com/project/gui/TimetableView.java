@@ -406,10 +406,10 @@ import javax.swing.border.TitledBorder;
         addNewCourse.add(btnCreateNewModule);
 
         JPanel addNewModule = new JPanel();
+        mainView.add(addNewModule, "name_814821531771");
         addNewModule.setLayout(null);
         addNewModule.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"),
                 "Add New Module", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
-        mainView.add(addNewModule, "name_172488623301030");
 
         JLabel label = new JLabel("Type of Course");
         label.setBounds(35, 33, 95, 14);
