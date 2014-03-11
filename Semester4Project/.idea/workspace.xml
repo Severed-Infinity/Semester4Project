@@ -114,10 +114,11 @@
       <file leaf-file-name="View.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="9" selection-start="659" selection-end="659" vertical-scroll-proportion="0.66445184" vertical-offset="0" max-vertical-offset="624">
+            <state line="11" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.29235882" vertical-offset="0" max-vertical-offset="624">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#68#96#0" expanded="true" />
+                <element signature="method#View#0;class#View#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -686,10 +687,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="9" selection-start="659" selection-end="659" vertical-scroll-proportion="0.66445184" vertical-offset="0" max-vertical-offset="624">
+        <state line="11" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.29235882" vertical-offset="0" max-vertical-offset="624">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#68#96#0" expanded="true" />
+            <element signature="method#View#0;class#View#0" expanded="true" />
           </folding>
         </state>
       </provider>
