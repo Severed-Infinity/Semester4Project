@@ -114,7 +114,7 @@
       <file leaf-file-name="View.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="8" selection-start="479" selection-end="479" vertical-scroll-proportion="0.50498337" vertical-offset="0" max-vertical-offset="602">
+            <state line="25" column="9" selection-start="659" selection-end="659" vertical-scroll-proportion="0.66445184" vertical-offset="0" max-vertical-offset="624">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#68#96#0" expanded="true" />
@@ -123,26 +123,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WarningPanes.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
+      <file leaf-file-name="AdminView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
-              <folding />
+            <state line="8" column="13" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#AdminView#0;class#AdminView#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimetableLogin.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <file leaf-file-name="TimetableMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1280">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#122#150#0" expanded="true" />
-                <element signature="class#1504:1633" expanded="true" />
-                <element signature="method#actionPerformed#0;class#1504:1633" expanded="true" />
-                <element signature="method#main#0;class#TimetableLogin#0" expanded="true" />
-              </folding>
+            <state line="12" column="30" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,40 +147,40 @@
       <file leaf-file-name="TimetableView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="6" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="15856">
+            <state line="147" column="58" selection-start="5761" selection-end="5879" vertical-scroll-proportion="-7.8076925" vertical-offset="2149" max-vertical-offset="15856">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#274#302#0" expanded="true" />
-                <element signature="e#10481#10489#0" expanded="true" />
-                <element signature="e#12315#12323#0" expanded="true" />
-                <element signature="e#13149#13157#0" expanded="true" />
-                <element signature="e#13976#13984#0" expanded="true" />
-                <element signature="e#14954#14962#0" expanded="true" />
-                <element signature="e#16691#16699#0" expanded="true" />
-                <element signature="e#17568#17576#0" expanded="true" />
-                <element signature="e#18357#18365#0" expanded="true" />
-                <element signature="e#18827#18835#0" expanded="true" />
-                <element signature="e#19608#19616#0" expanded="true" />
-                <element signature="e#20915#20923#0" expanded="true" />
-                <element signature="e#21387#21395#0" expanded="true" />
-                <element signature="e#22148#22156#0" expanded="true" />
-                <element signature="class#22644:22773" expanded="true" />
-                <element signature="method#actionPerformed#0;class#22644:22773" expanded="true" />
-                <element signature="e#23184#23192#0" expanded="true" />
-                <element signature="e#24322#24330#0" expanded="true" />
-                <element signature="e#26012#26020#0" expanded="true" />
-                <element signature="e#26860#26868#0" expanded="true" />
-                <element signature="e#27650#27658#0" expanded="true" />
-                <element signature="e#28455#28463#0" expanded="true" />
-                <element signature="e#30147#30155#0" expanded="true" />
-                <element signature="e#31008#31016#0" expanded="true" />
-                <element signature="e#31798#31806#0" expanded="true" />
-                <element signature="e#32247#32255#0" expanded="true" />
-                <element signature="e#33028#33036#0" expanded="true" />
-                <element signature="e#34234#34242#0" expanded="true" />
-                <element signature="e#34525#34533#0" expanded="true" />
-                <element signature="e#35267#35275#0" expanded="true" />
-                <element signature="e#36112#36120#0" expanded="true" />
+                <element signature="e#274#304#0" expanded="true" />
+                <element signature="e#10483#10491#0" expanded="true" />
+                <element signature="e#12317#12325#0" expanded="true" />
+                <element signature="e#13151#13159#0" expanded="true" />
+                <element signature="e#13978#13986#0" expanded="true" />
+                <element signature="e#14956#14964#0" expanded="true" />
+                <element signature="e#16693#16701#0" expanded="true" />
+                <element signature="e#17570#17578#0" expanded="true" />
+                <element signature="e#18359#18367#0" expanded="true" />
+                <element signature="e#18829#18837#0" expanded="true" />
+                <element signature="e#19610#19618#0" expanded="true" />
+                <element signature="e#20917#20925#0" expanded="true" />
+                <element signature="e#21389#21397#0" expanded="true" />
+                <element signature="e#22150#22158#0" expanded="true" />
+                <element signature="class#22646:22775" expanded="true" />
+                <element signature="method#actionPerformed#0;class#22646:22775" expanded="true" />
+                <element signature="e#23186#23194#0" expanded="true" />
+                <element signature="e#24324#24332#0" expanded="true" />
+                <element signature="e#26014#26022#0" expanded="true" />
+                <element signature="e#26862#26870#0" expanded="true" />
+                <element signature="e#27652#27660#0" expanded="true" />
+                <element signature="e#28457#28465#0" expanded="true" />
+                <element signature="e#30149#30157#0" expanded="true" />
+                <element signature="e#31010#31018#0" expanded="true" />
+                <element signature="e#31800#31808#0" expanded="true" />
+                <element signature="e#32249#32257#0" expanded="true" />
+                <element signature="e#33030#33038#0" expanded="true" />
+                <element signature="e#34236#34244#0" expanded="true" />
+                <element signature="e#34527#34535#0" expanded="true" />
+                <element signature="e#35269#35277#0" expanded="true" />
+                <element signature="e#36114#36122#0" expanded="true" />
                 <element signature="method#TimetableView#1;class#TimetableView#0" expanded="true" />
                 <element signature="method#TimetableView#2;class#TimetableView#0" expanded="true" />
                 <element signature="method#TimetableView#3;class#TimetableView#0" expanded="true" />
@@ -203,7 +200,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" />
+        <option value="$PROJECT_DIR$/src/TimetableMain.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/View/Timetable.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/Timetable.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
       </list>
     </option>
   </component>
@@ -302,7 +305,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="copyright" />
     <property name="options.splitter.main.proportions" value="0.3025" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -315,9 +318,9 @@
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
   </component>
-  <component name="RunManager" selected="Application.TimetableLogin">
-    <configuration default="false" name="TimetableLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.project.gui.TimetableLogin" />
+  <component name="RunManager" selected="Application.TimetableMain">
+    <configuration default="false" name="TimetableMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TimetableMain" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -460,11 +463,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Application.TimetableLogin" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TimetableMain" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.TimetableLogin" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TimetableMain" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -503,35 +506,81 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -556,7 +605,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1280">
+        <state line="18" column="28" selection-start="491" selection-end="491" vertical-scroll-proportion="-0.64784056" vertical-offset="678" max-vertical-offset="1280">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#122#150#0" expanded="true" />
@@ -567,42 +616,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="6" selection-start="1782" selection-end="1782" vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="15856">
+        <state line="147" column="58" selection-start="5761" selection-end="5879" vertical-scroll-proportion="-7.8076925" vertical-offset="2149" max-vertical-offset="15856">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#274#302#0" expanded="true" />
-            <element signature="e#10481#10489#0" expanded="true" />
-            <element signature="e#12315#12323#0" expanded="true" />
-            <element signature="e#13149#13157#0" expanded="true" />
-            <element signature="e#13976#13984#0" expanded="true" />
-            <element signature="e#14954#14962#0" expanded="true" />
-            <element signature="e#16691#16699#0" expanded="true" />
-            <element signature="e#17568#17576#0" expanded="true" />
-            <element signature="e#18357#18365#0" expanded="true" />
-            <element signature="e#18827#18835#0" expanded="true" />
-            <element signature="e#19608#19616#0" expanded="true" />
-            <element signature="e#20915#20923#0" expanded="true" />
-            <element signature="e#21387#21395#0" expanded="true" />
-            <element signature="e#22148#22156#0" expanded="true" />
-            <element signature="class#22644:22773" expanded="true" />
-            <element signature="method#actionPerformed#0;class#22644:22773" expanded="true" />
-            <element signature="e#23184#23192#0" expanded="true" />
-            <element signature="e#24322#24330#0" expanded="true" />
-            <element signature="e#26012#26020#0" expanded="true" />
-            <element signature="e#26860#26868#0" expanded="true" />
-            <element signature="e#27650#27658#0" expanded="true" />
-            <element signature="e#28455#28463#0" expanded="true" />
-            <element signature="e#30147#30155#0" expanded="true" />
-            <element signature="e#31008#31016#0" expanded="true" />
-            <element signature="e#31798#31806#0" expanded="true" />
-            <element signature="e#32247#32255#0" expanded="true" />
-            <element signature="e#33028#33036#0" expanded="true" />
-            <element signature="e#34234#34242#0" expanded="true" />
-            <element signature="e#34525#34533#0" expanded="true" />
-            <element signature="e#35267#35275#0" expanded="true" />
-            <element signature="e#36112#36120#0" expanded="true" />
+            <element signature="e#274#304#0" expanded="true" />
+            <element signature="e#10483#10491#0" expanded="true" />
+            <element signature="e#12317#12325#0" expanded="true" />
+            <element signature="e#13151#13159#0" expanded="true" />
+            <element signature="e#13978#13986#0" expanded="true" />
+            <element signature="e#14956#14964#0" expanded="true" />
+            <element signature="e#16693#16701#0" expanded="true" />
+            <element signature="e#17570#17578#0" expanded="true" />
+            <element signature="e#18359#18367#0" expanded="true" />
+            <element signature="e#18829#18837#0" expanded="true" />
+            <element signature="e#19610#19618#0" expanded="true" />
+            <element signature="e#20917#20925#0" expanded="true" />
+            <element signature="e#21389#21397#0" expanded="true" />
+            <element signature="e#22150#22158#0" expanded="true" />
+            <element signature="class#22646:22775" expanded="true" />
+            <element signature="method#actionPerformed#0;class#22646:22775" expanded="true" />
+            <element signature="e#23186#23194#0" expanded="true" />
+            <element signature="e#24324#24332#0" expanded="true" />
+            <element signature="e#26014#26022#0" expanded="true" />
+            <element signature="e#26862#26870#0" expanded="true" />
+            <element signature="e#27652#27660#0" expanded="true" />
+            <element signature="e#28457#28465#0" expanded="true" />
+            <element signature="e#30149#30157#0" expanded="true" />
+            <element signature="e#31010#31018#0" expanded="true" />
+            <element signature="e#31800#31808#0" expanded="true" />
+            <element signature="e#32249#32257#0" expanded="true" />
+            <element signature="e#33030#33038#0" expanded="true" />
+            <element signature="e#34236#34244#0" expanded="true" />
+            <element signature="e#34527#34535#0" expanded="true" />
+            <element signature="e#35269#35277#0" expanded="true" />
+            <element signature="e#36114#36122#0" expanded="true" />
             <element signature="method#TimetableView#1;class#TimetableView#0" expanded="true" />
             <element signature="method#TimetableView#2;class#TimetableView#0" expanded="true" />
             <element signature="method#TimetableView#3;class#TimetableView#0" expanded="true" />
@@ -611,16 +667,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
+    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state line="12" column="30" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#AdminView#0;class#AdminView#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="8" selection-start="479" selection-end="479" vertical-scroll-proportion="0.50498337" vertical-offset="0" max-vertical-offset="602">
+        <state line="25" column="9" selection-start="659" selection-end="659" vertical-scroll-proportion="0.66445184" vertical-offset="0" max-vertical-offset="624">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#68#96#0" expanded="true" />

@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class WarningPanes {
 
+    // TODO place warning panes within there appropriate classes
     public WarningPanes () {
 
         // TODO Auto-generated constructor stub

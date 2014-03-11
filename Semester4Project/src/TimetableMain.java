@@ -1,4 +1,4 @@
-
+import com.project.gui.TimetableLogin;
 
 public final class TimetableMain {
 
@@ -9,7 +9,8 @@ public final class TimetableMain {
 
     public static void main (String[] args) {
 
-        // TODO Auto-generated method stub
+        TimetableLogin login = new TimetableLogin();
+        login.setVisible( true );
 
     }
 

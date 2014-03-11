@@ -16,11 +16,16 @@ public abstract class View extends JPanel {
 
     // protected JPasswordField passwordField;
 
-    public View ( JPanel panelName, Component position, String title ) {
-        
+    public View ( JComponent panelName, Component position, String title ) {
+
         parent = (JFrame) SwingUtilities.getWindowAncestor( this );
         parent.setTitle( title );
         parent.getContentPane().add( panelName, position );
+
+        /*
+        may not be the correct means to adding to the mainview
+         */
+        parent.add( this );
 
         // TODO Auto-generated constructor stub
     }
