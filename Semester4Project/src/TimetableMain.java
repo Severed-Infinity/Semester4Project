@@ -1,4 +1,4 @@
-import com.project.gui.TimetableLogin;
+import com.project.gui.*;
 
 public final class TimetableMain {
 
@@ -11,6 +11,7 @@ public final class TimetableMain {
 
         TimetableLogin login = new TimetableLogin();
         login.setVisible( true );
+//        AdminView test = new AdminView(  );
 
     }
 
