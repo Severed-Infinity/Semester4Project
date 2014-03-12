@@ -9,7 +9,7 @@ public class TimetableView extends JFrame {
     public TimetableView () throws HeadlessException {
 
         JPanel timetableView = new JPanel();
-        mainView.add( timetableView, "name_109576600023605" );
+//        mainView.add( timetableView, "name_109576600023605" );
         timetableView.setLayout( new GridLayout( 5, 1, 5, 0 ) );
 
         JPanel monday = new JPanel();

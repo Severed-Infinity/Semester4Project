@@ -23,6 +23,7 @@ public class MainWindow extends JFrame {
         this.setLocationRelativeTo( null );
         this.setSize( 800, 500 );
         this.setResizable( false );
+        this.setViews( views );
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar( menuBar );
@@ -85,7 +86,7 @@ public class MainWindow extends JFrame {
         gl_header.setVerticalGroup( gl_header.createParallelGroup( Alignment.LEADING ).addGroup( gl_header.createSequentialGroup().addContainerGap().addGroup( gl_header.createParallelGroup( Alignment.BASELINE ).addComponent( txtSearch, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ).addComponent( btnLogout ).addComponent( btnHome ).addComponent( lblUser, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ) ) ) );
         header.setLayout( gl_header );
 
-        MainView mainView = new MainView( (JFrame) this, BorderLayout.CENTER, "Main View", getViews() );
+        MainView mainView = new MainView( this, BorderLayout.CENTER, "Main View", getViews() );
         this.add( mainView, BorderLayout.CENTER );
         mainView.setLayout( new CardLayout( 0, 0 ) );
     }
@@ -95,7 +96,7 @@ public class MainWindow extends JFrame {
     }
 
     public void setViews ( List<View> views ) {
-        this.views = views;
+        this.views = this.views;
     }
 
     public void addView ( View view ) {
@@ -114,8 +115,19 @@ public class MainWindow extends JFrame {
             super( parent, position, title );
 
             this.setViews( views );
+//            this.setUserView( getUser() );
             this.add( child );
-            //        child.setUserView( getUser() );
+            child = new JPanel(  );
+
+        }
+
+        public void setUserView ( User user ) {
+            if ( user instanceof Admin ) {
+//                child = adminView;
+            } else if ( user instanceof Lecturer ) {
+            } else if ( user instanceof Student ) {
+
+            }
 
         }
 
@@ -125,16 +137,6 @@ public class MainWindow extends JFrame {
 
         public void setViews ( List<View> views ) {
             this.views = views;
-        }
-
-        public void setUserView ( User user ) {
-            if ( user instanceof Admin ) {
-                //            child = adminView;
-            } else if ( user instanceof Lecturer ) {
-            } else if ( user instanceof Student ) {
-
-            }
-
         }
     }
 }

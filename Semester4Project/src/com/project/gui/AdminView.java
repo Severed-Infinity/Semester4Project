@@ -8,13 +8,12 @@ import java.awt.*;
  */
 public class AdminView extends View {
 
-    public AdminView ( Container parent, JComponent panelName, Component position, String title ) {
-        super( parent, panelName, position, title );
+    public AdminView ( Container parent, String position, String title ) {
+        super( parent, position, title );
 
         JTabbedPane adminView = new JTabbedPane( JTabbedPane.TOP );
         parent.add( adminView );
-//        MainView.addComponent( this );
-
+        
         JPanel Course = new JPanel();
         Course.setToolTipText( "Course" );
         adminView.addTab( "Course", null, Course, null );
@@ -110,6 +109,5 @@ public class AdminView extends View {
         gbc_panel_5.gridy = 2;
         User.add( panel_5, gbc_panel_5 );
     }
-
 
 }

@@ -6,7 +6,6 @@ import java.awt.*;
 @SuppressWarnings ( "serial" )
 public abstract class View extends JPanel {
 
-    public static String Name;
     protected JTextField tf;
     protected JButton add, cancel, clear, update;
     protected JLabel lbl;
@@ -34,16 +33,6 @@ public abstract class View extends JPanel {
         }
 
     }
-
-/*
-public String getName () {
-return name;
-}
-
-public void setName ( String name ) {
-this.name = name;
-}
-*/
 
     public JButton getAdd () {
         return add;

@@ -2,129 +2,137 @@ package com.project.gui;
 
 import javax.swing.*;
 import javax.swing.border.*;
+import java.awt.*;
 
 /**
  * Created by david on 3/12/14.
  */
-public class UpdateUserView {
+public class UpdateUserView extends View {
 
+    private final JButton btnAddModule;
+    private final JTextField textField;
+    private final JTextField textField_1;
+    private final JTextField textField_2;
+    private final JTextField textField_3;
+    private final JTextField textField_4;
 
+    public UpdateUserView ( Container parent, String position, String title ) {
+        super( parent, position, title );
 
+        JPanel updateUser = new JPanel();
 
-    JPanel updateUser = new JPanel();
-    updateUser.setLayout( null );
-    updateUser.setBorder( new TitledBorder( UIManager.getBorder( "TitledBorder.border" ),
+        updateUser.setBorder( new TitledBorder( UIManager.getBorder( "TitledBorder.border" ), "Add New User", TitledBorder.CENTER, TitledBorder.TOP, null, new Color( 0, 0, 0 ) ) );
+        //        mainView.add( addUserView, "name_111674253025430" );
 
-    "Add New User", TitledBorder.CENTER, TitledBorder.TOP, null, new Color( 0, 0, 0 ) ) );
-    mainView.add( updateUser, "name_183142460631028" );
+        JLabel lblTypeOfUser = new JLabel( "Type of User" );
+        lblTypeOfUser.setBounds( 35, 33, 95, 14 );
+        updateUser.add( lblTypeOfUser );
 
-    JLabel label_35 = new JLabel( "Type of User" );
-    label_35.setBounds( 35, 33, 95, 14 );
-    updateUser.add( label_35 );
+        JComboBox<String> userSelect = new JComboBox<String>();
+        userSelect.setModel( new DefaultComboBoxModel<String>( new String[]{ "School of Science and Computing", "School of Business & Humanities", "School of Engineering", "All" } ) );
+        userSelect.setBounds( 140, 30, 120, 20 );
+        updateUser.add( userSelect );
 
-    JComboBox<String> comboBox_17 = new JComboBox<String>();
-    comboBox_17.setBounds( 140, 30, 120, 20 );
-    updateUser.add( comboBox_17 );
+        btnAddModule = new JButton( "Add Module" );
+        btnAddModule.setBounds( 350, 187, 95, 23 );
+        updateUser.add( btnAddModule );
 
-    JLabel label_36 = new JLabel( "Name" );
-    label_36.setBounds( 35, 66, 95, 14 );
-    updateUser.add( label_36 );
+        JLabel lblName = new JLabel( "Name" );
+        lblName.setBounds( 35, 66, 95, 14 );
+        updateUser.add( lblName );
 
-    textField_29 = new JTextField();
-    textField_29.setColumns( 10 );
-    textField_29.setBounds( 140, 63, 120, 20 );
-    updateUser.add( textField_29 );
+        JLabel lblTitle = new JLabel( "Title" );
+        lblTitle.setBounds( 350, 66, 95, 14 );
+        updateUser.add( lblTitle );
 
-    JLabel label_37 = new JLabel( "Title" );
-    label_37.setBounds( 350, 66, 95, 14 );
-    updateUser.add( label_37 );
+        JLabel lblDepartment = new JLabel( "Department" );
+        lblDepartment.setBounds( 35, 116, 95, 14 );
+        updateUser.add( lblDepartment );
 
-    textField_30 = new JTextField();
-    textField_30.setColumns( 10 );
-    textField_30.setBounds( 467, 63, 120, 20 );
-    updateUser.add( textField_30 );
+        JLabel lblId = new JLabel( "ID" );
+        lblId.setBounds( 35, 91, 95, 14 );
+        updateUser.add( lblId );
 
-    JLabel label_38 = new JLabel( "ID" );
-    label_38.setBounds( 35, 91, 95, 14 );
-    updateUser.add( label_38 );
+        JComboBox<String> comboBox = new JComboBox<String>();
+        comboBox.setModel( new DefaultComboBoxModel<String>( new String[]{ "Admin", "Lecturer", "Student" } ) );
+        comboBox.setBounds( 140, 113, 192, 20 );
+        updateUser.add( comboBox );
 
-    textField_31 = new JTextField();
-    textField_31.setColumns( 10 );
-    textField_31.setBounds( 140, 88, 120, 20 );
-    updateUser.add( textField_31 );
+        JLabel lblCourse = new JLabel( "Course" );
+        lblCourse.setBounds( 35, 141, 95, 14 );
+        updateUser.add( lblCourse );
 
-    JLabel label_39 = new JLabel( "Department" );
-    label_39.setBounds( 35, 116, 95, 14 );
-    updateUser.add( label_39 );
+        textField = new JTextField();
+        textField.setBounds( 140, 63, 120, 20 );
+        updateUser.add( textField );
+        textField.setColumns( 10 );
 
-    JComboBox<String> comboBox_18 = new JComboBox<String>();
-    comboBox_18.setBounds( 140, 113, 192, 20 );
-    updateUser.add( comboBox_18 );
+        JComboBox<String> comboBox_1 = new JComboBox<String>();
+        comboBox_1.setBounds( 140, 138, 120, 20 );
+        updateUser.add( comboBox_1 );
 
-    JLabel label_40 = new JLabel( "Course" );
-    label_40.setBounds( 35, 141, 95, 14 );
-    updateUser.add( label_40 );
+        JLabel lblCourseCode = new JLabel( "Course Code: " );
+        lblCourseCode.setBounds( 35, 166, 225, 14 );
+        updateUser.add( lblCourseCode );
 
-    JComboBox<String> comboBox_19 = new JComboBox<String>();
-    comboBox_19.setBounds( 140, 138, 120, 20 );
-    updateUser.add( comboBox_19 );
+        textField_1 = new JTextField();
+        textField_1.setBounds( 467, 63, 120, 20 );
+        updateUser.add( textField_1 );
+        textField_1.setColumns( 10 );
 
-    JLabel label_41 = new JLabel( "Course Code: " );
-    label_41.setBounds( 35, 166, 225, 14 );
-    updateUser.add( label_41 );
+        JLabel lblYears = new JLabel( "Years" );
+        lblYears.setBounds( 350, 141, 62, 14 );
+        updateUser.add( lblYears );
 
-    JLabel label_42 = new JLabel( "Years" );
-    label_42.setBounds( 350, 141, 62, 14 );
-    updateUser.add( label_42 );
+        JLabel lblTeaches = new JLabel( "Teaches" );
+        lblTeaches.setBounds( 35, 191, 95, 14 );
+        updateUser.add( lblTeaches );
 
-    textField_32 = new JTextField();
-    textField_32.setColumns( 10 );
-    textField_32.setBounds( 467, 138, 120, 20 );
-    updateUser.add( textField_32 );
+        textField_2 = new JTextField();
+        textField_2.setBounds( 140, 88, 120, 20 );
+        updateUser.add( textField_2 );
+        textField_2.setColumns( 10 );
 
-    JLabel label_43 = new JLabel( "Teaches" );
-    label_43.setBounds( 35, 191, 95, 14 );
-    updateUser.add( label_43 );
+        JComboBox<String> comboBox_2 = new JComboBox<String>();
+        comboBox_2.setBounds( 140, 188, 192, 20 );
+        updateUser.add( comboBox_2 );
 
-    JComboBox<String> comboBox_20 = new JComboBox<String>();
-    comboBox_20.setBounds( 140, 188, 192, 20 );
-    updateUser.add( comboBox_20 );
+        JButton btnConfirm = new JButton( "Confirm" );
+        btnConfirm.setBounds( 467, 360, 89, 23 );
+        updateUser.add( btnConfirm );
 
-    JButton button_17 = new JButton( "Add Module" );
-    button_17.setBounds( 350, 187, 95, 23 );
-    updateUser.add( button_17 );
+        JButton btnCancel = new JButton( "Cancel" );
+        btnCancel.setBounds( 665, 360, 89, 23 );
+        updateUser.add( btnCancel );
 
-    JButton button_18 = new JButton( "Confirm" );
-    button_18.setBounds( 467, 360, 89, 23 );
-    updateUser.add( button_18 );
+        JButton btnClear = new JButton( "Clear" );
+        btnClear.setBounds( 566, 360, 89, 23 );
+        updateUser.add( btnClear );
 
-    JButton button_19 = new JButton( "Cancel" );
-    button_19.setBounds( 665, 360, 89, 23 );
-    updateUser.add( button_19 );
+        JLabel lblModules = new JLabel( "Modules: " );
+        lblModules.setBounds( 35, 216, 95, 14 );
+        updateUser.add( lblModules );
 
-    JButton button_20 = new JButton( "Clear" );
-    button_20.setBounds( 566, 360, 89, 23 );
-    updateUser.add( button_20 );
+        JList<String> list = new JList<String>();
+        list.setBounds( 140, 214, 192, 125 );
+        updateUser.add( list );
 
-    JLabel label_44 = new JLabel( "Modules: " );
-    label_44.setBounds( 35, 216, 95, 14 );
-    updateUser.add( label_44 );
+        JLabel lblNumberOfSemesters = new JLabel( "Number of Semesters: " );
+        lblNumberOfSemesters.setBounds( 350, 166, 237, 14 );
+        updateUser.add( lblNumberOfSemesters );
 
-    JList<String> list_5 = new JList<String>();
-    list_5.setBounds( 140, 214, 192, 125 );
-    updateUser.add( list_5 );
+        JLabel lblPassword = new JLabel( "Password" );
+        lblPassword.setBounds( 350, 91, 95, 14 );
+        updateUser.add( lblPassword );
 
-    JLabel label_45 = new JLabel( "Number of Semesters: " );
-    label_45.setBounds( 350, 166, 237, 14 );
-    updateUser.add( label_45 );
+        textField_3 = new JTextField();
+        textField_3.setBounds( 467, 138, 120, 20 );
+        updateUser.add( textField_3 );
+        textField_3.setColumns( 10 );
 
-    JLabel label_46 = new JLabel( "Password" );
-    label_46.setBounds( 350, 91, 95, 14 );
-    updateUser.add( label_46 );
-
-    textField_33 = new JTextField();
-    textField_33.setColumns( 10 );
-    textField_33.setBounds( 467, 88, 120, 20 );
-    updateUser.add( textField_33 );
-
+        textField_4 = new JTextField();
+        textField_4.setBounds( 467, 88, 120, 20 );
+        updateUser.add( textField_4 );
+        textField_4.setColumns( 10 );
+    }
 }
