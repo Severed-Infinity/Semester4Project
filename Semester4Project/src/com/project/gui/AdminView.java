@@ -13,7 +13,7 @@ public class AdminView extends View {
 
         JTabbedPane adminView = new JTabbedPane( JTabbedPane.TOP );
         parent.add( adminView );
-        MainView.addComponent( this );
+//        MainView.addComponent( this );
 
         JPanel Course = new JPanel();
         Course.setToolTipText( "Course" );
@@ -110,4 +110,6 @@ public class AdminView extends View {
         gbc_panel_5.gridy = 2;
         User.add( panel_5, gbc_panel_5 );
     }
+
+
 }

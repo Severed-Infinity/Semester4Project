@@ -11,7 +11,8 @@ public final class TimetableMain {
 
         TimetableLogin login = new TimetableLogin();
         login.setVisible( true );
-//        AdminView test = new AdminView(  );
+        MainWindow mainWindow = new MainWindow();
+        mainWindow.setVisible( true );
 
     }
 

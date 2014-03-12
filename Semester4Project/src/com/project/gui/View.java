@@ -2,11 +2,11 @@ package com.project.gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.List;
 
 @SuppressWarnings ( "serial" )
 public abstract class View extends JPanel {
 
+    public static String Name;
     protected JTextField tf;
     protected JButton add, cancel, clear, update;
     protected JLabel lbl;
@@ -14,26 +14,15 @@ public abstract class View extends JPanel {
     protected JComboBox<Object> cbx;
     protected JList<Object> lst;
     protected JFrame parent;
-    protected static List<Component> components;
 
-    // protected JPasswordField passwordField;
-
-   /*public View () {
-        JFrame test = new JFrame();
-        test.setDefaultCloseOperation( EXIT_ON_CLOSE );
-        test.setTitle( "Timetable" );
-        test.setLocationRelativeTo( null );
-        test.setSize( 800, 500 );
-        test.setResizable( false );
-        test.setVisible( true );
-    }*/
-
-    public View ( Container parent, JComponent panelName, Component position, String title ) {
+    public View ( Container parent, String position, String title ) {
 
         /*
         may not be the correct approach to this
         may pass in a parent parameter
         */
+        JComponent panelName = new JPanel();
+        this.setName( panelName.getName() );
 
         if ( parent instanceof JFrame ) {
             parent = SwingUtilities.getWindowAncestor( this );
@@ -46,9 +35,15 @@ public abstract class View extends JPanel {
 
     }
 
-    public static void addComponent ( Component component ) {
-        components.add( component );
-    }
+/*
+public String getName () {
+return name;
+}
+
+public void setName ( String name ) {
+this.name = name;
+}
+*/
 
     public JButton getAdd () {
         return add;
