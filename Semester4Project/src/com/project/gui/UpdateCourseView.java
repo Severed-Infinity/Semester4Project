@@ -17,7 +17,7 @@ public class UpdateCourseView extends View {
     private final JTextField textField_22;
 
     public UpdateCourseView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+        super( parent, position, title, null );
 
         JPanel updateCourse = new JPanel();
         updateCourse.setLayout( null );

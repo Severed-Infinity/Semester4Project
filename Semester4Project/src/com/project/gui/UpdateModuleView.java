@@ -17,7 +17,7 @@ public class UpdateModuleView extends View {
     private final JTextField textField_25;
 
     public UpdateModuleView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+        super( parent, position, title, null );
 
         JPanel updateModule = new JPanel();
         updateModule.setLayout( null );

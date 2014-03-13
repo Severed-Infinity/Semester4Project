@@ -1,7 +1,5 @@
 package com.project.gui;
 
-import com.project.user.*;
-
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
@@ -14,7 +12,7 @@ import java.util.List;
 public class MainWindow extends JFrame {
 
     protected JTextField txtSearch;
-    private java.util.List<View> views;
+    protected JPanel header, mainView;
 
     public MainWindow () {
 
@@ -23,7 +21,6 @@ public class MainWindow extends JFrame {
         this.setLocationRelativeTo( null );
         this.setSize( 800, 500 );
         this.setResizable( false );
-        this.setViews( views );
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar( menuBar );
@@ -68,7 +65,7 @@ public class MainWindow extends JFrame {
         mnEdit.add( mntmAddModule );
         getContentPane().setLayout( new BorderLayout( 10, 5 ) );
 
-        JPanel header = new JPanel();
+        header = new JPanel();
         getContentPane().add( header, BorderLayout.NORTH );
 
         JButton btnHome = new JButton( "Home" );
@@ -86,57 +83,24 @@ public class MainWindow extends JFrame {
         gl_header.setVerticalGroup( gl_header.createParallelGroup( Alignment.LEADING ).addGroup( gl_header.createSequentialGroup().addContainerGap().addGroup( gl_header.createParallelGroup( Alignment.BASELINE ).addComponent( txtSearch, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ).addComponent( btnLogout ).addComponent( btnHome ).addComponent( lblUser, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ) ) ) );
         header.setLayout( gl_header );
 
-        MainView mainView = new MainView( this, BorderLayout.CENTER, "Main View", getViews() );
-        this.add( mainView, BorderLayout.CENTER );
-        mainView.setLayout( new CardLayout( 0, 0 ) );
-    }
+        mainView = new MainView( this, BorderLayout.CENTER, "Main View", new CardLayout( 0, 0 ) );
 
-    public List<View> getViews () {
-        return views;
-    }
-
-    public void setViews ( List<View> views ) {
-        this.views = this.views;
-    }
-
-    public void addView ( View view ) {
-        this.getViews().add( view );
     }
 
     /**
      * Created by david on 3/12/14.
      */
-    public static class MainView extends View {
+    private class MainView extends View {
 
         private List<View> views;
         private JPanel child;
 
-        public MainView ( Container parent, String position, String title, List<View> views ) {
-            super( parent, position, title );
+        public MainView ( Container parent, String position, String title, LayoutManager layout ) {
+            super( parent, position, title, layout );
 
-            this.setViews( views );
-//            this.setUserView( getUser() );
-            this.add( child );
-            child = new JPanel(  );
+            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
 
         }
 
-        public void setUserView ( User user ) {
-            if ( user instanceof Admin ) {
-//                child = adminView;
-            } else if ( user instanceof Lecturer ) {
-            } else if ( user instanceof Student ) {
-
-            }
-
-        }
-
-        public List<View> getViews () {
-            return views;
-        }
-
-        public void setViews ( List<View> views ) {
-            this.views = views;
-        }
     }
 }

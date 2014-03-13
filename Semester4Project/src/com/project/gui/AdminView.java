@@ -9,14 +9,15 @@ import java.awt.*;
 public class AdminView extends View {
 
     public AdminView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+        super( parent, position, title, null );
 
         JTabbedPane adminView = new JTabbedPane( JTabbedPane.TOP );
         parent.add( adminView );
-        
+
         JPanel Course = new JPanel();
         Course.setToolTipText( "Course" );
         adminView.addTab( "Course", null, Course, null );
+
         GridBagLayout gbl_Course = new GridBagLayout();
         gbl_Course.columnWidths = new int[]{ 0, 0, 0, 0 };
         gbl_Course.rowHeights = new int[]{ 0, 0, 0, 0 };

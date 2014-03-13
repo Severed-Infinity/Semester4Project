@@ -17,7 +17,7 @@ public class UpdateUserView extends View {
     private final JTextField textField_4;
 
     public UpdateUserView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+        super( parent, position, title, null );
 
         JPanel updateUser = new JPanel();
 

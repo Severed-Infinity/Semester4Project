@@ -111,39 +111,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="View.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="View.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="3" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="928">
+            <state line="35" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.57468355" vertical-offset="333" max-vertical-offset="976">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#View#0;class#View#0" expanded="true" />
+                <element signature="e#745#788#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateModuleView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="7" selection-start="531" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="2464">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#UpdateModuleView#0" expanded="true" />
-                <element signature="e#1106#1114#0" expanded="true" />
-                <element signature="e#2447#2455#0" expanded="true" />
-                <element signature="e#3659#3667#0" expanded="true" />
-                <element signature="e#4098#4106#0" expanded="true" />
-                <element signature="e#4547#4555#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AdminView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="374" selection-end="374" vertical-scroll-proportion="0.37209302" vertical-offset="0" max-vertical-offset="1872">
+            <state line="19" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1888">
               <folding>
                 <element signature="docComment;class#AdminView#0" expanded="true" />
               </folding>
@@ -151,69 +134,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModuleView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/ModuleView.java">
+      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="12" selection-start="1048" selection-end="1051" vertical-scroll-proportion="-18.461538" vertical-offset="0" max-vertical-offset="2432">
+            <state line="98" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="1760">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#ModuleView#0" expanded="true" />
-                <element signature="e#2866#2874#0" expanded="true" />
-                <element signature="e#3743#3751#0" expanded="true" />
-                <element signature="e#4532#4540#0" expanded="true" />
-                <element signature="e#5002#5010#0" expanded="true" />
+                <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
+                <element signature="docComment;class#MainView#0;class#MainWindow#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
+      <file leaf-file-name="TimetableMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="5" selection-start="180" selection-end="422" vertical-scroll-proportion="-6.769231" vertical-offset="0" max-vertical-offset="2320">
+            <state line="13" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#UserView#0" expanded="true" />
-                <element signature="method#UserView#0;class#UserView#0" expanded="true" />
-                <element signature="e#1046#1054#0" expanded="true" />
-                <element signature="e#2067#2075#0" expanded="true" />
-                <element signature="e#2631#2639#0" expanded="true" />
-                <element signature="e#3561#3569#0" expanded="true" />
-                <element signature="e#4269#4277#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpdateUserView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="1" selection-start="5026" selection-end="5026" vertical-scroll-proportion="0.0" vertical-offset="1699" max-vertical-offset="2288">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#UpdateUserView#0" expanded="true" />
-                <element signature="method#UpdateUserView#0;class#UpdateUserView#0" expanded="true" />
-                <element signature="e#1055#1063#0" expanded="true" />
-                <element signature="e#2070#2078#0" expanded="true" />
-                <element signature="e#2631#2639#0" expanded="true" />
-                <element signature="e#3555#3563#0" expanded="true" />
-                <element signature="e#4258#4266#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CourseView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="39" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="2528">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#CourseView#0" expanded="true" />
-                <element signature="e#1170#1178#0" expanded="true" />
-                <element signature="e#3039#3047#0" expanded="true" />
-                <element signature="e#3873#3881#0" expanded="true" />
-                <element signature="e#4700#4708#0" expanded="true" />
+                <element signature="method#TimetableMain#0;class#TimetableMain#0" expanded="false" />
+                <marker date="1394642539860" expanded="true" signature="195:384" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -234,17 +174,17 @@
         <option value="$PROJECT_DIR$/src/com/project/gui/Timetable.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainView.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/User.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
         <option value="$PROJECT_DIR$/src/TimetableMain.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
       </list>
     </option>
   </component>
@@ -383,7 +323,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="options.splitter.main.proportions" value="0.3025" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -626,8 +566,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
@@ -686,7 +626,7 @@
         <state line="11" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="624">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#View#0;class#View#0" expanded="true" />
+            <element signature="e#745#788#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -704,7 +644,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="368">
           <folding>
-            <element signature="e#198#252#0" expanded="true" />
+            <element signature="method#TimetableMain#0;class#TimetableMain#0" expanded="false" />
+            <marker date="1394642539860" expanded="true" signature="195:384" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -736,18 +677,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1248">
           <folding>
-            <element signature="class#1456:1585" expanded="true" />
-            <element signature="method#actionPerformed#0;class#1456:1585" expanded="true" />
-            <element signature="method#main#0;class#TimetableLogin#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="35" selection-start="288" selection-end="288" vertical-scroll-proportion="0.23920266" vertical-offset="0" max-vertical-offset="602">
-          <folding>
-            <element signature="e#198#252#0" expanded="true" />
+            <element signature="class#1456:1585" expanded="false" />
+            <element signature="method#actionPerformed#0;class#1456:1585" expanded="false" />
+            <element signature="method#main#0;class#TimetableLogin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -756,28 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="44" selection-start="244" selection-end="244" vertical-scroll-proportion="0.23920266" vertical-offset="0" max-vertical-offset="688">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="23" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2336">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#3728#3729#0" expanded="true" />
-            <element signature="e#3756#3757#0" expanded="true" />
-            <element signature="method#setViews#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#addView#0;class#MainWindow#0" expanded="true" />
-            <element signature="docComment;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#setUserView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#4698#4699#0" expanded="true" />
-            <element signature="e#4734#4735#0" expanded="true" />
-            <element signature="e#4787#4788#0" expanded="true" />
-            <element signature="e#4829#4830#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -799,72 +709,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="49" selection-start="4679" selection-end="4679" vertical-scroll-proportion="0.539267" vertical-offset="1858" max-vertical-offset="2240">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#UpdateCourseView#0" expanded="true" />
-            <element signature="e#1108#1116#0" expanded="true" />
-            <element signature="e#2822#2830#0" expanded="true" />
-            <element signature="e#3670#3678#0" expanded="true" />
-            <element signature="e#4460#4468#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/ModuleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="12" selection-start="1048" selection-end="1051" vertical-scroll-proportion="-18.461538" vertical-offset="0" max-vertical-offset="2432">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ModuleView#0" expanded="true" />
-            <element signature="e#2866#2874#0" expanded="true" />
-            <element signature="e#3743#3751#0" expanded="true" />
-            <element signature="e#4532#4540#0" expanded="true" />
-            <element signature="e#5002#5010#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#UpdateCourseView#0" expanded="false" />
+            <element signature="e#1114#1122#0" expanded="false" />
+            <element signature="e#2828#2836#0" expanded="false" />
+            <element signature="e#3676#3684#0" expanded="false" />
+            <element signature="e#4466#4474#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="5" selection-start="180" selection-end="422" vertical-scroll-proportion="-6.769231" vertical-offset="0" max-vertical-offset="2320">
+        <state line="11" column="5" selection-start="180" selection-end="422" vertical-scroll-proportion="0.49438202" vertical-offset="0" max-vertical-offset="2320">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#UserView#0" expanded="true" />
             <element signature="method#UserView#0;class#UserView#0" expanded="true" />
-            <element signature="e#1046#1054#0" expanded="true" />
-            <element signature="e#2067#2075#0" expanded="true" />
-            <element signature="e#2631#2639#0" expanded="true" />
-            <element signature="e#3561#3569#0" expanded="true" />
-            <element signature="e#4269#4277#0" expanded="true" />
+            <element signature="e#1052#1060#0" expanded="true" />
+            <element signature="e#2073#2081#0" expanded="true" />
+            <element signature="e#2637#2645#0" expanded="true" />
+            <element signature="e#3567#3575#0" expanded="true" />
+            <element signature="e#4275#4283#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="1" selection-start="5026" selection-end="5026" vertical-scroll-proportion="0.0" vertical-offset="1699" max-vertical-offset="2288">
+        <state line="137" column="1" selection-start="5026" selection-end="5026" vertical-scroll-proportion="1.2905759" vertical-offset="1699" max-vertical-offset="2288">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#UpdateUserView#0" expanded="true" />
-            <element signature="method#UpdateUserView#0;class#UpdateUserView#0" expanded="true" />
-            <element signature="e#1055#1063#0" expanded="true" />
-            <element signature="e#2070#2078#0" expanded="true" />
-            <element signature="e#2631#2639#0" expanded="true" />
-            <element signature="e#3555#3563#0" expanded="true" />
-            <element signature="e#4258#4266#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#UpdateUserView#0" expanded="false" />
+            <element signature="method#UpdateUserView#0;class#UpdateUserView#0" expanded="false" />
+            <element signature="e#1061#1069#0" expanded="false" />
+            <element signature="e#2076#2084#0" expanded="false" />
+            <element signature="e#2637#2645#0" expanded="false" />
+            <element signature="e#3561#3569#0" expanded="false" />
+            <element signature="e#4264#4272#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="39" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="2528">
+        <state line="45" column="39" selection-start="1407" selection-end="1407" vertical-scroll-proportion="1.443038" vertical-offset="150" max-vertical-offset="2528">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#CourseView#0" expanded="true" />
-            <element signature="e#1170#1178#0" expanded="true" />
-            <element signature="e#3039#3047#0" expanded="true" />
-            <element signature="e#3873#3881#0" expanded="true" />
-            <element signature="e#4700#4708#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#CourseView#0" expanded="false" />
+            <element signature="e#1176#1184#0" expanded="false" />
+            <element signature="e#3045#3053#0" expanded="false" />
+            <element signature="e#3879#3887#0" expanded="false" />
+            <element signature="e#4706#4714#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -873,32 +769,90 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="7" selection-start="531" selection-end="565" vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="2464">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#UpdateModuleView#0" expanded="true" />
-            <element signature="e#1106#1114#0" expanded="true" />
-            <element signature="e#2447#2455#0" expanded="true" />
-            <element signature="e#3659#3667#0" expanded="true" />
-            <element signature="e#4098#4106#0" expanded="true" />
-            <element signature="e#4547#4555#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#UpdateModuleView#0" expanded="false" />
+            <element signature="e#1112#1120#0" expanded="false" />
+            <element signature="e#2453#2461#0" expanded="false" />
+            <element signature="e#3665#3673#0" expanded="false" />
+            <element signature="e#4104#4112#0" expanded="false" />
+            <element signature="e#4553#4561#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/ModuleView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="928">
+        <state line="30" column="12" selection-start="1048" selection-end="1051" vertical-scroll-proportion="1.4328358" vertical-offset="0" max-vertical-offset="2432">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#View#0;class#View#0" expanded="true" />
+            <element signature="docComment;class#ModuleView#0" expanded="true" />
+            <element signature="e#2872#2880#0" expanded="true" />
+            <element signature="e#3749#3757#0" expanded="true" />
+            <element signature="e#4538#4546#0" expanded="true" />
+            <element signature="e#5008#5016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/CardLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="11" selection-start="3809" selection-end="3809" vertical-scroll-proportion="2.2050633" vertical-offset="153" max-vertical-offset="2416">
+          <folding>
+            <element signature="method#CardLayout#1;class#CardLayout#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="374" selection-end="374" vertical-scroll-proportion="0.37209302" vertical-offset="0" max-vertical-offset="1872">
+        <state line="19" column="0" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1888">
           <folding>
             <element signature="docComment;class#AdminView#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <folding>
+            <element signature="method#TimetableMain#0;class#TimetableMain#0" expanded="false" />
+            <marker date="1394642539860" expanded="true" signature="195:384" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="1760">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
+            <element signature="docComment;class#MainView#0;class#MainWindow#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/lang/reflect/Method.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="482" column="0" selection-start="17910" selection-end="17910" vertical-scroll-proportion="0.8227848" vertical-offset="1899" max-vertical-offset="3136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="878" selection-end="878" vertical-scroll-proportion="0.7120419" vertical-offset="0" max-vertical-offset="382">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.57468355" vertical-offset="333" max-vertical-offset="976">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#745#788#0" expanded="true" />
           </folding>
         </state>
       </provider>

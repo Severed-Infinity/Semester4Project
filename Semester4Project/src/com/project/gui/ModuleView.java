@@ -17,7 +17,7 @@ public class ModuleView extends View {
     private final JTextField textField_16;
 
     public ModuleView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+        super( parent, position, title, null );
 
         JPanel addNewModule = new JPanel();
         //        mainView.add( addNewModule, "name_814821531771" );
