@@ -47,7 +47,6 @@ public class TimetableLogin extends JFrame {
         JButton btnLogin = new JButton( "Login" );
         btnLogin.setBounds( 10, 11, 66, 23 );
         btnLogin.addActionListener( new ActionListener() {
-
             @Override
             public void actionPerformed ( ActionEvent arg0 ) {
 

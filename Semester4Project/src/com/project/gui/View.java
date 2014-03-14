@@ -14,7 +14,7 @@ public abstract class View extends JPanel {
     protected JComboBox<Object> cbx;
     protected JList<Object> lst;
     protected JFrame parent;
-    protected ArrayList<View> views = new ArrayList<>(  );
+    protected ArrayList<View> views = new ArrayList<>();
 
     public View ( Container parent, String position, String title, LayoutManager layout ) {
 
@@ -25,16 +25,20 @@ public abstract class View extends JPanel {
         and just add parent as a jpanel
         */
 
-//        if ( parent instanceof JFrame ) {
-//            parent = SwingUtilities.getWindowAncestor( this );
-//            ( (JFrame) parent ).setTitle( title );
-//            ( (JFrame) parent ).getContentPane().add( this, position );
-//        } else {
-//            parent = this.getParent();
-//            parent.add( this, position );
-//        }
+        //        if ( parent instanceof JFrame ) {
+        //            parent = SwingUtilities.getWindowAncestor( this );
+        //            ( (JFrame) parent ).setTitle( title );
+        //            ( (JFrame) parent ).getContentPane().add( this, position );
+        //        } else {
+        //            parent = this.getParent();
+        //            parent.add( this, position );
+        //        }
 
         views.add( this );
+    }
+
+    public ArrayList<View> getViews () {
+        return views;
     }
 
     public JButton getAdd () {

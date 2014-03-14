@@ -3,13 +3,13 @@ package com.project.gui;
 import javax.swing.*;
 import java.awt.*;
 
-@SuppressWarnings ( "serial" )
-public class TimetableView extends JFrame {
+@SuppressWarnings ("serial")
+public class TimetableView extends View {
 
-    public TimetableView () throws HeadlessException {
-
+    public TimetableView ( Container parent, String position, String title, LayoutManager layout ) {
+        super( parent, position, title, layout );
         JPanel timetableView = new JPanel();
-//        mainView.add( timetableView, "name_109576600023605" );
+        //        mainView.add( timetableView, "name_109576600023605" );
         timetableView.setLayout( new GridLayout( 5, 1, 5, 0 ) );
 
         JPanel monday = new JPanel();
@@ -31,13 +31,6 @@ public class TimetableView extends JFrame {
         JPanel friday = new JPanel();
         timetableView.add( friday );
         friday.setLayout( new GridLayout( 0, 8, 5, 0 ) );
-
     }
 
-    public static void main ( String[] args ) {
-
-        TimetableView timetable = new TimetableView();
-        timetable.setVisible( true );
-
-    }
 }

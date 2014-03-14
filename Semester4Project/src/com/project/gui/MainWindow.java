@@ -1,26 +1,29 @@
 package com.project.gui;
 
+import com.project.user.*;
+
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
 import java.awt.*;
-import java.util.List;
 
 /**
  * Created by david on 3/12/14.
  */
 public class MainWindow extends JFrame {
 
+    public User currentUser; //.getUser();
     protected JTextField txtSearch;
     protected JPanel header, mainView;
 
-    public MainWindow () {
+    public MainWindow (User user) {
 
         this.setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
         this.setTitle( "Timetable" );
         this.setLocationRelativeTo( null );
         this.setSize( 800, 500 );
         this.setResizable( false );
+        this.currentUser = user;
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar( menuBar );
@@ -92,15 +95,49 @@ public class MainWindow extends JFrame {
      */
     private class MainView extends View {
 
-        private List<View> views;
+        //        private List<View> views;
         private JPanel child;
 
         public MainView ( Container parent, String position, String title, LayoutManager layout ) {
             super( parent, position, title, layout );
 
-            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
+            //            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
+            this.setChild( setDefaultView() );
 
         }
 
+        public View setDefaultView () {
+
+            if ( currentUser instanceof Student )
+                return new TimetableView( this, BorderLayout.CENTER, "Student Timetable", null );
+            else if ( currentUser instanceof Lecturer )
+                return new TimetableView( this, BorderLayout.CENTER, "Lecturer Timetable", null );
+            else if ( currentUser instanceof Admin )
+                return new AdminView( this, BorderLayout.CENTER, "Admin View", null );
+            return null;
+        }
+
+        public View changeView () {
+
+            this.getChild();
+            /*
+            change the child view of the main view based on the button pressed
+
+            get the button pressed
+            call the view
+            set child to the new view
+
+             */
+            return null;
+        }
+
+        public JPanel getChild () {
+            return child;
+        }
+
+        public void setChild ( JPanel child ) {
+            this.child = child;
+        }
     }
+
 }
