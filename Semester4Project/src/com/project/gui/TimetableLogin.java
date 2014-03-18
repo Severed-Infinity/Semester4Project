@@ -3,6 +3,7 @@ package com.project.gui;
 import javax.imageio.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import java.io.*;
 
 @SuppressWarnings ("serial")
@@ -74,7 +75,13 @@ public class TimetableLogin extends JFrame {
         add( getUserPassword(), constraints );
 
         setLogin( new JButton( "Login" ) );
-//        TODO login action listener
+        getLogin().addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed ( ActionEvent e ) {
+                System.out.println( "You Clicked Login." );
+//                TODO call on the database and connect to it, access main window
+            }
+        } );
         constraints.gridx = 0;
         constraints.gridy = 6;
         constraints.gridwidth = 1;
@@ -84,7 +91,12 @@ public class TimetableLogin extends JFrame {
         add( getLogin(), constraints );
 
         setCancel( new JButton( "Cancel" ) );
-//        TODO cancel action listener
+        getCancel().addActionListener( new ActionListener() {
+            @Override
+            public void actionPerformed ( ActionEvent e ) {
+                System.exit( 0 );
+            }
+        } );
         constraints.gridx = 1;
         constraints.gridy = 6;
         constraints.gridwidth = 1;
@@ -93,20 +105,12 @@ public class TimetableLogin extends JFrame {
         add( getCancel(), constraints );
     }
 
-    public JButton getCancel () {
-        return cancel;
+    public JPasswordField getUserPassword () {
+        return userPassword;
     }
 
-    public void setCancel ( JButton cancel ) {
-        this.cancel = cancel;
-    }
-
-    public JButton getLogin () {
-        return login;
-    }
-
-    public void setLogin ( JButton login ) {
-        this.login = login;
+    public void setUserPassword ( JPasswordField userPassword ) {
+        this.userPassword = userPassword;
     }
 
     public JTextField getUserName () {
@@ -117,12 +121,20 @@ public class TimetableLogin extends JFrame {
         this.userName = userName;
     }
 
-    public JPasswordField getUserPassword () {
-        return userPassword;
+    public JButton getLogin () {
+        return login;
     }
 
-    public void setUserPassword ( JPasswordField userPassword ) {
-        this.userPassword = userPassword;
+    public void setLogin ( JButton login ) {
+        this.login = login;
+    }
+
+    public JButton getCancel () {
+        return cancel;
+    }
+
+    public void setCancel ( JButton cancel ) {
+        this.cancel = cancel;
     }
 
 }
