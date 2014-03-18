@@ -111,41 +111,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="View.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
+      <file leaf-file-name="TimetableLogin.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="142" max-vertical-offset="896">
+            <state line="86" column="37" selection-start="3004" selection-end="3004" vertical-scroll-proportion="0.48764044" vertical-offset="1111" max-vertical-offset="1840">
               <folding>
-                <element signature="e#88#118#0" expanded="true" />
-                <element signature="method#View#0;class#View#0" expanded="true" />
-                <element signature="e#1233#1234#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdminView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1856">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="83" selection-start="4571" selection-end="4571" vertical-scroll-proportion="2.8794568" vertical-offset="0" max-vertical-offset="2240">
-              <folding>
-                <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
-                <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-                <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-                <element signature="e#4958#4959#0" expanded="true" />
-                <element signature="e#4994#4995#0" expanded="true" />
-                <element signature="e#5043#5044#0" expanded="true" />
-                <element signature="e#5085#5086#0" expanded="true" />
+                <element signature="e#110#138#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,20 +125,18 @@
       <file leaf-file-name="TimetableMain.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+            <state line="18" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#286#339#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimetableView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="49" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-              <folding />
-            </state>
+      <file leaf-file-name="itt-logo-300.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/itt-logo-300.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -194,9 +163,10 @@
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/User.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
-        <option value="$PROJECT_DIR$/src/TimetableMain.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/TimetableMain.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
       </list>
     </option>
   </component>
@@ -322,6 +292,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -363,7 +347,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Semester4Project" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -569,7 +559,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -580,7 +570,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960381" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22929937" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -639,10 +629,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="0" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0" vertical-offset="560" max-vertical-offset="976">
           <folding>
-            <element signature="e#88#118#0" expanded="true" />
-            <element signature="method#View#0;class#View#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#88#118#0" expanded="false" />
+            <element signature="method#View#0;class#View#0" expanded="false" />
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -658,13 +648,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="98" column="0" selection-start="3785" selection-end="3785" vertical-scroll-proportion="0.0" vertical-offset="1568" max-vertical-offset="1792">
           <folding>
-            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#4958#4959#0" expanded="true" />
-            <element signature="e#4994#4995#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5085#5086#0" expanded="true" />
+            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="false" />
+            <element signature="e#4958#4959#0" expanded="false" />
+            <element signature="e#4994#4995#0" expanded="false" />
+            <element signature="e#5043#5044#0" expanded="false" />
+            <element signature="e#5085#5086#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -673,7 +661,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="400">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#286#339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -682,10 +670,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="25" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="624">
           <folding>
-            <element signature="e#88#118#0" expanded="true" />
-            <element signature="method#View#0;class#View#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#88#118#0" expanded="false" />
+            <element signature="method#View#0;class#View#0" expanded="false" />
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -701,7 +689,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="30" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="368">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#286#339#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -725,15 +713,6 @@
         <state line="1013" column="18" selection-start="33987" selection-end="33987" vertical-scroll-proportion="0.33222592" vertical-offset="4296" max-vertical-offset="22832">
           <folding>
             <element signature="method#getName#0;class#Component#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1248">
-          <folding>
-            <element signature="method#main#0;class#TimetableLogin#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -853,10 +832,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="32" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="896">
           <folding>
-            <element signature="e#88#118#0" expanded="true" />
-            <element signature="method#View#0;class#View#0" expanded="true" />
-            <element signature="e#1233#1234#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#88#118#0" expanded="false" />
+            <element signature="method#View#0;class#View#0" expanded="false" />
+            <element signature="e#1233#1234#0" expanded="false" />
+            <element signature="e#1261#1262#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -865,32 +844,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="51" selection-start="135" selection-end="135" vertical-scroll-proportion="0.2020202" vertical-offset="0" max-vertical-offset="396">
           <folding>
-            <element signature="method#User#0;class#User#0" expanded="true" />
-            <element signature="method#getUser#0;class#User#0" expanded="true" />
+            <element signature="method#User#0;class#User#0" expanded="false" />
+            <element signature="method#getUser#0;class#User#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="49" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1856">
+        <state line="14" column="8" selection-start="371" selection-end="371" vertical-scroll-proportion="0.19435216" vertical-offset="59" max-vertical-offset="1856">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -898,13 +861,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="115" column="83" selection-start="4571" selection-end="4571" vertical-scroll-proportion="2.8794568" vertical-offset="0" max-vertical-offset="2240">
           <folding>
-            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#4958#4959#0" expanded="true" />
-            <element signature="e#4994#4995#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5085#5086#0" expanded="true" />
+            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="false" />
+            <element signature="e#4958#4959#0" expanded="false" />
+            <element signature="e#4994#4995#0" expanded="false" />
+            <element signature="e#5043#5044#0" expanded="false" />
+            <element signature="e#5085#5086#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="49" selection-start="385" selection-end="385" vertical-scroll-proportion="0.26578072" vertical-offset="0" max-vertical-offset="656">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="906" column="16" selection-start="31396" selection-end="31396" vertical-scroll-proportion="0.33333334" vertical-offset="2556" max-vertical-offset="10128">
+          <folding>
+            <element signature="method#setSize#1;class#Window#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/GridBagLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="363" column="13" selection-start="15632" selection-end="15632" vertical-scroll-proportion="0.20960699" vertical-offset="0" max-vertical-offset="3776">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="416">
+          <folding>
+            <element signature="e#286#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/itt-logo-300.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="37" selection-start="3004" selection-end="3004" vertical-scroll-proportion="0.48764044" vertical-offset="1111" max-vertical-offset="1840">
+          <folding>
+            <element signature="e#110#138#0" expanded="true" />
           </folding>
         </state>
       </provider>

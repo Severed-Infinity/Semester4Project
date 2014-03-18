@@ -1,5 +1,4 @@
 import com.project.gui.*;
-import com.project.user.*;
 
 public final class TimetableMain {
 
@@ -13,10 +12,10 @@ public final class TimetableMain {
         TimetableLogin login = new TimetableLogin();
         login.setVisible( true );
 
-        Admin tempUser = new Admin("John", "John");
-
-        MainWindow mainWindow = new MainWindow(tempUser);
-        mainWindow.setVisible( true );
+//        Admin tempUser = new Admin("John", "John");
+//
+//        MainWindow mainWindow = new MainWindow(tempUser);
+//        mainWindow.setVisible( true );
 
 
     }

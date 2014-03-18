@@ -1,72 +1,128 @@
 package com.project.gui;
 
+import javax.imageio.*;
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.*;
+import java.io.*;
 
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
 
-    private JTextField textField;
-    private JPasswordField passwordField;
+    public JLabel loginLabel, passwordLabel, logo;
+    public Image iTTLogo;
+    private JTextField userName;
+    private JPasswordField userPassword;
+    private JButton login, cancel;
 
     public TimetableLogin () {
 
         setTitle( "Login" );
         setResizable( false );
-        setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
+        setSize( 250, 320 );
         setLocationRelativeTo( null );
-        setSize( 250, 175 );
-        getContentPane().setLayout( null );
+        setBackground( Color.white );
 
-        JPanel panel = new JPanel();
-        panel.setBounds( 0, 0, 243, 85 );
-        getContentPane().add( panel );
-        panel.setLayout( null );
+        getContentPane().setLayout( new GridBagLayout() );
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        constraints.ipadx = 5;
+        constraints.ipady = 5;
 
-        JLabel lblUser = new JLabel( "User" );
-        lblUser.setBounds( 14, 11, 66, 29 );
-        panel.add( lblUser );
+        try {
+            iTTLogo = ImageIO.read( new File( "C:\\Users\\david\\Development\\Git " + "Repositories\\Semester4Project\\Semester4Project\\assets\\IT-Tallaght-Logo.gif" ) );
+        } catch ( IOException e ) {
+            e.printStackTrace();
+        }
 
-        textField = new JTextField();
-        textField.setBounds( 90, 11, 143, 29 );
-        panel.add( textField );
-        textField.setColumns( 10 );
+        logo = new JLabel( new ImageIcon( iTTLogo ) );
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.BOTH;
+        add( logo, constraints );
 
-        JLabel lblPassword = new JLabel( "Password" );
-        lblPassword.setBounds( 14, 52, 66, 29 );
-        panel.add( lblPassword );
+        constraints.insets = new Insets( 0, 10, 0, 10 );
 
-        passwordField = new JPasswordField();
-        passwordField.setBounds( 90, 52, 143, 29 );
-        panel.add( passwordField );
+        loginLabel = new JLabel( "User Name" );
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        add( loginLabel, constraints );
 
-        JPanel panel_1 = new JPanel();
-        panel_1.setBounds( 0, 93, 243, 50 );
-        getContentPane().add( panel_1 );
+        passwordLabel = new JLabel( "Password" );
+        constraints.gridx = 0;
+        constraints.gridy = 3;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        add( passwordLabel, constraints );
 
-        JButton btnLogin = new JButton( "Login" );
-        btnLogin.setBounds( 10, 11, 66, 23 );
-        btnLogin.addActionListener( new ActionListener() {
-            @Override
-            public void actionPerformed ( ActionEvent arg0 ) {
+        setUserName( new JFormattedTextField( "Enter User Name" ) );
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        add( getUserName(), constraints );
 
-            }
-        } );
-        panel_1.setLayout( null );
-        panel_1.add( btnLogin );
+        setUserPassword( new JPasswordField( "Enter Password" ) );
+        constraints.gridx = 0;
+        constraints.gridy = 5;
+        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        //        constraints.insets = new Insets( 5, 5, 5, 5 );
+        add( getUserPassword(), constraints );
 
-        JButton btnCancel = new JButton( "Cancel" );
-        btnCancel.setBounds( 90, 11, 66, 23 );
-        panel_1.add( btnCancel );
+        setLogin( new JButton( "Login" ) );
+//        TODO login action listener
+        constraints.gridx = 0;
+        constraints.gridy = 6;
+        constraints.gridwidth = 1;
+        constraints.weightx = 1.0;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.insets = new Insets( 10, 10, 0, 5 );
+        add( getLogin(), constraints );
 
-        // TODO Auto-generated constructor stub
+        setCancel( new JButton( "Cancel" ) );
+//        TODO cancel action listener
+        constraints.gridx = 1;
+        constraints.gridy = 6;
+        constraints.gridwidth = 1;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.insets = new Insets( 10, 0, 0, 10 );
+        add( getCancel(), constraints );
     }
 
-    public static void main ( String[] args ) {
+    public JButton getCancel () {
+        return cancel;
+    }
 
-        TimetableLogin login = new TimetableLogin();
-        login.setVisible( true );
+    public void setCancel ( JButton cancel ) {
+        this.cancel = cancel;
+    }
 
+    public JButton getLogin () {
+        return login;
+    }
+
+    public void setLogin ( JButton login ) {
+        this.login = login;
+    }
+
+    public JTextField getUserName () {
+        return userName;
+    }
+
+    public void setUserName ( JTextField userName ) {
+        this.userName = userName;
+    }
+
+    public JPasswordField getUserPassword () {
+        return userPassword;
+    }
+
+    public void setUserPassword ( JPasswordField userPassword ) {
+        this.userPassword = userPassword;
     }
 
 }
