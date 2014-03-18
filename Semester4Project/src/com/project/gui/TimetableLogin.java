@@ -1,10 +1,15 @@
 package com.project.gui;
 
+import com.project.database.*;
+import com.project.user.*;
+
 import javax.imageio.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.sql.*;
+import java.util.*;
 
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
@@ -74,12 +79,45 @@ public class TimetableLogin extends JFrame {
         //        constraints.insets = new Insets( 5, 5, 5, 5 );
         add( getUserPassword(), constraints );
 
+        /*
+        creating the login action for the timetable system
+        created by David Swift
+         */
         setLogin( new JButton( "Login" ) );
         getLogin().addActionListener( new ActionListener() {
             @Override
             public void actionPerformed ( ActionEvent e ) {
                 System.out.println( "You Clicked Login." );
-//                TODO call on the database and connect to it, access main window
+                /*
+                create a database connection
+                and try to connect
+                 */
+                DatabaseConnection databaseConnection = new DatabaseConnection();
+                try {
+                    databaseConnection.databaseConnection( getUserName().getText(), Arrays.toString( getUserPassword().getPassword() ) );
+                } catch ( SQLException e1 ) {
+                    System.out.println( "Could not get user or password" );
+
+                }
+
+                /*
+                if there is a database connection then
+                create a temp user (for testing purposes)
+                and launch the main window
+                then close this window
+                 */
+                try {
+                    if ( !databaseConnection.getDatabaseConnection().isClosed() ) {
+                        Admin tempUser = new Admin( "John", "John" );
+                        MainWindow mainWindow = new MainWindow( tempUser );
+                        mainWindow.setVisible( true );
+                        dispose();
+                    }
+
+                } catch ( SQLException e1 ) {
+                    System.out.println( "No connection was detected" );
+                }
+
             }
         } );
         constraints.gridx = 0;
