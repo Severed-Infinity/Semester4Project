@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-@SuppressWarnings ( "serial" )
+@SuppressWarnings ("serial")
 public abstract class View extends JPanel {
 
     protected JTextField tf;

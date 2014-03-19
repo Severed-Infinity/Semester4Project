@@ -1,7 +1,6 @@
 package com.project.gui;
 
 import com.project.database.*;
-import com.project.user.*;
 
 import javax.imageio.*;
 import javax.swing.*;
@@ -9,9 +8,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
-import java.util.*;
 
-@SuppressWarnings ("serial")
+@SuppressWarnings ( "serial" )
 public class TimetableLogin extends JFrame {
 
     public JLabel loginLabel, passwordLabel, logo;
@@ -64,14 +62,14 @@ public class TimetableLogin extends JFrame {
         constraints.fill = GridBagConstraints.HORIZONTAL;
         add( passwordLabel, constraints );
 
-        setUserName( new JFormattedTextField( "Enter User Name" ) );
+        setUserName( new JFormattedTextField() );
         constraints.gridx = 0;
         constraints.gridy = 2;
         constraints.gridwidth = 2;
         constraints.fill = GridBagConstraints.HORIZONTAL;
         add( getUserName(), constraints );
 
-        setUserPassword( new JPasswordField( "Enter Password" ) );
+        setUserPassword( new JPasswordField() );
         constraints.gridx = 0;
         constraints.gridy = 5;
         constraints.gridwidth = 2;
@@ -87,37 +85,7 @@ public class TimetableLogin extends JFrame {
         getLogin().addActionListener( new ActionListener() {
             @Override
             public void actionPerformed ( ActionEvent e ) {
-                System.out.println( "You Clicked Login." );
-                /*
-                create a database connection
-                and try to connect
-                 */
-                DatabaseConnection databaseConnection = new DatabaseConnection();
-                try {
-                    databaseConnection.databaseConnection( getUserName().getText(), Arrays.toString( getUserPassword().getPassword() ) );
-                } catch ( SQLException e1 ) {
-                    System.out.println( "Could not get user or password" );
-
-                }
-
-                /*
-                if there is a database connection then
-                create a temp user (for testing purposes)
-                and launch the main window
-                then close this window
-                 */
-                try {
-                    if ( !databaseConnection.getDatabaseConnection().isClosed() ) {
-                        Admin tempUser = new Admin( "John", "John" );
-                        MainWindow mainWindow = new MainWindow( tempUser );
-                        mainWindow.setVisible( true );
-                        dispose();
-                    }
-
-                } catch ( SQLException e1 ) {
-                    System.out.println( "No connection was detected" );
-                }
-
+                login();
             }
         } );
         constraints.gridx = 0;
@@ -141,30 +109,8 @@ public class TimetableLogin extends JFrame {
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.insets = new Insets( 10, 0, 0, 10 );
         add( getCancel(), constraints );
-    }
 
-    public JPasswordField getUserPassword () {
-        return userPassword;
-    }
-
-    public void setUserPassword ( JPasswordField userPassword ) {
-        this.userPassword = userPassword;
-    }
-
-    public JTextField getUserName () {
-        return userName;
-    }
-
-    public void setUserName ( JTextField userName ) {
-        this.userName = userName;
-    }
-
-    public JButton getLogin () {
-        return login;
-    }
-
-    public void setLogin ( JButton login ) {
-        this.login = login;
+        pack();
     }
 
     public JButton getCancel () {
@@ -175,4 +121,72 @@ public class TimetableLogin extends JFrame {
         this.cancel = cancel;
     }
 
+    public JButton getLogin () {
+        return login;
+    }
+
+    public void setLogin ( JButton login ) {
+        this.login = login;
+    }
+
+    public JTextField getUserName () {
+        return userName;
+    }
+
+    public void setUserName ( JTextField userName ) {
+        this.userName = userName;
+    }
+
+    public JPasswordField getUserPassword () {
+        return userPassword;
+    }
+
+    public void setUserPassword ( JPasswordField userPassword ) {
+        this.userPassword = userPassword;
+    }
+
+    public void login () {
+
+        System.out.println( "You Clicked Login." );
+                /*
+                create a database connection
+                and try to connect
+                 */
+
+        try {
+
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            try {
+//                databaseConnection.createDatabaseConnection( "SYSTEM", "timetable" );
+                databaseConnection.createDatabaseConnection( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
+                //            databaseConnection.checkPassword( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
+            } catch ( SQLException e ) {
+                //            e.printStackTrace();
+                JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
+//                System.out.println( e.getMessage() );
+
+            }
+
+                /*
+                if there is a database connection then
+                create a temp user (for testing purposes)
+                and launch the main window
+                then close this window
+                 */
+            try {
+                if ( !databaseConnection.getDatabaseConnection().isClosed() ) {
+//                    Admin tempUser = new Admin( "John", "John" );
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.setVisible( true );
+                    dispose();
+                }
+
+            } catch ( SQLException e1 ) {
+                System.out.println( e1.getMessage() );
+            }
+        } catch ( Exception e ) {
+            System.out.println(e.getMessage());
+        }
+
+    }
 }

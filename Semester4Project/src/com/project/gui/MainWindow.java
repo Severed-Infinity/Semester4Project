@@ -16,14 +16,14 @@ public class MainWindow extends JFrame {
     protected JTextField txtSearch;
     protected JPanel header, mainView;
 
-    public MainWindow (User user) {
+    public MainWindow () {
 
         this.setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
         this.setTitle( "Timetable" );
-        this.setLocationRelativeTo( null );
         this.setSize( 800, 500 );
+        this.setLocationRelativeTo( null );
         this.setResizable( false );
-        this.currentUser = user;
+//        this.currentUser = user;
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar( menuBar );
