@@ -24,9 +24,12 @@ public class DatabaseConnection {
         try {
             OracleDataSource dataSource = new OracleDataSource();
             try {
-                dataSource.setURL( "jdbc:oracle:thin:HR/@localhost:1521:XE" );
+                dataSource.setURL( "jdbc:oracle:thin:timetable//@localhost:1521:XE" );
                 //jdbc:oracle:thin:HR/david@localhost:1521:XE  also works the same.
 //                dataSource.setURL( "jdbc:oracle:thin:@//localhost:1521/timetable" );
+
+//                college source
+//                dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
                 dataSource.setUser( user );
                 dataSource.setPassword( password );
 
@@ -43,27 +46,27 @@ public class DatabaseConnection {
         }
     }
 
-    public boolean checkPassword ( String user, String password ) {
-
-        String userPassword = null;
-        try {
-            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName, userPassword from User where name = '" +
-                    user + "'" ) );
-            setResultSet( (ResultSet) getPreparedStatement() );
-            while ( getResultSet().next() ) {
-                getResultSet().getString( "userPassword" );
-                userPassword = String.valueOf( getResultSet() );
-
-                System.out.println( "Successful test" );
-            }
-        } catch ( SQLException e ) {
-//            e.printStackTrace();
-            System.out.println( e.getMessage() );
-        }
-        endConnection();
-        assert userPassword != null;
-        return password.length() == userPassword.length();
-    }
+//    public boolean checkPassword ( String user, String password ) {
+//
+//        String userPassword = null;
+//        try {
+//            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName, userPassword from User where name = '" +
+//                    user + "'" ) );
+//            setResultSet( (ResultSet) getPreparedStatement() );
+//            while ( getResultSet().next() ) {
+//                getResultSet().getString( "userPassword" );
+//                userPassword = String.valueOf( getResultSet() );
+//
+//                System.out.println( "Successful test" );
+//            }
+//        } catch ( SQLException e ) {
+////            e.printStackTrace();
+//            System.out.println( e.getMessage() );
+//        }
+//        endConnection();
+//        assert userPassword != null;
+//        return password.length() == userPassword.length();
+//    }
 
     public ResultSet getResultSet () {
         return resultSet;
@@ -101,7 +104,7 @@ public class DatabaseConnection {
 
         try {
             getDatabaseConnection().close();
-            System.out.println( "Successfully tested password" );
+//            System.out.println( "Successfully tested password" );
         } catch ( SQLException e ) {
             e.printStackTrace();
         }

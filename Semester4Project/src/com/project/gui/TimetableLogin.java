@@ -162,7 +162,7 @@ public class TimetableLogin extends JFrame {
                 //            databaseConnection.checkPassword( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
             } catch ( SQLException e ) {
                 //            e.printStackTrace();
-                JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
+//                JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
 //                System.out.println( e.getMessage() );
 
             }
@@ -183,9 +183,11 @@ public class TimetableLogin extends JFrame {
 
             } catch ( SQLException e1 ) {
                 System.out.println( e1.getMessage() );
+
             }
         } catch ( Exception e ) {
             System.out.println(e.getMessage());
+            JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
         }
 
     }
