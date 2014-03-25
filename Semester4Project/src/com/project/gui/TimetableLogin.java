@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
 
-@SuppressWarnings ( "serial" )
+@SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
 
     public JLabel loginLabel, passwordLabel, logo;
@@ -113,22 +113,6 @@ public class TimetableLogin extends JFrame {
         pack();
     }
 
-    public JButton getCancel () {
-        return cancel;
-    }
-
-    public void setCancel ( JButton cancel ) {
-        this.cancel = cancel;
-    }
-
-    public JButton getLogin () {
-        return login;
-    }
-
-    public void setLogin ( JButton login ) {
-        this.login = login;
-    }
-
     public JTextField getUserName () {
         return userName;
     }
@@ -141,8 +125,12 @@ public class TimetableLogin extends JFrame {
         return userPassword;
     }
 
-    public void setUserPassword ( JPasswordField userPassword ) {
-        this.userPassword = userPassword;
+    public JButton getLogin () {
+        return login;
+    }
+
+    public void setLogin ( JButton login ) {
+        this.login = login;
     }
 
     public void login () {
@@ -157,13 +145,13 @@ public class TimetableLogin extends JFrame {
 
             DatabaseConnection databaseConnection = new DatabaseConnection();
             try {
-//                databaseConnection.createDatabaseConnection( "SYSTEM", "timetable" );
+                //                databaseConnection.createDatabaseConnection( "SYSTEM", "timetable" );
                 databaseConnection.createDatabaseConnection( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
                 //            databaseConnection.checkPassword( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
             } catch ( SQLException e ) {
                 //            e.printStackTrace();
-//                JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
-//                System.out.println( e.getMessage() );
+                //                JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
+                //                System.out.println( e.getMessage() );
 
             }
 
@@ -175,7 +163,7 @@ public class TimetableLogin extends JFrame {
                  */
             try {
                 if ( !databaseConnection.getDatabaseConnection().isClosed() ) {
-//                    Admin tempUser = new Admin( "John", "John" );
+                    //                    Admin tempUser = new Admin( "John", "John" );
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.setVisible( true );
                     dispose();
@@ -186,9 +174,21 @@ public class TimetableLogin extends JFrame {
 
             }
         } catch ( Exception e ) {
-            System.out.println(e.getMessage());
+            System.out.println( e.getMessage() );
             JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
         }
 
+    }
+
+    public JButton getCancel () {
+        return cancel;
+    }
+
+    public void setCancel ( JButton cancel ) {
+        this.cancel = cancel;
+    }
+
+    public void setUserPassword ( JPasswordField userPassword ) {
+        this.userPassword = userPassword;
     }
 }

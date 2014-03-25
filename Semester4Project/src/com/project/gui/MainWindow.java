@@ -23,7 +23,7 @@ public class MainWindow extends JFrame {
         this.setSize( 800, 500 );
         this.setLocationRelativeTo( null );
         this.setResizable( false );
-//        this.currentUser = user;
+        //        this.currentUser = user;
 
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar( menuBar );
@@ -87,6 +87,7 @@ public class MainWindow extends JFrame {
         header.setLayout( gl_header );
 
         mainView = new MainView( this, BorderLayout.CENTER, "Main View", new CardLayout( 0, 0 ) );
+        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View", (LayoutManager) new JTabbedPane( JTabbedPane.TOP ) );
 
     }
 
@@ -108,12 +109,13 @@ public class MainWindow extends JFrame {
 
         public View setDefaultView () {
 
-            if ( currentUser instanceof Student )
+            if ( currentUser instanceof Student ) {
                 return new TimetableView( this, BorderLayout.CENTER, "Student Timetable", null );
-            else if ( currentUser instanceof Lecturer )
+            } else if ( currentUser instanceof Lecturer ) {
                 return new TimetableView( this, BorderLayout.CENTER, "Lecturer Timetable", null );
-            else if ( currentUser instanceof Admin )
+            } else if ( currentUser instanceof Admin ) {
                 return new AdminView( this, BorderLayout.CENTER, "Admin View", null );
+            }
             return null;
         }
 

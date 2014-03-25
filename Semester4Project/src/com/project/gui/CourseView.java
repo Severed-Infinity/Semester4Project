@@ -28,7 +28,6 @@ public class CourseView extends View {
                 "Add New Course", TitledBorder.CENTER, TitledBorder.TOP, null, new
 
                 Color( 0, 0, 0 )
-
         ) );
         //        mainView.add( addNewCourse, "name_171164909579259" );
 
@@ -40,7 +39,6 @@ public class CourseView extends View {
         comboBox_3.setModel( new DefaultComboBoxModel<String>( new String[]
 
                 { "Full time", "Part time" }
-
         ) );
         comboBox_3.setBounds( 140, 30, 120, 20 );
         addNewCourse.add( comboBox_3 );
@@ -139,7 +137,6 @@ public class CourseView extends View {
         comboBox_4.setModel( new DefaultComboBoxModel<String>( new String[]
 
                 { "School of Science and Computing", "School of Business & Humanities", "School of Engineering" }
-
         ) );
         comboBox_4.setBounds( 140, 113, 192, 20 );
         addNewCourse.add( comboBox_4 );

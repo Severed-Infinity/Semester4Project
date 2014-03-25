@@ -12,7 +12,7 @@ public class WarningPanes {
 
     public static void main ( String[] args ) {
 
-//        JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
+        //        JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
         JOptionPane.showMessageDialog( null, "Search returned no results", null, JOptionPane.WARNING_MESSAGE, null );
         JOptionPane.showMessageDialog( null, "Please select a Course", null, JOptionPane.WARNING_MESSAGE, null );
         JOptionPane.showMessageDialog( null, "Please select a Module", null, JOptionPane.WARNING_MESSAGE, null );
