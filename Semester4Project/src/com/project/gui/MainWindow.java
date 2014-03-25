@@ -87,7 +87,7 @@ public class MainWindow extends JFrame {
         header.setLayout( gl_header );
 
         mainView = new MainView( this, BorderLayout.CENTER, "Main View", new CardLayout( 0, 0 ) );
-        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View" );
+//        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View" );
 
     }
 
