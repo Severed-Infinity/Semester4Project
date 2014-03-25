@@ -17,7 +17,7 @@ public class UserView extends View {
     private final JTextField textField_4;
 
     public UserView ( Container parent, String position, String title ) {
-        super( parent, position, title, null );
+        super( parent, position, title );
 
         JPanel addUserView = new JPanel();
 

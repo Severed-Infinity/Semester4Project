@@ -16,7 +16,7 @@ public abstract class View extends JPanel {
     protected JFrame parent;
     protected ArrayList<View> views = new ArrayList<>();
 
-    public View ( Container parent, String position, String title, LayoutManager layout ) {
+    public View ( Container parent, String position, String title ) {
 
         /*
         may not be the correct approach to this

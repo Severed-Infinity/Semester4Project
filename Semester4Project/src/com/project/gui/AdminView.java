@@ -8,8 +8,8 @@ import java.awt.*;
  */
 public class AdminView extends View {
 
-    public AdminView ( Container parent, String position, String title, LayoutManager layout ) {
-        super( parent, position, title, layout );
+    public AdminView ( Container parent, String position, String title ) {
+        super( parent, position, title );
 
         JTabbedPane adminView = new JTabbedPane( JTabbedPane.TOP );
         parent.add( adminView );

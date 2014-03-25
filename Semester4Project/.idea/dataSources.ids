@@ -7,57 +7,5 @@
     </database-info>
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
     <schema name="TIMETABLE" catalog=""/>
-    <table name="TIMETABLE_COURSE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="COURSE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="COURSE_NAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="COURSE_TYPE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="COURSE_LENGTH" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="COURSE_YEAR" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="COURSE_SEMESTER" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="COURSE_HEAD" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
-      <column name="DEPARTMENT_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="MODULES" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007202" columns="COURSE_CODE"/>
-    </table>
-    <table name="TIMETABLE_DEPARTMENT" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="DEPARTMENT_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="DEPARTMENT_NAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="DEPARTMENT_HEAD" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="DEPARTMENT_ASSISTANTS" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="COURSES" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007220" columns="DEPARTMENT_ID"/>
-    </table>
-    <table name="TIMETABLE_MODULE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="MODULE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="MODULE_NAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="COURSE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="SEMESTER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="WEEKLY_HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="LECTURERS" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007209" columns="MODULE_CODE"/>
-    </table>
-    <table name="TIMETABLE_ROOM" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="ROOM_NUMBER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="ROOM_SEATING" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="DEPARTMENT_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="LAB" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="SYS_C007215" columns="ROOM_NUMBER"/>
-    </table>
-    <table name="TIMETABLE_TIMETABLE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="TIMETABLE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007194" columns="TIMETABLE_ID"/>
-    </table>
-    <table name="TIMETABLE_USER" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="USER_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="USER_NAME_FIRST" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_NAME_LAST" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="DATE_OF_BIRTH" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_TYPE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_PASSWORD" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="TITLE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
-      <column name="TEACHES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="COURSE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <primary-key name="SYS_C007192" columns="USER_ID"/>
-    </table>
   </data-source>
 </component>

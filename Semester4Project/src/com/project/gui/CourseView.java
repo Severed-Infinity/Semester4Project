@@ -17,7 +17,7 @@ public class CourseView extends View {
     private final JTextField textField_10;
 
     public CourseView ( Container parent, String position, String title ) {
-        super( parent, position, title, null );
+        super( parent, position, title );
 
         JPanel addNewCourse = new JPanel();
         addNewCourse.setLayout( null );

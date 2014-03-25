@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
+import java.util.*;
 
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
@@ -154,6 +155,7 @@ public class TimetableLogin extends JFrame {
                 //                System.out.println( e.getMessage() );
 
             }
+            System.out.printf( getUserName().getText() + ", " + Arrays.toString( getUserPassword().getPassword() ) );
 
                 /*
                 if there is a database connection then
@@ -175,7 +177,9 @@ public class TimetableLogin extends JFrame {
             }
         } catch ( Exception e ) {
             System.out.println( e.getMessage() );
-            JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null, JOptionPane.WARNING_MESSAGE, null );
+            JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", "Login Error",
+                    JOptionPane.WARNING_MESSAGE,
+                    null );
         }
 
     }

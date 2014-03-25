@@ -87,7 +87,7 @@ public class MainWindow extends JFrame {
         header.setLayout( gl_header );
 
         mainView = new MainView( this, BorderLayout.CENTER, "Main View", new CardLayout( 0, 0 ) );
-        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View", (LayoutManager) new JTabbedPane( JTabbedPane.TOP ) );
+        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View" );
 
     }
 
@@ -100,7 +100,7 @@ public class MainWindow extends JFrame {
         private JPanel child;
 
         public MainView ( Container parent, String position, String title, LayoutManager layout ) {
-            super( parent, position, title, layout );
+            super( parent, position, title );
 
             //            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
             this.setChild( setDefaultView() );
@@ -114,7 +114,7 @@ public class MainWindow extends JFrame {
             } else if ( currentUser instanceof Lecturer ) {
                 return new TimetableView( this, BorderLayout.CENTER, "Lecturer Timetable", null );
             } else if ( currentUser instanceof Admin ) {
-                return new AdminView( this, BorderLayout.CENTER, "Admin View", null );
+                return new AdminView( this, BorderLayout.CENTER, "Admin View" );
             }
             return null;
         }

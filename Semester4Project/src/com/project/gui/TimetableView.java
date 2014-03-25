@@ -7,7 +7,7 @@ import java.awt.*;
 public class TimetableView extends View {
 
     public TimetableView ( Container parent, String position, String title, LayoutManager layout ) {
-        super( parent, position, title, layout );
+        super( parent, position, title );
         JPanel timetableView = new JPanel();
         //        mainView.add( timetableView, "name_109576600023605" );
         timetableView.setLayout( new GridLayout( 5, 1, 5, 0 ) );
