@@ -1,0 +1,13 @@
+A TODO file containing everything that needs to be done
+
+1. add @Param to all constructors and methods that take in values
+2. add @Return to all constructors and methods that return a value
+3. create model controllers
+4. gather all the information on rooms in the college
+5. gather information on the departments in the college
+6. redo all the GUI's except login
+7. import / update oracle connection with TIMETABLE.DDL
+8. map users with users in the database, through the model controllers
+9. complete the com.project.database package with other classes such as createStatement etc.
+10. look for duplicate code and turn it into interfaces, and or parent classes
+11. ESSENTIAL create optimization method/class code
