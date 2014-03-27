@@ -9,8 +9,11 @@ public final class TimetableMain {
 
     public static void main ( String[] args ) {
 
-        TimetableLogin login = new TimetableLogin();
-        login.setVisible( true );
+//        TimetableLogin login = new TimetableLogin();
+//        login.setVisible( true );
+
+        MainWindow testMain = new MainWindow();
+        testMain.setVisible( true );
 
     }
 

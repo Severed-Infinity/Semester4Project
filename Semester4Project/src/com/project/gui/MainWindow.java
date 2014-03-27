@@ -13,82 +13,135 @@ import java.awt.*;
 public class MainWindow extends JFrame {
 
     public User currentUser; //.getUser();
-    protected JTextField txtSearch;
-    protected JPanel header, mainView;
+    protected JTextField searchField;
+    protected JPanel header;
+    protected MainView mainView;
+    protected JMenuBar mainMenu;
+    protected JMenu menuFile, menuEdit;
+    protected JMenuItem search, print, exitAndLogout, exit, updateTimetable, updateUsers, updateCourse, updateModule, addUsers, addCourse, addModule;
+    protected JButton home, logout;
+    protected JLabel loggedUser;
 
     public MainWindow () {
 
-        this.setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
-        this.setTitle( "Timetable" );
-        this.setSize( 800, 500 );
-        this.setLocationRelativeTo( null );
-        this.setResizable( false );
-        //        this.currentUser = user;
+        setTitle( "Timetable" );
+        setResizable( false );
+        setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
+        setSize( 800, 500 );
+        setLocationRelativeTo( null );
 
-        JMenuBar menuBar = new JMenuBar();
-        setJMenuBar( menuBar );
+        getContentPane().setBackground( Color.white );
+        getContentPane().setPreferredSize( new Dimension( 800, 500 ) );
+        getContentPane().setLayout( new GridBagLayout() );
+        GridBagConstraints constraints = new GridBagConstraints();
+        //        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+        constraints.ipadx = 5;
+        constraints.ipady = 5;
+        GroupLayout headerLayout;
 
-        JMenu mnFile = new JMenu( "File" );
-        menuBar.add( mnFile );
+        setJMenuBar( addMenu() );
 
-        JMenuItem mntmSearch = new JMenuItem( "Search" );
-        mnFile.add( mntmSearch );
-
-        JMenuItem mntmPrint = new JMenuItem( "Print" );
-        mnFile.add( mntmPrint );
-
-        JMenuItem mntmExitAndLogout = new JMenuItem( "Exit and Logout" );
-        mnFile.add( mntmExitAndLogout );
-
-        JMenuItem mntmExit = new JMenuItem( "Exit" );
-        mnFile.add( mntmExit );
-
-        JMenu mnEdit = new JMenu( "Edit" );
-        menuBar.add( mnEdit );
-
-        JMenuItem mntmUpdateTimetable = new JMenuItem( "Update timetable" );
-        mnEdit.add( mntmUpdateTimetable );
-
-        JMenuItem mntmUpdateUsers = new JMenuItem( "Update Users" );
-        mnEdit.add( mntmUpdateUsers );
-
-        JMenuItem mntmUpdateClass = new JMenuItem( "Update Class" );
-        mnEdit.add( mntmUpdateClass );
-
-        JMenuItem mntmUpdateModule = new JMenuItem( "Update Module" );
-        mnEdit.add( mntmUpdateModule );
-
-        JMenuItem mntmAddUser = new JMenuItem( "Add User" );
-        mnEdit.add( mntmAddUser );
-
-        JMenuItem mntmAddClass = new JMenuItem( "Add Class" );
-        mnEdit.add( mntmAddClass );
-
-        JMenuItem mntmAddModule = new JMenuItem( "Add Module" );
-        mnEdit.add( mntmAddModule );
-        getContentPane().setLayout( new BorderLayout( 10, 5 ) );
-
+        //        beginning of header
         header = new JPanel();
-        getContentPane().add( header, BorderLayout.NORTH );
+        header.setBackground( Color.white );
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.weightx = 1.0;
+        //        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        add( header, constraints );
 
-        JButton btnHome = new JButton( "Home" );
+        home = new JButton( "Home" );
+        //        header.add( home );
 
-        JButton btnLogout = new JButton( "Logout" );
+        logout = new JButton( "Logout" );
+        //        header.add( logout );
 
-        txtSearch = new JTextField();
-        txtSearch.setText( "Search" );
-        txtSearch.setColumns( 40 );
+        searchField = new JFormattedTextField( "Search" );
+        searchField.setColumns( 40 );
+        //        header.add( searchField );
 
-        JLabel lblUser = new JLabel( "User" );
-        lblUser.setHorizontalAlignment( SwingConstants.TRAILING );
-        GroupLayout gl_header = new GroupLayout( header );
-        gl_header.setHorizontalGroup( gl_header.createParallelGroup( Alignment.LEADING ).addGroup( gl_header.createSequentialGroup().addContainerGap().addComponent( btnHome ).addPreferredGap( ComponentPlacement.UNRELATED ).addComponent( btnLogout ).addGap( 78 ).addComponent( txtSearch, GroupLayout.PREFERRED_SIZE, 313, GroupLayout.PREFERRED_SIZE ).addGap( 18 ).addComponent( lblUser, GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE ).addContainerGap() ) );
-        gl_header.setVerticalGroup( gl_header.createParallelGroup( Alignment.LEADING ).addGroup( gl_header.createSequentialGroup().addContainerGap().addGroup( gl_header.createParallelGroup( Alignment.BASELINE ).addComponent( txtSearch, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ).addComponent( btnLogout ).addComponent( btnHome ).addComponent( lblUser, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE ) ) ) );
-        header.setLayout( gl_header );
+        loggedUser = new JLabel( "User" );
+        loggedUser.setHorizontalAlignment( SwingConstants.TRAILING );
+        //        header.add( loggedUser );
 
-        mainView = new MainView( this, BorderLayout.CENTER, "Main View", new CardLayout( 0, 0 ) );
-//        AdminView AdminView = new AdminView( getParent(), BorderLayout.CENTER, "Admin View" );
+        headerLayout = new GroupLayout( header );
+        headerLayout.setHorizontalGroup( headerLayout.createParallelGroup( Alignment.LEADING )
+                                                     .addGroup( headerLayout.createSequentialGroup()
+                                                                            .addContainerGap()
+                                                                            .addComponent( home )
+                                                                            .addPreferredGap( ComponentPlacement.UNRELATED )
+                                                                            .addComponent( logout )
+                                                                            .addGap( 50 )
+                                                                            .addComponent( searchField, GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE )
+                                                                            .addGap( 20 )
+                                                                            .addComponent( loggedUser, GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE )
+                                                                            .addGap( 40 )
+                                                                            .addContainerGap() ) );
 
+        headerLayout.setVerticalGroup( headerLayout.createParallelGroup( Alignment.LEADING )
+                                                   .addGroup( headerLayout.createSequentialGroup()
+                                                                          .addContainerGap()
+                                                                          .addGroup( headerLayout.createParallelGroup( Alignment.BASELINE )
+                                                                                                 .addComponent( searchField, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE )
+                                                                                                 .addComponent( logout )
+                                                                                                 .addComponent( home )
+                                                                                                 .addComponent( loggedUser, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE ) ) ) );
+
+        header.setLayout( headerLayout );
+        //        end of header
+
+        //        beginning of main view
+        mainView = new MainView();
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        constraints.weightx = 1.0;
+        constraints.weighty = 1.0;
+        //        constraints.gridwidth = 2;
+        constraints.fill = GridBagConstraints.BOTH;
+        add( mainView, constraints );
+
+        
+        //        end of main view
+
+        pack();
+    }
+
+    public JMenuBar addMenu () {
+
+        mainMenu = new JMenuBar();
+
+        menuFile = new JMenu( "File" );
+        mainMenu.add( menuFile );
+        menuEdit = new JMenu( "Edit" );
+        mainMenu.add( menuEdit );
+
+        search = new JMenuItem( "Search" );
+        print = new JMenuItem( "Print" );
+        exitAndLogout = new JMenuItem( "Exit and Logout" );
+        exit = new JMenuItem( "Exit" );
+        updateTimetable = new JMenuItem( "Update Timetable" );
+        updateUsers = new JMenuItem( "Update User" );
+        updateCourse = new JMenuItem( "Update Course" );
+        updateModule = new JMenuItem( "Update Module" );
+        addUsers = new JMenuItem( "Add User" );
+        addCourse = new JMenuItem( "Add Course" );
+        addModule = new JMenuItem( "Add Module" );
+
+        menuFile.add( search );
+        menuFile.add( print );
+        menuFile.add( exitAndLogout );
+        menuFile.add( exit );
+
+        menuEdit.add( updateTimetable );
+        menuEdit.add( updateUsers );
+        menuEdit.add( updateCourse );
+        menuEdit.add( updateModule );
+        menuEdit.add( addUsers );
+        menuEdit.add( addCourse );
+        menuEdit.add( addModule );
+
+        return mainMenu;
     }
 
     /**
@@ -99,7 +152,10 @@ public class MainWindow extends JFrame {
         //        private List<View> views;
         private JPanel child;
 
-        public MainView ( Container parent, String position, String title, LayoutManager layout ) {
+        private MainView () {
+        }
+
+        public MainView ( Container parent, String position, String title ) {
             super( parent, position, title );
 
             //            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
@@ -119,6 +175,7 @@ public class MainWindow extends JFrame {
             return null;
         }
 
+        @SuppressWarnings ( "unused" )
         public View changeView () {
 
             this.getChild();

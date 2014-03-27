@@ -1,6 +1,6 @@
 package com.project.database;
 
-import oracle.jdbc.pool.OracleDataSource;
+import oracle.jdbc.pool.*;
 
 import java.sql.*;
 
@@ -44,33 +44,43 @@ public class DatabaseConnection {
                 System.out.println( e.getMessage() );
             }
         } catch ( Exception e ) {
-            System.out.println( e.getMessage() );
+//            System.out.println( e.getMessage() );
             System.exit( 0 );
         }
     }
 
-    // public boolean checkPassword ( String user, String password ) {
-    //
-    // String userPassword = null;
-    // try {
-    // setPreparedStatement( getDatabaseConnection().prepareStatement(
-    // "select userName, userPassword from User where name = '" +
-    // user + "'" ) );
-    // setResultSet( (ResultSet) getPreparedStatement() );
-    // while ( getResultSet().next() ) {
-    // getResultSet().getString( "userPassword" );
-    // userPassword = String.valueOf( getResultSet() );
-    //
-    // System.out.println( "Successful test" );
-    // }
-    // } catch ( SQLException e ) {
-    // // e.printStackTrace();
-    // System.out.println( e.getMessage() );
-    // }
-    // endConnection();
-    // assert userPassword != null;
-    // return password.length() == userPassword.length();
-    // }
+    public boolean checkPassword ( String user, String password ) {
+
+        String userPassword = null;
+        try {
+            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName, userPassword from User where name = '" +
+                            user + "'"
+                                                                          ) );
+            setResultSet( (ResultSet) getPreparedStatement() );
+            while ( getResultSet().next() ) {
+                getResultSet().getString( "userPassword" );
+                userPassword = String.valueOf( getResultSet() );
+
+                System.out.println( "Successful test" );
+            }
+        } catch ( SQLException e ) {
+            // e.printStackTrace();
+            System.out.println( e.getMessage() );
+        }
+        endConnection();
+        assert userPassword != null;
+        return password.length() == userPassword.length();
+    }
+
+    public Connection getDatabaseConnection () {
+
+        return databaseConnection;
+    }
+
+    public PreparedStatement getPreparedStatement () {
+
+        return preparedStatement;
+    }
 
     public ResultSet getResultSet () {
 
@@ -80,26 +90,6 @@ public class DatabaseConnection {
     public void setResultSet ( ResultSet resultSet ) {
 
         this.resultSet = resultSet;
-    }
-
-    public PreparedStatement getPreparedStatement () {
-
-        return preparedStatement;
-    }
-
-    public void setPreparedStatement ( PreparedStatement preparedStatement ) {
-
-        this.preparedStatement = preparedStatement;
-    }
-
-    public Statement getStatement () {
-
-        return statement;
-    }
-
-    public void setStatement ( Statement statement ) {
-
-        this.statement = statement;
     }
 
     public void endConnection () {
@@ -113,13 +103,23 @@ public class DatabaseConnection {
 
     }
 
-    public Connection getDatabaseConnection () {
+    public void setPreparedStatement ( PreparedStatement preparedStatement ) {
 
-        return databaseConnection;
+        this.preparedStatement = preparedStatement;
     }
 
     public void setDatabaseConnection ( Connection databaseConnection ) {
 
         this.databaseConnection = databaseConnection;
+    }
+
+    public Statement getStatement () {
+
+        return statement;
+    }
+
+    public void setStatement ( Statement statement ) {
+
+        this.statement = statement;
     }
 }

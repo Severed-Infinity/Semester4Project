@@ -9,11 +9,12 @@ import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
 
-@SuppressWarnings ( "serial" )
+@SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
 
     public JLabel loginLabel, passwordLabel, logo;
     public Image iTTLogo;
+    protected DatabaseConnection databaseConnection = null;
     private JTextField userName;
     private JPasswordField userPassword;
     private JButton login, cancel;
@@ -23,9 +24,9 @@ public class TimetableLogin extends JFrame {
         setTitle( "Login" );
         setResizable( false );
         setDefaultCloseOperation( WindowConstants.EXIT_ON_CLOSE );
-        setSize( 250, 320 );
+        setSize( 250, 330 );
         setLocationRelativeTo( null );
-        setBackground( Color.white );
+        getContentPane().setBackground( Color.white );
 
         getContentPane().setLayout( new GridBagLayout() );
         GridBagConstraints constraints = new GridBagConstraints();
@@ -94,7 +95,7 @@ public class TimetableLogin extends JFrame {
         constraints.gridwidth = 1;
         constraints.weightx = 1.0;
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.insets = new Insets( 10, 10, 0, 5 );
+        constraints.insets = new Insets( 10, 10, 10, 5 );
         add( getLogin(), constraints );
 
         setCancel( new JButton( "Cancel" ) );
@@ -109,7 +110,7 @@ public class TimetableLogin extends JFrame {
         constraints.gridy = 6;
         constraints.gridwidth = 1;
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.insets = new Insets( 10, 0, 0, 10 );
+        constraints.insets = new Insets( 10, 0, 10, 10 );
         add( getCancel(), constraints );
 
         pack();
@@ -146,7 +147,7 @@ public class TimetableLogin extends JFrame {
         /*
          * create a database connection and try to connect
          */
-        DatabaseConnection databaseConnection = null;
+
         try {
 
             databaseConnection = new DatabaseConnection();
@@ -170,7 +171,9 @@ public class TimetableLogin extends JFrame {
              * window
              */
             try {
-                if ( !( ( databaseConnection != null ) && databaseConnection.getDatabaseConnection().isClosed() ) ) {
+
+                boolean connection = !databaseConnection.getDatabaseConnection().isClosed();
+                if ( connection ) {
 
                     MainWindow mainWindow = new MainWindow();
                     mainWindow.setVisible( true );

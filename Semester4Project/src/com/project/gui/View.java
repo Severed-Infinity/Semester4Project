@@ -2,7 +2,6 @@ package com.project.gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
 
 @SuppressWarnings ("serial")
 public abstract class View extends JPanel {
@@ -14,19 +13,29 @@ public abstract class View extends JPanel {
     protected JComboBox<Object> cbx;
     protected JList<Object> lst;
     protected JFrame parent;
-    protected ArrayList<View> views = new ArrayList<>();
+    //    protected ArrayList<View> views = new ArrayList<>();
+
+    public View () {
+
+        setBackground( Color.white );
+    }
 
     public View ( Container parent, String position, String title ) {
 
+        setBackground( Color.white );
         /*
         may not be the correct approach to this
         may pass in a parent parameter
         instead get the root pane for the title
         and just add parent as a jpanel
         */
+        //
+        //        parent = this.getParent();
+        //        parent.add( this, position );
 
         //        if ( parent instanceof JFrame ) {
-        //            parent = SwingUtilities.getWindowAncestor( this );
+        //            JFrame jFrame = (JFrame) parent;
+        //            jFrame = (JFrame) SwingUtilities.getWindowAncestor( this );
         //            ( (JFrame) parent ).setTitle( title );
         //            ( (JFrame) parent ).getContentPane().add( this, position );
         //        } else {
@@ -34,12 +43,12 @@ public abstract class View extends JPanel {
         //            parent.add( this, position );
         //        }
 
-        views.add( this );
+        //        views.add( this );
     }
 
-    public ArrayList<View> getViews () {
-        return views;
-    }
+    //    public ArrayList<View> getViews () {
+    //        return views;
+    //    }
 
     public JButton getAdd () {
         return add;
