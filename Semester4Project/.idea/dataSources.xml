@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1672088191">
+  <component name="DataSourceManagerImpl" format="xml" hash="53480883">
     <data-source source="LOCAL" name="Oracle - @localhost" uuid="632fe7bd-1828-4698-bc12-0825a2688553">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
       <jdbc-url>jdbc:oracle:thin:@//localhost:1521</jdbc-url>
-      <user-name>system</user-name>
+      <user-name>timetable</user-name>
       <user-password>dfdedfc3dfc7dfcfdfdedfcbdfc8dfc6dfcf</user-password>
       <schema-pattern>*.TIMETABLE</schema-pattern>
       <libraries />

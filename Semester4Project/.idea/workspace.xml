@@ -119,35 +119,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TimetableLogin.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <file leaf-file-name="TIMETABLE.DDL" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/lib/TIMETABLE.DDL">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="736" max-vertical-offset="3408">
-              <caret line="46" column="51" selection-start-line="43" selection-start-column="8" selection-end-line="46" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7201166" vertical-offset="1289" max-vertical-offset="1824">
-              <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.54188037" vertical-offset="1539" max-vertical-offset="2576">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
-                <element signature="e#4619#4642#0" expanded="true" />
-                <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-                <element signature="e#7300#7330#0" expanded="true" />
+                <marker date="1396049463840" expanded="true" signature="2754:2961" placeholder="CREATE TABLE..TIMETABLE_USERS..." />
+                <marker date="1396049463840" expanded="true" signature="2966:3032" placeholder="CREATE UNIQU..SYS_C007269..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimetableMain.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
+      <file leaf-file-name="DATABASE/632fe7bd-1828-4698-bc12-0825a2688553" pinned="false" current="false" current-in-tab="false">
+        <entry file="uml://DATABASE/632fe7bd-1828-4698-bc12-0825a2688553">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>632fe7bd-1828-4698-bc12-0825a2688553</OriginalElement>
+              <nodes>
+                <node x="445.56666666666666" y="595.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE</node>
+                <node x="926.0" y="360.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS</node>
+                <node x="317.81666666666666" y="0.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL</node>
+                <node x="569.0" y="316.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE</node>
+                <node x="272.31666666666666" y="125.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
+                <node x="0.0" y="371.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM</node>
+                <node x="112.48333333333335" y="764.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
+                <node x="108.98333333333335" y="606.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD</node>
+                <node x="268.0" y="349.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE</node>
+                <node x="0.0" y="884.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USER</node>
+                <node x="886.75" y="617.5">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD">
+                  <point x="0.0" y="-37.5" />
+                  <point x="0.0" y="48.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+                  <point x="0.0" y="-114.5" />
+                  <point x="737.5" y="291.0" />
+                  <point x="496.56666666666666" y="291.0" />
+                  <point x="74.75" y="70.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+                  <point x="50.75" y="-48.5" />
+                  <point x="261.23333333333335" y="575.0" />
+                  <point x="314.83333333333337" y="575.0" />
+                  <point x="-93.66666666666663" y="81.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM">
+                  <point x="-50.75" y="-48.5" />
+                  <point x="159.73333333333335" y="575.0" />
+                  <point x="124.0" y="575.0" />
+                  <point x="0.0" y="59.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL">
+                  <point x="0.0" y="-70.5" />
+                  <point x="0.0" y="37.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+                  <point x="-59.25" y="-59.5" />
+                  <point x="504.81666666666666" y="575.0" />
+                  <point x="408.5" y="575.0" />
+                  <point x="0.0" y="81.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+                  <point x="-50.25" y="-37.0" />
+                  <point x="937.0" y="565.0" />
+                  <point x="502.16666666666674" y="565.0" />
+                  <point x="93.66666666666674" y="81.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+                  <point x="0.0" y="-59.5" />
+                  <point x="124.0" y="291.0" />
+                  <point x="347.06666666666666" y="291.0" />
+                  <point x="-74.75" y="70.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE">
+                  <point x="59.25" y="-59.5" />
+                  <point x="623.3166666666666" y="575.0" />
+                  <point x="737.5" y="575.0" />
+                  <point x="0.0" y="114.5" />
+                </edge>
+                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS">
+                  <point x="50.25" y="-37.0" />
+                  <point x="0.0" y="70.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.5039717563989409" x="331.430823117338" y="466.2171628721541" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Oracle - @localhost" pinned="false" current="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.4827585" vertical-offset="0" max-vertical-offset="400">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -186,7 +261,6 @@
         <option value="$PROJECT_DIR$/src/com/project/database/RunStatement.java" />
         <option value="$PROJECT_DIR$/src/TODO" />
         <option value="$PROJECT_DIR$/src/lib/TODO" />
-        <option value="db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/" />
         <option value="$PROJECT_DIR$/src/reference/code/adminView" />
         <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
         <option value="$PROJECT_DIR$/src/reference/code/mainWindow" />
@@ -195,6 +269,8 @@
         <option value="$PROJECT_DIR$/src/TimetableMain.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
+        <option value="db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/" />
+        <option value="$PROJECT_DIR$/src/lib/TIMETABLE.DDL" />
       </list>
     </option>
   </component>
@@ -306,7 +382,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,11 +416,11 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="preferences.sourceCode.SQL" />
     <property name="options.splitter.main.proportions" value="0.3025" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -358,6 +434,8 @@
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="LayoutCode.rearrangeEntries" value="false" />
+    <property name="Console.TableResult.DefaultCopyAction" value="SQL Insert Statements" />
+    <property name="LayoutCode.rearrangeEntriesOracle" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -584,12 +662,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -608,6 +680,12 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="1">
@@ -654,12 +732,13 @@
       <workItem from="1395875075514" duration="1900000" />
       <workItem from="1395955845493" duration="347000" />
       <workItem from="1395957817990" duration="668000" />
-      <workItem from="1395960891211" duration="3164000" />
+      <workItem from="1395960891211" duration="3804000" />
+      <workItem from="1396001500124" duration="18211000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58071000" />
+    <option name="totallyTimeSpent" value="76922000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -685,36 +764,36 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4392971" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2579425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2965204" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4392971" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15506808" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15506808" sideWeight="0.4979424" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38658148" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38658148" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4402985" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -741,48 +820,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1904">
-          <caret line="19" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1568" max-vertical-offset="1792">
-          <caret line="98" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="400">
-          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="624">
-          <caret line="11" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="384">
-          <caret line="8" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="368">
-          <caret line="12" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2149" max-vertical-offset="15856">
@@ -935,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/TIMETABLE.DDL">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.026711185" vertical-offset="144" max-vertical-offset="928">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/database/CreateNewSchema.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
@@ -991,13 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-          <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72325975" vertical-offset="1574" max-vertical-offset="2176">
@@ -1023,13 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
         </state>
       </provider>
     </entry>
@@ -1061,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.423208" vertical-offset="0" max-vertical-offset="10144">
           <caret line="849" column="16" selection-start-line="849" selection-start-column="16" selection-end-line="849" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52478135" vertical-offset="748" max-vertical-offset="1136">
           <caret line="58" column="437" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="437" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1081,32 +1095,191 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="912">
           <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="method#View#0;class#View#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7201166" vertical-offset="1289" max-vertical-offset="1824">
-          <caret line="103" column="8" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="3328">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26755852" vertical-offset="0" max-vertical-offset="598">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_COURSE">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_SCHOOL">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_DEPARTMENT">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="336">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_USER">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.55172414" vertical-offset="0" max-vertical-offset="400">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_USERS">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.4827585" vertical-offset="0" max-vertical-offset="400">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/632fe7bd-1828-4698-bc12-0825a2688553">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>632fe7bd-1828-4698-bc12-0825a2688553</OriginalElement>
+          <nodes>
+            <node x="445.56666666666666" y="595.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE</node>
+            <node x="926.0" y="360.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS</node>
+            <node x="317.81666666666666" y="0.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL</node>
+            <node x="569.0" y="316.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE</node>
+            <node x="272.31666666666666" y="125.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
+            <node x="0.0" y="371.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM</node>
+            <node x="112.48333333333335" y="764.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
+            <node x="108.98333333333335" y="606.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD</node>
+            <node x="268.0" y="349.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE</node>
+            <node x="0.0" y="884.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USER</node>
+            <node x="886.75" y="617.5">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD">
+              <point x="0.0" y="-37.5" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+              <point x="0.0" y="-114.5" />
+              <point x="737.5" y="291.0" />
+              <point x="496.56666666666666" y="291.0" />
+              <point x="74.75" y="70.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="50.75" y="-48.5" />
+              <point x="261.23333333333335" y="575.0" />
+              <point x="314.83333333333337" y="575.0" />
+              <point x="-93.66666666666663" y="81.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM">
+              <point x="-50.75" y="-48.5" />
+              <point x="159.73333333333335" y="575.0" />
+              <point x="124.0" y="575.0" />
+              <point x="0.0" y="59.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL">
+              <point x="0.0" y="-70.5" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="-59.25" y="-59.5" />
+              <point x="504.81666666666666" y="575.0" />
+              <point x="408.5" y="575.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="-50.25" y="-37.0" />
+              <point x="937.0" y="565.0" />
+              <point x="502.16666666666674" y="565.0" />
+              <point x="93.66666666666674" y="81.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+              <point x="0.0" y="-59.5" />
+              <point x="124.0" y="291.0" />
+              <point x="347.06666666666666" y="291.0" />
+              <point x="-74.75" y="70.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE">
+              <point x="59.25" y="-59.5" />
+              <point x="623.3166666666666" y="575.0" />
+              <point x="737.5" y="575.0" />
+              <point x="0.0" y="114.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS">
+              <point x="50.25" y="-37.0" />
+              <point x="0.0" y="70.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.5039717563989409" x="331.430823117338" y="466.2171628721541" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/TIMETABLE.DDL">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54188037" vertical-offset="1539" max-vertical-offset="2576">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
-            <element signature="e#4619#4642#0" expanded="true" />
-            <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#7300#7330#0" expanded="true" />
+            <marker date="1396049463840" expanded="true" signature="2754:2961" placeholder="CREATE TABLE..TIMETABLE_USERS..." />
+            <marker date="1396049463840" expanded="true" signature="2966:3032" placeholder="CREATE UNIQU..SYS_C007269..." />
           </folding>
         </state>
       </provider>
@@ -1180,6 +1353,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

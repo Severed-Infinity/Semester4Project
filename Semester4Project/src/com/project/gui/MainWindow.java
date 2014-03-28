@@ -101,7 +101,7 @@ public class MainWindow extends JFrame {
         constraints.fill = GridBagConstraints.BOTH;
         add( mainView, constraints );
 
-        
+
         //        end of main view
 
         pack();
