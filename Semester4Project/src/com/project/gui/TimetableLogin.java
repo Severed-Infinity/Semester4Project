@@ -12,7 +12,9 @@ import java.sql.*;
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
 
-    public JLabel loginLabel, passwordLabel, logo;
+    public final JLabel loginLabel;
+    public final JLabel passwordLabel;
+    public final JLabel logo;
     public Image iTTLogo;
     protected DatabaseConnection databaseConnection = null;
     private JTextField userName;
@@ -150,16 +152,10 @@ public class TimetableLogin extends JFrame {
 
         try {
 
-            databaseConnection = new DatabaseConnection();
-            try {
-                // databaseConnection.createDatabaseConnection( "SYSTEM",
-                // "timetable" );
-                databaseConnection.createDatabaseConnection( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
-
-            } catch ( SQLException e ) {
-                // e.printStackTrace();
-
-            }
+            databaseConnection = new DatabaseConnection(getUserName().getText(), String.valueOf( getUserPassword().getPassword() ));
+            // databaseConnection.createDatabaseConnection( "SYSTEM",
+            // "timetable" );
+//            databaseConnection.createDatabaseConnection( getUserName().getText(), String.valueOf( getUserPassword().getPassword() ) );
 
         } catch ( Exception e ) {
             //            System.out.println( e.getMessage() );

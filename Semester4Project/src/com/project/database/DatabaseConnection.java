@@ -19,7 +19,11 @@ public class DatabaseConnection {
     private Statement statement;
     private PreparedStatement preparedStatement;
 
-    public void createDatabaseConnection ( String user, String password ) throws SQLException {
+    public DatabaseConnection ( String user, String password ) {
+        createDatabaseConnection( user, password );
+    }
+
+    public void createDatabaseConnection ( String user, String password ) {
 
         try {
             OracleDataSource dataSource = new OracleDataSource();
@@ -44,33 +48,33 @@ public class DatabaseConnection {
                 System.out.println( e.getMessage() );
             }
         } catch ( Exception e ) {
-//            System.out.println( e.getMessage() );
+            //            System.out.println( e.getMessage() );
             System.exit( 0 );
         }
     }
 
-    public boolean checkPassword ( String user, String password ) {
-
-        String userPassword = null;
-        try {
-            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName, userPassword from User where name = '" +
-                            user + "'"
-                                                                          ) );
-            setResultSet( (ResultSet) getPreparedStatement() );
-            while ( getResultSet().next() ) {
-                getResultSet().getString( "userPassword" );
-                userPassword = String.valueOf( getResultSet() );
-
-                System.out.println( "Successful test" );
-            }
-        } catch ( SQLException e ) {
-            // e.printStackTrace();
-            System.out.println( e.getMessage() );
-        }
-        endConnection();
-        assert userPassword != null;
-        return password.length() == userPassword.length();
-    }
+//    public boolean checkPassword ( String user, String password ) {
+//
+//        String userPassword = null;
+//        try {
+//            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName, userPassword from User where name = '" +
+//                            user + "'"
+//                                                                          ) );
+//            setResultSet( (ResultSet) getPreparedStatement() );
+//            while ( getResultSet().next() ) {
+//                getResultSet().getString( "userPassword" );
+//                userPassword = String.valueOf( getResultSet() );
+//
+//                System.out.println( "Successful test" );
+//            }
+//        } catch ( SQLException e ) {
+//            // e.printStackTrace();
+//            System.out.println( e.getMessage() );
+//        }
+//        endConnection();
+//        assert userPassword != null;
+//        return password.length() == userPassword.length();
+//    }
 
     public Connection getDatabaseConnection () {
 

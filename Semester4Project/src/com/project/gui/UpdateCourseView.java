@@ -9,126 +9,208 @@ import java.awt.*;
  */
 public class UpdateCourseView extends View {
 
-    private final JTextField txtCourseCode;
-    private final JTextField txtCourseID;
-    private final JTextField txtCourseDeparment;
-    private final JTextField textField_20;
-    private final JTextField textField_21;
-    private final JTextField textField_22;
+    //    private final Container moduleOptions;
+    //    private final Container optionLayout;
+    //    protected GroupLayout optionButtonLayout, moduleOptionLayout;
+    protected JLabel typeOfCourse, nameOfCourse, codeForCourse, lengthOfCourse, yearOfCourse, semestersInCourse, departmentContainingCourse, headOfCourse, modulesInCourse, listOfModules;
+    protected JTextField courseName, courseCode, courseLength, courseYear, courseSemester, courseHead;
+    protected JButton addModule, createNewModule, update, delete, cancel;
+    //todo change <types> to the correct types, for now string will do until classes are made
+    protected JComboBox<String> courseTypeOptions, courseModule, courseDepartment;
+    protected JList<String> courseModules;
 
-    public UpdateCourseView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+    public UpdateCourseView () {
+        //        setSize( getParent().getWidth(), getParent().getHeight() );
+        setLayout( new GridBagLayout() );
+        GridBagConstraints constraints = new GridBagConstraints();
 
-        JPanel updateCourse = new JPanel();
-        updateCourse.setLayout( null );
-        updateCourse.setBorder( new TitledBorder( UIManager.getBorder( "TitledBorder.border" ), "Add New Course", TitledBorder.CENTER, TitledBorder.TOP, null, new Color( 0, 0, 0 ) ) );
-        //        mainView.add( updateCourse, "name_183053656053264" );
+          /*
+        constraints
 
-        JLabel label_8 = new JLabel( "Type of Course" );
-        label_8.setBounds( 35, 33, 95, 14 );
-        updateCourse.add( label_8 );
+         */
+        constraints.weightx = 1.0;
+        constraints.weighty = 1.0;
+        //        constraints.gridwidth = 1;
+        constraints.anchor = GridBagConstraints.NORTHEAST;
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.insets = new Insets( 15, 15, 0, 2 );
+        constraints.ipadx = 5;
+        constraints.ipady = 5;
 
-        JComboBox<String> comboBox_10 = new JComboBox<String>();
-        comboBox_10.setBounds( 140, 30, 120, 20 );
-        updateCourse.add( comboBox_10 );
+        //Todo add all components to the view
+        //Todo apply constraints to components
+        setBorder( new TitledBorder( UIManager.getBorder( "TitleBorder.border" ), "Update Course", TitledBorder.CENTER,
+                TitledBorder.TOP, null, new Color( 0, 0, 0 ) ) );
 
-        JLabel label_10 = new JLabel( "Name" );
-        label_10.setBounds( 35, 66, 95, 14 );
-        updateCourse.add( label_10 );
+        //labels
+        typeOfCourse = new JLabel( "Type of Course" );
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        add( typeOfCourse, constraints );
 
-        txtCourseCode = new JTextField();
-        txtCourseCode.setColumns( 10 );
-        txtCourseCode.setBounds( 140, 63, 120, 20 );
-        updateCourse.add( txtCourseCode );
+        nameOfCourse = new JLabel( "Name" );
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        add( nameOfCourse, constraints );
 
-        JLabel label_12 = new JLabel( "Course Code" );
-        label_12.setBounds( 350, 66, 95, 14 );
-        updateCourse.add( label_12 );
+        codeForCourse = new JLabel( "Course Code" );
+        constraints.gridx = 2;
+        constraints.gridy = 1;
+        add( codeForCourse, constraints );
 
-        txtCourseID = new JTextField();
-        txtCourseID.setColumns( 10 );
-        txtCourseID.setBounds( 467, 63, 120, 20 );
+        headOfCourse = new JLabel( "Course Head" );
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        add( headOfCourse, constraints );
 
-        updateCourse.add( txtCourseID );
-        JLabel label_16 = new JLabel( "ID" );
-        label_16.setBounds( 35, 91, 95, 14 );
-        updateCourse.add( label_16 );
+        departmentContainingCourse = new JLabel( "Department" );
+        constraints.gridx = 0;
+        constraints.gridy = 3;
+        add( departmentContainingCourse, constraints );
 
-        txtCourseDeparment = new JTextField();
-        txtCourseDeparment.setColumns( 10 );
-        txtCourseDeparment.setBounds( 140, 88, 120, 20 );
-        updateCourse.add( txtCourseDeparment );
+        lengthOfCourse = new JLabel( "Course length" );
+        constraints.gridx = 0;
+        constraints.gridy = 4;
+        add( lengthOfCourse, constraints );
 
-        JLabel label_17 = new JLabel( "Department" );
-        label_17.setBounds( 35, 116, 95, 14 );
-        updateCourse.add( label_17 );
+        modulesInCourse = new JLabel( "Select Module" );
+        constraints.gridx = 0;
+        constraints.gridy = 5;
+        add( modulesInCourse, constraints );
 
-        JLabel label_18 = new JLabel( "Course Length" );
-        label_18.setBounds( 35, 144, 95, 14 );
-        updateCourse.add( label_18 );
+        listOfModules = new JLabel( "List of Modules:" );
+        constraints.gridx = 0;
+        constraints.gridy = 6;
+        add( listOfModules, constraints );
 
-        textField_20 = new JTextField();
-        textField_20.setColumns( 10 );
-        textField_20.setBounds( 140, 141, 120, 20 );
-        updateCourse.add( textField_20 );
+        //        constraints.fill = GridBagConstraints.REMAINDER;
+        //        constraints.insets = new Insets( 10, 10, 0, 100 );
 
-        JLabel label_19 = new JLabel( "Select Module" );
-        label_19.setBounds( 35, 191, 95, 14 );
-        updateCourse.add( label_19 );
+        //textfields
+        courseName = new JTextField( 15 );
+        constraints.gridx = 1;
+        constraints.gridy = 1;
+        add( courseName, constraints );
 
-        JComboBox<String> comboBox_11 = new JComboBox<String>();
-        comboBox_11.setBounds( 140, 188, 192, 20 );
-        updateCourse.add( comboBox_11 );
+        courseCode = new JTextField( 15 );
+        constraints.gridx = 3;
+        constraints.gridy = 1;
+        add( courseCode, constraints );
 
-        JButton button_4 = new JButton( "Add Module" );
-        button_4.setBounds( 350, 188, 95, 23 );
-        updateCourse.add( button_4 );
+        courseHead = new JTextField( 15 );
+        constraints.gridx = 1;
+        constraints.gridy = 2;
+        add( courseHead, constraints );
 
-        JButton button_8 = new JButton( "Confirm" );
-        button_8.setBounds( 467, 360, 89, 23 );
-        updateCourse.add( button_8 );
+        courseLength = new JTextField( 15 );
+        constraints.gridx = 1;
+        constraints.gridy = 4;
+        add( courseLength, constraints );
 
-        JButton button_9 = new JButton( "Cancel" );
-        button_9.setBounds( 665, 360, 89, 23 );
-        updateCourse.add( button_9 );
+        //combo boxes
+        //todo get do get type
+        courseTypeOptions = new JComboBox<>( new DefaultComboBoxModel<>( new String[]{ "Full time", "Part time" } ) );
+        constraints.gridx = 1;
+        constraints.gridy = 0;
+        add( courseTypeOptions, constraints );
 
-        JButton button_10 = new JButton( "Clear" );
-        button_10.setBounds( 566, 360, 89, 23 );
-        updateCourse.add( button_10 );
+        //todo get departments
+        courseDepartment = new JComboBox<>();
+        constraints.gridx = 1;
+        constraints.gridy = 3;
+        add( courseDepartment, constraints );
 
-        JLabel label_20 = new JLabel( "Modules: " );
-        label_20.setBounds( 35, 216, 95, 14 );
-        updateCourse.add( label_20 );
+        //todo get modules
+        courseModule = new JComboBox<>();
+        constraints.gridx = 1;
+        constraints.gridy = 5;
+        add( courseModule, constraints );
 
-        JList<String> list_3 = new JList<String>();
-        list_3.setBounds( 140, 214, 192, 125 );
-        updateCourse.add( list_3 );
+        courseModules = new JList<>();
+        //        courseModules.setMinimumSize( new Dimension( 0, 200 ) );
+        constraints.gridx = 1;
+        constraints.gridy = 6;
+        constraints.fill = GridBagConstraints.BOTH;
+        courseModules.setBackground( Color.BLUE );
+        add( courseModules, constraints );
 
-        JLabel label_21 = new JLabel( "Number of Semesters" );
-        label_21.setBounds( 350, 144, 110, 14 );
-        updateCourse.add( label_21 );
+        //        constraints.fill = GridBagConstraints.LINE_START;
+        //button components
+        addModule = new JButton( "Add Module" );
+        constraints.gridx = 2;
+        constraints.gridy = 5;
+        add( addModule, constraints );
 
-        JLabel label_22 = new JLabel( "Password" );
-        label_22.setBounds( 350, 91, 95, 14 );
-        updateCourse.add( label_22 );
+        createNewModule = new JButton( "Create New Module" );
+        constraints.gridx = 3;
+        constraints.gridy = 5;
+        add( createNewModule, constraints );
 
-        textField_21 = new JTextField();
-        textField_21.setColumns( 10 );
-        textField_21.setBounds( 467, 88, 120, 20 );
-        updateCourse.add( textField_21 );
+        //        moduleOptions = new Container();
+        //        moduleOptionLayout = new GroupLayout( moduleOptions );
+        //        moduleOptionLayout.setHorizontalGroup( moduleOptionLayout.createParallelGroup( Alignment.LEADING )
+        //                                                                 .addGroup( moduleOptionLayout.createSequentialGroup()
+        //                                                                                              .addComponent( addModule )
+        //                                                                                              .addGap( 5 )
+        //                                                                                              .addComponent( createNewModule )
+        //                                                                          ) );
+        //        moduleOptionLayout.setVerticalGroup( moduleOptionLayout.createParallelGroup( Alignment.LEADING )
+        //                                                               .addGroup( moduleOptionLayout.createSequentialGroup()
+        //                                                                                            .addGroup( moduleOptionLayout
+        //                                                                                                    .createParallelGroup( Alignment.BASELINE )
+        //                                                                                                    .addComponent( addModule )
+        //                                                                                                    .addComponent( createNewModule ) )
+        //                                                                        ) );
+        //        constraints.gridx = 3;
+        //        constraints.gridy = 5;
+        //             constraints.gridwidth = 2;
+        //        add( moduleOptions, constraints );
+        //        moduleOptions.setLayout( moduleOptionLayout );
 
-        textField_22 = new JTextField();
-        textField_22.setColumns( 10 );
-        textField_22.setBounds( 467, 141, 120, 20 );
-        updateCourse.add( textField_22 );
+        //        constraints.anchor = GridBagConstraints.SOUTHEAST;
+        constraints.fill = GridBagConstraints.REMAINDER;
+        constraints.insets = new Insets( 90, 0, 10, 10 );
+        update = new JButton( "Update" );
+        constraints.gridx = 3;
+        constraints.gridy = 7;
+        add( update, constraints );
 
-        JComboBox<String> comboBox_12 = new JComboBox<String>();
-        comboBox_12.setBounds( 140, 113, 192, 20 );
-        updateCourse.add( comboBox_12 );
+        delete = new JButton( "Delete" );
+        constraints.gridx = 4;
+        constraints.gridy = 7;
+        add( delete, constraints );
 
-        JButton button_11 = new JButton( "Create New Module" );
-        button_11.setBounds( 467, 188, 127, 23 );
-        updateCourse.add( button_11 );
+        cancel = new JButton( "Cancel" );
+        constraints.gridx = 5;
+        constraints.gridy = 7;
+        add( cancel, constraints );
+
+        //        optionLayout = new Container();
+        //        optionButtonLayout = new GroupLayout( optionLayout );
+        //        optionButtonLayout.setHorizontalGroup( optionButtonLayout.createParallelGroup( Alignment.LEADING )
+        //                                                                 .addGroup( optionButtonLayout.createSequentialGroup()
+        //                                                                                              .addComponent( confirm )
+        //                                                                                              .addGap( 10 )
+        //                                                                                              .addComponent( clear )
+        //                                                                                              .addGap( 10 )
+        //                                                                                              .addComponent( cancel )
+        //                                                                          ) );
+        //        optionButtonLayout.setVerticalGroup( optionButtonLayout.createParallelGroup( Alignment.LEADING )
+        //                                                               .addGroup( optionButtonLayout.createSequentialGroup()
+        //                                                                                            .addGroup( optionButtonLayout
+        //                                                                                                    .createParallelGroup( Alignment.BASELINE )
+        //                                                                                                    .addComponent( confirm )
+        //                                                                                                    .addComponent( clear )
+        //                                                                                                    .addComponent( cancel ) )
+        //                                                                        ) );
+        //
+        //        constraints.gridx = 3;
+        //        constraints.gridy = 10;
+        //        //        constraints.gridwidth = 3;
+        //        constraints.fill = GridBagConstraints.HORIZONTAL;
+        //        add( optionLayout, constraints );
+        //        optionLayout.setLayout( optionButtonLayout );
+
     }
 
 }

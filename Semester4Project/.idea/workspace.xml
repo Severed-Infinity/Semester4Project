@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="2" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="698aa514-53e5-46ab-8866-4f2a2d58e51e" name="Default" comment="" />
     <ignored path="Semester4Project.iws" />
@@ -118,117 +121,46 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="TIMETABLE.DDL" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/lib/TIMETABLE.DDL">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54188037" vertical-offset="1539" max-vertical-offset="2576">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-              <folding>
-                <marker date="1396049463840" expanded="true" signature="2754:2961" placeholder="CREATE TABLE..TIMETABLE_USERS..." />
-                <marker date="1396049463840" expanded="true" signature="2966:3032" placeholder="CREATE UNIQU..SYS_C007269..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DATABASE/632fe7bd-1828-4698-bc12-0825a2688553" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://DATABASE/632fe7bd-1828-4698-bc12-0825a2688553">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>632fe7bd-1828-4698-bc12-0825a2688553</OriginalElement>
-              <nodes>
-                <node x="445.56666666666666" y="595.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE</node>
-                <node x="926.0" y="360.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS</node>
-                <node x="317.81666666666666" y="0.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL</node>
-                <node x="569.0" y="316.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE</node>
-                <node x="272.31666666666666" y="125.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
-                <node x="0.0" y="371.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM</node>
-                <node x="112.48333333333335" y="764.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
-                <node x="108.98333333333335" y="606.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD</node>
-                <node x="268.0" y="349.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE</node>
-                <node x="0.0" y="884.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USER</node>
-                <node x="886.75" y="617.5">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD">
-                  <point x="0.0" y="-37.5" />
-                  <point x="0.0" y="48.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
-                  <point x="0.0" y="-114.5" />
-                  <point x="737.5" y="291.0" />
-                  <point x="496.56666666666666" y="291.0" />
-                  <point x="74.75" y="70.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
-                  <point x="50.75" y="-48.5" />
-                  <point x="261.23333333333335" y="575.0" />
-                  <point x="314.83333333333337" y="575.0" />
-                  <point x="-93.66666666666663" y="81.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM">
-                  <point x="-50.75" y="-48.5" />
-                  <point x="159.73333333333335" y="575.0" />
-                  <point x="124.0" y="575.0" />
-                  <point x="0.0" y="59.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL">
-                  <point x="0.0" y="-70.5" />
-                  <point x="0.0" y="37.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
-                  <point x="-59.25" y="-59.5" />
-                  <point x="504.81666666666666" y="575.0" />
-                  <point x="408.5" y="575.0" />
-                  <point x="0.0" y="81.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
-                  <point x="-50.25" y="-37.0" />
-                  <point x="937.0" y="565.0" />
-                  <point x="502.16666666666674" y="565.0" />
-                  <point x="93.66666666666674" y="81.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
-                  <point x="0.0" y="-59.5" />
-                  <point x="124.0" y="291.0" />
-                  <point x="347.06666666666666" y="291.0" />
-                  <point x="-74.75" y="70.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE">
-                  <point x="59.25" y="-59.5" />
-                  <point x="623.3166666666666" y="575.0" />
-                  <point x="737.5" y="575.0" />
-                  <point x="0.0" y="114.5" />
-                </edge>
-                <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS">
-                  <point x="50.25" y="-37.0" />
-                  <point x="0.0" y="70.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.5039717563989409" x="331.430823117338" y="466.2171628721541" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Oracle - @localhost" pinned="false" current="false" current-in-tab="false">
-        <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.4827585" vertical-offset="0" max-vertical-offset="400">
-              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="CourseView.java" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="720">
+                  <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AdminView.java" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="567">
+                  <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="UpdateCourseView.java" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2672">
+                  <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -242,8 +174,6 @@
         <option value="$PROJECT_DIR$/src/com/project/gui/Timetable.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
@@ -260,25 +190,30 @@
         <option value="$PROJECT_DIR$/src/com/project/database/GetDatabase.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/RunStatement.java" />
         <option value="$PROJECT_DIR$/src/TODO" />
-        <option value="$PROJECT_DIR$/src/lib/TODO" />
         <option value="$PROJECT_DIR$/src/reference/code/adminView" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
         <option value="$PROJECT_DIR$/src/reference/code/mainWindow" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
+        <option value="$PROJECT_DIR$/src/lib/TIMETABLE.DDL" />
+        <option value="$PROJECT_DIR$/src/reference/code/courseView" />
+        <option value="$PROJECT_DIR$/src/lib/TODO" />
+        <option value="db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/" />
+        <option value="db-console:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/" />
+        <option value="$PROJECT_DIR$/src/reference/code/updateCourseView" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
         <option value="$PROJECT_DIR$/src/TimetableMain.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
-        <option value="db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/" />
-        <option value="$PROJECT_DIR$/src/lib/TIMETABLE.DDL" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -335,6 +270,7 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -382,31 +318,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="gui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,15 +333,15 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.SQL" />
+    <property name="options.lastSelected" value="sbt.project.settings.configurable" />
     <property name="options.splitter.main.proportions" value="0.3025" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/ojdbc6.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/DB CA2 - Semester 2" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="true" />
@@ -436,6 +353,9 @@
     <property name="LayoutCode.rearrangeEntries" value="false" />
     <property name="Console.TableResult.DefaultCopyAction" value="SQL Insert Statements" />
     <property name="LayoutCode.rearrangeEntriesOracle" value="false" />
+    <property name="Downloaded.Files.Path" value="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\lib" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -483,6 +403,21 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -662,6 +597,27 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -680,12 +636,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="1">
@@ -733,12 +683,19 @@
       <workItem from="1395955845493" duration="347000" />
       <workItem from="1395957817990" duration="668000" />
       <workItem from="1395960891211" duration="3804000" />
-      <workItem from="1396001500124" duration="18211000" />
+      <workItem from="1396001500124" duration="19736000" />
+      <workItem from="1396133863434" duration="3198000" />
+      <workItem from="1396258347981" duration="6143000" />
+      <workItem from="1396427107306" duration="105000" />
+      <workItem from="1396427250108" duration="23235000" />
+      <workItem from="1396562705089" duration="11275000" />
+      <workItem from="1396614324608" duration="9092000" />
+      <workItem from="1396741214548" duration="1300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76922000" />
+    <option name="totallyTimeSpent" value="132795000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -761,10 +718,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1" y="1" width="1364" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4392971" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -772,28 +728,30 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272921" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2965204" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20015338" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4392971" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15506808" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52786887" sideWeight="0.49117175" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15477997" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32898772" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15506808" sideWeight="0.4979424" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38658148" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20858896" sideWeight="0.4979424" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39737275" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21710527" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38658148" sideWeight="0.5088282" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32800853" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -813,172 +771,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2149" max-vertical-offset="15856">
-          <caret line="147" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33222592" vertical-offset="4296" max-vertical-offset="22832">
-          <caret line="1013" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/user/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
-          <caret line="2" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49438202" vertical-offset="0" max-vertical-offset="2320">
-          <caret line="11" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2905759" vertical-offset="1699" max-vertical-offset="2288">
-          <caret line="137" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.443038" vertical-offset="150" max-vertical-offset="2528">
-          <caret line="45" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="2464">
-          <caret line="19" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/ModuleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4328358" vertical-offset="0" max-vertical-offset="2432">
-          <caret line="30" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/CardLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2050633" vertical-offset="153" max-vertical-offset="2416">
-          <caret line="140" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8227848" vertical-offset="1899" max-vertical-offset="3136">
-          <caret line="482" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7120419" vertical-offset="0" max-vertical-offset="382">
-          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/user/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2020202" vertical-offset="0" max-vertical-offset="396">
-          <caret line="5" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26578072" vertical-offset="0" max-vertical-offset="656">
-          <caret line="11" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/itt-logo-300.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/event/ActionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34934497" vertical-offset="0" max-vertical-offset="458">
-          <caret line="49" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33624455" vertical-offset="806" max-vertical-offset="1264">
-          <caret line="251" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37583894" vertical-offset="0" max-vertical-offset="596">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/sqlDataSources.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/CreateNewSchema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/database/RunStatement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="320">
@@ -1021,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72325975" vertical-offset="1574" max-vertical-offset="2176">
-          <caret line="129" column="49" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="598">
@@ -1042,34 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/model/DetectUser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/DetectUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="400">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reference/code/adminView">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-57.48148" vertical-offset="0" max-vertical-offset="1648">
-          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5217391" vertical-offset="120" max-vertical-offset="1360">
-          <caret line="43" column="53" selection-start-line="43" selection-start-column="53" selection-end-line="43" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -1087,105 +857,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="2064">
-          <caret line="46" column="51" selection-start-line="43" selection-start-column="8" selection-end-line="46" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="124" max-vertical-offset="912">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1632" max-vertical-offset="3328">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26755852" vertical-offset="0" max-vertical-offset="598">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_COURSE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_SCHOOL">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="288">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_DEPARTMENT">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="336">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_USER">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.55172414" vertical-offset="0" max-vertical-offset="400">
           <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="10" selection-end-column="26" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_USERS">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.4827585" vertical-offset="0" max-vertical-offset="400">
-          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
-          <folding />
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1195,17 +913,17 @@
           <ID>DATABASE</ID>
           <OriginalElement>632fe7bd-1828-4698-bc12-0825a2688553</OriginalElement>
           <nodes>
-            <node x="445.56666666666666" y="595.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE</node>
-            <node x="926.0" y="360.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS</node>
-            <node x="317.81666666666666" y="0.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL</node>
-            <node x="569.0" y="316.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE</node>
-            <node x="272.31666666666666" y="125.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
+            <node x="802.75" y="595.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE</node>
+            <node x="569.0" y="360.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS</node>
+            <node x="439.3166666666667" y="0.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL</node>
+            <node x="812.0" y="316.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE</node>
+            <node x="393.8166666666667" y="125.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
             <node x="0.0" y="371.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM</node>
             <node x="112.48333333333335" y="764.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
             <node x="108.98333333333335" y="606.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD</node>
             <node x="268.0" y="349.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE</node>
             <node x="0.0" y="884.0">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USER</node>
-            <node x="886.75" y="617.5">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
+            <node x="437.5250000000001" y="617.5">632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
           </nodes>
           <notes />
           <edges>
@@ -1215,15 +933,15 @@
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
               <point x="0.0" y="-114.5" />
-              <point x="737.5" y="291.0" />
-              <point x="496.56666666666666" y="291.0" />
+              <point x="980.5" y="291.0" />
+              <point x="618.0666666666667" y="291.0" />
               <point x="74.75" y="70.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
               <point x="50.75" y="-48.5" />
               <point x="261.23333333333335" y="575.0" />
               <point x="314.83333333333337" y="575.0" />
-              <point x="-93.66666666666663" y="81.5" />
+              <point x="-93.66666666666669" y="81.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.CLASS_PERIOD" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM">
               <point x="-50.75" y="-48.5" />
@@ -1232,55 +950,427 @@
               <point x="0.0" y="59.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_SCHOOL">
-              <point x="0.0" y="-70.5" />
+              <point x="-5.6843418860808015E-14" y="-70.5" />
               <point x="0.0" y="37.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
               <point x="-59.25" y="-59.5" />
-              <point x="504.81666666666666" y="575.0" />
-              <point x="408.5" y="575.0" />
-              <point x="0.0" y="81.5" />
+              <point x="862.0" y="565.0" />
+              <point x="502.16666666666674" y="565.0" />
+              <point x="93.66666666666669" y="81.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_MODULE">
               <point x="-50.25" y="-37.0" />
-              <point x="937.0" y="565.0" />
-              <point x="502.16666666666674" y="565.0" />
-              <point x="93.66666666666674" y="81.5" />
+              <point x="487.7750000000001" y="575.0" />
+              <point x="408.5" y="575.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE">
+              <point x="59.25" y="-59.5" />
+              <point x="0.0" y="114.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_ROOM" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_DEPARTMENT">
               <point x="0.0" y="-59.5" />
               <point x="124.0" y="291.0" />
-              <point x="347.06666666666666" y="291.0" />
+              <point x="468.5666666666667" y="291.0" />
               <point x="-74.75" y="70.5" />
-            </edge>
-            <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.COURSE_MODULE" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_COURSE">
-              <point x="59.25" y="-59.5" />
-              <point x="623.3166666666666" y="575.0" />
-              <point x="737.5" y="575.0" />
-              <point x="0.0" y="114.5" />
             </edge>
             <edge source="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER" target="632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.TIMETABLE_USERS">
               <point x="50.25" y="-37.0" />
+              <point x="588.2750000000001" y="575.0" />
+              <point x="680.5" y="575.0" />
               <point x="0.0" y="70.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5039717563989409" x="331.430823117338" y="466.2171628721541" />
+          <settings layout="Hierarchic Group" zoom="0.7039717563989408" x="252.0" y="458.0" />
+          <SelectedNodes>
+            <node>632fe7bd-1828-4698-bc12-0825a2688553.table:TIMETABLE.MODULE_LECTURER</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_ROOM">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29431438" vertical-offset="0" max-vertical-offset="598">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/code/adminView">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-57.48148" vertical-offset="0" max-vertical-offset="1648">
+          <caret line="97" column="41" selection-start-line="97" selection-start-column="41" selection-end-line="97" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/code/courseView">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8530466" vertical-offset="1380" max-vertical-offset="2144">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/Insets.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3318182" vertical-offset="286" max-vertical-offset="928">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+          <folding>
+            <element signature="method#Insets#0;class#Insets#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/awt/GridBagConstraints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9352052" vertical-offset="1008" max-vertical-offset="3024">
+          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO</OriginalElement>
+          <nodes>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="89.0" y="38.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26153848" vertical-offset="187" max-vertical-offset="576">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM</OriginalElement>
+          <nodes>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.GENRE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.DIRECTOR</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="300.0" y="257.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR</OriginalElement>
+          <nodes>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.ACTOR</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.GENRE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.DIRECTOR</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8576051779935275" x="300.0" y="299.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.STUDIO">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.GENRE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR_LINK_TABLE">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR_LINK_TABLE</OriginalElement>
+          <nodes>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR_LINK_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.DIRECTOR_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.ACTOR_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_TABLE</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="237.0" y="249.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.ACTOR_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="488">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.DIRECTOR_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.FILM_ACTOR_LINK_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.STUDIO_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.GENRE_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/.X00073017.FILM_TABLE">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5b220918-e858-4c5e-90fa-325a3b511bdf.schema:X00073017">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5b220918-e858-4c5e-90fa-325a3b511bdf.schema:X00073017</OriginalElement>
+          <nodes>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_ACTOR_LINK_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.STUDIO_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.DIRECTOR_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.ACTOR_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.GENRE_TABLE</node>
+            <node x="" y="">5b220918-e858-4c5e-90fa-325a3b511bdf.table:X00073017.FILM_TABLE</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="313.0" y="228.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/8cb057b8/5b220918-e858-4c5e-90fa-325a3b511bdf/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35687733" vertical-offset="0" max-vertical-offset="656">
+          <caret line="12" column="90" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/code/updateCourseView">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95642203" vertical-offset="1343" max-vertical-offset="1856">
+          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26490065" vertical-offset="0" max-vertical-offset="1680">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="method#login#0;class#TimetableLogin#0" expanded="true" />
+            <element signature="e#4612#4669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26490065" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
+            <element signature="method#getDatabaseConnection#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#getPreparedStatement#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#getResultSet#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#setResultSet#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#setPreparedStatement#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#setDatabaseConnection#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#getStatement#0;class#DatabaseConnection#0" expanded="false" />
+            <element signature="method#setStatement#0;class#DatabaseConnection#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23669724" vertical-offset="111" max-vertical-offset="656">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1323076" vertical-offset="0" max-vertical-offset="512">
+          <caret line="151" column="40" selection-start-line="151" selection-start-column="40" selection-end-line="151" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34461537" vertical-offset="0" max-vertical-offset="720">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="928" max-vertical-offset="2672">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2366864" vertical-offset="0" max-vertical-offset="338">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimetableMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28994083" vertical-offset="30" max-vertical-offset="368">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="720">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/TIMETABLE.DDL">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54188037" vertical-offset="1539" max-vertical-offset="2576">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <marker date="1396049463840" expanded="true" signature="2754:2961" placeholder="CREATE TABLE..TIMETABLE_USERS..." />
-            <marker date="1396049463840" expanded="true" signature="2966:3032" placeholder="CREATE UNIQU..SYS_C007269..." />
-          </folding>
+        <state vertical-scroll-proportion="0.07760141" vertical-offset="276" max-vertical-offset="2560">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19753087" vertical-offset="0" max-vertical-offset="567">
+          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,12 +1438,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Semester4Project</last-edited>
+          <last-edited>Scala|Semester4Project</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

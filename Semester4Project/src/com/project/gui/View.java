@@ -6,6 +6,7 @@ import java.awt.*;
 @SuppressWarnings ("serial")
 public abstract class View extends JPanel {
 
+    //todo move duplicate code to the view class from subclasses
     protected JTextField tf;
     protected JButton add, cancel, clear, update;
     protected JLabel lbl;

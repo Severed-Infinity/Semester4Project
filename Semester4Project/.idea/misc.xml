@@ -343,9 +343,29 @@
     </ddl-file-settings>
   </component>
   <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+    <entry_points version="2.0">
+      <entry_point TYPE="method" FQNAME="com.project.database.DatabaseConnection DatabaseConnection(java.lang.String user, java.lang.String password)" />
+    </entry_points>
   </component>
   <component name="IdProvider" IDEtalkID="3825C3E759D6B35E0B302A27AF494BF7" />
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/assets" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OPTION_INCLUDE_LIBS" value="true" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
   </component>
