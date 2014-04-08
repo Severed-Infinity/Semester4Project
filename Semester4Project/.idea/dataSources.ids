@@ -113,4 +113,59 @@
       <index name="SYS_C007269" unique="true" columns="SYS_NC_OID$"/>
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Oracle - @localhost [2]" uuid="5b220918-e858-4c5e-90fa-325a3b511bdf">
+    <database-info product="Oracle" version="Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="X00073017" catalog=""/>
+    <table name="ACTOR_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="ACTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="ACTOR_FIRST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ACTOR_LAST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SYS_C007354" columns="ACTOR_ID"/>
+      <exported-key name="SYS_C007374" table="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" columns="ACTOR_ID"/>
+    </table>
+    <table name="DIRECTOR_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="DIRECTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="DIRECTOR_FIRST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DIRECTOR_LAST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SYS_C007350" columns="DIRECTOR_ID"/>
+      <exported-key name="SYS_C007379" table="FILM_TABLE" schema="X00073017" catalog="" columns="DIRECTOR_ID"/>
+    </table>
+    <table name="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="FILM_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="ACTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <primary-key name="SYS_C007372" columns="FILM_ID,ACTOR_ID"/>
+      <foreign-key name="SYS_C007374" columns="ACTOR_ID" ref-table="ACTOR_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="ACTOR_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007373" columns="FILM_ID" ref-table="FILM_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="FILM_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="FILM_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="FILM_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="GENRE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="FILM_LENGTH" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
+      <column name="FILM_TITLE" sqlType="VARCHAR2" precision="40" scale="0" nullable="true" jdbcType="12"/>
+      <column name="YEAR_RELEASED" sqlType="VARCHAR2" precision="4" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DIRECTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="STUDIO_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <primary-key name="SYS_C007365" columns="FILM_ID"/>
+      <foreign-key name="SYS_C007379" columns="DIRECTOR_ID" ref-table="DIRECTOR_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="DIRECTOR_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007366" columns="GENRE_ID" ref-table="GENRE_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="GENRE_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007380" columns="STUDIO_ID" ref-table="STUDIO_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="STUDIO_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <exported-key name="SYS_C007373" table="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" columns="FILM_ID"/>
+    </table>
+    <table name="GENRE_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="GENRE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="GENRE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SYS_C007346" columns="GENRE_ID"/>
+      <exported-key name="SYS_C007366" table="FILM_TABLE" schema="X00073017" catalog="" columns="GENRE_ID"/>
+    </table>
+    <table name="STUDIO_TABLE" schema="X00073017" catalog="" type="TABLE">
+      <column name="STUDIO_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="STUDIO_NAME" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="SYS_C007357" columns="STUDIO_ID"/>
+      <exported-key name="SYS_C007380" table="FILM_TABLE" schema="X00073017" catalog="" columns="STUDIO_ID"/>
+    </table>
+  </data-source>
 </component>

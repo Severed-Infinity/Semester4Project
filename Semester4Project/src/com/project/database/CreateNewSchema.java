@@ -15,7 +15,9 @@ public class CreateNewSchema {
     the same inside of an oracle database.
      */
 
-    public static void createSchema () {
-
-    }
+// --Commented out by Inspection START (4/6/2014 12:55 AM):
+//    public static void createSchema () {
+//
+//    }
+// --Commented out by Inspection STOP (4/6/2014 12:55 AM)
 }

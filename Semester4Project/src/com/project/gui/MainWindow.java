@@ -1,7 +1,5 @@
 package com.project.gui;
 
-import com.project.user.*;
-
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
@@ -12,15 +10,16 @@ import java.awt.*;
  */
 public class MainWindow extends JFrame {
 
-    public User currentUser; //.getUser();
-    protected JTextField searchField;
-    protected JPanel header;
-    protected MainView mainView;
+    // --Commented out by Inspection (4/6/2014 12:20 AM):public User currentUser; //.getUser();
+    protected final JTextField searchField;
+    protected final JPanel header;
+    protected final MainView mainView;
     protected JMenuBar mainMenu;
     protected JMenu menuFile, menuEdit;
     protected JMenuItem search, print, exitAndLogout, exit, updateTimetable, updateUsers, updateCourse, updateModule, addUsers, addCourse, addModule;
-    protected JButton home, logout;
-    protected JLabel loggedUser;
+    protected final JButton home;
+    protected final JButton logout;
+    protected final JLabel loggedUser;
 
     public MainWindow () {
 
@@ -101,7 +100,10 @@ public class MainWindow extends JFrame {
         constraints.fill = GridBagConstraints.BOTH;
         add( mainView, constraints );
 
+        //        AdminView admimView = new AdminView();
 
+        //        mainView.add( new CourseView() );
+        mainView.add( new UpdateCourseView() );
         //        end of main view
 
         pack();
@@ -149,54 +151,51 @@ public class MainWindow extends JFrame {
      */
     private class MainView extends View {
 
-        //        private List<View> views;
-        private JPanel child;
+// --Commented out by Inspection START (4/6/2014 12:55 AM):
+//        //        private List<View> views;
+//        private JPanel child;
+// --Commented out by Inspection STOP (4/6/2014 12:55 AM)
 
         private MainView () {
-        }
-
-        public MainView ( Container parent, String position, String title ) {
-            super( parent, position, title );
-
-            //            child = new AdminView( this, BorderLayout.CENTER, "Admin View" );
-            this.setChild( setDefaultView() );
 
         }
 
-        public View setDefaultView () {
+//        public View setDefaultView () {
+//
+//            if ( currentUser instanceof Student ) {
+//                return new TimetableView( this, CENTER, "Student Timetable", null );
+//            } else if ( currentUser instanceof Lecturer ) {
+//                return new TimetableView( this, CENTER, "Lecturer Timetable", null );
+//            } else if ( currentUser instanceof Admin ) {
+//                return new AdminView( this, CENTER, "Admin View" );
+//            }
+//            return null;
+//        }
 
-            if ( currentUser instanceof Student ) {
-                return new TimetableView( this, BorderLayout.CENTER, "Student Timetable", null );
-            } else if ( currentUser instanceof Lecturer ) {
-                return new TimetableView( this, BorderLayout.CENTER, "Lecturer Timetable", null );
-            } else if ( currentUser instanceof Admin ) {
-                return new AdminView( this, BorderLayout.CENTER, "Admin View" );
-            }
-            return null;
-        }
 
-        @SuppressWarnings ( "unused" )
-        public View changeView () {
+//        public View changeView () {
+//
+//            this.getChild();
+//            /*
+//            change the child view of the main view based on the button pressed
+//
+//            get the button pressed
+//            call the view
+//            set child to the new view
+//
+//             */
+//            return null;
+//        }
+//
+//        public JPanel getChild () {
+//            return child;
+//        }
 
-            this.getChild();
-            /*
-            change the child view of the main view based on the button pressed
-
-            get the button pressed
-            call the view
-            set child to the new view
-
-             */
-            return null;
-        }
-
-        public JPanel getChild () {
-            return child;
-        }
-
-        public void setChild ( JPanel child ) {
-            this.child = child;
-        }
+// --Commented out by Inspection START (4/6/2014 12:23 AM):
+//        public void setChild ( JPanel child ) {
+//            this.child = child;
+//        }
+// --Commented out by Inspection STOP (4/6/2014 12:23 AM)
     }
 
 }
