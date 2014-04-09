@@ -3,146 +3,272 @@ package com.project.gui;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Created by david on 3/12/14.
  */
-public class UpdateModuleView extends View {
+public class UpdateModuleView extends ModuleView {
+  public UpdateModuleView() {
 
-    private final JTextField textField_23;
-    private final JTextField textField_24;
-    private final JTextField textField_26;
-    private final JTextField textField_27;
-    private final JTextField textField_28;
-    private final JTextField textField_25;
+    //        setSize( getParent().getWidth(), getParent().getHeight() );
+    setLayout(new GridBagLayout());
+    GridBagConstraints constraints = new GridBagConstraints();
 
-    public UpdateModuleView ( Container parent, String position, String title ) {
-        super( parent, position, title );
+          /*
+        constraints
 
-        JPanel updateModule = new JPanel();
-        updateModule.setLayout( null );
-        updateModule.setBorder( new TitledBorder( UIManager.getBorder( "TitledBorder.border" ), "Add New Module", TitledBorder.CENTER, TitledBorder.TOP, null, new Color( 0, 0, 0 ) ) );
+         */
+    constraints.weightx = 1.0;
+    constraints.weighty = 1.0;
+    //        constraints.gridwidth = 1;
+    constraints.anchor = GridBagConstraints.NORTHEAST;
+    constraints.fill = GridBagConstraints.HORIZONTAL;
+    constraints.insets = new Insets(15, 15, 0, 2);
+    constraints.ipadx = 5;
+    constraints.ipady = 5;
 
-        //        mainView.add( updateModule, "name_183096271792642" );
+    //Todo add all components to the view
+    //Todo apply constraints to components
+    setBorder(new TitledBorder(UIManager.getBorder("TitleBorder.border"), "Add New Course",
+        TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 
-        JLabel label_23 = new JLabel( "Type of Course" );
-        label_23.setBounds( 35, 33, 95, 14 );
-        updateModule.add( label_23 );
+    //labels
 
-        JComboBox<String> comboBox_13 = new JComboBox<String>();
-        comboBox_13.setBounds( 140, 30, 120, 20 );
-        updateModule.add( comboBox_13 );
+    /**
+     * reflects the type courses the module can belong to
+     */
+    typeOf = new JLabel("Type of Module");
+    constraints.gridx = 0;
+    constraints.gridy = 0;
+    add(typeOf, constraints);
 
-        JLabel label_24 = new JLabel( "Name" );
-        label_24.setBounds( 35, 66, 95, 14 );
-        updateModule.add( label_24 );
+    nameOf = new JLabel("Name of Module");
+    constraints.gridx = 0;
+    constraints.gridy = 1;
+    add(nameOf, constraints);
 
-        JLabel label_25 = new JLabel( "Module Code" );
-        label_25.setBounds( 350, 66, 95, 14 );
-        updateModule.add( label_25 );
+    codeFor = new JLabel("Code");
+    constraints.gridx = 2;
+    constraints.gridy = 1;
+    add(codeFor, constraints);
 
-        JLabel label_26 = new JLabel( "ID" );
-        label_26.setBounds( 35, 91, 95, 14 );
-        updateModule.add( label_26 );
+    /**
+     * possibly reflects the head of the course
+     */
+    headOf = new JLabel("Head of Module");
+    constraints.gridx = 0;
+    constraints.gridy = 2;
+    add(headOf, constraints);
 
-        JLabel label_27 = new JLabel( "Department" );
-        label_27.setBounds( 35, 116, 95, 14 );
-        updateModule.add( label_27 );
+    /**
+     * the year the module belongs to
+     */
+    yearOf = new JLabel("The Module Year");
+    constraints.gridx = 2;
+    constraints.gridy = 2;
+    add(yearOf, constraints);
 
-        textField_23 = new JTextField();
-        textField_23.setColumns( 10 );
-        textField_23.setBounds( 140, 63, 120, 20 );
-        updateModule.add( textField_23 );
+    lengthOf = new JLabel("Length of Module");
+    constraints.gridx = 0;
+    constraints.gridy = 3;
+    add(lengthOf, constraints);
 
-        JLabel label_28 = new JLabel( "Hours a Week" );
-        label_28.setBounds( 350, 165, 95, 14 );
-        updateModule.add( label_28 );
+    semesters = new JLabel("Number of Semesters");
+    constraints.gridx = 2;
+    constraints.gridy = 3;
+    add(semesters, constraints);
 
-        JLabel label_29 = new JLabel( "Select Lecturer" );
-        label_29.setBounds( 35, 191, 95, 14 );
-        updateModule.add( label_29 );
+    departmentContaining = new JLabel("Department");
+    constraints.gridx = 0;
+    constraints.gridy = 4;
+    add(departmentContaining, constraints);
 
-        textField_24 = new JTextField();
-        textField_24.setColumns( 10 );
-        textField_24.setBounds( 467, 63, 120, 20 );
-        updateModule.add( textField_24 );
+    selectComponent = new JLabel("Select Lecturer");
+    constraints.gridx = 0;
+    constraints.gridy = 5;
+    add(selectComponent, constraints);
 
-        JComboBox<String> comboBox_14 = new JComboBox<String>();
-        comboBox_14.setBounds( 140, 188, 192, 20 );
-        updateModule.add( comboBox_14 );
+    listOf = new JLabel("Lecturers:");
+    constraints.gridx = 0;
+    constraints.gridy = 6;
+    add(listOf, constraints);
 
-        JButton button_12 = new JButton( "Add Lecturer" );
-        button_12.setBounds( 350, 187, 95, 23 );
-        updateModule.add( button_12 );
+    //        constraints.fill = GridBagConstraints.REMAINDER;
+    //        constraints.insets = new Insets( 10, 10, 0, 100 );
 
-        textField_25 = new JTextField();
-        textField_25.setColumns( 10 );
-        textField_25.setBounds( 140, 88, 120, 20 );
-        updateModule.add( textField_25 );
+    //textfields'
+    name = new JTextField(15);
+    constraints.gridx = 1;
+    constraints.gridy = 1;
+    add(name, constraints);
 
-        JButton button_13 = new JButton( "Confirm" );
-        button_13.setBounds( 467, 360, 89, 23 );
-        updateModule.add( button_13 );
+    code = new JTextField(15);
+    constraints.gridx = 3;
+    constraints.gridy = 1;
+    add(code, constraints);
 
-        JButton button_14 = new JButton( "Cancel" );
-        button_14.setBounds( 665, 360, 89, 23 );
-        updateModule.add( button_14 );
+    head = new JTextField(15);
+    constraints.gridx = 1;
+    constraints.gridy = 2;
+    add(head, constraints);
 
-        JButton button_15 = new JButton( "Clear" );
-        button_15.setBounds( 566, 360, 89, 23 );
-        updateModule.add( button_15 );
+    year = new JTextField(15);
+    constraints.gridx = 3;
+    constraints.gridy = 2;
+    add(year, constraints);
 
-        textField_26 = new JTextField();
-        textField_26.setColumns( 10 );
-        textField_26.setBounds( 467, 162, 120, 20 );
-        updateModule.add( textField_26 );
+    length = new JTextField(15);
+    constraints.gridx = 1;
+    constraints.gridy = 3;
+    add(length, constraints);
 
-        JLabel label_30 = new JLabel( "Lecturers: " );
-        label_30.setBounds( 35, 216, 95, 14 );
-        updateModule.add( label_30 );
+    semester = new JTextField(15);
+    constraints.gridx = 3;
+    constraints.gridy = 3;
+    add(semester, constraints);
 
-        JList<String> list_4 = new JList<String>();
-        list_4.setBounds( 140, 214, 192, 125 );
-        updateModule.add( list_4 );
+    //combo boxes
+    //todo get do get type
+    typeOptions = new JComboBox<>(new DefaultComboBoxModel<>(new String[] {"Full Time",
+        "Part Time"}));
+    constraints.gridx = 1;
+    constraints.gridy = 0;
+    add(typeOptions, constraints);
 
-        JLabel label_31 = new JLabel( "Number of Semesters" );
-        label_31.setBounds( 350, 138, 110, 14 );
-        updateModule.add( label_31 );
+    //todo get departments
+    parentComponent = new JComboBox<>();
+    constraints.gridx = 1;
+    constraints.gridy = 4;
+    add(parentComponent, constraints);
 
-        JLabel label_32 = new JLabel( "Password" );
-        label_32.setBounds( 350, 91, 95, 14 );
-        updateModule.add( label_32 );
+    //todo get modules
+    subComponent = new JComboBox<>();
+    constraints.gridx = 1;
+    constraints.gridy = 5;
+    add(subComponent, constraints);
 
-        JComboBox<String> comboBox_15 = new JComboBox<String>();
-        comboBox_15.setBounds( 140, 113, 192, 20 );
-        updateModule.add( comboBox_15 );
+    //        courseModules.setMinimumSize( new Dimension( 0, 200 ) );
+    subComponents = new JList<>();
+    constraints.gridx = 1;
+    constraints.gridy = 6;
+    constraints.fill = GridBagConstraints.BOTH;
+    //    subComponents.setBackground(Color.BLUE);
+    add(subComponents, constraints);
 
-        JButton button_16 = new JButton( "Create New Course" );
-        button_16.setBounds( 467, 187, 127, 23 );
-        updateModule.add( button_16 );
+    //        constraints.fill = GridBagConstraints.LINE_START;
+    //button components
+    addComponent = new JButton("Add Lecturer");
+    constraints.gridx = 2;
+    constraints.gridy = 5;
+    add(addComponent, constraints);
 
-        JLabel label_33 = new JLabel( "Course" );
-        label_33.setBounds( 35, 141, 95, 14 );
-        updateModule.add( label_33 );
+    //todo make sure it calls the user type lecturer
+    createNew = new JButton("Create New Lecturer");
+    createNew.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+        UpdateModuleView.this.setCreateNewPanel(new JFrame());
+        UpdateModuleView.this.getCreateNewPanel().add(new UserView());
+      }
+    });
+    constraints.gridx = 3;
+    constraints.gridy = 5;
+    add(createNew, constraints);
 
-        JComboBox<String> comboBox_16 = new JComboBox<String>();
-        comboBox_16.setBounds( 140, 138, 120, 20 );
-        updateModule.add( comboBox_16 );
+    //        moduleOptions = new Container();
+    //        moduleOptionLayout = new GroupLayout( moduleOptions );
+    //        moduleOptionLayout.setHorizontalGroup( moduleOptionLayout.createParallelGroup(
+    // Alignment.LEADING )
+    //                                                                 .addGroup(
+    // moduleOptionLayout.createSequentialGroup()
+    //
+    //   .addComponent( addModule )
+    //
+    //   .addGap( 5 )
+    //
+    //   .addComponent( createNewModule )
+    //                                                                          ) );
+    //        moduleOptionLayout.setVerticalGroup( moduleOptionLayout.createParallelGroup(
+    // Alignment.LEADING )
+    //                                                               .addGroup(
+    // moduleOptionLayout.createSequentialGroup()
+    //
+    // .addGroup( moduleOptionLayout
+    //
+    //         .createParallelGroup( Alignment.BASELINE )
+    //
+    //         .addComponent( addModule )
+    //
+    //         .addComponent( createNewModule ) )
+    //                                                                        ) );
+    //        constraints.gridx = 3;
+    //        constraints.gridy = 5;
+    //             constraints.gridwidth = 2;
+    //        add( moduleOptions, constraints );
+    //        moduleOptions.setLayout( moduleOptionLayout );
 
-        JLabel label_34 = new JLabel( "Course Code: " );
-        label_34.setBounds( 35, 165, 225, 14 );
-        updateModule.add( label_34 );
+    //        constraints.anchor = GridBagConstraints.SOUTHEAST;
 
-        textField_27 = new JTextField();
-        textField_27.setColumns( 10 );
-        textField_27.setBounds( 467, 88, 120, 20 );
-        updateModule.add( textField_27 );
+    confirm = new JButton("Confirm");
+    constraints.fill = GridBagConstraints.REMAINDER;
+    constraints.insets = new Insets(90, 0, 10, 10);
+    constraints.gridx = 3;
+    constraints.gridy = 7;
+    add(confirm, constraints);
 
-        textField_28 = new JTextField();
-        textField_28.setColumns( 10 );
-        textField_28.setBounds( 467, 138, 120, 20 );
-        updateModule.add( textField_28 );
+    clear = new JButton("Clear");
+    constraints.gridx = 4;
+    constraints.gridy = 7;
+    add(clear, constraints);
 
-    }
+    cancel = new JButton("Cancel");
+    constraints.gridx = 5;
+    constraints.gridy = 7;
+    add(cancel, constraints);
 
+    //        optionLayout = new Container();
+    //        optionButtonLayout = new GroupLayout( optionLayout );
+    //        optionButtonLayout.setHorizontalGroup( optionButtonLayout.createParallelGroup(
+    // Alignment.LEADING )
+    //                                                                 .addGroup(
+    // optionButtonLayout.createSequentialGroup()
+    //
+    //   .addComponent( confirm )
+    //
+    //   .addGap( 10 )
+    //
+    //   .addComponent( clear )
+    //
+    //   .addGap( 10 )
+    //
+    //   .addComponent( cancel )
+    //                                                                          ) );
+    //        optionButtonLayout.setVerticalGroup( optionButtonLayout.createParallelGroup(
+    // Alignment.LEADING )
+    //                                                               .addGroup(
+    // optionButtonLayout.createSequentialGroup()
+    //
+    // .addGroup( optionButtonLayout
+    //
+    //         .createParallelGroup( Alignment.BASELINE )
+    //
+    //         .addComponent( confirm )
+    //
+    //         .addComponent( clear )
+    //
+    //         .addComponent( cancel ) )
+    //                                                                        ) );
+    //
+    //        constraints.gridx = 3;
+    //        constraints.gridy = 10;
+    //        //        constraints.gridwidth = 3;
+    //        constraints.fill = GridBagConstraints.HORIZONTAL;
+    //        add( optionLayout, constraints );
+    //        optionLayout.setLayout( optionButtonLayout );
+
+  }
 }
+
+
+

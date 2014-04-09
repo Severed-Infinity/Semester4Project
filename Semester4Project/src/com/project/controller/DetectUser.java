@@ -9,4 +9,4 @@ package com.project.controller;
  *
  * Created by david on 3/25/2014.
  */
-public class DetectUser { }
+public class DetectUser {}

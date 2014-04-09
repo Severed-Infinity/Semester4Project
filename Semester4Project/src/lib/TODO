@@ -11,3 +11,7 @@ A TODO file containing everything that needs to be done
 9. complete the com.project.database package with other classes such as createStatement etc.
 10. look for duplicate code and turn it into interfaces, and or parent classes
 11. ESSENTIAL create optimization method/class code
+12. Change naming of buttons, labels, etc. to match their classes
+13. refers to 10, move the same code found in all views and generify it
+14. add warning panes to appropriate classes
+15. refers to 6, leave timetable view alone until it is time to work with it
