@@ -1,9 +1,17 @@
 package com.project.user;
 
-public class Student extends User {
-  public Student(String name, String login) {
-    super(name, login);
-    // TODO Auto-generated constructor stub
-  }
+import com.project.controller.*;
 
+import java.time.*;
+
+public class Student extends User {
+  protected Student(
+      final String code,
+      final String firstName,
+      final String lastName,
+      final String password,
+      final LocalDate dateOfBirth
+  ) {
+    super(code, firstName, lastName, password, dateOfBirth);
+  }
 }

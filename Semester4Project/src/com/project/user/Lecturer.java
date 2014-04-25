@@ -1,9 +1,15 @@
 package com.project.user;
 
-public class Lecturer extends Staff {
-  public Lecturer(String name, String login) {
-    super(name, login);
-    // TODO Auto-generated constructor stub
-  }
+import java.time.*;
 
+public class Lecturer extends Staff {
+  protected Lecturer(
+      final String code,
+      final String firstName,
+      final String lastName,
+      final String password,
+      final LocalDate dateOfBirth
+  ) {
+    super(code, firstName, lastName, password, dateOfBirth);
+  }
 }

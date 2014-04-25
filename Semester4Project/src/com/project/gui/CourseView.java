@@ -1,5 +1,7 @@
 package com.project.gui;
 
+import com.project.controller.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -27,8 +29,6 @@ public class CourseView extends View {
     constraints.ipadx = 5;
     constraints.ipady = 5;
 
-    //Todo add all components to the view
-    //Todo apply constraints to components
     setBorder(new TitledBorder(UIManager.getBorder("TitleBorder.border"), "Add New Course",
         TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 
@@ -88,22 +88,22 @@ public class CourseView extends View {
     //        constraints.insets = new Insets( 10, 10, 0, 100 );
 
     //textfields'
-    name = new JTextField(15);
+    name = new JTextField(20);
     constraints.gridx = 1;
     constraints.gridy = 1;
     add(name, constraints);
 
-    code = new JTextField(15);
+    code = new JTextField(20);
     constraints.gridx = 3;
     constraints.gridy = 1;
     add(code, constraints);
 
-    head = new JTextField(15);
+    head = new JTextField(20);
     constraints.gridx = 1;
     constraints.gridy = 2;
     add(head, constraints);
 
-    year = new JTextField(15);
+    year = new JTextField(20);
     constraints.gridx = 3;
     constraints.gridy = 2;
     add(year, constraints);
@@ -127,18 +127,19 @@ public class CourseView extends View {
     add(typeOptions, constraints);
 
     //todo get departments
-    parentComponent = new JComboBox<>();
+    parentComponent = new JComboBox<Department>();
     constraints.gridx = 1;
     constraints.gridy = 4;
     add(parentComponent, constraints);
 
     //todo get modules
-    subComponent = new JComboBox<>();
+    subComponent = new JComboBox<Module>();
     constraints.gridx = 1;
     constraints.gridy = 5;
     add(subComponent, constraints);
 
     //        courseModules.setMinimumSize( new Dimension( 0, 200 ) );
+    //todo work on list adding and removing
     subComponents = new JList<>();
     constraints.gridx = 1;
     constraints.gridy = 6;

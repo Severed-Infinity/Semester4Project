@@ -11,14 +11,12 @@ import java.sql.*;
 
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
-  public final JLabel loginLabel;
-  public final JLabel passwordLabel;
-  public final JLabel logo;
-  public Image iTTLogo;
-  protected DatabaseConnection databaseConnection = null;
+  private Image iTTLogo;
+  private DatabaseConnection databaseConnection = null;
   private JTextField userName;
   private JPasswordField userPassword;
   private JButton login, cancel;
+  private RunStatement runStatement;
 
   public TimetableLogin() {
 
@@ -44,7 +42,7 @@ public class TimetableLogin extends JFrame {
       e.printStackTrace();
     }
 
-    logo = new JLabel(new ImageIcon(iTTLogo));
+    final JLabel logo = new JLabel(new ImageIcon(iTTLogo));
     constraints.gridx = 0;
     constraints.gridy = 0;
     constraints.gridwidth = 2;
@@ -53,14 +51,14 @@ public class TimetableLogin extends JFrame {
 
     constraints.insets = new Insets(0, 10, 0, 10);
 
-    loginLabel = new JLabel("User Name");
+    final JLabel loginLabel = new JLabel("User Name");
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     add(loginLabel, constraints);
 
-    passwordLabel = new JLabel("Password");
+    final JLabel passwordLabel = new JLabel("Password");
     constraints.gridx = 0;
     constraints.gridy = 3;
     constraints.gridwidth = 2;
@@ -92,6 +90,7 @@ public class TimetableLogin extends JFrame {
       public void actionPerformed(ActionEvent e) {
 
         login();
+        query();
       }
     });
     constraints.gridx = 0;
@@ -120,7 +119,11 @@ public class TimetableLogin extends JFrame {
     pack();
   }
 
-  public JTextField getUserName() {
+  private void query() {
+    runStatement.queryCourse(databaseConnection.getDatabaseConnection());
+  }
+
+  JTextField getUserName() {
 
     return userName;
   }
@@ -161,31 +164,22 @@ public class TimetableLogin extends JFrame {
 
       databaseConnection = new DatabaseConnection(getUserName().getText(),
           String.valueOf(getUserPassword().getPassword()));
-      // databaseConnection.createDatabaseConnection( "SYSTEM",
-      // "timetable" );
-      //            databaseConnection.createDatabaseConnection( getUserName().getText(),
-      // String.valueOf( getUserPassword().getPassword() ) );
 
     } catch (Exception e) {
       //            System.out.println( e.getMessage() );
-      JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
-          JOptionPane.WARNING_MESSAGE, null);
-    } finally {
-/*
-             * if there is a database connection then create a temp user (for
-             * testing purposes) and launch the main window then close this
-             * window
-             */
-      try {
 
+    } finally {
+      /**
+       * if there is a database connection then launch the main window
+       * followed by closing this window
+       */
+      try {
         boolean connection = !databaseConnection.getDatabaseConnection().isClosed();
         if (connection) {
-
           MainWindow mainWindow = new MainWindow(databaseConnection);
           mainWindow.setVisible(true);
           dispose();
         }
-
       } catch (SQLException e1) {
         //                System.out.println( e1.getMessage() );
         System.out.printf("No database Connection Detected");

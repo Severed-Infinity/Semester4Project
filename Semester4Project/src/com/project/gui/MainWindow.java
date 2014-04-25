@@ -12,18 +12,12 @@ import java.awt.event.*;
  * Created by david on 3/12/14.
  */
 public class MainWindow extends JFrame {
-  // --Commented out by Inspection (4/6/2014 12:20 AM):public User currentUser; //.getUser();
-  protected final JTextField searchField;
-  protected final JPanel header;
-  protected final MainView mainView;
-  protected final JButton home;
-  protected final JButton logout;
-  protected final JLabel loggedUser;
-  protected JMenuBar mainMenu;
-  protected JMenu menuFile, menuEdit;
-  protected JMenuItem search, print, exitAndLogout, exit, updateTimetable, updateUsers,
-      updateCourse, updateModule, addUsers, addCourse, addModule;
-
+  /**
+   * Instantiates a new Main window.
+   *
+   * @param databaseConnection
+   *     the database connection
+   */
   public MainWindow(DatabaseConnection databaseConnection) {
 
     setTitle("Timetable");
@@ -44,7 +38,10 @@ public class MainWindow extends JFrame {
     setJMenuBar(addMenu());
 
     //        beginning of header
-    header = new JPanel();
+    /*
+    The Header.
+   */
+    final JPanel header = new JPanel();
     header.setBackground(Color.white);
     constraints.gridx = 0;
     constraints.gridy = 0;
@@ -53,10 +50,16 @@ public class MainWindow extends JFrame {
     constraints.fill = GridBagConstraints.HORIZONTAL;
     add(header, constraints);
 
-    home = new JButton("Home");
+    /*
+    The Home.
+   */
+    final JButton home = new JButton("Home");
     //        header.add( home );
 
-    logout = new JButton("Logout");
+    /*
+    The Logout.
+   */
+    final JButton logout = new JButton("Logout");
     logout.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent e) {
@@ -66,11 +69,17 @@ public class MainWindow extends JFrame {
     });
     //        header.add( logout );
 
-    searchField = new JFormattedTextField("Search");
+    /*
+    The Search field.
+   */
+    final JTextField searchField = new JFormattedTextField("Search");
     searchField.setColumns(40);
     //        header.add( searchField );
 
-    loggedUser = new JLabel("User");
+    /*
+    The Logged user.
+   */
+    final JLabel loggedUser = new JLabel("User");
     loggedUser.setHorizontalAlignment(SwingConstants.TRAILING);
     //        header.add( loggedUser );
 
@@ -103,7 +112,10 @@ public class MainWindow extends JFrame {
     //        end of header
 
     //        beginning of main view
-    mainView = new MainView();
+    /**
+     The Main view.
+     */
+    final MainView mainView = new MainView(new CourseView());
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.weightx = 1.0;
@@ -111,36 +123,45 @@ public class MainWindow extends JFrame {
     //        constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.BOTH;
     add(mainView, constraints);
-
-    //        AdminView admimView = new AdminView();
-
-    //        mainView.add( new CourseView() );
-    mainView.add(new ModuleView());
     //        end of main view
 
     pack();
   }
 
+  /**
+   * Add menu.
+   *
+   * @return the j menu bar
+   */
   public JMenuBar addMenu() {
 
-    mainMenu = new JMenuBar();
+    /*
+    The Main menu.
+   */
+    final JMenuBar mainMenu = new JMenuBar();
 
-    menuFile = new JMenu("File");
+    /*
+    The Menu file.
+   */
+    final JMenu menuFile = new JMenu("File");
     mainMenu.add(menuFile);
-    menuEdit = new JMenu("Edit");
+    final JMenu menuEdit = new JMenu("Edit");
     mainMenu.add(menuEdit);
 
-    search = new JMenuItem("Search");
-    print = new JMenuItem("Print");
-    exitAndLogout = new JMenuItem("Exit and Logout");
-    exit = new JMenuItem("Exit");
-    updateTimetable = new JMenuItem("Update Timetable");
-    updateUsers = new JMenuItem("Update User");
-    updateCourse = new JMenuItem("Update Course");
-    updateModule = new JMenuItem("Update Module");
-    addUsers = new JMenuItem("Add User");
-    addCourse = new JMenuItem("Add Course");
-    addModule = new JMenuItem("Add Module");
+    /*
+    The Search.
+   */
+    final JMenuItem search = new JMenuItem("Search");
+    final JMenuItem print = new JMenuItem("Print");
+    final JMenuItem exitAndLogout = new JMenuItem("Exit and Logout");
+    final JMenuItem exit = new JMenuItem("Exit");
+    final JMenuItem updateTimetable = new JMenuItem("Update Timetable");
+    final JMenuItem updateUsers = new JMenuItem("Update User");
+    final JMenuItem updateCourse = new JMenuItem("Update Course");
+    final JMenuItem updateModule = new JMenuItem("Update Module");
+    final JMenuItem addUsers = new JMenuItem("Add User");
+    final JMenuItem addCourse = new JMenuItem("Add Course");
+    final JMenuItem addModule = new JMenuItem("Add Module");
 
     menuFile.add(search);
     menuFile.add(print);
@@ -162,51 +183,11 @@ public class MainWindow extends JFrame {
    * Created by david on 3/12/14.
    */
   private class MainView extends View {
-
-    // --Commented out by Inspection START (4/6/2014 12:55 AM):
-    //        //        private List<View> views;
-    //        private JPanel child;
-    // --Commented out by Inspection STOP (4/6/2014 12:55 AM)
-
-    private MainView() {
-
+    private MainView(View view) {
+      setLayout(new BorderLayout());
+      this.add(view, BorderLayout.CENTER);
     }
 
-    //        public View setDefaultView () {
-    //
-    //            if ( currentUser instanceof Student ) {
-    //                return new TimetableView( this, CENTER, "Student Timetable", null );
-    //            } else if ( currentUser instanceof Lecturer ) {
-    //                return new TimetableView( this, CENTER, "Lecturer Timetable", null );
-    //            } else if ( currentUser instanceof Admin ) {
-    //                return new AdminView( this, CENTER, "Admin View" );
-    //            }
-    //            return null;
-    //        }
-
-    //        public View changeView () {
-    //
-    //            this.getChild();
-    //            /*
-    //            change the child view of the main view based on the button pressed
-    //
-    //            get the button pressed
-    //            call the view
-    //            set child to the new view
-    //
-    //             */
-    //            return null;
-    //        }
-    //
-    //        public JPanel getChild () {
-    //            return child;
-    //        }
-
-    // --Commented out by Inspection START (4/6/2014 12:23 AM):
-    //        public void setChild ( JPanel child ) {
-    //            this.child = child;
-    //        }
-    // --Commented out by Inspection STOP (4/6/2014 12:23 AM)
   }
 
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4201621825">
+  <component name="DataSourceManagerImpl" format="xml" hash="1668769420">
     <data-source source="LOCAL" name="Oracle - @localhost" uuid="632fe7bd-1828-4698-bc12-0825a2688553">
       <driver-ref>oracle</driver-ref>
       <synchronize>true</synchronize>
@@ -9,15 +9,6 @@
       <user-name>timetable</user-name>
       <user-password>dfdedfc3dfc7dfcfdfdedfcbdfc8dfc6dfcf</user-password>
       <schema-pattern>*.TIMETABLE</schema-pattern>
-      <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="Oracle - @localhost [2]" uuid="5b220918-e858-4c5e-90fa-325a3b511bdf">
-      <driver-ref>oracle</driver-ref>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@//localhost:1521</jdbc-url>
-      <user-name>x00073017</user-name>
-      <user-password>dfcedfc8df9adf99dfeedfcfdfc9df93df9b</user-password>
-      <schema-pattern>*.X00073017</schema-pattern>
       <libraries />
     </data-source>
   </component>

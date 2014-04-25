@@ -22,7 +22,7 @@
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
-    <autoscroll-to-editor value="false" />
+    <autoscroll-to-editor value="true" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
   </component>
@@ -154,11 +154,23 @@
           <content-type name="DTD" enabled="true" />
           <content-type name="HTML" enabled="true" />
           <content-type name="XHTML" enabled="true" />
+          <content-type name="CSS" enabled="true" />
           <content-type name="Java" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JPA QL" enabled="true" />
+          <content-type name="JavaScript" enabled="true" />
+          <content-type name="JSP" enabled="true" />
+          <content-type name="JSPx" enabled="true" />
           <content-type name="Groovy" enabled="true" />
+          <content-type name="FTL" enabled="true" />
+          <content-type name="TML" enabled="true" />
+          <content-type name="GSP" enabled="true" />
+          <content-type name="ASP" enabled="true" />
+          <content-type name="VTL" enabled="true" />
           <content-type name="AIDL" enabled="true" />
+          <content-type name="YAML" enabled="true" />
+          <content-type name="Flex" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>
       </qualified-text-editor>
@@ -348,6 +360,26 @@
     </entry_points>
   </component>
   <component name="IdProvider" IDEtalkID="3825C3E759D6B35E0B302A27AF494BF7" />
+  <component name="InspectorGeneralConfiguration">
+    <option name="MAKE_CLASSES_AND_METHODS_FINAL_IF_NOT_OVERRIDDEN" value="false" />
+    <option name="PREFER_FINAL_FOR_PARAMETERS" value="false" />
+    <option name="PREFER_FINAL_FOR_LOCAL_VARIABLES" value="true" />
+    <option name="ANNOTATE_LOCAL_VARIABLES" value="false" />
+    <option name="PASSES_FOR_NULLITY_INFERENCE" value="3" />
+    <option name="PASSES_FOR_TYPE_INFERENCE" value="3" />
+    <option name="USE_CONTINUE_TO_FLATTEN_LOOP_STRUCTURES" value="true" />
+    <option name="RETURN_POLICY" value="0" />
+    <option name="REPLACE_CONDITIONAL_EXPRESSIONS_WHERE_POSSIBLE" value="false" />
+    <option name="INSERT_EXPLANATORY_PARENS" value="true" />
+    <option name="RATIONALIZE_ON_CHECKIN" value="false" />
+    <option name="OPTIMIZE_STRINGS_ON_CHECKIN" value="false" />
+    <option name="TIGHTEN_ACCESS_MODIFIERS_ON_CHECKIN" value="false" />
+    <option name="INFER_NULLITY_ON_CHECKIN" value="false" />
+    <option name="TIGHTEN_TYPES_ON_CHECKIN" value="false" />
+    <option name="CLEANUP_REFERENCES_ON_CHECKIN" value="false" />
+    <option name="OVERRIDE_ANNOTATION_RULE" value="1" />
+    <option name="protectedAnnotationStringFlattened" value="" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/assets" />
     <option name="OPTION_SCOPE" value="protected" />

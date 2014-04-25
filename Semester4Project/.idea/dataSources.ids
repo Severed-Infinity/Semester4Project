@@ -8,32 +8,31 @@
     <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
     <schema name="TIMETABLE" catalog=""/>
     <table name="CLASS_PERIOD" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="MODULE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="MODULE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="TIME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
       <column name="ROOM_NUMBER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <primary-key name="SYS_C007289" columns="TIME"/>
-      <foreign-key name="SYS_C007291" columns="MODULE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007513" columns="MODULE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
       <foreign-key name="SYS_C007288" columns="ROOM_NUMBER" ref-table="TIMETABLE_ROOM" ref-schema="TIMETABLE" ref-catalog="" ref-columns="ROOM_NUMBER" update-rule="0" delete-rule="1" deferrability="2"/>
       <exported-key name="SYS_C007290" table="TIMETABLE_TIMETABLE" schema="TIMETABLE" catalog="" columns="TIME_SLOT"/>
     </table>
     <table name="COURSE_MODULE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="COURSE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="MODULE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="COURSE_CODE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="MODULE_CODE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="SEMESTER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="YEAR" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <primary-key name="SYS_C007263" columns="COURSE_CODE,MODULE_CODE"/>
-      <foreign-key name="SYS_C007264" columns="COURSE_CODE" ref-table="TIMETABLE_COURSE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="COURSE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
-      <foreign-key name="SYS_C007265" columns="MODULE_CODE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007510" columns="COURSE_CODE" ref-table="TIMETABLE_COURSE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="COURSE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007512" columns="MODULE_CODE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
     </table>
     <table name="MODULE_LECTURER" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="MODULE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="MODULE_CODE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="USER_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <primary-key name="SYS_C007280" columns="MODULE_CODE,USER_ID"/>
-      <foreign-key name="SYS_C007281" columns="MODULE_CODE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
-      <foreign-key name="SYS_C007282" columns="USER_ID" ref-table="TIMETABLE_USERS" ref-schema="TIMETABLE" ref-catalog="" ref-columns="USER_ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="SYS_C007511" columns="MODULE_CODE" ref-table="TIMETABLE_MODULE" ref-schema="TIMETABLE" ref-catalog="" ref-columns="MODULE_CODE" update-rule="0" delete-rule="1" deferrability="2"/>
     </table>
     <table name="TIMETABLE_COURSE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="COURSE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="COURSE_CODE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="COURSE_NAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
       <column name="COURSE_TYPE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
       <column name="COURSE_LENGTH" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
@@ -41,10 +40,9 @@
       <column name="COURSE_SEMESTER" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
       <column name="COURSE_HEAD" sqlType="VARCHAR2" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <column name="DEPARTMENT_ID" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
-      <column name="MODULES" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <primary-key name="SYS_C007202" columns="COURSE_CODE"/>
       <foreign-key name="SYS_C007257" columns="DEPARTMENT_ID" ref-table="TIMETABLE_DEPARTMENT" ref-schema="TIMETABLE" ref-catalog="" ref-columns="DEPARTMENT_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-      <exported-key name="SYS_C007264" table="COURSE_MODULE" schema="TIMETABLE" catalog="" columns="COURSE_CODE"/>
+      <exported-key name="SYS_C007510" table="COURSE_MODULE" schema="TIMETABLE" catalog="" columns="COURSE_CODE"/>
     </table>
     <table name="TIMETABLE_DEPARTMENT" schema="TIMETABLE" catalog="" type="TABLE">
       <column name="DEPARTMENT_ID" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
@@ -58,22 +56,22 @@
       <exported-key name="SYS_C007283" table="TIMETABLE_ROOM" schema="TIMETABLE" catalog="" columns="DEPARTMENT_ID"/>
     </table>
     <table name="TIMETABLE_MODULE" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="MODULE_CODE" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
+      <column name="MODULE_CODE" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
       <column name="MODULE_NAME" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="COURSE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="SEMESTER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="WEEKLY_HOURS" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="LECTURERS" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <primary-key name="SYS_C007209" columns="MODULE_CODE"/>
-      <exported-key name="SYS_C007291" table="CLASS_PERIOD" schema="TIMETABLE" catalog="" columns="MODULE"/>
-      <exported-key name="SYS_C007265" table="COURSE_MODULE" schema="TIMETABLE" catalog="" columns="MODULE_CODE"/>
-      <exported-key name="SYS_C007281" table="MODULE_LECTURER" schema="TIMETABLE" catalog="" columns="MODULE_CODE"/>
+      <exported-key name="SYS_C007513" table="CLASS_PERIOD" schema="TIMETABLE" catalog="" columns="MODULE"/>
+      <exported-key name="SYS_C007512" table="COURSE_MODULE" schema="TIMETABLE" catalog="" columns="MODULE_CODE"/>
+      <exported-key name="SYS_C007511" table="MODULE_LECTURER" schema="TIMETABLE" catalog="" columns="MODULE_CODE"/>
     </table>
     <table name="TIMETABLE_ROOM" schema="TIMETABLE" catalog="" type="TABLE">
       <column name="ROOM_NUMBER" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="ROOM_SEATING" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
       <column name="DEPARTMENT_ID" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
       <column name="LAB" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="SHARED_ROOM_NUMBER" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
       <primary-key name="SYS_C007215" columns="ROOM_NUMBER"/>
       <foreign-key name="SYS_C007283" columns="DEPARTMENT_ID" ref-table="TIMETABLE_DEPARTMENT" ref-schema="TIMETABLE" ref-catalog="" ref-columns="DEPARTMENT_ID" update-rule="0" delete-rule="1" deferrability="2"/>
       <exported-key name="SYS_C007288" table="CLASS_PERIOD" schema="TIMETABLE" catalog="" columns="ROOM_NUMBER"/>
@@ -90,82 +88,10 @@
       <primary-key name="SYS_C007194" columns="TIMETABLE_ID"/>
       <foreign-key name="SYS_C007290" columns="TIME_SLOT" ref-table="CLASS_PERIOD" ref-schema="TIMETABLE" ref-catalog="" ref-columns="TIME" update-rule="0" delete-rule="1" deferrability="2"/>
     </table>
-    <table name="TIMETABLE_USER" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="USER_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="USER_NAME_FIRST" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_NAME_LAST" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="DATE_OF_BIRTH" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_TYPE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="USER_PASSWORD" sqlType="VARCHAR2" precision="4000" scale="0" nullable="false" jdbcType="12"/>
-      <column name="TITLE" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
-      <column name="TEACHES" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="COURSE" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <primary-key name="SYS_C007192" columns="USER_ID"/>
-    </table>
     <table name="TIMETABLE_USERS" schema="TIMETABLE" catalog="" type="TABLE">
-      <column name="USER_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="USER_NAME_FIRST" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <column name="USER_NAME_LAST" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <column name="DATE_OF_BIRTH" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="93"/>
-      <column name="USER_PASSWORD" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SYS_C007270" columns="USER_ID"/>
-      <exported-key name="SYS_C007282" table="MODULE_LECTURER" schema="TIMETABLE" catalog="" columns="USER_ID"/>
-      <index name="SYS_C007269" unique="true" columns="SYS_NC_OID$"/>
-    </table>
-  </data-source>
-  <data-source source="LOCAL" name="Oracle - @localhost [2]" uuid="5b220918-e858-4c5e-90fa-325a3b511bdf">
-    <database-info product="Oracle" version="Oracle Database 11g Express Edition Release 11.2.0.2.0 - Production" jdbc-version="11.2" driver-name="Oracle JDBC driver" driver-version="11.2.0.3.0">
-      <extra-name-characters>$#</extra-name-characters>
-      <identifier-quote-string>&quot;</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
-    <schema name="X00073017" catalog=""/>
-    <table name="ACTOR_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="ACTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="ACTOR_FIRST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <column name="ACTOR_LAST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SYS_C007354" columns="ACTOR_ID"/>
-      <exported-key name="SYS_C007374" table="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" columns="ACTOR_ID"/>
-    </table>
-    <table name="DIRECTOR_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="DIRECTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="DIRECTOR_FIRST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <column name="DIRECTOR_LAST_NAME" sqlType="VARCHAR2" precision="15" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SYS_C007350" columns="DIRECTOR_ID"/>
-      <exported-key name="SYS_C007379" table="FILM_TABLE" schema="X00073017" catalog="" columns="DIRECTOR_ID"/>
-    </table>
-    <table name="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="FILM_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="ACTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007372" columns="FILM_ID,ACTOR_ID"/>
-      <foreign-key name="SYS_C007374" columns="ACTOR_ID" ref-table="ACTOR_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="ACTOR_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-      <foreign-key name="SYS_C007373" columns="FILM_ID" ref-table="FILM_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="FILM_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-    </table>
-    <table name="FILM_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="FILM_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="GENRE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="FILM_LENGTH" sqlType="NUMBER" precision="0" scale="-127" nullable="true" jdbcType="3"/>
-      <column name="FILM_TITLE" sqlType="VARCHAR2" precision="40" scale="0" nullable="true" jdbcType="12"/>
-      <column name="YEAR_RELEASED" sqlType="VARCHAR2" precision="4" scale="0" nullable="true" jdbcType="12"/>
-      <column name="DIRECTOR_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="STUDIO_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <primary-key name="SYS_C007365" columns="FILM_ID"/>
-      <foreign-key name="SYS_C007379" columns="DIRECTOR_ID" ref-table="DIRECTOR_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="DIRECTOR_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-      <foreign-key name="SYS_C007366" columns="GENRE_ID" ref-table="GENRE_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="GENRE_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-      <foreign-key name="SYS_C007380" columns="STUDIO_ID" ref-table="STUDIO_TABLE" ref-schema="X00073017" ref-catalog="" ref-columns="STUDIO_ID" update-rule="0" delete-rule="1" deferrability="2"/>
-      <exported-key name="SYS_C007373" table="FILM_ACTOR_LINK_TABLE" schema="X00073017" catalog="" columns="FILM_ID"/>
-    </table>
-    <table name="GENRE_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="GENRE_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="GENRE" sqlType="VARCHAR2" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SYS_C007346" columns="GENRE_ID"/>
-      <exported-key name="SYS_C007366" table="FILM_TABLE" schema="X00073017" catalog="" columns="GENRE_ID"/>
-    </table>
-    <table name="STUDIO_TABLE" schema="X00073017" catalog="" type="TABLE">
-      <column name="STUDIO_ID" sqlType="NUMBER" precision="0" scale="-127" nullable="false" jdbcType="3"/>
-      <column name="STUDIO_NAME" sqlType="VARCHAR2" precision="30" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="SYS_C007357" columns="STUDIO_ID"/>
-      <exported-key name="SYS_C007380" table="FILM_TABLE" schema="X00073017" catalog="" columns="STUDIO_ID"/>
+      <column name="USER_ID" sqlType="VARCHAR2" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="USER_OBJ" sqlType="TIMETABLE_USER_OBJ" precision="256" scale="0" nullable="false" jdbcType="1111"/>
+      <primary-key name="SYS_C007546" columns="USER_ID"/>
     </table>
   </data-source>
 </component>

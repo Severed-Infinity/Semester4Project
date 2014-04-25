@@ -1,11 +1,12 @@
 package com.project.gui;
 
+import com.project.controller.*;
+
 import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
 public abstract class View extends JPanel {
-  //todo change <types> to the correct types, for now string will do until classes are made
   /**
    * Inputs for the Views, they relate directly to components of similar names
    */
@@ -24,15 +25,20 @@ public abstract class View extends JPanel {
       selectComponent,
       listOf, yearOf, semesters;
   protected JFrame createNewPanel;
-  /**
+  /*
    * drop downs to interacting with different types of components and options
    */
-  protected JComboBox<Object> typeOptions, subComponent, parentComponent;
+  /** any object that extends object can belong in type options */
+  protected JComboBox<String> typeOptions;
+  /** any type that extends object that is a sub component of the implementing class */
+  protected JComboBox<?> subComponent;
+  /** any type that extends object that is a parent component of the implementing class */
+  protected JComboBox<?> parentComponent;
   /**
    * A list used in conjunction with controls and combo box to create a list of
    * components to be added to main type
    */
-  protected JList<Object> subComponents;
+  protected JList<Module> subComponents;
 
   //    protected ArrayList<View> views = new ArrayList<>();
 

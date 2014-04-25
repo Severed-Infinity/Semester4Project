@@ -2,6 +2,7 @@ package com.project.database;
 
 import oracle.jdbc.pool.*;
 
+import javax.swing.*;
 import java.sql.*;
 
 /**
@@ -13,16 +14,65 @@ import java.sql.*;
  * Created by david on 3/18/14.
  */
 public class DatabaseConnection {
+  /**
+   * The Run statement.
+   */
+  public RunStatement runStatement;
   private Connection databaseConnection;
-  private ResultSet resultSet;
-  private Statement statement;
-  private PreparedStatement preparedStatement;
+  private String path;
 
+  /**
+   * Instantiates a new Database connection.
+   *
+   * @param user
+   *     the user
+   * @param password
+   *     the password
+   */
   public DatabaseConnection(String user, String password) {
     createDatabaseConnection(user, password);
+    setPath("TIMETABLE.DDL");
+    createDatabaseFromDDL(getPath());
   }
 
-  public void createDatabaseConnection(String user, String password) {
+  /**
+   * Gets path.
+   *
+   * @return the path
+   */
+  public String getPath() {
+    return path;
+  }
+
+  /**
+   * Sets path.
+   *
+   * @param path
+   *     the path
+   */
+  public void setPath(final String path) {
+    this.path = path;
+  }
+
+  /**
+   * Create database from dDL.
+   *
+   * @param path
+   *     the path
+   */
+  public void createDatabaseFromDDL(String path) {
+    new GetDatabaseDDL(path);
+  }
+
+  /**
+   * Create database connection.
+   *
+   * @param user
+   *     the user
+   * @param password
+   *     the password
+   */
+  private void createDatabaseConnection(String user, String password) {
 
     try {
       OracleDataSource dataSource = new OracleDataSource();
@@ -39,63 +89,62 @@ public class DatabaseConnection {
         dataSource.setUser(user);
         dataSource.setPassword(password);
 
-        // checkPassword( user, password );
-
         setDatabaseConnection(dataSource.getConnection());
+        if (!checkPassword(dataSource.getConnection(), user, password)) {
+          dataSource.getConnection().close();
+        }
         System.out.println("connected to source");
-      } catch (Exception e) {
+      } catch (SQLException e) {
         System.out.println(e.getMessage());
+        JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
+            JOptionPane.WARNING_MESSAGE, null);
       }
     } catch (Exception e) {
-      //            System.out.println( e.getMessage() );
       System.exit(0);
     }
   }
 
-  //    public boolean checkPassword ( String user, String password ) {
-  //
-  //        String userPassword = null;
-  //        try {
-  //            setPreparedStatement( getDatabaseConnection().prepareStatement( "select userName,
-  // userPassword from User where name = '" +
-  //                            user + "'"
-  //                                                                          ) );
-  //            setResultSet( (ResultSet) getPreparedStatement() );
-  //            while ( getResultSet().next() ) {
-  //                getResultSet().getString( "userPassword" );
-  //                userPassword = String.valueOf( getResultSet() );
-  //
-  //                System.out.println( "Successful test" );
-  //            }
-  //        } catch ( SQLException e ) {
-  //            // e.printStackTrace();
-  //            System.out.println( e.getMessage() );
-  //        }
-  //        endConnection();
-  //        assert userPassword != null;
-  //        return password.length() == userPassword.length();
-  //    }
+  /**
+   * Check password.
+   *
+   * @param connection
+   *     the connection
+   * @param user
+   *     the user
+   * @param password
+   *     the password
+   *
+   * @return boolean
+   *
+   * @throws SQLException
+   *     the sQL exception
+   */
+  public boolean checkPassword(
+      Connection connection, String user,
+      String password
+  ) throws SQLException {
 
-  public PreparedStatement getPreparedStatement() {
-
-    return preparedStatement;
+    runStatement.setQueryType(connection.createStatement());
+    runStatement.setResultSet(runStatement.getQueryType().executeQuery(
+        "SELECT treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_ID, " +
+            "" + "treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_PASSWORD FROM TIMETABLE" +
+            ".TIMETABLE_USERS"
+    ));
+    while (runStatement.getResultSet().next()) {
+      if (user.equals(runStatement.getResultSet().getString(1)) && password.equals(
+          runStatement.getResultSet
+              ().getString(2)
+      )) {
+        System.out.printf("%s, %s", user, password);
+        return true;
+      }
+    }
+    return false;
   }
 
-  public void setPreparedStatement(PreparedStatement preparedStatement) {
-
-    this.preparedStatement = preparedStatement;
-  }
-
-  public ResultSet getResultSet() {
-
-    return resultSet;
-  }
-
-  public void setResultSet(ResultSet resultSet) {
-
-    this.resultSet = resultSet;
-  }
-
+  /**
+   * End connection.
+   */
   public void endConnection() {
 
     try {
@@ -108,23 +157,24 @@ public class DatabaseConnection {
 
   }
 
+  /**
+   * Gets database connection.
+   *
+   * @return the database connection
+   */
   public Connection getDatabaseConnection() {
-
     return databaseConnection;
   }
 
-  public void setDatabaseConnection(Connection databaseConnection) {
+  /**
+   * Sets database connection.
+   *
+   * @param databaseConnection
+   *     the database connection
+   */
+  private void setDatabaseConnection(Connection databaseConnection) {
 
     this.databaseConnection = databaseConnection;
   }
 
-  public Statement getStatement() {
-
-    return statement;
-  }
-
-  public void setStatement(Statement statement) {
-
-    this.statement = statement;
-  }
 }
