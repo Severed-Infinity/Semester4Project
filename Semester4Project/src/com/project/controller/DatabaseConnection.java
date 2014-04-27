@@ -1,5 +1,7 @@
-package com.project.database;
+package com.project.controller;
 
+import com.project.database.*;
+import com.project.user.*;
 import oracle.jdbc.pool.*;
 
 import javax.swing.*;
@@ -17,7 +19,7 @@ public class DatabaseConnection {
   /**
    * The Run statement.
    */
-  private RunStatement runStatement;
+  private RunStatement runStatement = new RunStatement();
   /**
    * The Database connection.
    */
@@ -76,26 +78,19 @@ public class DatabaseConnection {
    *     the password
    */
   private void createDatabaseConnection(String user, String password) {
-    //todo change from void type to connection type
-    //todo change the call to checkUser, call this from checkUser
     try {
       OracleDataSource dataSource = new OracleDataSource();
       try {
-        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
-        //               dataSource.setURL( "jdbc:oracle:thin:HR/david@localhost:1521:XE" );
-        //                also works the
-        // same.
-        // dataSource.setURL(
-        // "jdbc:oracle:thin:@//localhost:1521/timetable" );
-
+        //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
+        dataSource.setURL("jdbc:oracle:thin://@localhost:1521:XE");
         // college source
         // dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
         dataSource.setUser(user);
         dataSource.setPassword(password);
 
         setDatabaseConnection(dataSource.getConnection());
-        checkUser(dataSource.getConnection(), user, password);
-        System.out.println("connected to source");
+        checkUser(user, password);
+
       } catch (SQLException e) {
         System.out.println(e.getMessage());
         JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
@@ -109,8 +104,6 @@ public class DatabaseConnection {
   /**
    * Check password.
    *
-   * @param connection
-   *     the connection
    * @param user
    *     the user
    * @param password
@@ -122,13 +115,24 @@ public class DatabaseConnection {
    *     the sQL exception
    */
   private boolean checkUser(
-      Connection connection, String user,
+      String user,
       String password
   ) throws SQLException {
-
-    runStatement.setQueryType(connection.createStatement());
+    //todo change to check userArray
+    for (User userCheck : RunStatement.users) {
+      if (user.equals(userCheck.getCode()) && password.equals(userCheck.getPassword())) {
+        if (userCheck instanceof Student) {
+          //set view to timetable view
+        } else if (userCheck instanceof Admin) {
+          //set view to admin view
+        } else if (userCheck instanceof Lecturer) {
+          //set view to timetable view
+        }
+      }
+    }
+    runStatement.setQueryType(getDatabaseConnection().createStatement());
     runStatement.setResultSet(runStatement.getQueryType().executeQuery(
-        "SELECT treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_ID, " +
+        "SELECT USER_ID, " +
             "" + "treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_PASSWORD FROM TIMETABLE" +
             ".TIMETABLE_USERS"
     ));
@@ -137,28 +141,15 @@ public class DatabaseConnection {
           runStatement.getResultSet
               ().getString(2)
       )) {
-        System.out.printf("%s, %s", user, password);
+        System.out.println("connected to source");
+        System.out.printf("%s, %s \n", user, password);
         return true;
       }
     }
-    System.out.println("No match found");
-    connection.close();
+    endConnection();
+    JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
+        JOptionPane.WARNING_MESSAGE, null);
     return false;
-  }
-
-  /**
-   * End connection.
-   */
-  public void endConnection() {
-
-    try {
-      System.out.println("Closing Connection");
-      getDatabaseConnection().close();
-      // System.out.println( "Successfully tested password" );
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-
   }
 
   /**
@@ -177,8 +168,20 @@ public class DatabaseConnection {
    *     the database connection
    */
   private void setDatabaseConnection(Connection databaseConnection) {
-
     this.databaseConnection = databaseConnection;
+  }
+
+  /**
+   * End connection.
+   */
+  public void endConnection() {
+    try {
+      System.out.println("Closing Connection");
+      getDatabaseConnection().close();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
   }
 
 }

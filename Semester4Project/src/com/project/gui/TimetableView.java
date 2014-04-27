@@ -1,11 +1,14 @@
 package com.project.gui;
 
+import com.project.database.*;
+
 import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
 class TimetableView extends View {
-  public TimetableView() {
+  public TimetableView(User user) {
+    super();
 
     JPanel timetableView = new JPanel();
     //        mainView.add( timetableView, "name_109576600023605" );

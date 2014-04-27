@@ -1,6 +1,6 @@
 package com.project.user;
 
-import java.time.*;
+import java.sql.*;
 
 public class Lecturer extends Staff {
   private final int hoursWeek;
@@ -9,11 +9,11 @@ public class Lecturer extends Staff {
       final String code,
       final String firstName,
       final String lastName,
+      final Date dateOfBirth,
       final String password,
-      final LocalDate dateOfBirth,
       final int hoursWeek
   ) {
-    super(code, firstName, lastName, password, dateOfBirth);
+    super(code, firstName, lastName, dateOfBirth, password);
     this.hoursWeek = hoursWeek;
   }
 

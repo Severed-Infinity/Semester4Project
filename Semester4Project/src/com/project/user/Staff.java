@@ -1,17 +1,17 @@
 package com.project.user;
 
-import com.project.controller.*;
+import com.project.database.*;
 
-import java.time.*;
+import java.sql.*;
 
 abstract class Staff extends User {
   Staff(
       final String code,
       final String firstName,
       final String lastName,
-      final String password,
-      final LocalDate dateOfBirth
+      final Date dateOfBirth,
+      final String password
   ) {
-    super(code, firstName, lastName, password, dateOfBirth);
+    super(code, firstName, lastName, dateOfBirth, password);
   }
 }

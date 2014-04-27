@@ -1,5 +1,7 @@
 package com.project.gui;
 
+import com.project.database.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,7 +9,8 @@ import java.awt.*;
  * Created by david on 3/11/14.
  */
 class AdminView extends View {
-  public AdminView() {
+  public AdminView(final User user) {
+    super();
     setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();
 
@@ -59,14 +62,14 @@ class AdminView extends View {
     /**
      * creates the tab for holding the user related options
      */
-    final JPanel user = new JPanel();
-    adminView.addTab("User", user);
+    final JPanel userPanel = new JPanel();
+    adminView.addTab("User", userPanel);
 
     createNew = new JButton("Create New User");
-    user.add(createNew);
+    userPanel.add(createNew);
 
     update = new JButton("Update a User");
-    user.add(update);
+    userPanel.add(update);
   }
 
 }

@@ -9,6 +9,7 @@ import java.awt.*;
  */
 class UserView extends View {
   public UserView() {
+
     //        setSize( getParent().getWidth(), getParent().getHeight() );
     setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();

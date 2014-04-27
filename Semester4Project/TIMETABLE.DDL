@@ -1,29 +1,34 @@
-CREATE TABLE CLASS_PERIOD
+DROP TABLE TIMETABLE_TIMETABLE;
+DROP TABLE COURSE_MODULE;
+DROP TABLE MODULE_LECTURER;
+DROP TABLE CLASS_PERIOD;
+DROP TABLE TIMETABLE_MODULE;
+DROP TABLE TIMETABLE_ROOM;
+DROP TABLE TIMETABLE_COURSE;
+DROP TABLE TIMETABLE_DEPARTMENT;
+DROP TABLE TIMETABLE_SCHOOL;
+DROP TABLE TIMETABLE_USERS;
+DROP TYPE TIMETABLE_USER_OBJ_STUDENT;
+DROP TYPE TIMETABLE_USER_OBJ_ADMIN;
+DROP TYPE TIMETABLE_USER_OBJ_LECTURER;
+DROP TYPE TIMETABLE_USER_OBJ;
+
+CREATE TABLE TIMETABLE_SCHOOL
 (
-  MODULE      INTEGER                    NOT NULL,
-  TIME        VARCHAR2(4000) PRIMARY KEY NOT NULL,
-  ROOM_NUMBER INTEGER                    NOT NULL,
-  FOREIGN KEY (MODULE) REFERENCES TIMETABLE_MODULE (MODULE_CODE),
-  FOREIGN KEY (ROOM_NUMBER) REFERENCES TIMETABLE_ROOM (ROOM_NUMBER)
+  SCHOOL_ID   VARCHAR2(10) PRIMARY KEY NOT NULL,
+  SCHOOL_NAME VARCHAR2(40)             NOT NULL
 );
-CREATE TABLE COURSE_MODULE
+
+CREATE TABLE TIMETABLE_DEPARTMENT
 (
-  COURSE_CODE INTEGER NOT NULL,
-  MODULE_CODE INTEGER NOT NULL,
-  SEMESTER    INTEGER NOT NULL,
-  YEAR        INTEGER NOT NULL,
-  PRIMARY KEY (COURSE_CODE, MODULE_CODE),
-  FOREIGN KEY (COURSE_CODE) REFERENCES TIMETABLE_COURSE (COURSE_CODE),
-  FOREIGN KEY (MODULE_CODE) REFERENCES TIMETABLE_MODULE (MODULE_CODE)
+  DEPARTMENT_ID         VARCHAR2(10) PRIMARY KEY NOT NULL,
+  DEPARTMENT_NAME       VARCHAR2(4000)           NOT NULL,
+  DEPARTMENT_HEAD       VARCHAR2(4000)           NOT NULL,
+  DEPARTMENT_ASSISTANTS INTEGER,
+  SCHOOL_ID             VARCHAR2(10)             NOT NULL,
+  FOREIGN KEY (SCHOOL_ID) REFERENCES TIMETABLE_SCHOOL (SCHOOL_ID)
 );
-CREATE TABLE MODULE_LECTURER
-(
-  MODULE_CODE INTEGER NOT NULL,
-  USER_ID     INTEGER NOT NULL,
-  PRIMARY KEY (MODULE_CODE, USER_ID),
-  FOREIGN KEY (MODULE_CODE) REFERENCES TIMETABLE_MODULE (MODULE_CODE),
-  FOREIGN KEY (USER_ID) REFERENCES TIMETABLE_USERS (USER_ID)
-);
+
 CREATE TABLE TIMETABLE_COURSE
 (
   COURSE_CODE     INTEGER PRIMARY KEY NOT NULL,
@@ -37,15 +42,7 @@ CREATE TABLE TIMETABLE_COURSE
   MODULES         INTEGER             NOT NULL,
   FOREIGN KEY (DEPARTMENT_ID) REFERENCES TIMETABLE_DEPARTMENT (DEPARTMENT_ID)
 );
-CREATE TABLE TIMETABLE_DEPARTMENT
-(
-  DEPARTMENT_ID         VARCHAR2(10) PRIMARY KEY NOT NULL,
-  DEPARTMENT_NAME       VARCHAR2(4000)           NOT NULL,
-  DEPARTMENT_HEAD       VARCHAR2(4000)           NOT NULL,
-  DEPARTMENT_ASSISTANTS INTEGER,
-  SCHOOL_ID             VARCHAR2(10)             NOT NULL,
-  FOREIGN KEY (SCHOOL_ID) REFERENCES TIMETABLE_SCHOOL (SCHOOL_ID)
-);
+
 CREATE TABLE TIMETABLE_MODULE
 (
   MODULE_CODE  INTEGER PRIMARY KEY NOT NULL,
@@ -55,31 +52,22 @@ CREATE TABLE TIMETABLE_MODULE
   WEEKLY_HOURS INTEGER             NOT NULL,
   LECTURERS    INTEGER             NOT NULL
 );
-CREATE TABLE TIMETABLE_ROOM
-(
-  ROOM_NUMBER   INTEGER PRIMARY KEY NOT NULL,
-  ROOM_SEATING  INTEGER             NOT NULL,
-  DEPARTMENT_ID VARCHAR2(15),
-  LAB           VARCHAR2(4000)      NOT NULL,
-  FOREIGN KEY (DEPARTMENT_ID) REFERENCES TIMETABLE_DEPARTMENT (DEPARTMENT_ID)
-);
-CREATE TABLE TIMETABLE_SCHOOL
-(
-  SCHOOL_ID   VARCHAR2(10) PRIMARY KEY NOT NULL,
-  SCHOOL_NAME VARCHAR2(40)             NOT NULL
-);
-CREATE TABLE TIMETABLE_TIMETABLE
-(
-  TIMETABLE_ID INTEGER PRIMARY KEY NOT NULL,
-  TIME_SLOT    VARCHAR2(15),
-  FOREIGN KEY (TIME_SLOT) REFERENCES CLASS_PERIOD (TIME)
-);
 
+CREATE TABLE COURSE_MODULE
+(
+  COURSE_CODE INTEGER NOT NULL,
+  MODULE_CODE INTEGER NOT NULL,
+  SEMESTER    INTEGER NOT NULL,
+  YEAR        INTEGER NOT NULL,
+  PRIMARY KEY (COURSE_CODE, MODULE_CODE),
+  FOREIGN KEY (COURSE_CODE) REFERENCES TIMETABLE_COURSE (COURSE_CODE),
+  FOREIGN KEY (MODULE_CODE) REFERENCES TIMETABLE_MODULE (MODULE_CODE)
+);
 --OBJECT TABLE
 CREATE OR REPLACE TYPE TIMETABLE_USER_OBJ AS OBJECT (
   USER_NAME_FIRST VARCHAR2(15),
   USER_NAME_LAST  VARCHAR2(15),
-  DATE_OF_BIRTH   DATE,
+  DATE_OF_BIRTH   VARCHAR2(10),
   USER_PASSWORD   VARCHAR2(20)
 ) NOT FINAL;
 CREATE OR REPLACE TYPE TIMETABLE_USER_OBJ_STUDENT UNDER TIMETABLE_USER_OBJ(
@@ -87,15 +75,52 @@ CREATE OR REPLACE TYPE TIMETABLE_USER_OBJ_STUDENT UNDER TIMETABLE_USER_OBJ(
   REPEAT_STUDENT BINARY_FLOAT
 );
 CREATE OR REPLACE TYPE TIMETABLE_USER_OBJ_LECTURER UNDER TIMETABLE_USER_OBJ(
-  TEACHES_MODULES INTEGER -- QUESTIONABLE CURRENTLY
+  HOURS_WEEK INTEGER -- QUESTIONABLE CURRENTLY
 );
 CREATE OR REPLACE TYPE TIMETABLE_USER_OBJ_ADMIN UNDER TIMETABLE_USER_OBJ(
   TITLE VARCHAR2(30)
 );
 CREATE TABLE TIMETABLE_USERS (
-  USER_ID  VARCHAR2 (10),
+  USER_ID  VARCHAR2(10),
   USER_OBJ TIMETABLE_USER_OBJ NOT NULL,
   PRIMARY KEY (USER_ID)
+);
+
+CREATE TABLE MODULE_LECTURER
+(
+  MODULE_CODE INTEGER      NOT NULL,
+  USER_ID     VARCHAR2(10) NOT NULL,
+  PRIMARY KEY (MODULE_CODE, USER_ID),
+  FOREIGN KEY (MODULE_CODE) REFERENCES TIMETABLE_MODULE (MODULE_CODE),
+  FOREIGN KEY (USER_ID) REFERENCES TIMETABLE_USERS (USER_ID)
+);
+
+
+CREATE TABLE TIMETABLE_ROOM
+(
+  ROOM_NUMBER        INTEGER PRIMARY KEY NOT NULL,
+  ROOM_SEATING       INTEGER             NOT NULL,
+  DEPARTMENT_ID      VARCHAR2(15),
+  LAB                VARCHAR2(4000)      NOT NULL,
+  SHARED_ROOM_NUMBER INTEGER,
+  FOREIGN KEY (DEPARTMENT_ID) REFERENCES TIMETABLE_DEPARTMENT (DEPARTMENT_ID)
+);
+
+
+CREATE TABLE CLASS_PERIOD
+(
+  MODULE      INTEGER                    NOT NULL,
+  TIME        VARCHAR2(4000) PRIMARY KEY NOT NULL,
+  ROOM_NUMBER INTEGER                    NOT NULL,
+  FOREIGN KEY (MODULE) REFERENCES TIMETABLE_MODULE (MODULE_CODE),
+  FOREIGN KEY (ROOM_NUMBER) REFERENCES TIMETABLE_ROOM (ROOM_NUMBER)
+);
+
+CREATE TABLE TIMETABLE_TIMETABLE
+(
+  TIMETABLE_ID INTEGER PRIMARY KEY NOT NULL,
+  TIME_SLOT    VARCHAR2(15),
+  FOREIGN KEY (TIME_SLOT) REFERENCES CLASS_PERIOD (TIME)
 );
 
 --school inserts
@@ -297,34 +322,32 @@ VALUES (233, 32, 'DOC', 'true', NULL);
 
 --sample users
 INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('1', TIMETABLE_USER_OBJ('david',
-                                                                              'swift',
-                                                                              to_date
-                                                                              ('12-dec-1991',
-                                                                               'dd-mon-yyyy'),
-                                                                              'db12Dec91'));
+                                                                                'swift',
+                                                                                '1991-12-03',
+                                                                                'db12Dec91'));
 
-INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('2', TIMETABLE_USER_OBJ_STUDENT('david',
-                                                                                      'swift',
-                                                                                      to_date
-                                                                                      (
-                                                                                          '12-dec-1991',
-                                                                                          'dd-mon-yyyy'),
+INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('x00073017',
+                                                        TIMETABLE_USER_OBJ_STUDENT('david',
+                                                                                   'swift',
+                                                                                   '1991-12-03',
+                                                                                   'db12Dec91',
+                                                                                   1, 0));
+
+INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('00073017', TIMETABLE_USER_OBJ_LECTURER
+('LECT',
+ 'URER',
+ '1991-12-03',
+ 'db12Dec91',
+ 1));
+
+INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('admin', TIMETABLE_USER_OBJ_ADMIN('admin',
+                                                                                      'admin',
+                                                                                      '1991-12-03',
                                                                                       'db12Dec91',
-                                                                                      1, 0));
-
-INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('3', TIMETABLE_USER_OBJ_LECTURER('LECT',
-                                                                                       'URER',
-                                                                                       to_date
-                                                                                       (
-                                                                                           '12-dec-1991',
-                                                                                           'dd-mon-yyyy'),
-                                                                                       'db12Dec91',
-                                                                                       1));
-
-INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('4', TIMETABLE_USER_OBJ_ADMIN('admin',
-                                                                                    'admin',
-                                                                                    to_date
-                                                                                    ('12-dec-1991',
-                                                                                     'dd-mon-yyyy'),
-                                                                                    'db12Dec91',
-                                                                                    'Senior technician'));
+                                                                                      'Senior technician'));
+INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ)
+VALUES ('timetable', TIMETABLE_USER_OBJ_ADMIN('admin',
+                                              'admin',
+                                              '0001-01-01',
+                                              'timetable',
+                                              'Default Access'));

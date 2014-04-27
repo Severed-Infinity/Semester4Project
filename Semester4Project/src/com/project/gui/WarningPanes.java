@@ -4,11 +4,6 @@ import javax.swing.*;
 
 class WarningPanes {
   // TODO place warning panes within there appropriate classes
-  public WarningPanes() {
-
-    // TODO Auto-generated constructor stub
-  }
-
   public static void main(String[] args) {
 
     //        JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null,

@@ -1,3 +1,5 @@
+package com.project.main;
+
 import com.project.gui.*;
 
 final class TimetableMain {

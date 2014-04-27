@@ -1,5 +1,6 @@
 package com.project.gui;
 
+import com.project.controller.*;
 import com.project.database.*;
 
 import javax.swing.*;
@@ -12,13 +13,16 @@ import java.awt.event.*;
  * Created by david on 3/12/14.
  */
 class MainWindow extends JFrame {
+  private User user;
+
   /**
    * Instantiates a new Main window.
    *
    * @param databaseConnection
    *     the database connection
+   * @param user
    */
-  public MainWindow(DatabaseConnection databaseConnection) {
+  public MainWindow(DatabaseConnection databaseConnection, final User user) {
 
     setTitle("Timetable");
     setResizable(false);
@@ -117,7 +121,7 @@ class MainWindow extends JFrame {
      The Main view.
      */
     //todo create method signature that allows dynamic change of views
-    final MainView mainView = new MainView(new AdminView());
+    final MainView mainView = new MainView(this.user, new AdminView(this.user));
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.weightx = 1.0;
@@ -185,7 +189,8 @@ class MainWindow extends JFrame {
    * Created by david on 3/12/14.
    */
   private class MainView extends View {
-    private MainView(View view) {
+    private MainView(User user, View view) {
+      super();
       setLayout(new BorderLayout());
       this.add(view, BorderLayout.CENTER);
     }

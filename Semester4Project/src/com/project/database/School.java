@@ -1,4 +1,4 @@
-package com.project.controller;
+package com.project.database;
 
 /**
  * Project Semester4Project

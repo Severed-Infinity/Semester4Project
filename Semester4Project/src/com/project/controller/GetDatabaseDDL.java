@@ -3,7 +3,7 @@
  * representing a single query terminated by ";"
  * Comments are filtered out.
  */
-package com.project.database;
+package com.project.controller;
 
 import java.io.*;
 import java.util.*;

@@ -121,7 +121,7 @@ class UpdateCourseView extends CourseView {
 
     //combo boxes
     //todo get do get type
-    typeOptions = new JComboBox<>(new DefaultComboBoxModel<>(new String[] {"Full Time",
+    typeOptions = new JComboBox<>(new DefaultComboBoxModel<String>(new String[] {"Full Time",
         "Part Time"}));
     constraints.gridx = 1;
     constraints.gridy = 0;

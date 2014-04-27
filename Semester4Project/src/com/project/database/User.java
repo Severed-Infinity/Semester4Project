@@ -1,34 +1,32 @@
-package com.project.controller;
+package com.project.database;
 
-import java.time.*;
+import java.sql.*;
 
 /**
  * The type User.
  */
 public abstract class User {
   private String code, firstName, lastName, password;
-  private LocalDate dateOfBirth; // can be converted directly to SQl Date
+  private Date dateOfBirth; // can be converted directly to SQl Date
 
   /**
    * Instantiates a new User.
-   *
-   * @param code
+   *  @param code
    *     the code
    * @param firstName
    *     the first name
    * @param lastName
-   *     the last name
-   * @param password
-   *     the password
+ *     the last name
    * @param dateOfBirth
-   *     the date of birth
+   * @param password
+*     the password
    */
   protected User(
       final String code,
       final String firstName,
       final String lastName,
-      final String password,
-      final LocalDate dateOfBirth
+      final Date dateOfBirth,
+      final String password
   ) {
     this.setCode(code);
     this.setFirstName(firstName);
@@ -42,7 +40,7 @@ public abstract class User {
    *
    * @return the date of birth
    */
-  public LocalDate getDateOfBirth() {
+  public Date getDateOfBirth() {
     return dateOfBirth;
   }
 
@@ -52,7 +50,7 @@ public abstract class User {
    * @param dateOfBirth
    *     the date of birth
    */
-  void setDateOfBirth(final LocalDate dateOfBirth) {
+  void setDateOfBirth(final Date dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 

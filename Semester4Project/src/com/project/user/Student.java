@@ -1,8 +1,8 @@
 package com.project.user;
 
-import com.project.controller.*;
+import com.project.database.*;
 
-import java.time.*;
+import java.sql.*;
 
 public class Student extends User {
   private final int courseCode;
@@ -12,12 +12,12 @@ public class Student extends User {
       final String code,
       final String firstName,
       final String lastName,
+      final Date dateOfBirth,
       final String password,
-      final LocalDate dateOfBirth,
       int courseCode,
       boolean repeatStudent
   ) {
-    super(code, firstName, lastName, password, dateOfBirth);
+    super(code, firstName, lastName, dateOfBirth, password);
     this.courseCode = courseCode;
     this.repeatStudent = repeatStudent;
   }

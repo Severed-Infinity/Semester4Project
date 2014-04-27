@@ -1,6 +1,6 @@
 package com.project.gui;
 
-import com.project.controller.*;
+import com.project.database.*;
 
 import javax.swing.*;
 import java.awt.*;

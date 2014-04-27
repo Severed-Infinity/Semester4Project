@@ -1,4 +1,4 @@
-A TODO file containing everything that needs to be done
+TODO file containing everything that needs to be done
 
 --1. add @Param to all constructors and methods that take in values
 --2. add @Return to all constructors and methods that return a value
@@ -6,9 +6,10 @@ A TODO file containing everything that needs to be done
 --4. gather all the information on rooms in the college
 --5. gather information on the departments in the college
 --6. redo all the GUI's except login
-7. import / update oracle connection with TIMETABLE.DDL -- half done?
-8. map users with users in the database, through the model controllers
-9. complete the com.project.database package with other classes such as createStatement etc.
+7. import / update oracle connection with TIMETABLE.DDL -- //todo test?
+--8. map users with users in the database, through the model controllers
+--9. complete the com.project.database package with other classes such as createStatement etc.
+	-- half done
 10. look for duplicate code and turn it into interfaces, and or parent classes
 11. ESSENTIAL create optimization method/class code
 --12. Change naming of buttons, labels, etc. to match their classes
@@ -17,3 +18,5 @@ A TODO file containing everything that needs to be done
 15. refers to 6, leave timetable view alone until it is time to work with it
 16. minor changes to presented information in certain views, compare to database
 17. documentation
+18. add in the add, update and delete functions
+19. add database testers for each table

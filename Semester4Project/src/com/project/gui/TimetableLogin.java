@@ -1,5 +1,6 @@
 package com.project.gui;
 
+import com.project.controller.*;
 import com.project.database.*;
 
 import javax.imageio.*;
@@ -40,7 +41,8 @@ public class TimetableLogin extends JFrame {
   /**
    * The Run statement.
    */
-  private RunStatement runStatement;
+  private RunStatement runStatement = new RunStatement();
+  private User user;
 
   /**
    * Instantiates a new Timetable login.
@@ -150,8 +152,10 @@ public class TimetableLogin extends JFrame {
    * Query void.
    */
   private void query() {
-    runStatement.queryUsers(databaseConnection.getDatabaseConnection());
+    runStatement.querySchool(databaseConnection.getDatabaseConnection());
+    runStatement.queryDepartment(databaseConnection.getDatabaseConnection());
     runStatement.queryCourse(databaseConnection.getDatabaseConnection());
+    runStatement.queryUsers(databaseConnection.getDatabaseConnection());
   }
 
   /**
@@ -221,11 +225,9 @@ public class TimetableLogin extends JFrame {
    * Login void.
    */
   void login() {
-
-    System.out.println("You Clicked Login.");
-        /*
-         * create a database connection and try to connect
-         */
+ /*
+  * create a database connection and try to connect
+  */
 
     try {
 
@@ -243,12 +245,12 @@ public class TimetableLogin extends JFrame {
       try {
         boolean connection = !databaseConnection.getDatabaseConnection().isClosed();
         if (connection) {
-          MainWindow mainWindow = new MainWindow(databaseConnection);
+          MainWindow mainWindow = new MainWindow(databaseConnection, user);
           mainWindow.setVisible(true);
           dispose();
         }
       } catch (SQLException e1) {
-        //                System.out.println( e1.getMessage() );
+        System.out.println(e1.getMessage());
         System.out.printf("No database Connection Detected");
 
       }
