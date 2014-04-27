@@ -4,8 +4,8 @@ import com.project.controller.*;
 
 import java.time.*;
 
-public abstract class Staff extends User {
-  protected Staff(
+abstract class Staff extends User {
+  Staff(
       final String code,
       final String firstName,
       final String lastName,

@@ -8,7 +8,7 @@ import java.awt.event.*;
 /**
  * Created by david on 3/12/14.
  */
-public class UpdateModuleView extends ModuleView {
+class UpdateModuleView extends ModuleView {
   public UpdateModuleView() {
 
     //        setSize( getParent().getWidth(), getParent().getHeight() );

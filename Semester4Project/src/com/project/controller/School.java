@@ -21,7 +21,7 @@ public class School {
     return code;
   }
 
-  public void setCode(final String code) {
+  void setCode(final String code) {
     this.code = code;
   }
 
@@ -29,7 +29,7 @@ public class School {
     return name;
   }
 
-  public void setName(final String name) {
+  void setName(final String name) {
     this.name = name;
   }
 }

@@ -9,15 +9,42 @@ import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
 
+/**
+ * The type Timetable login.
+ */
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
+  /**
+   * The I tT logo.
+   */
   private Image iTTLogo;
+  /**
+   * The Database connection.
+   */
   private DatabaseConnection databaseConnection = null;
+  /**
+   * The User name.
+   */
   private JTextField userName;
+  /**
+   * The User password.
+   */
   private JPasswordField userPassword;
-  private JButton login, cancel;
+  /**
+   * The Login.
+   */
+  private JButton login, /**
+   * The Cancel.
+   */
+  cancel;
+  /**
+   * The Run statement.
+   */
   private RunStatement runStatement;
 
+  /**
+   * Instantiates a new Timetable login.
+   */
   public TimetableLogin() {
 
     setTitle("Login");
@@ -119,41 +146,81 @@ public class TimetableLogin extends JFrame {
     pack();
   }
 
+  /**
+   * Query void.
+   */
   private void query() {
+    runStatement.queryUsers(databaseConnection.getDatabaseConnection());
     runStatement.queryCourse(databaseConnection.getDatabaseConnection());
   }
 
+  /**
+   * Gets user name.
+   *
+   * @return the user name
+   */
   JTextField getUserName() {
 
     return userName;
   }
 
-  public void setUserName(JTextField userName) {
+  /**
+   * Sets user name.
+   *
+   * @param userName
+   *     the user name
+   */
+  void setUserName(JTextField userName) {
 
     this.userName = userName;
   }
 
-  public JPasswordField getUserPassword() {
+  /**
+   * Gets user password.
+   *
+   * @return the user password
+   */
+  JPasswordField getUserPassword() {
 
     return userPassword;
   }
 
-  public void setUserPassword(JPasswordField userPassword) {
+  /**
+   * Sets user password.
+   *
+   * @param userPassword
+   *     the user password
+   */
+  void setUserPassword(JPasswordField userPassword) {
 
     this.userPassword = userPassword;
   }
 
-  public JButton getLogin() {
+  /**
+   * Gets login.
+   *
+   * @return the login
+   */
+  JButton getLogin() {
 
     return login;
   }
 
-  public void setLogin(JButton login) {
+  /**
+   * Sets login.
+   *
+   * @param login
+   *     the login
+   */
+  void setLogin(JButton login) {
 
     this.login = login;
   }
 
-  public void login() {
+  /**
+   * Login void.
+   */
+  void login() {
 
     System.out.println("You Clicked Login.");
         /*
@@ -190,12 +257,23 @@ public class TimetableLogin extends JFrame {
 
   }
 
-  public JButton getCancel() {
+  /**
+   * Gets cancel.
+   *
+   * @return the cancel
+   */
+  JButton getCancel() {
 
     return cancel;
   }
 
-  public void setCancel(JButton cancel) {
+  /**
+   * Sets cancel.
+   *
+   * @param cancel
+   *     the cancel
+   */
+  void setCancel(JButton cancel) {
 
     this.cancel = cancel;
   }

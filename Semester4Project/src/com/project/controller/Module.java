@@ -57,7 +57,7 @@ public class Module {
    * @param code
    *     the code
    */
-  public void setCode(final String code) {
+  void setCode(final String code) {
     this.code = code;
   }
 
@@ -76,7 +76,7 @@ public class Module {
    * @param name
    *     the name
    */
-  public void setName(final String name) {
+  void setName(final String name) {
     this.name = name;
   }
 
@@ -95,7 +95,7 @@ public class Module {
    * @param semester
    *     the semester
    */
-  public void setSemester(final int semester) {
+  void setSemester(final int semester) {
     this.semester = semester;
   }
 
@@ -114,7 +114,7 @@ public class Module {
    * @param weeklyHours
    *     the weekly hours
    */
-  public void setWeeklyHours(final int weeklyHours) {
+  void setWeeklyHours(final int weeklyHours) {
     this.weeklyHours = weeklyHours;
   }
 
@@ -133,7 +133,7 @@ public class Module {
    * @param lecturers
    *     the lecturers
    */
-  public void setLecturers(final int lecturers) {
+  void setLecturers(final int lecturers) {
     this.lecturers = lecturers;
   }
 }

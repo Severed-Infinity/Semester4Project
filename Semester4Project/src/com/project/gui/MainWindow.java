@@ -11,7 +11,7 @@ import java.awt.event.*;
 /**
  * Created by david on 3/12/14.
  */
-public class MainWindow extends JFrame {
+class MainWindow extends JFrame {
   /**
    * Instantiates a new Main window.
    *
@@ -64,7 +64,8 @@ public class MainWindow extends JFrame {
       @Override
       public void actionPerformed(final ActionEvent e) {
         databaseConnection.endConnection();
-        System.exit(0);
+        new TimetableLogin().setVisible(true);
+        dispose();
       }
     });
     //        header.add( logout );
@@ -115,7 +116,8 @@ public class MainWindow extends JFrame {
     /**
      The Main view.
      */
-    final MainView mainView = new MainView(new CourseView());
+    //todo create method signature that allows dynamic change of views
+    final MainView mainView = new MainView(new AdminView());
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.weightx = 1.0;
@@ -133,7 +135,7 @@ public class MainWindow extends JFrame {
    *
    * @return the j menu bar
    */
-  public JMenuBar addMenu() {
+  JMenuBar addMenu() {
 
     /*
     The Main menu.

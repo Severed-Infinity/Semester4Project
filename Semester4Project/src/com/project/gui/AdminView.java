@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Created by david on 3/11/14.
  */
-public class AdminView extends View {
+class AdminView extends View {
   public AdminView() {
     setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();

@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
-public class TimetableView extends View {
+class TimetableView extends View {
   public TimetableView() {
 
     JPanel timetableView = new JPanel();

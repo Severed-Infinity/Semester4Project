@@ -2,7 +2,7 @@ package com.project.gui;
 
 import javax.swing.*;
 
-public class WarningPanes {
+class WarningPanes {
   // TODO place warning panes within there appropriate classes
   public WarningPanes() {
 

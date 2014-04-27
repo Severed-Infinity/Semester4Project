@@ -33,7 +33,7 @@ public class GetDatabaseDDL {
    *
    * @return List of query strings
    */
-  public ArrayList<String> createQueries(String path) {
+  ArrayList<String> createQueries(String path) {
 
     String queryLine;
     StringBuilder stringBuilder = new StringBuilder();

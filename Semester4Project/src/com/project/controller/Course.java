@@ -72,7 +72,7 @@ public class Course {
    * @param code
    *     the code
    */
-  public void setCode(final String code) {
+  void setCode(final String code) {
     this.code = code;
   }
 
@@ -91,7 +91,7 @@ public class Course {
    * @param name
    *     the name
    */
-  public void setName(final String name) {
+  void setName(final String name) {
     this.name = name;
   }
 
@@ -110,7 +110,7 @@ public class Course {
    * @param type
    *     the type
    */
-  public void setType(final String type) {
+  void setType(final String type) {
     this.type = type;
   }
 
@@ -129,7 +129,7 @@ public class Course {
    * @param head
    *     the head
    */
-  public void setHead(final String head) {
+  void setHead(final String head) {
     this.head = head;
   }
 
@@ -149,7 +149,7 @@ public class Course {
    * @param departmentCode
    *     the department code
    */
-  public void setDepartmentCode(final String departmentCode) {
+  void setDepartmentCode(final String departmentCode) {
     this.departmentCode = departmentCode;
   }
 
@@ -168,7 +168,7 @@ public class Course {
    * @param modules
    *     the modules
    */
-  public void setModules(final String modules) {
+  void setModules(final String modules) {
     this.modules = modules;
   }
 
@@ -187,7 +187,7 @@ public class Course {
    * @param length
    *     the length
    */
-  public void setLength(final int length) {
+  void setLength(final int length) {
     this.length = length;
   }
 
@@ -206,7 +206,7 @@ public class Course {
    * @param year
    *     the year
    */
-  public void setYear(final int year) {
+  void setYear(final int year) {
     this.year = year;
   }
 
@@ -225,7 +225,7 @@ public class Course {
    * @param semester
    *     the semester
    */
-  public void setSemester(final int semester) {
+  void setSemester(final int semester) {
     this.semester = semester;
   }
 }

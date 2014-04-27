@@ -55,7 +55,7 @@ public class Department {
    * @param code
    *     the code
    */
-  public void setCode(final String code) {
+  void setCode(final String code) {
     this.code = code;
   }
 
@@ -74,7 +74,7 @@ public class Department {
    * @param name
    *     the name
    */
-  public void setName(final String name) {
+  void setName(final String name) {
     this.name = name;
   }
 
@@ -93,7 +93,7 @@ public class Department {
    * @param head
    *     the head
    */
-  public void setHead(final String head) {
+  void setHead(final String head) {
     this.head = head;
   }
 
@@ -112,7 +112,7 @@ public class Department {
    * @param assistants
    *     the assistants
    */
-  public void setAssistants(final String assistants) {
+  void setAssistants(final String assistants) {
     this.assistants = assistants;
   }
 
@@ -132,7 +132,7 @@ public class Department {
    * @param schoolCode
    *     the school code
    */
-  public void setSchoolCode(final String schoolCode) {
+  void setSchoolCode(final String schoolCode) {
     this.schoolCode = schoolCode;
   }
 }

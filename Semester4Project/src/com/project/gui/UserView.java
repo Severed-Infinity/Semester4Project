@@ -7,7 +7,7 @@ import java.awt.*;
 /**
  * Created by david on 3/12/14.
  */
-public class UserView extends View {
+class UserView extends View {
   public UserView() {
     //        setSize( getParent().getWidth(), getParent().getHeight() );
     setLayout(new GridBagLayout());

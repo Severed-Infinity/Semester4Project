@@ -20,7 +20,7 @@ public class Admin extends Staff {
    * @param dateOfBirth
    *     the date of birth
    */
-  protected Admin(
+  public Admin(
       final String code,
       final String firstName,
       final String lastName,

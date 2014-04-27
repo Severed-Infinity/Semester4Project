@@ -17,8 +17,14 @@ public class DatabaseConnection {
   /**
    * The Run statement.
    */
-  public RunStatement runStatement;
+  private RunStatement runStatement;
+  /**
+   * The Database connection.
+   */
   private Connection databaseConnection;
+  /**
+   * The Path.
+   */
   private String path;
 
   /**
@@ -31,7 +37,7 @@ public class DatabaseConnection {
    */
   public DatabaseConnection(String user, String password) {
     createDatabaseConnection(user, password);
-    setPath("TIMETABLE.DDL");
+    setPath();
     createDatabaseFromDDL(getPath());
   }
 
@@ -40,18 +46,15 @@ public class DatabaseConnection {
    *
    * @return the path
    */
-  public String getPath() {
+  private String getPath() {
     return path;
   }
 
   /**
    * Sets path.
-   *
-   * @param path
-   *     the path
    */
-  public void setPath(final String path) {
-    this.path = path;
+  private void setPath() {
+    this.path = "TIMETABLE.DDL";
   }
 
   /**
@@ -60,7 +63,7 @@ public class DatabaseConnection {
    * @param path
    *     the path
    */
-  public void createDatabaseFromDDL(String path) {
+  private void createDatabaseFromDDL(String path) {
     new GetDatabaseDDL(path);
   }
 
@@ -73,7 +76,8 @@ public class DatabaseConnection {
    *     the password
    */
   private void createDatabaseConnection(String user, String password) {
-
+    //todo change from void type to connection type
+    //todo change the call to checkUser, call this from checkUser
     try {
       OracleDataSource dataSource = new OracleDataSource();
       try {
@@ -90,9 +94,7 @@ public class DatabaseConnection {
         dataSource.setPassword(password);
 
         setDatabaseConnection(dataSource.getConnection());
-        if (!checkPassword(dataSource.getConnection(), user, password)) {
-          dataSource.getConnection().close();
-        }
+        checkUser(dataSource.getConnection(), user, password);
         System.out.println("connected to source");
       } catch (SQLException e) {
         System.out.println(e.getMessage());
@@ -100,7 +102,7 @@ public class DatabaseConnection {
             JOptionPane.WARNING_MESSAGE, null);
       }
     } catch (Exception e) {
-      System.exit(0);
+      System.out.println(e.getMessage());
     }
   }
 
@@ -114,12 +116,12 @@ public class DatabaseConnection {
    * @param password
    *     the password
    *
-   * @return boolean
+   * @return boolean boolean
    *
    * @throws SQLException
    *     the sQL exception
    */
-  public boolean checkPassword(
+  private boolean checkUser(
       Connection connection, String user,
       String password
   ) throws SQLException {
@@ -139,6 +141,8 @@ public class DatabaseConnection {
         return true;
       }
     }
+    System.out.println("No match found");
+    connection.close();
     return false;
   }
 

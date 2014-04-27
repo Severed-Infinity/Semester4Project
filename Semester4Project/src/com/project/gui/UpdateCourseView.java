@@ -8,7 +8,7 @@ import java.awt.event.*;
 /**
  * Created by david on 3/12/14.
  */
-public class UpdateCourseView extends CourseView {
+class UpdateCourseView extends CourseView {
   //todo pass in an already existing course to be updated
   public UpdateCourseView() {
     //        setSize( getParent().getWidth(), getParent().getHeight() );

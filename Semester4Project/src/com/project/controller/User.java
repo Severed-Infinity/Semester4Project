@@ -52,7 +52,7 @@ public abstract class User {
    * @param dateOfBirth
    *     the date of birth
    */
-  public void setDateOfBirth(final LocalDate dateOfBirth) {
+  void setDateOfBirth(final LocalDate dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 
@@ -71,7 +71,7 @@ public abstract class User {
    * @param password
    *     the password
    */
-  public void setPassword(final String password) {
+  void setPassword(final String password) {
     this.password = password;
   }
 
@@ -90,7 +90,7 @@ public abstract class User {
    * @param lastName
    *     the last name
    */
-  public void setLastName(final String lastName) {
+  void setLastName(final String lastName) {
     this.lastName = lastName;
   }
 
@@ -109,7 +109,7 @@ public abstract class User {
    * @param firstName
    *     the first name
    */
-  public void setFirstName(final String firstName) {
+  void setFirstName(final String firstName) {
     this.firstName = firstName;
   }
 
@@ -128,7 +128,7 @@ public abstract class User {
    * @param code
    *     the code
    */
-  public void setCode(final String code) {
+  void setCode(final String code) {
     this.code = code;
   }
 }

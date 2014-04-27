@@ -10,8 +10,8 @@ import java.awt.event.*;
 /**
  * Created by david on 3/12/14.
  */
-public class CourseView extends View {
-  public CourseView() {
+class CourseView extends View {
+  CourseView() {
     //        setSize( getParent().getWidth(), getParent().getHeight() );
     setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();
