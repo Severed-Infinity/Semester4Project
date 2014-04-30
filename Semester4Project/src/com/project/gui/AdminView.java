@@ -1,16 +1,13 @@
 package com.project.gui;
 
-import com.project.database.*;
-
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * Created by david on 3/11/14.
  */
-class AdminView extends View {
-  public AdminView(final User user) {
-    super();
+public class AdminView extends View {
+  public AdminView() {
     setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();
 

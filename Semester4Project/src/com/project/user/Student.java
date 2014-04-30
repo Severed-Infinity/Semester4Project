@@ -5,7 +5,7 @@ import com.project.database.*;
 import java.sql.*;
 
 public class Student extends User {
-  private final int courseCode;
+  private final String courseCode;
   private final boolean repeatStudent;
 
   public Student(
@@ -14,7 +14,7 @@ public class Student extends User {
       final String lastName,
       final Date dateOfBirth,
       final String password,
-      int courseCode,
+      String courseCode,
       boolean repeatStudent
   ) {
     super(code, firstName, lastName, dateOfBirth, password);
@@ -26,7 +26,12 @@ public class Student extends User {
     return repeatStudent;
   }
 
-  public int getCourseCode() {
-    return courseCode;
+  public Course getCourseCode() {
+    for (Course course : Course.courses) {
+      if (course.getCode().equals(courseCode)) {
+        return course;
+      }
+    }
+    return null;
   }
 }

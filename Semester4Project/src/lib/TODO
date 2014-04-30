@@ -15,8 +15,10 @@ TODO file containing everything that needs to be done
 --12. Change naming of buttons, labels, etc. to match their classes
 --13. refers to 10, move the same code found in all views and generify it
 14. add warning panes to appropriate classes
-15. refers to 6, leave timetable view alone until it is time to work with it
+15. refers to 6, leave timetable currentView alone until it is time to work with it
 16. minor changes to presented information in certain views, compare to database
+	-- half done
 17. documentation
 18. add in the add, update and delete functions
 19. add database testers for each table
+20. rework the timetable table structure in relation to the rest of the database

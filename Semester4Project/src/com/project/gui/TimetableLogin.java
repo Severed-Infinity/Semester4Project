@@ -1,7 +1,6 @@
 package com.project.gui;
 
 import com.project.controller.*;
-import com.project.database.*;
 
 import javax.imageio.*;
 import javax.swing.*;
@@ -15,6 +14,10 @@ import java.sql.*;
  */
 @SuppressWarnings ("serial")
 public class TimetableLogin extends JFrame {
+  /**
+   * The Run statement.
+   */
+  private final RunStatementSelect runStatementSelect = new RunStatementSelect();
   /**
    * The I tT logo.
    */
@@ -38,11 +41,6 @@ public class TimetableLogin extends JFrame {
    * The Cancel.
    */
   cancel;
-  /**
-   * The Run statement.
-   */
-  private RunStatement runStatement = new RunStatement();
-  private User user;
 
   /**
    * Instantiates a new Timetable login.
@@ -152,10 +150,16 @@ public class TimetableLogin extends JFrame {
    * Query void.
    */
   private void query() {
-    runStatement.querySchool(databaseConnection.getDatabaseConnection());
-    runStatement.queryDepartment(databaseConnection.getDatabaseConnection());
-    runStatement.queryCourse(databaseConnection.getDatabaseConnection());
-    runStatement.queryUsers(databaseConnection.getDatabaseConnection());
+    runStatementSelect.querySchool(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryDepartment(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryCourse(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryTimetables(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryClassPeriod(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryCourseModule(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryModule(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryModuleLecturer(databaseConnection.getDatabaseConnection());
+    runStatementSelect.queryRoom(databaseConnection.getDatabaseConnection());
+//        runStatementSelect.queryUsers(databaseConnection.getDatabaseConnection());
   }
 
   /**
@@ -243,11 +247,14 @@ public class TimetableLogin extends JFrame {
        * followed by closing this window
        */
       try {
-        boolean connection = !databaseConnection.getDatabaseConnection().isClosed();
-        if (connection) {
-          MainWindow mainWindow = new MainWindow(databaseConnection, user);
+        boolean closed = databaseConnection.getDatabaseConnection().isClosed();
+        if (!closed) {
+          MainWindow mainWindow = new MainWindow(databaseConnection, databaseConnection.getUser());
           mainWindow.setVisible(true);
           dispose();
+        } else {
+          JOptionPane.showMessageDialog(null, "No connection detected", null,
+              JOptionPane.WARNING_MESSAGE, null);
         }
       } catch (SQLException e1) {
         System.out.println(e1.getMessage());

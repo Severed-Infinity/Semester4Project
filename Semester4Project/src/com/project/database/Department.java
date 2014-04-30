@@ -1,5 +1,7 @@
 package com.project.database;
 
+import java.util.*;
+
 /**
  * Project Semester4Project
  *
@@ -10,7 +12,26 @@ package com.project.database;
  * Created by david on 4/17/2014.
  */
 public class Department {
-  private String code, name, head, assistants, schoolCode;
+  /**
+   * The Departments.
+   */
+  public static final LinkedList<Department> departments = new LinkedList<>();
+  /**
+   * The Code.
+   */
+  private String code;
+  /**
+   * The Name.
+   */
+  private String name;
+  /**
+   * The Head.
+   */
+  private String head;
+  /**
+   * The School code.
+   */
+  private String schoolCode;
 
   /**
    * Instantiates a new Department.
@@ -21,8 +42,6 @@ public class Department {
    *     the name
    * @param head
    *     the head
-   * @param assistants
-   *     the assistants
    * @param schoolCode
    *     the school code
    */
@@ -30,13 +49,11 @@ public class Department {
       final String code,
       final String name,
       final String head,
-      final String assistants,
       final String schoolCode
   ) {
     this.setCode(code);
     this.setName(name);
     this.setHead(head);
-    this.setAssistants(assistants);
     this.setSchoolCode(schoolCode);
   }
 
@@ -95,25 +112,6 @@ public class Department {
    */
   void setHead(final String head) {
     this.head = head;
-  }
-
-  /**
-   * Gets assistants.
-   *
-   * @return the assistants
-   */
-  public String getAssistants() {
-    return assistants;
-  }
-
-  /**
-   * Sets assistants.
-   *
-   * @param assistants
-   *     the assistants
-   */
-  void setAssistants(final String assistants) {
-    this.assistants = assistants;
   }
 
   /**

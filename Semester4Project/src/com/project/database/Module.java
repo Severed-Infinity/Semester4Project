@@ -1,5 +1,7 @@
 package com.project.database;
 
+import java.util.*;
+
 /**
  * Project Semester4Project
  *
@@ -10,36 +12,64 @@ package com.project.database;
  * Created by david on 4/17/2014.
  */
 public class Module {
-  private String code, name;
-  private int semester, weeklyHours, lecturers;
-  //if this was java based only, then lecturers among other things could be objects of type user
+  /**
+   * The Modules.
+   */
+  public static LinkedList<Module> modules = new LinkedList<>();
+  /**
+   * The Name.
+   */
+  private String name;
+  /**
+   * The Code.
+   */
+  private int code, /**
+   * The Course code.
+   */
+  courseCode, /**
+   * The Semester.
+   */
+  semester, /**
+   * The Weekly hours.
+   */
+  weeklyHours, /**
+   * The Lecturers.
+   */
+  lecturers;
+
+  /**
+   * Gets course code.
+   *
+   * @return the course code
+   */
+  public int getCourseCode() {
+    return courseCode;
+  }
 
   /**
    * Instantiates a new Module.
-   *
-   * @param code
-   *     the code
-   * @param name
-   *     the name
-   * @param semester
-   *     the semester
-   * @param weeklyHours
-   *     the weekly hours
-   * @param lecturers
-   *     the lecturers
+   * @param code      the code
+   * @param name      the name
+   * @param semester      the semester
+   * @param weeklyHours      the weekly hours
+   * @param lecturers the lecturers
+   * @param courseCode the course code
    */
   public Module(
-      final String code,
+      final int code,
       final String name,
       final int semester,
       final int weeklyHours,
-      final int lecturers
+      final int lecturers,
+      final int courseCode
   ) {
+
     this.setCode(code);
     this.setName(name);
     this.setSemester(semester);
     this.setWeeklyHours(weeklyHours);
     this.setLecturers(lecturers);
+    this.courseCode = courseCode;
   }
 
   /**
@@ -47,17 +77,16 @@ public class Module {
    *
    * @return the code
    */
-  public String getCode() {
+  public int getCode() {
     return code;
   }
 
   /**
    * Sets code.
    *
-   * @param code
-   *     the code
+   * @param code      the code
    */
-  void setCode(final String code) {
+  void setCode(final int code) {
     this.code = code;
   }
 
@@ -73,8 +102,7 @@ public class Module {
   /**
    * Sets name.
    *
-   * @param name
-   *     the name
+   * @param name      the name
    */
   void setName(final String name) {
     this.name = name;
@@ -92,8 +120,7 @@ public class Module {
   /**
    * Sets semester.
    *
-   * @param semester
-   *     the semester
+   * @param semester      the semester
    */
   void setSemester(final int semester) {
     this.semester = semester;
@@ -111,8 +138,7 @@ public class Module {
   /**
    * Sets weekly hours.
    *
-   * @param weeklyHours
-   *     the weekly hours
+   * @param weeklyHours      the weekly hours
    */
   void setWeeklyHours(final int weeklyHours) {
     this.weeklyHours = weeklyHours;
@@ -130,8 +156,7 @@ public class Module {
   /**
    * Sets lecturers.
    *
-   * @param lecturers
-   *     the lecturers
+   * @param lecturers      the lecturers
    */
   void setLecturers(final int lecturers) {
     this.lecturers = lecturers;

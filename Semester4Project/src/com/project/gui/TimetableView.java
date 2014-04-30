@@ -6,8 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
-class TimetableView extends View {
-  public TimetableView(User user) {
+public class TimetableView extends View {
+  public TimetableView(Timetable timetable) {
     super();
 
     JPanel timetableView = new JPanel();

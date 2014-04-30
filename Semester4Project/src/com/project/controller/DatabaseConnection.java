@@ -1,7 +1,6 @@
 package com.project.controller;
 
 import com.project.database.*;
-import com.project.user.*;
 import oracle.jdbc.pool.*;
 
 import javax.swing.*;
@@ -19,7 +18,7 @@ public class DatabaseConnection {
   /**
    * The Run statement.
    */
-  private RunStatement runStatement = new RunStatement();
+  private final RunStatementSelect runStatementSelect = new RunStatementSelect();
   /**
    * The Database connection.
    */
@@ -28,6 +27,7 @@ public class DatabaseConnection {
    * The Path.
    */
   private String path;
+  private User user;
 
   /**
    * Instantiates a new Database connection.
@@ -38,7 +38,11 @@ public class DatabaseConnection {
    *     the password
    */
   public DatabaseConnection(String user, String password) {
-    createDatabaseConnection(user, password);
+    try {
+      createDatabaseConnection(user, password);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
     setPath();
     createDatabaseFromDDL(getPath());
   }
@@ -77,7 +81,7 @@ public class DatabaseConnection {
    * @param password
    *     the password
    */
-  private void createDatabaseConnection(String user, String password) {
+  private void createDatabaseConnection(String user, String password) throws SQLException {
     try {
       OracleDataSource dataSource = new OracleDataSource();
       try {
@@ -89,7 +93,6 @@ public class DatabaseConnection {
         dataSource.setPassword(password);
 
         setDatabaseConnection(dataSource.getConnection());
-        checkUser(user, password);
 
       } catch (SQLException e) {
         System.out.println(e.getMessage());
@@ -98,6 +101,13 @@ public class DatabaseConnection {
       }
     } catch (Exception e) {
       System.out.println(e.getMessage());
+    } finally {
+      runStatementSelect.queryUsers(databaseConnection);
+      if (checkUser(user, password) == null) {
+        this.endConnection();
+      } else {
+        this.setUser(checkUser(user, password));
+      }
     }
   }
 
@@ -110,46 +120,50 @@ public class DatabaseConnection {
    *     the password
    *
    * @return boolean boolean
-   *
-   * @throws SQLException
-   *     the sQL exception
    */
-  private boolean checkUser(
+  private User checkUser(
       String user,
       String password
-  ) throws SQLException {
-    //todo change to check userArray
-    for (User userCheck : RunStatement.users) {
+  ) {
+    for (User userCheck : User.users) {
       if (user.equals(userCheck.getCode()) && password.equals(userCheck.getPassword())) {
-        if (userCheck instanceof Student) {
-          //set view to timetable view
-        } else if (userCheck instanceof Admin) {
-          //set view to admin view
-        } else if (userCheck instanceof Lecturer) {
-          //set view to timetable view
-        }
+        //        changeView(userCheck);
+        return userCheck;
       }
     }
-    runStatement.setQueryType(getDatabaseConnection().createStatement());
-    runStatement.setResultSet(runStatement.getQueryType().executeQuery(
-        "SELECT USER_ID, " +
-            "" + "treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_PASSWORD FROM TIMETABLE" +
-            ".TIMETABLE_USERS"
-    ));
-    while (runStatement.getResultSet().next()) {
-      if (user.equals(runStatement.getResultSet().getString(1)) && password.equals(
-          runStatement.getResultSet
-              ().getString(2)
-      )) {
-        System.out.println("connected to source");
-        System.out.printf("%s, %s \n", user, password);
-        return true;
-      }
-    }
-    endConnection();
+    //    runStatement.setQueryType(getDatabaseConnection().createStatement());
+    //    runStatement.setResultSet(runStatement.getQueryType().executeQuery(
+    //        "SELECT USER_ID, " +
+    //            "" + "treat(USER_OBJ AS TIMETABLE_USER_OBJ).USER_PASSWORD FROM TIMETABLE" +
+    //            ".TIMETABLE_USERS"
+    //    ));
+    //    while (runStatement.getResultSet().next()) {
+    //      if (user.equals(runStatement.getResultSet().getString(1)) && password.equals(
+    //          runStatement.getResultSet
+    //              ().getString(2)
+    //      )) {
+    //        System.out.println("connected to source");
+    //        System.out.printf("%s, %s \n", user, password);
+    //        return true;
+    //      }
+    //    }
+    //    endConnection();
     JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
         JOptionPane.WARNING_MESSAGE, null);
-    return false;
+    return null;
+  }
+
+  /**
+   * End connection.
+   */
+  public void endConnection() {
+    try {
+      System.out.println("Closing Connection");
+      getDatabaseConnection().close();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+
   }
 
   /**
@@ -171,17 +185,11 @@ public class DatabaseConnection {
     this.databaseConnection = databaseConnection;
   }
 
-  /**
-   * End connection.
-   */
-  public void endConnection() {
-    try {
-      System.out.println("Closing Connection");
-      getDatabaseConnection().close();
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-
+  public User getUser() {
+    return user;
   }
 
+  public void setUser(final User user) {
+    this.user = user;
+  }
 }

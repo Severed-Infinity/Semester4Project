@@ -13,12 +13,19 @@ public class Admin extends Staff {
 
   /**
    * Instantiates a new Admin.
-   * @param code      the code
-   * @param firstName      the first name
-   * @param lastName      the last name
-   * @param password      the password
-   * @param dateOfBirth the date of birth
-   * @param title the title
+   *
+   * @param code
+   *     the code
+   * @param firstName
+   *     the first name
+   * @param lastName
+   *     the last name
+   * @param password
+   *     the password
+   * @param dateOfBirth
+   *     the date of birth
+   * @param title
+   *     the title
    */
   public Admin(
       final String code,

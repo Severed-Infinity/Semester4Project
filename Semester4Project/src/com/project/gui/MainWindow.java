@@ -2,6 +2,7 @@ package com.project.gui;
 
 import com.project.controller.*;
 import com.project.database.*;
+import com.project.user.*;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.*;
@@ -20,9 +21,8 @@ class MainWindow extends JFrame {
    *
    * @param databaseConnection
    *     the database connection
-   * @param user
    */
-  public MainWindow(DatabaseConnection databaseConnection, final User user) {
+  public MainWindow(final DatabaseConnection databaseConnection, final User user) {
 
     setTitle("Timetable");
     setResizable(false);
@@ -34,102 +34,112 @@ class MainWindow extends JFrame {
     getContentPane().setPreferredSize(new Dimension(800, 500));
     getContentPane().setLayout(new GridBagLayout());
     GridBagConstraints constraints = new GridBagConstraints();
-    //        constraints.anchor = GridBagConstraints.FIRST_LINE_START;
+    // constraints.anchor = GridBagConstraints.FIRST_LINE_START;
     constraints.ipadx = 5;
     constraints.ipady = 5;
     GroupLayout headerLayout;
 
     setJMenuBar(addMenu());
 
-    //        beginning of header
-    /*
-    The Header.
-   */
+    // beginning of header
+        /*
+         * The Header.
+         */
     final JPanel header = new JPanel();
     header.setBackground(Color.white);
     constraints.gridx = 0;
     constraints.gridy = 0;
     constraints.weightx = 1.0;
-    //        constraints.gridwidth = 2;
+    // constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     add(header, constraints);
 
-    /*
-    The Home.
-   */
+        /*
+         * The Home.
+         */
     final JButton home = new JButton("Home");
-    //        header.add( home );
+    // header.add( home );
 
-    /*
-    The Logout.
-   */
+        /*
+         * The Logout.
+         */
     final JButton logout = new JButton("Logout");
     logout.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent e) {
+
         databaseConnection.endConnection();
         new TimetableLogin().setVisible(true);
         dispose();
       }
     });
-    //        header.add( logout );
+    // header.add( logout );
 
-    /*
-    The Search field.
-   */
+        /*
+         * The Search field.
+         */
     final JTextField searchField = new JFormattedTextField("Search");
     searchField.setColumns(40);
-    //        header.add( searchField );
+    // header.add( searchField );
 
-    /*
-    The Logged user.
-   */
+        /*
+         * The Logged user.
+         */
     final JLabel loggedUser = new JLabel("User");
     loggedUser.setHorizontalAlignment(SwingConstants.TRAILING);
-    //        header.add( loggedUser );
+    // header.add( loggedUser );
 
     headerLayout = new GroupLayout(header);
     headerLayout.setHorizontalGroup(headerLayout.createParallelGroup(Alignment.LEADING)
-        .addGroup(headerLayout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(home)
-            .addPreferredGap(ComponentPlacement.UNRELATED)
-            .addComponent(logout)
-            .addGap(50)
-            .addComponent(searchField, GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE)
-            .addGap(20)
-            .addComponent(loggedUser, GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-            .addGap(40)
-            .addContainerGap()));
-
-    headerLayout.setVerticalGroup(headerLayout.createParallelGroup(Alignment.LEADING)
-        .addGroup(headerLayout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(headerLayout.createParallelGroup(Alignment.BASELINE)
-                .addComponent(searchField, GroupLayout.PREFERRED_SIZE, 30,
-                    GroupLayout.PREFERRED_SIZE)
-                .addComponent(logout)
+        .addGroup(
+            headerLayout
+                .createSequentialGroup()
+                .addContainerGap()
                 .addComponent(home)
-                .addComponent(loggedUser, GroupLayout.PREFERRED_SIZE, 30,
-                    GroupLayout.PREFERRED_SIZE))));
+                .addPreferredGap(ComponentPlacement.UNRELATED)
+                .addComponent(logout)
+                .addGap(50)
+                .addComponent(searchField, GroupLayout.PREFERRED_SIZE, 400,
+                    Short.MAX_VALUE)
+                .addGap(20)
+                .addComponent(loggedUser, GroupLayout.DEFAULT_SIZE, 200,
+                    Short.MAX_VALUE).addGap(40).addContainerGap()
+        ));
+
+    headerLayout.setVerticalGroup(headerLayout.createParallelGroup(Alignment.LEADING).addGroup(
+        headerLayout
+            .createSequentialGroup()
+            .addContainerGap()
+            .addGroup(
+                headerLayout
+                    .createParallelGroup(Alignment.BASELINE)
+                    .addComponent(searchField, GroupLayout.PREFERRED_SIZE, 30,
+                        GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logout)
+                    .addComponent(home)
+                    .addComponent(loggedUser, GroupLayout.PREFERRED_SIZE, 30,
+                        GroupLayout.PREFERRED_SIZE)
+            )
+    ));
 
     header.setLayout(headerLayout);
-    //        end of header
+    // end of header
 
-    //        beginning of main view
+    // beginning of main currentView
     /**
-     The Main view.
+     * The Main currentView.
      */
-    //todo create method signature that allows dynamic change of views
-    final MainView mainView = new MainView(this.user, new AdminView(this.user));
+
+    final View view = null;
+    final MainView mainView = new MainView(user, view);
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.weightx = 1.0;
     constraints.weighty = 1.0;
-    //        constraints.gridwidth = 2;
+    // constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.BOTH;
     add(mainView, constraints);
-    //        end of main view
+    // end of main currentView
 
     pack();
   }
@@ -141,22 +151,22 @@ class MainWindow extends JFrame {
    */
   JMenuBar addMenu() {
 
-    /*
-    The Main menu.
-   */
+        /*
+         * The Main menu.
+         */
     final JMenuBar mainMenu = new JMenuBar();
 
-    /*
-    The Menu file.
-   */
+        /*
+         * The Menu file.
+         */
     final JMenu menuFile = new JMenu("File");
     mainMenu.add(menuFile);
     final JMenu menuEdit = new JMenu("Edit");
     mainMenu.add(menuEdit);
 
-    /*
-    The Search.
-   */
+        /*
+         * The Search.
+         */
     final JMenuItem search = new JMenuItem("Search");
     final JMenuItem print = new JMenuItem("Print");
     final JMenuItem exitAndLogout = new JMenuItem("Exit and Logout");
@@ -189,12 +199,33 @@ class MainWindow extends JFrame {
    * Created by david on 3/12/14.
    */
   private class MainView extends View {
-    private MainView(User user, View view) {
-      super();
+    private final User user;
+    private View currentView;
+    private View previousView;
+
+    private MainView(User user, View currentView) {
+
       setLayout(new BorderLayout());
-      this.add(view, BorderLayout.CENTER);
+      this.currentView = currentView;
+      this.user = user;
+      this.add(changeView(user), BorderLayout.CENTER);
     }
 
+    public View changeView(final User user) {
+      if (user instanceof Student) {
+        this.previousView = currentView;
+        return this.currentView = new TimetableView(new Timetable());
+        //        return this.currentView = new TimetableView(((Student)user).getCourseCode()
+        // .getTimetable());
+      } else if (user instanceof Admin) {
+        this.previousView = currentView;
+        return this.currentView = new AdminView();
+      } else if (user instanceof Lecturer) {
+        this.previousView = currentView;
+        return this.currentView = new TimetableView(((Lecturer)user).getTimetable());
+      }
+      return new TimetableView(new Timetable());
+    }
   }
 
 }

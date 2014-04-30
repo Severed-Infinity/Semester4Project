@@ -1,25 +1,44 @@
 package com.project.database;
 
-import java.sql.*;
+import com.project.user.*;
+
+import java.sql.Date;
+import java.util.*;
 
 /**
  * The type User.
  */
 public abstract class User {
+  /**
+   * The Users.
+   */
+  public static final LinkedList<User> users = new LinkedList<>();
+  /**
+   * The Students.
+   */
+  public static final ArrayList<Student> students = new ArrayList<>();
+  /**
+   * The Lecturers.
+   */
+  public static final ArrayList<Lecturer> lecturers = new ArrayList<>();
+  /**
+   * The Admins.
+   */
+  public static final ArrayList<Admin> admins = new ArrayList<>();
   private String code, firstName, lastName, password;
   private Date dateOfBirth; // can be converted directly to SQl Date
 
   /**
    * Instantiates a new User.
-   *  @param code
+   *
+   * @param code
    *     the code
    * @param firstName
    *     the first name
    * @param lastName
- *     the last name
-   * @param dateOfBirth
+   *     the last name
    * @param password
-*     the password
+   *     the password
    */
   protected User(
       final String code,
@@ -129,4 +148,5 @@ public abstract class User {
   void setCode(final String code) {
     this.code = code;
   }
+
 }

@@ -1,5 +1,7 @@
 package com.project.database;
 
+import java.util.*;
+
 /**
  * Project Semester4Project
  *
@@ -10,6 +12,10 @@ package com.project.database;
  * Created by david on 4/17/2014.
  */
 public class School {
+  /**
+   * The Schools.
+   */
+  public static final LinkedList<School> schools = new LinkedList<>();
   private String code, name;
 
   public School(final String code, final String name) {

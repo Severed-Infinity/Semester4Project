@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
-abstract class View extends JPanel {
+public abstract class View extends JPanel {
   /**
    * Inputs for the Views, they relate directly to components of similar names
    */

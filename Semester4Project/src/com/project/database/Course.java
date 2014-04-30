@@ -1,5 +1,7 @@
 package com.project.database;
 
+import java.util.*;
+
 /**
  * Project Semester4Project
  *
@@ -10,8 +12,43 @@ package com.project.database;
  * Created by david on 4/17/2014.
  */
 public class Course {
-  private String code, name, type, head, departmentCode, modules;
-  private int length, year, semester;
+  /**
+   * The Courses.
+   */
+  public static final LinkedList<Course> courses = new LinkedList<>();
+  /**
+   * The Code.
+   */
+  private String code, /**
+   * The Name.
+   */
+  name, /**
+   * The Type.
+   */
+  type, /**
+   * The Head.
+   */
+  head, /**
+   * The Department code.
+   */
+  departmentCode, /**
+   * The Modules.
+   */
+  modules;
+  /**
+   * The Length.
+   */
+  private int length, /**
+   * The Year.
+   */
+  year, /**
+   * The Semester.
+   */
+  semester;
+  /**
+   * The Timetable.
+   */
+  private int timetable;
 
   /**
    * Instantiates a new Course.
@@ -34,6 +71,8 @@ public class Course {
    *     the year
    * @param semester
    *     the semester
+   * @param timetable
+   *     the timetable
    */
   public Course(
       final String code,
@@ -44,8 +83,10 @@ public class Course {
       final String modules,
       final int length,
       final int year,
-      final int semester
+      final int semester,
+      final int timetable
   ) {
+    this.timetable = timetable;
     this.setCode(code);
     this.setName(name);
     this.setType(type);
@@ -227,5 +268,19 @@ public class Course {
    */
   void setSemester(final int semester) {
     this.semester = semester;
+  }
+
+  /**
+   * Gets timetable.
+   *
+   * @return the timetable
+   */
+  public Timetable getTimetable() {
+    for (Timetable timetable : Timetable.timetables) {
+      if (this.timetable == timetable.getCode()) {
+        return timetable;
+      }
+    }
+    return null;
   }
 }
