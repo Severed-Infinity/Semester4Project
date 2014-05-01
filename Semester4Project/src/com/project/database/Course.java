@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -35,10 +36,7 @@ public class Course {
   head, /**
    * The Department code.
    */
-  departmentCode, /**
-   * The Modules.
-   */
-  modules;
+  departmentCode;
   /**
    * The Length.
    */
@@ -63,8 +61,6 @@ public class Course {
    *     the head
    * @param departmentCode
    *     the department code
-   * @param modules
-   *     the MODULES
    * @param length
    *     the length
    * @param year
@@ -80,7 +76,6 @@ public class Course {
       final String type,
       final String head,
       final String departmentCode,
-      final String modules,
       final int length,
       final int year,
       final int semester,
@@ -92,7 +87,6 @@ public class Course {
     this.type = type;
     this.head = head;
     this.departmentCode = departmentCode;
-    this.modules = modules;
     this.length = length;
     this.year = year;
     this.semester = semester;
@@ -104,13 +98,12 @@ public class Course {
       final String type,
       final String head,
       final String departmentCode,
-      final String modules,
       final int length,
       final int year,
       final int semester,
       final int timetable
   ) {
-    return new Course(code, name, type, head, departmentCode, modules, length, year, semester,
+    return new Course(code, name, type, head, departmentCode, length, year, semester,
         timetable);
   }
 
@@ -211,25 +204,6 @@ public class Course {
   }
 
   /**
-   * Gets MODULES.
-   *
-   * @return the MODULES
-   */
-  public String getModules() {
-    return this.modules;
-  }
-
-  /**
-   * Sets MODULES.
-   *
-   * @param modules
-   *     the MODULES
-   */
-  final void setModules(final String modules) {
-    this.modules = modules;
-  }
-
-  /**
    * Gets length.
    *
    * @return the length
@@ -298,23 +272,16 @@ public class Course {
         timetableReturn = timetableCheck;
       }
     }
-
     return timetableReturn;
   }
 
   @Override
   public String toString() {
-    return "Course{" +
-        "timetable=" + this.timetable +
-        ", code='" + this.code + '\'' +
-        ", name='" + this.name + '\'' +
-        ", type='" + this.type + '\'' +
-        ", head='" + this.head + '\'' +
-        ", departmentCode='" + this.departmentCode + '\'' +
-        ", modules='" + this.modules + '\'' +
-        ", length=" + this.length +
-        ", year=" + this.year +
-        ", semester=" + this.semester +
-        '}';
+    return MessageFormat.format(
+        "Course'{'timetable={0}, code=''{1}'', name=''{2}'', type=''{3}'', head=''{4}'', " +
+            "departmentCode=''{5}'', length={6}, year={7}, semester={8}'}'",
+        this.timetable, this.code, this.name, this.type, this.head, this.departmentCode,
+        this.length, this.year, this.semester
+    );
   }
 }

@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -26,7 +27,6 @@ public class Room {
       final boolean lab,
       final int shareRoomNumber
   ) {
-
     this.roomNumber = roomNumber;
     this.roomSeating = roomSeating;
     this.departmentCode = departmentCode;
@@ -64,12 +64,10 @@ public class Room {
 
   @Override
   public String toString() {
-    return "Room{" +
-        "roomNumber=" + this.roomNumber +
-        ", roomSeating=" + this.roomSeating +
-        ", departmentCode='" + this.departmentCode + '\'' +
-        ", lab=" + this.lab +
-        ", shareRoomNumber=" + this.shareRoomNumber +
-        '}';
+    return MessageFormat.format(
+        "Room'{'roomNumber={0}, roomSeating={1}, departmentCode=''{2}'', lab={3}, " +
+            "shareRoomNumber={4}'}'",
+        this.roomNumber, this.roomSeating, this.departmentCode, this.lab, this.shareRoomNumber
+    );
   }
 }

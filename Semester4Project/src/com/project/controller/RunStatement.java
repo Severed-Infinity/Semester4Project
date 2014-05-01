@@ -1,6 +1,7 @@
 package com.project.controller;
 
 import java.sql.*;
+import java.text.*;
 
 /**
  * Project Semester4Project
@@ -12,7 +13,6 @@ import java.sql.*;
  * Created by david on 3/25/2014.
  */
 class RunStatement {
-  private String sqlStatement;
   /**
    * The Query type.
    */
@@ -29,6 +29,7 @@ class RunStatement {
    * The Result set.
    */
   private ResultSet resultSet;
+  private Connection connection;
 
   /**
    * Gets query type.
@@ -73,7 +74,7 @@ class RunStatement {
    *
    * @return the query preparation
    */
-  public PreparedStatement getQueryPreparation() {
+  PreparedStatement getQueryPreparation() {
     return this.queryPreparation;
   }
 
@@ -83,7 +84,7 @@ class RunStatement {
    * @param queryPreparation
    *     the query preparation
    */
-  public void setQueryPreparation(final PreparedStatement queryPreparation) {
+  void setQueryPreparation(final PreparedStatement queryPreparation) {
     this.queryPreparation = queryPreparation;
   }
 
@@ -106,14 +107,21 @@ class RunStatement {
     this.ddl = ddl;
   }
 
+  Connection getConnection() {
+    return this.connection;
+  }
+
+  public void setConnection(final Connection connection) {
+    this.connection = connection;
+  }
+
   @Override
   public String toString() {
-    return "RunStatement{" +
-        "sqlStatement='" + this.sqlStatement + '\'' +
-        ", queryType=" + this.queryType +
-        ", ddl=" + this.ddl +
-        ", queryPreparation=" + this.queryPreparation +
-        ", resultSet=" + this.resultSet +
-        '}';
+    return MessageFormat.format(
+        "RunStatement'{'queryType={0}, ddl={1}, queryPreparation={2}, " +
+            "resultSet={3}, connection={4}'}'",
+        this.queryType, this.ddl, this.queryPreparation, this.resultSet,
+        this.connection
+    );
   }
 }

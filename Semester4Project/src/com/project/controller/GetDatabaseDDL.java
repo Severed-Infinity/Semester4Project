@@ -6,6 +6,7 @@
 package com.project.controller;
 
 import java.io.*;
+import java.text.*;
 import java.util.*;
 import java.util.regex.*;
 
@@ -38,14 +39,11 @@ public class GetDatabaseDDL {
    * @return List of query strings
    */
   static List<String> createQueries(final String path) {
-
     final StringBuilder stringBuilder = new StringBuilder();
     final List<String> listOfQueries = new ArrayList<>(10000);
-
     try {
       final FileReader fileReader = new FileReader(new File(path));
       final BufferedReader bufferedReader = new BufferedReader(fileReader);
-
       //read the SQL file line by line
       String queryLine;
       while ((queryLine = bufferedReader.readLine()) != null) {
@@ -67,7 +65,6 @@ public class GetDatabaseDDL {
           queryLine = queryLine.startsWith("#") ? "" : queryLine.substring(0,
               -1);
         }
-
         final StringBuilder builder = stringBuilder.append(queryLine);
         builder.append(' ');
         // ignore all characters within the comment
@@ -80,7 +77,6 @@ public class GetDatabaseDDL {
           queryLine = queryLine.endsWith("*/") ? "" : queryLine.substring(+2,
               queryLine.length() - 1);
         }
-
         //  the + " " is necessary, because otherwise the content before and after a line break
         // are concatenated
         // like e.g. a.xyz FROM becomes a.xyzFROM otherwise and can not be executed
@@ -89,10 +85,8 @@ public class GetDatabaseDDL {
         }
       }
       bufferedReader.close();
-
       // here is our splitter ! We use ";" as a delimiter for each request
       final String[] splittedQueries = COMPILE.split(stringBuilder.toString());
-
       // filter out empty statements
       for (final String splittedQuery : splittedQueries) {
         final String trim = splittedQuery.trim();
@@ -106,7 +100,7 @@ public class GetDatabaseDDL {
     } catch (final IOException exception) {
       exception.printStackTrace();
     } catch (final RuntimeException exception) {
-      System.out.println("*** Error : " + exception.toString());
+      System.out.println(MessageFormat.format("*** Error : {0}", exception.toString()));
       System.out.println("*** ");
       System.out.println("*** Error : ");
       exception.printStackTrace();

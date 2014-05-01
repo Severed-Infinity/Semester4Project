@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -45,9 +46,6 @@ public class School {
 
   @Override
   public String toString() {
-    return "School{" +
-        "code='" + this.code + '\'' +
-        ", name='" + this.name + '\'' +
-        '}';
+    return MessageFormat.format("School'{'code=''{0}'', name=''{1}'''}'", this.code, this.name);
   }
 }

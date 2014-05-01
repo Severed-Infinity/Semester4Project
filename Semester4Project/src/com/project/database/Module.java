@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -65,7 +66,6 @@ public class Module {
       final int lecturers,
       final int courseCode
   ) {
-
     this.code = code;
     this.name = name;
     this.semester = semester;
@@ -189,13 +189,10 @@ public class Module {
 
   @Override
   public String toString() {
-    return "Module{" +
-        "courseCode=" + this.courseCode +
-        ", name='" + this.name + '\'' +
-        ", code=" + this.code +
-        ", semester=" + this.semester +
-        ", weeklyHours=" + this.weeklyHours +
-        ", lecturers=" + this.lecturers +
-        '}';
+    return MessageFormat.format(
+        "Module'{'courseCode={0}, name=''{1}'', code={2}, semester={3}, weeklyHours={4}, " +
+            "lecturers={5}'}'",
+        this.courseCode, this.name, this.code, this.semester, this.weeklyHours, this.lecturers
+    );
   }
 }

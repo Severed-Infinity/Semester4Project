@@ -6,6 +6,7 @@ import oracle.jdbc.pool.*;
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
+import java.text.*;
 
 import static com.project.controller.GetDatabaseDDL.*;
 
@@ -18,11 +19,6 @@ import static com.project.controller.GetDatabaseDDL.*;
  * Created by david on 3/18/14.
  */
 public class DatabaseConnection {
-  /**
-   * The Run statement.
-   */
-  private final RunStatementSelect runStatementSelect = RunStatementSelect
-      .createRunStatementSelect();
   /**
    * The Database connection.
    */
@@ -65,15 +61,15 @@ public class DatabaseConnection {
   private void createConnection(final String user, final String password) {
     try {
       final OracleDataSource dataSource = new OracleDataSource();
-
       //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
       dataSource.setURL("jdbc:oracle:thin://@localhost:1521:XE");
       // college source
       // dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
       dataSource.setUser(user);
       dataSource.setPassword(password);
-
-      this.databaseConnection = dataSource.getConnection();
+      final RunStatement runStatement = new RunStatement();
+      runStatement.setConnection(this.databaseConnection = dataSource
+          .getConnection());
 
     } catch (final SQLException | HeadlessException exception) {
       JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
@@ -82,7 +78,7 @@ public class DatabaseConnection {
     } catch (final RuntimeException exception) {
       System.out.println(exception.getMessage());
     } finally {
-      this.runStatementSelect.queryUsers(this.databaseConnection);
+      RunStatementSelect.createRunStatementSelect().queryUsers();
       if (userReturn(user, password) == null) {
         this.endConnection();
       } else {
@@ -131,7 +127,6 @@ public class DatabaseConnection {
     //    endConnection();
     JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
         JOptionPane.WARNING_MESSAGE, null);
-
     return userReturn;
   }
 
@@ -202,11 +197,8 @@ public class DatabaseConnection {
 
   @Override
   public String toString() {
-    return "DatabaseConnection{" +
-        "runStatementSelect=" + this.runStatementSelect +
-        ", databaseConnection=" + this.databaseConnection +
-        ", path='" + this.path + '\'' +
-        ", user=" + this.user +
-        '}';
+    return MessageFormat.format(
+        "DatabaseConnection'{', databaseConnection={0}, path=''{1}'', user={2}'}'",
+        this.databaseConnection, this.path, this.user);
   }
 }

@@ -14,7 +14,6 @@ class WarningPanes {
 
   // TODO place warning panes within there appropriate classes
   public static void main(final String[] args) {
-
     //        JOptionPane.showMessageDialog( null, "User ID or Password is incorrect", null,
     // JOptionPane.WARNING_MESSAGE, null );
     JOptionPane.showMessageDialog(null, SEARCH_RETURNED_NO_RESULTS, null,

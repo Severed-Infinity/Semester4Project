@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -143,11 +144,8 @@ public class Department {
 
   @Override
   public String toString() {
-    return "Department{" +
-        "code='" + this.code + '\'' +
-        ", name='" + this.name + '\'' +
-        ", head='" + this.head + '\'' +
-        ", schoolCode='" + this.schoolCode + '\'' +
-        '}';
+    return MessageFormat.format(
+        "Department'{'code=''{0}'', name=''{1}'', head=''{2}'', schoolCode=''{3}'''}'",
+        this.code, this.name, this.head, this.schoolCode);
   }
 }

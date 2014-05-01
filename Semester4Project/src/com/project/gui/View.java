@@ -4,6 +4,7 @@ import com.project.database.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.*;
 
 @SuppressWarnings ("serial")
 public class View extends JPanel {
@@ -55,7 +56,6 @@ public class View extends JPanel {
    */
   JList<Module> subComponents;
   private JFrame createNewPanel;
-
   //    protected ArrayList<View> views = new ArrayList<>();
 
   protected View() {
@@ -73,40 +73,23 @@ public class View extends JPanel {
     this.createNewPanel.setLocationRelativeTo(null);
     this.createNewPanel.setVisible(true);
   }
-
   //    public ArrayList<View> getViews () {
   //        return views;
   //    }
 
   @Override
   public String toString() {
-    return "View{" +
-        "name=" + this.name +
-        ", code=" + this.code +
-        ", length=" + this.length +
-        ", head=" + this.head +
-        ", year=" + this.year +
-        ", semester=" + this.semester +
-        ", confirm=" + this.confirm +
-        ", cancel=" + this.cancel +
-        ", clear=" + this.clear +
-        ", createNew=" + this.createNew +
-        ", addComponent=" + this.addComponent +
-        ", typeOf=" + this.typeOf +
-        ", nameOf=" + this.nameOf +
-        ", codeFor=" + this.codeFor +
-        ", lengthOf=" + this.lengthOf +
-        ", departmentContaining=" + this.departmentContaining +
-        ", headOf=" + this.headOf +
-        ", selectComponent=" + this.selectComponent +
-        ", listOf=" + this.listOf +
-        ", yearOf=" + this.yearOf +
-        ", semesters=" + this.semesters +
-        ", typeOptions=" + this.typeOptions +
-        ", subComponent=" + this.subComponent +
-        ", parentComponent=" + this.parentComponent +
-        ", subComponents=" + this.subComponents +
-        ", createNewPanel=" + this.createNewPanel +
-        '}';
+    return MessageFormat.format(
+        "View'{'name={0}, code={1}, length={2}, head={3}, year={4}, semester={5}, confirm={6}, " +
+            "cancel={7}, clear={8}, createNew={9}, addComponent={10}, typeOf={11}, nameOf={12}, " +
+            "codeFor={13}, lengthOf={14}, departmentContaining={15}, headOf={16}, " +
+            "selectComponent={17}, listOf={18}, yearOf={19}, semesters={20}, typeOptions={21}, " +
+            "subComponent={22}, parentComponent={23}, subComponents={24}, createNewPanel={25}'}'",
+        this.name, this.code, this.length, this.head, this.year, this.semester, this.confirm,
+        this.cancel, this.clear, this.createNew, this.addComponent, this.typeOf, this.nameOf,
+        this.codeFor, this.lengthOf, this.departmentContaining, this.headOf, this.selectComponent,
+        this.listOf, this.yearOf, this.semesters, this.typeOptions, this.subComponent,
+        this.parentComponent, this.subComponents, this.createNewPanel
+    );
   }
 }

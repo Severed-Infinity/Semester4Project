@@ -3,6 +3,7 @@ package com.project.user;
 import com.project.database.*;
 
 import java.sql.*;
+import java.text.*;
 
 public class Student extends User {
   private final String courseCode;
@@ -43,7 +44,6 @@ public class Student extends User {
     for (final Course course : Course.COURSES) {
       final String code = course.getCode();
       if (code.equals(this.courseCode)) {
-
         courseReturn = course;
 
       }
@@ -53,9 +53,8 @@ public class Student extends User {
 
   @Override
   public String toString() {
-    return "Student{" +
-        "courseCode='" + this.courseCode + '\'' +
-        ", repeatStudent=" + this.repeatStudent +
-        '}';
+    return MessageFormat.format("Student'{'courseCode=''{0}'', repeatStudent={1}'}'",
+        this.courseCode,
+        this.repeatStudent);
   }
 }

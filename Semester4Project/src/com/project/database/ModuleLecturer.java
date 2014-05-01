@@ -1,5 +1,6 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
@@ -17,7 +18,6 @@ public class ModuleLecturer {
   private final int userCode;
 
   private ModuleLecturer(final int moduleCode, final int userCode) {
-
     this.moduleCode = moduleCode;
     this.userCode = userCode;
   }
@@ -37,9 +37,7 @@ public class ModuleLecturer {
 
   @Override
   public String toString() {
-    return "ModuleLecturer{" +
-        "moduleCode=" + this.moduleCode +
-        ", userCode=" + this.userCode +
-        '}';
+    return MessageFormat.format("ModuleLecturer'{'moduleCode={0}, userCode={1}'}'", this.moduleCode,
+        this.userCode);
   }
 }

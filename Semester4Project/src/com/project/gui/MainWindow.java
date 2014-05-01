@@ -10,6 +10,7 @@ import javax.swing.GroupLayout.*;
 import javax.swing.LayoutStyle.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.text.*;
 
 /**
  * Created by david on 3/12/14.
@@ -26,13 +27,11 @@ class MainWindow extends JFrame {
    */
   MainWindow(final DatabaseConnection databaseConnection, final User user) {
     super();
-
     this.setTitle("Timetable");
     this.setResizable(false);
     this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     this.setSize(800, 500);
     this.setLocationRelativeTo(null);
-
     final Container contentPane = this.getContentPane();
     contentPane.setBackground(Color.white);
     contentPane.setPreferredSize(new Dimension(800, 500));
@@ -41,9 +40,7 @@ class MainWindow extends JFrame {
     // constraints.anchor = GridBagConstraints.FIRST_LINE_START;
     constraints.ipadx = 5;
     constraints.ipady = 5;
-
     this.setJMenuBar(addMenu());
-
     // beginning of header
         /*
          * The Header.
@@ -70,7 +67,6 @@ class MainWindow extends JFrame {
     logout.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent actionEvente) {
-
         databaseConnection.endConnection();
         final TimetableLogin login = TimetableLogin.createTimetableLogin();
         login.setVisible(true);
@@ -92,7 +88,6 @@ class MainWindow extends JFrame {
     final JLabel loggedUser = new JLabel("User");
     loggedUser.setHorizontalAlignment(SwingConstants.TRAILING);
     // header.add( loggedUser );
-
     final GroupLayout headerLayout = new GroupLayout(header);
     headerLayout.setHorizontalGroup(headerLayout.createParallelGroup(Alignment.LEADING)
         .addGroup(
@@ -109,7 +104,6 @@ class MainWindow extends JFrame {
                 .addComponent(loggedUser, GroupLayout.DEFAULT_SIZE, 200,
                     Short.MAX_VALUE).addGap(40).addContainerGap()
         ));
-
     headerLayout.setVerticalGroup(headerLayout.createParallelGroup(Alignment.LEADING).addGroup(
         headerLayout
             .createSequentialGroup()
@@ -125,15 +119,12 @@ class MainWindow extends JFrame {
                         GroupLayout.PREFERRED_SIZE)
             )
     ));
-
     header.setLayout(headerLayout);
     // end of header
-
     // beginning of main currentView
     /**
      * The Main currentView.
      */
-
     final View view = null;
     final MainView mainView = new MainView(user, null);
     constraints.gridx = 0;
@@ -144,7 +135,6 @@ class MainWindow extends JFrame {
     constraints.fill = GridBagConstraints.BOTH;
     this.add(mainView, constraints);
     // end of main currentView
-
     this.pack();
     this.user = null;
   }
@@ -183,12 +173,10 @@ class MainWindow extends JFrame {
     final JMenuItem addUsers = new JMenuItem("Add User");
     final JMenuItem addCourse = new JMenuItem(StringConstants.ADD_COURSE);
     final JMenuItem addModule = new JMenuItem(StringConstants.ADD_MODULE);
-
     menuFile.add(search);
     menuFile.add(print);
     menuFile.add(exitAndLogout);
     menuFile.add(exit);
-
     menuEdit.add(updateTimetable);
     menuEdit.add(updateUsers);
     menuEdit.add(updateCourse);
@@ -196,15 +184,12 @@ class MainWindow extends JFrame {
     menuEdit.add(addUsers);
     menuEdit.add(addCourse);
     menuEdit.add(addModule);
-
     return mainMenu;
   }
 
   @Override
   public String toString() {
-    return "MainWindow{" +
-        "user=" + this.user +
-        '}';
+    return MessageFormat.format("MainWindow'{'user={0}'}'", this.user);
   }
 
   /**
@@ -218,7 +203,6 @@ class MainWindow extends JFrame {
 
     private MainView(final User user, final View currentView) {
       super();
-
       this.setLayout(new BorderLayout());
       this.currentView = currentView;
       this.user = user;
@@ -245,11 +229,9 @@ class MainWindow extends JFrame {
 
     @Override
     public String toString() {
-      return "MainView{" +
-          "user=" + this.user +
-          ", currentView=" + this.currentView +
-          ", previousView=" + this.previousView +
-          '}';
+      return MessageFormat.format("MainView'{'user={0}, currentView={1}, previousView={2}'}'",
+          this.user,
+          this.currentView, this.previousView);
     }
   }
 }

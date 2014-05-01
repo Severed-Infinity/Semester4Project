@@ -3,6 +3,7 @@ package com.project.user;
 import com.project.database.*;
 
 import java.sql.*;
+import java.text.*;
 
 public class Lecturer extends Staff {
   private final int hoursWeek;
@@ -51,9 +52,7 @@ public class Lecturer extends Staff {
 
   @Override
   public String toString() {
-    return "Lecturer{" +
-        "hoursWeek=" + this.hoursWeek +
-        ", timetableCode=" + this.timetableCode +
-        '}';
+    return MessageFormat.format("Lecturer'{'hoursWeek={0}, timetableCode={1}'}'", this.hoursWeek,
+        this.timetableCode);
   }
 }

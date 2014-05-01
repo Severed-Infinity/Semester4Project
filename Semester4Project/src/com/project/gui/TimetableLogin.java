@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
+import java.text.*;
 
 /**
  * The type Timetable login.
@@ -45,7 +46,6 @@ public final class TimetableLogin extends JFrame {
    */
   private TimetableLogin() {
     super();
-
     this.setTitle(StringConstants.LOGIN);
     this.setResizable(false);
     this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -53,7 +53,6 @@ public final class TimetableLogin extends JFrame {
     this.setLocationRelativeTo(null);
     final Container contentPane = this.getContentPane();
     contentPane.setBackground(Color.white);
-
     contentPane.setLayout(new GridBagLayout());
     final GridBagConstraints constraints = new GridBagConstraints();
     constraints.anchor = GridBagConstraints.FIRST_LINE_START;
@@ -72,37 +71,31 @@ public final class TimetableLogin extends JFrame {
     } catch (final IOException exception) {
       exception.printStackTrace();
     }
-
     final JLabel logo = new JLabel(new ImageIcon(iTTLogo));
     constraints.gridx = 0;
     constraints.gridy = 0;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.BOTH;
     this.add(logo, constraints);
-
     constraints.insets = new Insets(0, 10, 0, 10);
-
     final JLabel loginLabel = new JLabel(StringConstants.USER_NAME);
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     this.add(loginLabel, constraints);
-
     final JLabel passwordLabel = new JLabel(StringConstants.PASSWORD);
     constraints.gridx = 0;
     constraints.gridy = 3;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     this.add(passwordLabel, constraints);
-
     this.userName = new JFormattedTextField();
     constraints.gridx = 0;
     constraints.gridy = 2;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     this.add(this.userName, constraints);
-
     this.userPassword = new JPasswordField();
     constraints.gridx = 0;
     constraints.gridy = 5;
@@ -119,7 +112,6 @@ public final class TimetableLogin extends JFrame {
     this.login.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent actionEvent) {
-
         try {
           TimetableLogin.this.login();
         } catch (final SQLException exception) {
@@ -135,12 +127,10 @@ public final class TimetableLogin extends JFrame {
     constraints.fill = GridBagConstraints.HORIZONTAL;
     constraints.insets = new Insets(10, 10, 10, 5);
     this.add(this.login, constraints);
-
     this.cancel = new JButton(StringConstants.CANCEL);
     this.cancel.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent actionEvent) {
-
         System.exit(0);
       }
     });
@@ -150,7 +140,6 @@ public final class TimetableLogin extends JFrame {
     constraints.fill = GridBagConstraints.HORIZONTAL;
     constraints.insets = new Insets(10, 0, 10, 10);
     this.add(this.cancel, constraints);
-
     this.pack();
   }
 
@@ -158,15 +147,16 @@ public final class TimetableLogin extends JFrame {
    * Query void.
    */
   private void query() {
-    this.runStatementSelect.querySchool(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryDepartment(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryCourse(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryTimetables(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryClassPeriod(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryCourseModule(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryModule(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryModuleLecturer(this.databaseConnection.getDatabaseConnection());
-    this.runStatementSelect.queryRoom(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.querySchool();
+    this.runStatementSelect.queryDepartment();
+    this.runStatementSelect.queryCourse();
+    this.runStatementSelect.queryTimetables();
+    this.runStatementSelect.queryClassPeriod();
+    this.runStatementSelect.queryCourseModule();
+    this.runStatementSelect.queryModule();
+    this.runStatementSelect.queryModuleLecturer();
+    this.runStatementSelect.queryRoom();
+    this.runStatementSelect.queryLecturers();
     //        runStatementSelect.queryUsers(databaseConnection.getDatabaseConnection());
   }
 
@@ -177,20 +167,18 @@ public final class TimetableLogin extends JFrame {
  /*
   * create a database connection and try to connect
   */
-
     try {
-
       this.databaseConnection = DatabaseConnection.createDatabaseConnection(this.userName.getText(),
           String.valueOf(this.userPassword.getPassword()));
 
     } catch (final RuntimeException ignored) {
       //            System.out.println( e.getMessage() );
-
     } finally {
       /**
        * if there is a database connection then launch the main window
        * followed by closing this window
        */
+      //todo rework this portion of code, returns null pointer. Change to runstatement
       final Connection connection = this.databaseConnection.getDatabaseConnection();
       final boolean isOpen = !connection.isClosed();
       if (isOpen) {
@@ -215,7 +203,6 @@ public final class TimetableLogin extends JFrame {
    * @return the user name
    */
   final JTextField getUserName() {
-
     return this.userName;
   }
 
@@ -226,7 +213,6 @@ public final class TimetableLogin extends JFrame {
    *     the user name
    */
   final void setUserName(final JTextField userName) {
-
     this.userName = userName;
   }
 
@@ -236,7 +222,6 @@ public final class TimetableLogin extends JFrame {
    * @return the user password
    */
   final JPasswordField getUserPassword() {
-
     return this.userPassword;
   }
 
@@ -247,7 +232,6 @@ public final class TimetableLogin extends JFrame {
    *     the user password
    */
   final void setUserPassword(final JPasswordField userPassword) {
-
     this.userPassword = userPassword;
   }
 
@@ -257,7 +241,6 @@ public final class TimetableLogin extends JFrame {
    * @return the login
    */
   final JButton getLogin() {
-
     return this.login;
   }
 
@@ -268,7 +251,6 @@ public final class TimetableLogin extends JFrame {
    *     the login
    */
   final void setLogin(final JButton login) {
-
     this.login = login;
   }
 
@@ -278,7 +260,6 @@ public final class TimetableLogin extends JFrame {
    * @return the cancel
    */
   final JButton getCancel() {
-
     return this.cancel;
   }
 
@@ -289,19 +270,17 @@ public final class TimetableLogin extends JFrame {
    *     the cancel
    */
   final void setCancel(final JButton cancel) {
-
     this.cancel = cancel;
   }
 
   @Override
   public String toString() {
-    return "TimetableLogin{" +
-        "runStatementSelect=" + this.runStatementSelect +
-        ", databaseConnection=" + this.databaseConnection +
-        ", userName=" + this.userName +
-        ", userPassword=" + this.userPassword +
-        ", login=" + this.login +
-        ", cancel=" + this.cancel +
-        '}';
+    return MessageFormat.format(
+        "TimetableLogin'{'runStatementSelect={0}, databaseConnection={1}, userName={2}, " +
+            "userPassword={3}, login={4}, cancel={5}'}'",
+        this.runStatementSelect, this.databaseConnection, this.userName, this.userPassword,
+        this.login,
+        this.cancel
+    );
   }
 }

@@ -1,12 +1,13 @@
 package com.project.database;
 
+import java.text.*;
 import java.util.*;
 
 /**
  * Project Semester4Project
  *
  * This class is part of a project
- * that is aimed at improving ITT's
+ * that is aimed at improving IT Tallaght's
  * timetable system
  *
  * Created by david on 4/30/2014.
@@ -18,7 +19,6 @@ public class ClassPeriod {
   private final int roomNumber;
 
   private ClassPeriod(final int module, final String time, final int roomNumber) {
-
     this.module = module;
     this.time = time;
     this.roomNumber = roomNumber;
@@ -44,10 +44,8 @@ public class ClassPeriod {
 
   @Override
   public String toString() {
-    return "ClassPeriod{" +
-        "module=" + this.module +
-        ", time='" + this.time + '\'' +
-        ", roomNumber=" + this.roomNumber +
-        '}';
+    return MessageFormat.format("ClassPeriod'{'module={0}, time=''{1}'', roomNumber={2}'}'",
+        this.module,
+        this.time, this.roomNumber);
   }
 }

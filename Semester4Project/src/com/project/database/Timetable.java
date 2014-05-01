@@ -1,6 +1,7 @@
 package com.project.database;
 
 import javax.swing.*;
+import java.text.*;
 import java.util.*;
 
 /**
@@ -40,8 +41,6 @@ public class Timetable {
 
   @Override
   public String toString() {
-    return "Timetable{" +
-        "code=" + this.code +
-        '}';
+    return MessageFormat.format("Timetable'{'code={0}'}'", this.code);
   }
 }

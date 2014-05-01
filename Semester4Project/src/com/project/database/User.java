@@ -3,6 +3,7 @@ package com.project.database;
 import com.project.user.*;
 
 import java.sql.Date;
+import java.text.*;
 import java.util.*;
 
 /**
@@ -151,12 +152,10 @@ public abstract class User {
 
   @Override
   public String toString() {
-    return "User{" +
-        "code='" + this.code + '\'' +
-        ", firstName='" + this.firstName + '\'' +
-        ", lastName='" + this.lastName + '\'' +
-        ", password='" + this.password + '\'' +
-        ", dateOfBirth=" + this.dateOfBirth +
-        '}';
+    return MessageFormat.format(
+        "User'{'code=''{0}'', firstName=''{1}'', lastName=''{2}'', password=''{3}'', " +
+            "dateOfBirth={4}'}'",
+        this.code, this.firstName, this.lastName, this.password, this.dateOfBirth
+    );
   }
 }
