@@ -8,43 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698aa514-53e5-46ab-8866-4f2a2d58e51e" name="Default" comment="Commiting un registered commits">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Admin.java" afterPath="$PROJECT_DIR$/src/com/project/user/Admin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" afterPath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Course.java" afterPath="$PROJECT_DIR$/src/com/project/database/Course.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/CourseModule.java" afterPath="$PROJECT_DIR$/src/com/project/database/CourseModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/CourseView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Department.java" afterPath="$PROJECT_DIR$/src/com/project/database/Department.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" afterPath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" afterPath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Module.java" afterPath="$PROJECT_DIR$/src/com/project/database/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" afterPath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Room.java" afterPath="$PROJECT_DIR$/src/com/project/database/Room.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/School.java" afterPath="$PROJECT_DIR$/src/com/project/database/School.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Staff.java" afterPath="$PROJECT_DIR$/src/com/project/user/Staff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Student.java" afterPath="$PROJECT_DIR$/src/com/project/user/Student.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TIMETABLE.DDL" afterPath="$PROJECT_DIR$/TIMETABLE.DDL" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lib/TODO" afterPath="$PROJECT_DIR$/src/lib/TODO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Timetable.java" afterPath="$PROJECT_DIR$/src/com/project/database/Timetable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" afterPath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" afterPath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/User.java" afterPath="$PROJECT_DIR$/src/com/project/database/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UserView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/View.java" afterPath="$PROJECT_DIR$/src/com/project/gui/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" afterPath="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Semester4Project.iws" />
@@ -166,16 +129,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".classpath" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.classpath">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StringConstants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -185,6 +138,26 @@
                 <element signature="docComment;class#StringConstants#0" expanded="true" />
                 <element signature="method#createStringConstants#0;class#StringConstants#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.043360434" vertical-offset="0" max-vertical-offset="369">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Semester4Project.iml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Semester4Project.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="368">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -211,10 +184,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/user/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33248731" vertical-offset="157" max-vertical-offset="832">
+            <state vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="832">
               <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
               <folding>
                 <element signature="method#getCourseCode#0;class#Student#0" expanded="true" />
@@ -889,12 +862,17 @@
       <workItem from="1398529888771" duration="1197000" />
       <workItem from="1398601646931" duration="14972000" />
       <workItem from="1398626360300" duration="11815000" />
-      <workItem from="1398770198842" duration="54217000" />
+      <workItem from="1398770198842" duration="54514000" />
     </task>
+    <task id="LOCAL-00001" summary="Commiting un registered commits">
+      <created>1398969948377</created>
+      <updated>1398969948377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340909000" />
+    <option name="totallyTimeSpent" value="341206000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -918,7 +896,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -944,7 +922,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32108626" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.399361" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21633889" sideWeight="0.50308645" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258786" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3258786" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1026,25 +1004,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_COURSE">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_TIMETABLE">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -1493,25 +1452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="1120">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-          <folding>
-            <element signature="docComment;class#StringConstants#0" expanded="true" />
-            <element signature="method#createStringConstants#0;class#StringConstants#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/user/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="304">
@@ -1532,11 +1472,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/user/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33248731" vertical-offset="157" max-vertical-offset="832">
+        <state vertical-scroll-proportion="0.0" vertical-offset="157" max-vertical-offset="832">
           <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="method#getCourseCode#0;class#Student#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="1120">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="docComment;class#StringConstants#0" expanded="true" />
+            <element signature="method#createStringConstants#0;class#StringConstants#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Semester4Project.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.043360434" vertical-offset="0" max-vertical-offset="369">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
