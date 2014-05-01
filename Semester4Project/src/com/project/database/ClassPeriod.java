@@ -12,27 +12,42 @@ import java.util.*;
  * Created by david on 4/30/2014.
  */
 public class ClassPeriod {
-  public static LinkedList<ClassPeriod> classPeriods;
-  private int module;
-  private String time;
-  private int roomNumber;
+  public static final Deque<ClassPeriod> CLASS_PERIODS = null;
+  private final int module;
+  private final String time;
+  private final int roomNumber;
 
-  public ClassPeriod(final int module, final String time, final int roomNumber) {
+  private ClassPeriod(final int module, final String time, final int roomNumber) {
 
     this.module = module;
     this.time = time;
     this.roomNumber = roomNumber;
   }
 
+  public static ClassPeriod createClassPeriod(
+      final int module,
+      final String time,
+      final int roomNumber
+  ) {return new ClassPeriod(module, time, roomNumber);}
+
   public int getModule() {
-    return module;
+    return this.module;
   }
 
   public String getTime() {
-    return time;
+    return this.time;
   }
 
   public int getRoomNumber() {
-    return roomNumber;
+    return this.roomNumber;
+  }
+
+  @Override
+  public String toString() {
+    return "ClassPeriod{" +
+        "module=" + this.module +
+        ", time='" + this.time + '\'' +
+        ", roomNumber=" + this.roomNumber +
+        '}';
   }
 }

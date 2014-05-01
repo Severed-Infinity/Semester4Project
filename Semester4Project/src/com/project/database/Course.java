@@ -15,7 +15,11 @@ public class Course {
   /**
    * The Courses.
    */
-  public static final LinkedList<Course> courses = new LinkedList<>();
+  public static final Collection<Course> COURSES = new LinkedList<>();
+  /**
+   * The Timetable.
+   */
+  private final int timetable;
   /**
    * The Code.
    */
@@ -45,10 +49,6 @@ public class Course {
    * The Semester.
    */
   semester;
-  /**
-   * The Timetable.
-   */
-  private int timetable;
 
   /**
    * Instantiates a new Course.
@@ -64,7 +64,7 @@ public class Course {
    * @param departmentCode
    *     the department code
    * @param modules
-   *     the modules
+   *     the MODULES
    * @param length
    *     the length
    * @param year
@@ -74,7 +74,7 @@ public class Course {
    * @param timetable
    *     the timetable
    */
-  public Course(
+  private Course(
       final String code,
       final String name,
       final String type,
@@ -87,15 +87,31 @@ public class Course {
       final int timetable
   ) {
     this.timetable = timetable;
-    this.setCode(code);
-    this.setName(name);
-    this.setType(type);
-    this.setHead(head);
-    this.setDepartmentCode(departmentCode);
-    this.setModules(modules);
-    this.setLength(length);
-    this.setYear(year);
-    this.setSemester(semester);
+    this.code = code;
+    this.name = name;
+    this.type = type;
+    this.head = head;
+    this.departmentCode = departmentCode;
+    this.modules = modules;
+    this.length = length;
+    this.year = year;
+    this.semester = semester;
+  }
+
+  public static Course createCourse(
+      final String code,
+      final String name,
+      final String type,
+      final String head,
+      final String departmentCode,
+      final String modules,
+      final int length,
+      final int year,
+      final int semester,
+      final int timetable
+  ) {
+    return new Course(code, name, type, head, departmentCode, modules, length, year, semester,
+        timetable);
   }
 
   /**
@@ -104,7 +120,7 @@ public class Course {
    * @return the code
    */
   public String getCode() {
-    return code;
+    return this.code;
   }
 
   /**
@@ -113,7 +129,7 @@ public class Course {
    * @param code
    *     the code
    */
-  void setCode(final String code) {
+  final void setCode(final String code) {
     this.code = code;
   }
 
@@ -123,7 +139,7 @@ public class Course {
    * @return the name
    */
   public String getName() {
-    return name;
+    return this.name;
   }
 
   /**
@@ -132,7 +148,7 @@ public class Course {
    * @param name
    *     the name
    */
-  void setName(final String name) {
+  final void setName(final String name) {
     this.name = name;
   }
 
@@ -142,7 +158,7 @@ public class Course {
    * @return the type
    */
   public String getType() {
-    return type;
+    return this.type;
   }
 
   /**
@@ -151,7 +167,7 @@ public class Course {
    * @param type
    *     the type
    */
-  void setType(final String type) {
+  final void setType(final String type) {
     this.type = type;
   }
 
@@ -161,7 +177,7 @@ public class Course {
    * @return the head
    */
   public String getHead() {
-    return head;
+    return this.head;
   }
 
   /**
@@ -170,18 +186,18 @@ public class Course {
    * @param head
    *     the head
    */
-  void setHead(final String head) {
+  final void setHead(final String head) {
     this.head = head;
   }
 
   /**
    * Gets department code.
-   * compare to existing departments, if non-existent
+   * compare to existing DEPARTMENTS, if non-existent
    *
    * @return the department code
    */
   public String getDepartmentCode() {
-    return departmentCode;
+    return this.departmentCode;
   }
 
   /**
@@ -190,26 +206,26 @@ public class Course {
    * @param departmentCode
    *     the department code
    */
-  void setDepartmentCode(final String departmentCode) {
+  final void setDepartmentCode(final String departmentCode) {
     this.departmentCode = departmentCode;
   }
 
   /**
-   * Gets modules.
+   * Gets MODULES.
    *
-   * @return the modules
+   * @return the MODULES
    */
   public String getModules() {
-    return modules;
+    return this.modules;
   }
 
   /**
-   * Sets modules.
+   * Sets MODULES.
    *
    * @param modules
-   *     the modules
+   *     the MODULES
    */
-  void setModules(final String modules) {
+  final void setModules(final String modules) {
     this.modules = modules;
   }
 
@@ -219,7 +235,7 @@ public class Course {
    * @return the length
    */
   public int getLength() {
-    return length;
+    return this.length;
   }
 
   /**
@@ -228,7 +244,7 @@ public class Course {
    * @param length
    *     the length
    */
-  void setLength(final int length) {
+  final void setLength(final int length) {
     this.length = length;
   }
 
@@ -238,7 +254,7 @@ public class Course {
    * @return the year
    */
   public int getYear() {
-    return year;
+    return this.year;
   }
 
   /**
@@ -247,7 +263,7 @@ public class Course {
    * @param year
    *     the year
    */
-  void setYear(final int year) {
+  final void setYear(final int year) {
     this.year = year;
   }
 
@@ -257,7 +273,7 @@ public class Course {
    * @return the semester
    */
   public int getSemester() {
-    return semester;
+    return this.semester;
   }
 
   /**
@@ -266,7 +282,7 @@ public class Course {
    * @param semester
    *     the semester
    */
-  void setSemester(final int semester) {
+  final void setSemester(final int semester) {
     this.semester = semester;
   }
 
@@ -276,11 +292,29 @@ public class Course {
    * @return the timetable
    */
   public Timetable getTimetable() {
-    for (Timetable timetable : Timetable.timetables) {
-      if (this.timetable == timetable.getCode()) {
-        return timetable;
+    Timetable timetableReturn = null;
+    for (final Timetable timetableCheck : Timetable.TIMETABLES) {
+      if (this.timetable == timetableCheck.getCode()) {
+        timetableReturn = timetableCheck;
       }
     }
-    return null;
+
+    return timetableReturn;
+  }
+
+  @Override
+  public String toString() {
+    return "Course{" +
+        "timetable=" + this.timetable +
+        ", code='" + this.code + '\'' +
+        ", name='" + this.name + '\'' +
+        ", type='" + this.type + '\'' +
+        ", head='" + this.head + '\'' +
+        ", departmentCode='" + this.departmentCode + '\'' +
+        ", modules='" + this.modules + '\'' +
+        ", length=" + this.length +
+        ", year=" + this.year +
+        ", semester=" + this.semester +
+        '}';
   }
 }

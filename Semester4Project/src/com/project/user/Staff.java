@@ -4,7 +4,7 @@ import com.project.database.*;
 
 import java.sql.*;
 
-abstract class Staff extends User {
+class Staff extends User {
   Staff(
       final String code,
       final String firstName,

@@ -7,11 +7,6 @@ import java.sql.*;
  */
 public class Admin extends Staff {
   /**
-   * The Title.
-   */
-  private final String title;
-
-  /**
    * Instantiates a new Admin.
    *
    * @param code
@@ -27,7 +22,7 @@ public class Admin extends Staff {
    * @param title
    *     the title
    */
-  public Admin(
+  private Admin(
       final String code,
       final String firstName,
       final String lastName,
@@ -36,6 +31,18 @@ public class Admin extends Staff {
       final String title
   ) {
     super(code, firstName, lastName, dateOfBirth, password);
-    this.title = title;
+    /*
+    The Title.
+   */
+    final String title1 = title;
   }
+
+  public static Admin createAdmin(
+      final String code,
+      final String firstName,
+      final String lastName,
+      final Date dateOfBirth,
+      final String password,
+      final String title
+  ) {return new Admin(code, firstName, lastName, dateOfBirth, password, title);}
 }

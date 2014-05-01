@@ -1,15 +1,20 @@
 package com.project.gui;
 
+import com.project.constants.*;
+
 import javax.swing.*;
 import java.awt.*;
 
 /**
  * Created by david on 3/11/14.
  */
-public class AdminView extends View {
-  public AdminView() {
-    setLayout(new GridBagLayout());
-    GridBagConstraints constraints = new GridBagConstraints();
+class AdminView extends View {
+  private static final long serialVersionUID = 5635241602578233675L;
+
+  AdminView() {
+    super();
+    this.setLayout(new GridBagLayout());
+    final GridBagConstraints constraints = new GridBagConstraints();
 
     /**
      constraints
@@ -27,19 +32,19 @@ public class AdminView extends View {
     /**
      * adds the tabbed pane to the admin view
      */
-    JTabbedPane adminView = new JTabbedPane(JTabbedPane.TOP);
-    add(adminView, constraints);
+    final JTabbedPane adminView = new JTabbedPane(SwingConstants.TOP);
+    this.add(adminView, constraints);
 
     /**
      * creates the tab for holding the course related options
      */
     final JPanel course = new JPanel();
-    adminView.addTab("Course", course);
+    adminView.addTab(StringConstants.COURSE, course);
 
-    createNew = new JButton("Create New Course");
-    course.add(createNew);
+    this.createNew = new JButton(StringConstants.CREATE_NEW_COURSE);
+    course.add(this.createNew);
 
-    JButton update = new JButton("Update a Course");
+    JButton update = new JButton(StringConstants.UPDATE_A_COURSE);
     course.add(update);
 
     //todo create an area to hold the sql return objects
@@ -48,24 +53,24 @@ public class AdminView extends View {
      * creates the tab for holding the module related options
      */
     final JPanel module = new JPanel();
-    adminView.addTab("Module", module);
+    adminView.addTab(StringConstants.MODULE, module);
 
-    createNew = new JButton("Create New Module");
-    module.add(createNew);
+    this.createNew = new JButton(StringConstants.CREATE_NEW_MODULE);
+    module.add(this.createNew);
 
-    update = new JButton("Update a Module");
+    update = new JButton(StringConstants.UPDATE_A_MODULE);
     module.add(update);
 
     /**
      * creates the tab for holding the user related options
      */
     final JPanel userPanel = new JPanel();
-    adminView.addTab("User", userPanel);
+    adminView.addTab(StringConstants.USER, userPanel);
 
-    createNew = new JButton("Create New User");
-    userPanel.add(createNew);
+    this.createNew = new JButton(StringConstants.CREATE_NEW_USER);
+    userPanel.add(this.createNew);
 
-    update = new JButton("Update a User");
+    update = new JButton(StringConstants.UPDATE_A_USER);
     userPanel.add(update);
   }
 

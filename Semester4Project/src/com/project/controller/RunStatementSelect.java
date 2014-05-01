@@ -15,35 +15,67 @@ import java.sql.*;
  * Created by david on 4/30/2014.
  */
 public class RunStatementSelect extends RunStatement {
+  private static final String STUDENT_LAST_NAME =
+      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_NAME_LAST, ";
+  private static final String STUDENT_DATE_OF_BIRTH = "treat" +
+      "(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).DATE_OF_BIRTH, ";
+  private static final String STUDENT_PASSWORD = "treat" +
+      "(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_PASSWORD, ";
+  private static final String STUDENT_COURSE_CODE = "treat" +
+      "(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).COURSE_CODE, ";
+  private static final String STUDENT_REPEATING =
+      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).REPEAT_STUDENT FROM ";
+  private static final String
+      STUDENT_TYPE = "TIMETABLE" +
+      ".TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_STUDENT)";
+  private static final String SELECT_FROM_TIMETABLE_TIMETABLE = "SELECT * FROM TIMETABLE_TIMETABLE";
+  private static final String ALL_FROM_DEPARTMENT = "SELECT * FROM " +
+      "TIMETABLE.TIMETABLE_DEPARTMENT";
+  private static final String SELECT_FROM_TIMETABLE_SCHOOL = "SELECT * FROM TIMETABLE_SCHOOL";
+  private static final String ALL_FROM_COURSE = "SELECT * FROM TIMETABLE" +
+      ".TIMETABLE_COURSE";
+  private static final String SELECT_FROM_TIMETABLE_MODULE = "SELECT * FROM TIMETABLE_MODULE";
+  private static final String SELECT_FROM_CLASS_PERIOD = "SELECT * FROM CLASS_PERIOD";
+  private static final String SELECT_FROM_COURSE_MODULE = "SELECT * FROM COURSE_MODULE";
+  private static final String SELECT_FROM_MODULE_LECTURER = "SELECT * FROM MODULE_LECTURER";
+  private static final String SELECT_FROM_TIMETABLE_ROOM = "SELECT * FROM TIMETABLE_ROOM";
+
+  private RunStatementSelect() {super();}
+
+  public static RunStatementSelect createRunStatementSelect() {return new RunStatementSelect();}
+
   /**
-   * Query users.
+   * Query USERS.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
-  public void queryUsers(Connection connection) {
+  public void queryUsers(final Connection connection) {
     System.out.println("Querying Users");
-    queryStudents(connection);
-    queryLecturers(connection);
-    queryAdmins(connection);
-    User.users.addAll(User.students);
-    User.users.addAll(User.lecturers);
-    User.users.addAll(User.admins);
-    for (User user : User.users) {
+    this.queryStudents(connection);
+    this.queryLecturers(connection);
+    this.queryAdmins(connection);
+    User.USERS.addAll(User.STUDENTS);
+    User.USERS.addAll(User.LECTURERS);
+    User.USERS.addAll(User.ADMINS);
+    for (final User user : User.USERS) {
+      final Class<? extends User> userClass = user.getClass();
       System.out.printf("%s, %s,%s%n", user.getCode(), user.getFirstName(),
-          user.getClass().getName());
+          userClass.getName());
     }
   }
 
   /**
-   * Query lecturers.
+   * Query LECTURERS.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
   private void queryLecturers(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(
-          getQueryType().executeQuery(
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(
+          this.getQueryType().executeQuery(
               "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER).USER_NAME_FIRST, " +
                   "treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER).USER_NAME_LAST, " +
                   "treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER).DATE_OF_BIRTH, " +
@@ -53,28 +85,30 @@ public class RunStatementSelect extends RunStatement {
                   "(TIMETABLE_USER_OBJ_LECTURER)"
           )
       );
-      while (getResultSet().next()) {
-        Lecturer Lecturer = new Lecturer(getResultSet().getString(1), getResultSet().getString(2),
-            getResultSet().getString(3), Date.valueOf(getResultSet().getString(4)),
-            getResultSet().getString(5),
-            getResultSet().getInt(6), getResultSet().getInt(7));
-        User.lecturers.add(Lecturer);
+      while (this.getResultSet().next()) {
+        final Lecturer lecturer = Lecturer.createLecturer(this.getResultSet().getString(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getString(3), Date.valueOf(this.getResultSet().getString(4)),
+            this.getResultSet().getString(5),
+            this.getResultSet().getInt(6), this.getResultSet().getInt(7));
+        User.LECTURERS.add(lecturer);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
-   * Query admins.
+   * Query ADMINS.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
   private void queryAdmins(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(
-          getQueryType().executeQuery(
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(
+          this.getQueryType().executeQuery(
               "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_FIRST, " +
                   "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_LAST, " +
                   "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).DATE_OF_BIRTH, " +
@@ -83,220 +117,244 @@ public class RunStatementSelect extends RunStatement {
                   "FROM TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_ADMIN)"
           )
       );
-      while (getResultSet().next()) {
-        Admin admin = new Admin(getResultSet().getString(1), getResultSet().getString(2),
-            getResultSet().getString(3), Date.valueOf(getResultSet().getString(4)),
-            getResultSet().getString(5)
-            , getResultSet().getString(6));
-        User.admins.add(admin);
+      while (this.getResultSet().next()) {
+        final Admin admin = Admin.createAdmin(this.getResultSet().getString(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getString(3), Date.valueOf(this.getResultSet().getString(4)),
+            this.getResultSet().getString(5)
+            , this.getResultSet().getString(6));
+        User.ADMINS.add(admin);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
-   * Query students.
+   * Query STUDENTS.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
   private void queryStudents(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(
-          getQueryType().executeQuery(
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(
+          this.getQueryType().executeQuery(
               "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_NAME_FIRST, " +
-                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_NAME_LAST, " +
-                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).DATE_OF_BIRTH, " +
-                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_PASSWORD, " +
-                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).COURSE_CODE, " +
-                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).REPEAT_STUDENT FROM " +
-                  "TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_STUDENT)"
+                  STUDENT_LAST_NAME +
+                  STUDENT_DATE_OF_BIRTH +
+                  STUDENT_PASSWORD +
+                  STUDENT_COURSE_CODE +
+                  STUDENT_REPEATING +
+                  STUDENT_TYPE
           )
       );
-      while (getResultSet().next()) {
-        Student student = new Student(getResultSet().getString(1), getResultSet().getString(2),
-            getResultSet().getString(3), Date.valueOf(getResultSet().getString(4)),
-            getResultSet().getString(5),
-            getResultSet().getString(6),
-            Boolean.parseBoolean(String.valueOf((getResultSet().getInt(7)))));
-        User.students.add(student);
+      while (this.getResultSet().next()) {
+        final Student student = Student.createStudent(this.getResultSet().getString(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getString(3), Date.valueOf(this.getResultSet().getString(4)),
+            this.getResultSet().getString(5),
+            this.getResultSet().getString(6),
+            Boolean.parseBoolean(String.valueOf(this.getResultSet().getInt(7))));
+        User.STUDENTS.add(student);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
-   * Query timetables.
+   * Query TIMETABLES.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
   public void queryTimetables(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE_TIMETABLE"));
-      while (getResultSet().next()) {
-        Timetable timetable = new Timetable(getResultSet().getInt(1), getResultSet().getInt(2));
-        Timetable.timetables.add(timetable);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_TIMETABLE));
+      while (this.getResultSet().next()) {
+        final Timetable timetable = Timetable.createTimetable(this.getResultSet().getInt(1),
+            this.getResultSet().getInt(2));
+        Timetable.TIMETABLES.add(timetable);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query department.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
-  public void queryDepartment(Connection connection) {
+  public void queryDepartment(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE.TIMETABLE_DEPARTMENT"));
-      while (getResultSet().next()) {
-        Department department = new Department(getResultSet().getString(1),
-            getResultSet().getString(2),
-            getResultSet().getString(3), getResultSet().getString(4));
-        Department.departments.add(department);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(ALL_FROM_DEPARTMENT));
+      while (this.getResultSet().next()) {
+        final Department department = Department.createDepartment(this.getResultSet().getString(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getString(3), this.getResultSet().getString(4));
+        Department.DEPARTMENTS.add(department);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query school.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
-  public void querySchool(Connection connection) {
+  public void querySchool(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE_SCHOOL"));
-      while (getResultSet().next()) {
-        School school = new School(getResultSet().getString(1), getResultSet().getString(2));
-        School.schools.add(school);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_SCHOOL));
+      while (this.getResultSet().next()) {
+        final School school = School.createSchool(this.getResultSet().getString(1),
+            this.getResultSet().getString(2));
+        School.SCHOOLS.add(school);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query course.
    *
-   * @param connection      the connection
+   * @param connection
+   *     the connection
    */
-  public void queryCourse(Connection connection) {
+  public void queryCourse(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE.TIMETABLE_COURSE"));
-      while (getResultSet().next()) {
-        Course course = new Course(getResultSet().getString(1), getResultSet().getString(2),
-            getResultSet().getString(3), getResultSet().getString(4), getResultSet().getString(5),
-            getResultSet().getString(6), getResultSet().getInt(7),
-            getResultSet().getInt(8), getResultSet().getInt(9), getResultSet().getInt(10));
-        Course.courses.add(course);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(ALL_FROM_COURSE));
+      while (this.getResultSet().next()) {
+        final Course course = Course.createCourse(this.getResultSet().getString(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getString(3), this.getResultSet().getString(4),
+            this.getResultSet().getString(5),
+            this.getResultSet().getString(6), this.getResultSet().getInt(7),
+            this.getResultSet().getInt(8), this.getResultSet().getInt(9),
+            this.getResultSet().getInt(10));
+        Course.COURSES.add(course);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query module.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
-  public void queryModule(Connection connection) {
+  public void queryModule(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE_MODULE"));
-      while (getResultSet().next()) {
-        Module module = new Module(getResultSet().getInt(1), getResultSet().getString(2),
-            getResultSet().getInt(3), getResultSet().getInt(4), getResultSet().getInt(5),
-            getResultSet().getInt(6));
-        Module.modules.add(module);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_MODULE));
+      while (this.getResultSet().next()) {
+        final Module module = Module.createModule(this.getResultSet().getInt(1),
+            this.getResultSet().getString(2),
+            this.getResultSet().getInt(3), this.getResultSet().getInt(4),
+            this.getResultSet().getInt(5),
+            this.getResultSet().getInt(6));
+        Module.MODULES.add(module);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query class period.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
-  public void queryClassPeriod(Connection connection) {
+  public void queryClassPeriod(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM CLASS_PERIOD"));
-      while (getResultSet().next()) {
-        ClassPeriod classPeriod = new ClassPeriod(getResultSet().getInt(1),
-            getResultSet().getString(2), getResultSet().getInt(3));
-        ClassPeriod.classPeriods.add(classPeriod);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_CLASS_PERIOD));
+      while (this.getResultSet().next()) {
+        final ClassPeriod classPeriod = ClassPeriod.createClassPeriod(this.getResultSet().getInt(1),
+            this.getResultSet().getString(2), this.getResultSet().getInt(3));
+        ClassPeriod.CLASS_PERIODS.add(classPeriod);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query course module.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
-  public void queryCourseModule(Connection connection) {
+  public void queryCourseModule(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM COURSE_MODULE"));
-      while (getResultSet().next()) {
-        CourseModule courseModule = new CourseModule(getResultSet().getString(1),
-            getResultSet().getInt(2), getResultSet().getInt(3), getResultSet().getInt(4));
-        CourseModule.courseModules.add(courseModule);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_COURSE_MODULE));
+      while (this.getResultSet().next()) {
+        final CourseModule courseModule = CourseModule.createCourseModule(
+            this.getResultSet().getString(1),
+            this.getResultSet().getInt(2), this.getResultSet().getInt(3),
+            this.getResultSet().getInt(4));
+        CourseModule.COURSE_MODULES.add(courseModule);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query module lecturer.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
-  public void queryModuleLecturer(Connection connection) {
+  public void queryModuleLecturer(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM module_lecturer"));
-      while (getResultSet().next()) {
-        ModuleLecturer moduleLecturer = new ModuleLecturer(getResultSet().getInt(1),
-            getResultSet().getInt(2));
-        ModuleLecturer.moduleLectuers.add(moduleLecturer);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_MODULE_LECTURER));
+      while (this.getResultSet().next()) {
+        final ModuleLecturer moduleLecturer = ModuleLecturer.createModuleLecturer(
+            this.getResultSet().getInt(1),
+            this.getResultSet().getInt(2));
+        ModuleLecturer.MODULE_LECTURERS.add(moduleLecturer);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 
   /**
    * Query room.
    *
-   * @param connection the connection
+   * @param connection
+   *     the connection
    */
-  public void queryRoom(Connection connection) {
+  public void queryRoom(final Connection connection) {
     try {
-      setQueryType(connection.createStatement());
-      setResultSet(getQueryType().executeQuery("SELECT * FROM TIMETABLE_ROOM"));
-      while (getResultSet().next()) {
-        Room room = new Room(getResultSet().getInt(1), getResultSet().getInt(2),
-            getResultSet().getString(3), getResultSet().getBoolean(4), getResultSet().getInt(5));
-        Room.rooms.add(room);
+      this.setQueryType(connection.createStatement());
+      this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_ROOM));
+      while (this.getResultSet().next()) {
+        final Room room = Room.createRoom(this.getResultSet().getInt(1),
+            this.getResultSet().getInt(2),
+            this.getResultSet().getString(3), this.getResultSet().getBoolean(4),
+            this.getResultSet().getInt(5));
+        Room.ROOMS.add(room);
       }
-    } catch (SQLException e) {
-      System.out.println(e.getMessage());
+    } catch (final SQLException exception) {
+      System.out.println(exception.getMessage());
     }
   }
 

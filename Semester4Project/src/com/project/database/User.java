@@ -12,19 +12,19 @@ public abstract class User {
   /**
    * The Users.
    */
-  public static final LinkedList<User> users = new LinkedList<>();
+  public static final Collection<User> USERS = new LinkedList<>();
   /**
    * The Students.
    */
-  public static final ArrayList<Student> students = new ArrayList<>();
+  public static final Collection<Student> STUDENTS = new ArrayList<>(500);
   /**
    * The Lecturers.
    */
-  public static final ArrayList<Lecturer> lecturers = new ArrayList<>();
+  public static final Collection<Lecturer> LECTURERS = new ArrayList<>(500);
   /**
    * The Admins.
    */
-  public static final ArrayList<Admin> admins = new ArrayList<>();
+  public static final Collection<Admin> ADMINS = new ArrayList<>(500);
   private String code, firstName, lastName, password;
   private Date dateOfBirth; // can be converted directly to SQl Date
 
@@ -47,11 +47,11 @@ public abstract class User {
       final Date dateOfBirth,
       final String password
   ) {
-    this.setCode(code);
-    this.setFirstName(firstName);
-    this.setLastName(lastName);
-    this.setPassword(password);
-    this.setDateOfBirth(dateOfBirth);
+    this.code = code;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.password = password;
+    this.dateOfBirth = dateOfBirth;
   }
 
   /**
@@ -60,7 +60,7 @@ public abstract class User {
    * @return the date of birth
    */
   public Date getDateOfBirth() {
-    return dateOfBirth;
+    return (Date)this.dateOfBirth.clone();
   }
 
   /**
@@ -69,7 +69,7 @@ public abstract class User {
    * @param dateOfBirth
    *     the date of birth
    */
-  void setDateOfBirth(final Date dateOfBirth) {
+  final void setDateOfBirth(final Date dateOfBirth) {
     this.dateOfBirth = dateOfBirth;
   }
 
@@ -79,7 +79,7 @@ public abstract class User {
    * @return the password
    */
   public String getPassword() {
-    return password;
+    return this.password;
   }
 
   /**
@@ -88,7 +88,7 @@ public abstract class User {
    * @param password
    *     the password
    */
-  void setPassword(final String password) {
+  final void setPassword(final String password) {
     this.password = password;
   }
 
@@ -98,7 +98,7 @@ public abstract class User {
    * @return the last name
    */
   public String getLastName() {
-    return lastName;
+    return this.lastName;
   }
 
   /**
@@ -107,7 +107,7 @@ public abstract class User {
    * @param lastName
    *     the last name
    */
-  void setLastName(final String lastName) {
+  final void setLastName(final String lastName) {
     this.lastName = lastName;
   }
 
@@ -117,7 +117,7 @@ public abstract class User {
    * @return the first name
    */
   public String getFirstName() {
-    return firstName;
+    return this.firstName;
   }
 
   /**
@@ -126,7 +126,7 @@ public abstract class User {
    * @param firstName
    *     the first name
    */
-  void setFirstName(final String firstName) {
+  final void setFirstName(final String firstName) {
     this.firstName = firstName;
   }
 
@@ -136,7 +136,7 @@ public abstract class User {
    * @return the code
    */
   public String getCode() {
-    return code;
+    return this.code;
   }
 
   /**
@@ -145,8 +145,18 @@ public abstract class User {
    * @param code
    *     the code
    */
-  void setCode(final String code) {
+  final void setCode(final String code) {
     this.code = code;
   }
 
+  @Override
+  public String toString() {
+    return "User{" +
+        "code='" + this.code + '\'' +
+        ", firstName='" + this.firstName + '\'' +
+        ", lastName='" + this.lastName + '\'' +
+        ", password='" + this.password + '\'' +
+        ", dateOfBirth=" + this.dateOfBirth +
+        '}';
+  }
 }

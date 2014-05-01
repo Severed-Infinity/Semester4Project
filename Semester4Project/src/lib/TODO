@@ -10,8 +10,9 @@ TODO file containing everything that needs to be done
 --8. map users with users in the database, through the model controllers
 --9. complete the com.project.database package with other classes such as createStatement etc.
 	-- half done
-10. look for duplicate code and turn it into interfaces, and or parent classes
+10. look for duplicate code and turn it into interfaces, child classes, and or parent classes
 11. ESSENTIAL create optimization method/class code
+	work out the contraints for the optimization process
 --12. Change naming of buttons, labels, etc. to match their classes
 --13. refers to 10, move the same code found in all views and generify it
 14. add warning panes to appropriate classes
@@ -21,4 +22,5 @@ TODO file containing everything that needs to be done
 17. documentation
 18. add in the add, update and delete functions
 19. add database testers for each table
+	-- half done
 20. rework the timetable table structure in relation to the rest of the database

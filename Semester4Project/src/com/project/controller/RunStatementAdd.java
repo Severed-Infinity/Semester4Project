@@ -9,6 +9,6 @@ package com.project.controller;
  *
  * Created by david on 4/30/2014.
  */
-public class RunStatementAdd extends RunStatement {
+class RunStatementAdd extends RunStatement {
   //todo add queries
 }

@@ -1,5 +1,6 @@
 package com.project.gui;
 
+import com.project.constants.*;
 import com.project.controller.*;
 
 import javax.imageio.*;
@@ -13,19 +14,16 @@ import java.sql.*;
  * The type Timetable login.
  */
 @SuppressWarnings ("serial")
-public class TimetableLogin extends JFrame {
+public final class TimetableLogin extends JFrame {
   /**
    * The Run statement.
    */
-  private final RunStatementSelect runStatementSelect = new RunStatementSelect();
-  /**
-   * The I tT logo.
-   */
-  private Image iTTLogo;
+  private final RunStatementSelect runStatementSelect = RunStatementSelect
+      .createRunStatementSelect();
   /**
    * The Database connection.
    */
-  private DatabaseConnection databaseConnection = null;
+  private DatabaseConnection databaseConnection;
   /**
    * The User name.
    */
@@ -45,28 +43,34 @@ public class TimetableLogin extends JFrame {
   /**
    * Instantiates a new Timetable login.
    */
-  public TimetableLogin() {
+  private TimetableLogin() {
+    super();
 
-    setTitle("Login");
-    setResizable(false);
-    setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    setSize(250, 330);
-    setLocationRelativeTo(null);
-    getContentPane().setBackground(Color.white);
+    this.setTitle(StringConstants.LOGIN);
+    this.setResizable(false);
+    this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    this.setSize(250, 330);
+    this.setLocationRelativeTo(null);
+    final Container contentPane = this.getContentPane();
+    contentPane.setBackground(Color.white);
 
-    getContentPane().setLayout(new GridBagLayout());
-    GridBagConstraints constraints = new GridBagConstraints();
+    contentPane.setLayout(new GridBagLayout());
+    final GridBagConstraints constraints = new GridBagConstraints();
     constraints.anchor = GridBagConstraints.FIRST_LINE_START;
     constraints.ipadx = 5;
     constraints.ipady = 5;
 
+    /*
+    The I tT logo.
+   */
+    Image iTTLogo = null;
     try {
       iTTLogo = ImageIO.read(new File(
           "C:\\Users\\david\\Development\\Git " +
               "Repositories\\Semester4Project\\Semester4Project\\assets\\IT-Tallaght-Logo.gif"
       ));
-    } catch (IOException e) {
-      e.printStackTrace();
+    } catch (final IOException exception) {
+      exception.printStackTrace();
     }
 
     final JLabel logo = new JLabel(new ImageIcon(iTTLogo));
@@ -74,50 +78,54 @@ public class TimetableLogin extends JFrame {
     constraints.gridy = 0;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.BOTH;
-    add(logo, constraints);
+    this.add(logo, constraints);
 
     constraints.insets = new Insets(0, 10, 0, 10);
 
-    final JLabel loginLabel = new JLabel("User Name");
+    final JLabel loginLabel = new JLabel(StringConstants.USER_NAME);
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
-    add(loginLabel, constraints);
+    this.add(loginLabel, constraints);
 
-    final JLabel passwordLabel = new JLabel("Password");
+    final JLabel passwordLabel = new JLabel(StringConstants.PASSWORD);
     constraints.gridx = 0;
     constraints.gridy = 3;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
-    add(passwordLabel, constraints);
+    this.add(passwordLabel, constraints);
 
-    setUserName(new JFormattedTextField());
+    this.userName = new JFormattedTextField();
     constraints.gridx = 0;
     constraints.gridy = 2;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
-    add(getUserName(), constraints);
+    this.add(this.userName, constraints);
 
-    setUserPassword(new JPasswordField());
+    this.userPassword = new JPasswordField();
     constraints.gridx = 0;
     constraints.gridy = 5;
     constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     // constraints.insets = new Insets( 5, 5, 5, 5 );
-    add(getUserPassword(), constraints);
+    this.add(this.userPassword, constraints);
 
         /*
          * creating the login action for the timetable system created by David
          * Swift
          */
-    setLogin(new JButton("Login"));
-    getLogin().addActionListener(new ActionListener() {
+    this.login = new JButton(StringConstants.LOGIN);
+    this.login.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(ActionEvent e) {
+      public void actionPerformed(final ActionEvent actionEvent) {
 
-        login();
-        query();
+        try {
+          TimetableLogin.this.login();
+        } catch (final SQLException exception) {
+          exception.printStackTrace();
+        }
+        TimetableLogin.this.query();
       }
     });
     constraints.gridx = 0;
@@ -126,12 +134,12 @@ public class TimetableLogin extends JFrame {
     constraints.weightx = 1.0;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     constraints.insets = new Insets(10, 10, 10, 5);
-    add(getLogin(), constraints);
+    this.add(this.login, constraints);
 
-    setCancel(new JButton("Cancel"));
-    getCancel().addActionListener(new ActionListener() {
+    this.cancel = new JButton(StringConstants.CANCEL);
+    this.cancel.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(ActionEvent e) {
+      public void actionPerformed(final ActionEvent actionEvent) {
 
         System.exit(0);
       }
@@ -141,35 +149,74 @@ public class TimetableLogin extends JFrame {
     constraints.gridwidth = 1;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     constraints.insets = new Insets(10, 0, 10, 10);
-    add(getCancel(), constraints);
+    this.add(this.cancel, constraints);
 
-    pack();
+    this.pack();
   }
 
   /**
    * Query void.
    */
   private void query() {
-    runStatementSelect.querySchool(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryDepartment(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryCourse(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryTimetables(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryClassPeriod(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryCourseModule(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryModule(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryModuleLecturer(databaseConnection.getDatabaseConnection());
-    runStatementSelect.queryRoom(databaseConnection.getDatabaseConnection());
-//        runStatementSelect.queryUsers(databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.querySchool(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryDepartment(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryCourse(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryTimetables(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryClassPeriod(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryCourseModule(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryModule(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryModuleLecturer(this.databaseConnection.getDatabaseConnection());
+    this.runStatementSelect.queryRoom(this.databaseConnection.getDatabaseConnection());
+    //        runStatementSelect.queryUsers(databaseConnection.getDatabaseConnection());
   }
+
+  /**
+   * Login void.
+   */
+  void login() throws SQLException {
+ /*
+  * create a database connection and try to connect
+  */
+
+    try {
+
+      this.databaseConnection = DatabaseConnection.createDatabaseConnection(this.userName.getText(),
+          String.valueOf(this.userPassword.getPassword()));
+
+    } catch (final RuntimeException ignored) {
+      //            System.out.println( e.getMessage() );
+
+    } finally {
+      /**
+       * if there is a database connection then launch the main window
+       * followed by closing this window
+       */
+      final Connection connection = this.databaseConnection.getDatabaseConnection();
+      final boolean isOpen = !connection.isClosed();
+      if (isOpen) {
+        final MainWindow mainWindow = new MainWindow(this.databaseConnection,
+            this.databaseConnection.getUser());
+        mainWindow.setVisible(true);
+        this.dispose();
+      } else {
+        JOptionPane.showMessageDialog(null, "No connection detected", null,
+            JOptionPane.WARNING_MESSAGE, null);
+      }
+
+    }
+
+  }
+
+  public static TimetableLogin createTimetableLogin() {return new TimetableLogin();}
 
   /**
    * Gets user name.
    *
    * @return the user name
    */
-  JTextField getUserName() {
+  final JTextField getUserName() {
 
-    return userName;
+    return this.userName;
   }
 
   /**
@@ -178,7 +225,7 @@ public class TimetableLogin extends JFrame {
    * @param userName
    *     the user name
    */
-  void setUserName(JTextField userName) {
+  final void setUserName(final JTextField userName) {
 
     this.userName = userName;
   }
@@ -188,9 +235,9 @@ public class TimetableLogin extends JFrame {
    *
    * @return the user password
    */
-  JPasswordField getUserPassword() {
+  final JPasswordField getUserPassword() {
 
-    return userPassword;
+    return this.userPassword;
   }
 
   /**
@@ -199,7 +246,7 @@ public class TimetableLogin extends JFrame {
    * @param userPassword
    *     the user password
    */
-  void setUserPassword(JPasswordField userPassword) {
+  final void setUserPassword(final JPasswordField userPassword) {
 
     this.userPassword = userPassword;
   }
@@ -209,9 +256,9 @@ public class TimetableLogin extends JFrame {
    *
    * @return the login
    */
-  JButton getLogin() {
+  final JButton getLogin() {
 
-    return login;
+    return this.login;
   }
 
   /**
@@ -220,50 +267,9 @@ public class TimetableLogin extends JFrame {
    * @param login
    *     the login
    */
-  void setLogin(JButton login) {
+  final void setLogin(final JButton login) {
 
     this.login = login;
-  }
-
-  /**
-   * Login void.
-   */
-  void login() {
- /*
-  * create a database connection and try to connect
-  */
-
-    try {
-
-      databaseConnection = new DatabaseConnection(getUserName().getText(),
-          String.valueOf(getUserPassword().getPassword()));
-
-    } catch (Exception e) {
-      //            System.out.println( e.getMessage() );
-
-    } finally {
-      /**
-       * if there is a database connection then launch the main window
-       * followed by closing this window
-       */
-      try {
-        boolean closed = databaseConnection.getDatabaseConnection().isClosed();
-        if (!closed) {
-          MainWindow mainWindow = new MainWindow(databaseConnection, databaseConnection.getUser());
-          mainWindow.setVisible(true);
-          dispose();
-        } else {
-          JOptionPane.showMessageDialog(null, "No connection detected", null,
-              JOptionPane.WARNING_MESSAGE, null);
-        }
-      } catch (SQLException e1) {
-        System.out.println(e1.getMessage());
-        System.out.printf("No database Connection Detected");
-
-      }
-
-    }
-
   }
 
   /**
@@ -271,9 +277,9 @@ public class TimetableLogin extends JFrame {
    *
    * @return the cancel
    */
-  JButton getCancel() {
+  final JButton getCancel() {
 
-    return cancel;
+    return this.cancel;
   }
 
   /**
@@ -282,8 +288,20 @@ public class TimetableLogin extends JFrame {
    * @param cancel
    *     the cancel
    */
-  void setCancel(JButton cancel) {
+  final void setCancel(final JButton cancel) {
 
     this.cancel = cancel;
+  }
+
+  @Override
+  public String toString() {
+    return "TimetableLogin{" +
+        "runStatementSelect=" + this.runStatementSelect +
+        ", databaseConnection=" + this.databaseConnection +
+        ", userName=" + this.userName +
+        ", userPassword=" + this.userPassword +
+        ", login=" + this.login +
+        ", cancel=" + this.cancel +
+        '}';
   }
 }

@@ -8,30 +8,54 @@ public class Student extends User {
   private final String courseCode;
   private final boolean repeatStudent;
 
-  public Student(
+  private Student(
       final String code,
       final String firstName,
       final String lastName,
       final Date dateOfBirth,
       final String password,
-      String courseCode,
-      boolean repeatStudent
+      final String courseCode,
+      final boolean repeatStudent
   ) {
     super(code, firstName, lastName, dateOfBirth, password);
     this.courseCode = courseCode;
     this.repeatStudent = repeatStudent;
   }
 
+  public static Student createStudent(
+      final String code,
+      final String firstName,
+      final String lastName,
+      final Date dateOfBirth,
+      final String password,
+      final String courseCode,
+      final boolean repeatStudent
+  ) {
+    return new Student(code, firstName, lastName, dateOfBirth, password, courseCode, repeatStudent);
+  }
+
   public boolean isRepeatStudent() {
-    return repeatStudent;
+    return this.repeatStudent;
   }
 
   public Course getCourseCode() {
-    for (Course course : Course.courses) {
-      if (course.getCode().equals(courseCode)) {
-        return course;
+    Course courseReturn = null;
+    for (final Course course : Course.COURSES) {
+      final String code = course.getCode();
+      if (code.equals(this.courseCode)) {
+
+        courseReturn = course;
+
       }
     }
-    return null;
+    return courseReturn;
+  }
+
+  @Override
+  public String toString() {
+    return "Student{" +
+        "courseCode='" + this.courseCode + '\'' +
+        ", repeatStudent=" + this.repeatStudent +
+        '}';
   }
 }

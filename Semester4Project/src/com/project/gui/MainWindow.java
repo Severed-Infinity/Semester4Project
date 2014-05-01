@@ -1,5 +1,6 @@
 package com.project.gui;
 
+import com.project.constants.*;
 import com.project.controller.*;
 import com.project.database.*;
 import com.project.user.*;
@@ -14,7 +15,8 @@ import java.awt.event.*;
  * Created by david on 3/12/14.
  */
 class MainWindow extends JFrame {
-  private User user;
+  private static final long serialVersionUID = 7506769863584558072L;
+  private final User user;
 
   /**
    * Instantiates a new Main window.
@@ -22,24 +24,25 @@ class MainWindow extends JFrame {
    * @param databaseConnection
    *     the database connection
    */
-  public MainWindow(final DatabaseConnection databaseConnection, final User user) {
+  MainWindow(final DatabaseConnection databaseConnection, final User user) {
+    super();
 
-    setTitle("Timetable");
-    setResizable(false);
-    setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    setSize(800, 500);
-    setLocationRelativeTo(null);
+    this.setTitle("Timetable");
+    this.setResizable(false);
+    this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    this.setSize(800, 500);
+    this.setLocationRelativeTo(null);
 
-    getContentPane().setBackground(Color.white);
-    getContentPane().setPreferredSize(new Dimension(800, 500));
-    getContentPane().setLayout(new GridBagLayout());
-    GridBagConstraints constraints = new GridBagConstraints();
+    final Container contentPane = this.getContentPane();
+    contentPane.setBackground(Color.white);
+    contentPane.setPreferredSize(new Dimension(800, 500));
+    contentPane.setLayout(new GridBagLayout());
+    final GridBagConstraints constraints = new GridBagConstraints();
     // constraints.anchor = GridBagConstraints.FIRST_LINE_START;
     constraints.ipadx = 5;
     constraints.ipady = 5;
-    GroupLayout headerLayout;
 
-    setJMenuBar(addMenu());
+    this.setJMenuBar(addMenu());
 
     // beginning of header
         /*
@@ -52,7 +55,7 @@ class MainWindow extends JFrame {
     constraints.weightx = 1.0;
     // constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.HORIZONTAL;
-    add(header, constraints);
+    this.add(header, constraints);
 
         /*
          * The Home.
@@ -66,11 +69,12 @@ class MainWindow extends JFrame {
     final JButton logout = new JButton("Logout");
     logout.addActionListener(new ActionListener() {
       @Override
-      public void actionPerformed(final ActionEvent e) {
+      public void actionPerformed(final ActionEvent actionEvente) {
 
         databaseConnection.endConnection();
-        new TimetableLogin().setVisible(true);
-        dispose();
+        final TimetableLogin login = TimetableLogin.createTimetableLogin();
+        login.setVisible(true);
+        MainWindow.this.dispose();
       }
     });
     // header.add( logout );
@@ -89,7 +93,7 @@ class MainWindow extends JFrame {
     loggedUser.setHorizontalAlignment(SwingConstants.TRAILING);
     // header.add( loggedUser );
 
-    headerLayout = new GroupLayout(header);
+    final GroupLayout headerLayout = new GroupLayout(header);
     headerLayout.setHorizontalGroup(headerLayout.createParallelGroup(Alignment.LEADING)
         .addGroup(
             headerLayout
@@ -131,17 +135,18 @@ class MainWindow extends JFrame {
      */
 
     final View view = null;
-    final MainView mainView = new MainView(user, view);
+    final MainView mainView = new MainView(user, null);
     constraints.gridx = 0;
     constraints.gridy = 1;
     constraints.weightx = 1.0;
     constraints.weighty = 1.0;
     // constraints.gridwidth = 2;
     constraints.fill = GridBagConstraints.BOTH;
-    add(mainView, constraints);
+    this.add(mainView, constraints);
     // end of main currentView
 
-    pack();
+    this.pack();
+    this.user = null;
   }
 
   /**
@@ -149,7 +154,7 @@ class MainWindow extends JFrame {
    *
    * @return the j menu bar
    */
-  JMenuBar addMenu() {
+  private static JMenuBar addMenu() {
 
         /*
          * The Main menu.
@@ -176,8 +181,8 @@ class MainWindow extends JFrame {
     final JMenuItem updateCourse = new JMenuItem("Update Course");
     final JMenuItem updateModule = new JMenuItem("Update Module");
     final JMenuItem addUsers = new JMenuItem("Add User");
-    final JMenuItem addCourse = new JMenuItem("Add Course");
-    final JMenuItem addModule = new JMenuItem("Add Module");
+    final JMenuItem addCourse = new JMenuItem(StringConstants.ADD_COURSE);
+    final JMenuItem addModule = new JMenuItem(StringConstants.ADD_MODULE);
 
     menuFile.add(search);
     menuFile.add(print);
@@ -195,37 +200,56 @@ class MainWindow extends JFrame {
     return mainMenu;
   }
 
+  @Override
+  public String toString() {
+    return "MainWindow{" +
+        "user=" + this.user +
+        '}';
+  }
+
   /**
    * Created by david on 3/12/14.
    */
-  private class MainView extends View {
+  private static class MainView extends View {
+    private static final long serialVersionUID = -821318304586697996L;
     private final User user;
     private View currentView;
     private View previousView;
 
-    private MainView(User user, View currentView) {
+    private MainView(final User user, final View currentView) {
+      super();
 
-      setLayout(new BorderLayout());
+      this.setLayout(new BorderLayout());
       this.currentView = currentView;
       this.user = user;
-      this.add(changeView(user), BorderLayout.CENTER);
+      this.add(this.changeView(user), BorderLayout.CENTER);
     }
 
-    public View changeView(final User user) {
+    public final View changeView(final User user) {
       if (user instanceof Student) {
-        this.previousView = currentView;
-        return this.currentView = new TimetableView(new Timetable());
+        this.previousView = this.currentView;
+        this.currentView = new TimetableView(Timetable.createTimetable());
         //        return this.currentView = new TimetableView(((Student)user).getCourseCode()
         // .getTimetable());
-      } else if (user instanceof Admin) {
-        this.previousView = currentView;
-        return this.currentView = new AdminView();
-      } else if (user instanceof Lecturer) {
-        this.previousView = currentView;
-        return this.currentView = new TimetableView(((Lecturer)user).getTimetable());
       }
-      return new TimetableView(new Timetable());
+      if (user instanceof Admin) {
+        this.previousView = this.currentView;
+        this.currentView = new AdminView();
+      }
+      if (user instanceof Lecturer) {
+        this.previousView = this.currentView;
+        this.currentView = new TimetableView(((Lecturer)user).getTimetable());
+      }
+      return this.currentView;
+    }
+
+    @Override
+    public String toString() {
+      return "MainView{" +
+          "user=" + this.user +
+          ", currentView=" + this.currentView +
+          ", previousView=" + this.previousView +
+          '}';
     }
   }
-
 }

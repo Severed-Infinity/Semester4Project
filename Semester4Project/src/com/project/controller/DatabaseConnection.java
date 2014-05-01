@@ -4,7 +4,10 @@ import com.project.database.*;
 import oracle.jdbc.pool.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.sql.*;
+
+import static com.project.controller.GetDatabaseDDL.*;
 
 /**
  * Project Semester4Project
@@ -18,7 +21,8 @@ public class DatabaseConnection {
   /**
    * The Run statement.
    */
-  private final RunStatementSelect runStatementSelect = new RunStatementSelect();
+  private final RunStatementSelect runStatementSelect = RunStatementSelect
+      .createRunStatementSelect();
   /**
    * The Database connection.
    */
@@ -37,23 +41,10 @@ public class DatabaseConnection {
    * @param password
    *     the password
    */
-  public DatabaseConnection(String user, String password) {
-    try {
-      createDatabaseConnection(user, password);
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
-    setPath();
-    createDatabaseFromDDL(getPath());
-  }
-
-  /**
-   * Gets path.
-   *
-   * @return the path
-   */
-  private String getPath() {
-    return path;
+  private DatabaseConnection(final String user, final String password) {
+    this.createConnection(user, password);
+    this.setPath();
+    //    createDatabaseFromDDL(this.path);
   }
 
   /**
@@ -64,16 +55,6 @@ public class DatabaseConnection {
   }
 
   /**
-   * Create database from dDL.
-   *
-   * @param path
-   *     the path
-   */
-  private void createDatabaseFromDDL(String path) {
-    new GetDatabaseDDL(path);
-  }
-
-  /**
    * Create database connection.
    *
    * @param user
@@ -81,32 +62,31 @@ public class DatabaseConnection {
    * @param password
    *     the password
    */
-  private void createDatabaseConnection(String user, String password) throws SQLException {
+  private void createConnection(final String user, final String password) {
     try {
-      OracleDataSource dataSource = new OracleDataSource();
-      try {
-        //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
-        dataSource.setURL("jdbc:oracle:thin://@localhost:1521:XE");
-        // college source
-        // dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
-        dataSource.setUser(user);
-        dataSource.setPassword(password);
+      final OracleDataSource dataSource = new OracleDataSource();
 
-        setDatabaseConnection(dataSource.getConnection());
+      //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
+      dataSource.setURL("jdbc:oracle:thin://@localhost:1521:XE");
+      // college source
+      // dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
+      dataSource.setUser(user);
+      dataSource.setPassword(password);
 
-      } catch (SQLException e) {
-        System.out.println(e.getMessage());
-        JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
-            JOptionPane.WARNING_MESSAGE, null);
-      }
-    } catch (Exception e) {
-      System.out.println(e.getMessage());
+      this.databaseConnection = dataSource.getConnection();
+
+    } catch (final SQLException | HeadlessException exception) {
+      JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
+          JOptionPane.WARNING_MESSAGE, null);
+      exception.printStackTrace();
+    } catch (final RuntimeException exception) {
+      System.out.println(exception.getMessage());
     } finally {
-      runStatementSelect.queryUsers(databaseConnection);
-      if (checkUser(user, password) == null) {
+      this.runStatementSelect.queryUsers(this.databaseConnection);
+      if (userReturn(user, password) == null) {
         this.endConnection();
       } else {
-        this.setUser(checkUser(user, password));
+        this.user = userReturn(user, password);
       }
     }
   }
@@ -121,14 +101,15 @@ public class DatabaseConnection {
    *
    * @return boolean boolean
    */
-  private User checkUser(
-      String user,
-      String password
+  private static User userReturn(
+      final String user,
+      final String password
   ) {
-    for (User userCheck : User.users) {
+    User userReturn = null;
+    for (final User userCheck : User.USERS) {
       if (user.equals(userCheck.getCode()) && password.equals(userCheck.getPassword())) {
         //        changeView(userCheck);
-        return userCheck;
+        userReturn = userCheck;
       }
     }
     //    runStatement.setQueryType(getDatabaseConnection().createStatement());
@@ -150,7 +131,8 @@ public class DatabaseConnection {
     //    endConnection();
     JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
         JOptionPane.WARNING_MESSAGE, null);
-    return null;
+
+    return userReturn;
   }
 
   /**
@@ -159,11 +141,36 @@ public class DatabaseConnection {
   public void endConnection() {
     try {
       System.out.println("Closing Connection");
-      getDatabaseConnection().close();
-    } catch (SQLException e) {
-      e.printStackTrace();
+      this.databaseConnection.close();
+    } catch (final SQLException exception) {
+      exception.printStackTrace();
     }
 
+  }
+
+  /**
+   * Create database from dDL.
+   *
+   * @param path
+   *     the path
+   */
+  private static void createDatabaseFromDDL(final String path) {
+    createQueries(path);
+
+  }
+
+  public static DatabaseConnection createDatabaseConnection(
+      final String user,
+      final String password
+  ) {return new DatabaseConnection(user, password);}
+
+  /**
+   * Gets path.
+   *
+   * @return the path
+   */
+  private String getPath() {
+    return this.path;
   }
 
   /**
@@ -172,7 +179,7 @@ public class DatabaseConnection {
    * @return the database connection
    */
   public Connection getDatabaseConnection() {
-    return databaseConnection;
+    return this.databaseConnection;
   }
 
   /**
@@ -181,15 +188,25 @@ public class DatabaseConnection {
    * @param databaseConnection
    *     the database connection
    */
-  private void setDatabaseConnection(Connection databaseConnection) {
+  private void setDatabaseConnection(final Connection databaseConnection) {
     this.databaseConnection = databaseConnection;
   }
 
   public User getUser() {
-    return user;
+    return this.user;
   }
 
-  public void setUser(final User user) {
+  void setUser(final User user) {
     this.user = user;
+  }
+
+  @Override
+  public String toString() {
+    return "DatabaseConnection{" +
+        "runStatementSelect=" + this.runStatementSelect +
+        ", databaseConnection=" + this.databaseConnection +
+        ", path='" + this.path + '\'' +
+        ", user=" + this.user +
+        '}';
   }
 }

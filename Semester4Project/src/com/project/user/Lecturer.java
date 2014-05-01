@@ -8,7 +8,7 @@ public class Lecturer extends Staff {
   private final int hoursWeek;
   private final int timetableCode;
 
-  public Lecturer(
+  private Lecturer(
       final String code,
       final String firstName,
       final String lastName,
@@ -23,16 +23,37 @@ public class Lecturer extends Staff {
 
   }
 
+  public static Lecturer createLecturer(
+      final String code,
+      final String firstName,
+      final String lastName,
+      final Date dateOfBirth,
+      final String password,
+      final int hoursWeek,
+      final int timetableCode
+  ) {
+    return new Lecturer(code, firstName, lastName, dateOfBirth, password, hoursWeek, timetableCode);
+  }
+
   public Timetable getTimetable() {
-    for (Timetable timetable : Timetable.timetables) {
-      if (timetable.getCode() == timetableCode) {
-        return timetable;
+    Timetable timetableReturn = null;
+    for (final Timetable timetable : Timetable.TIMETABLES) {
+      if (timetable.getCode() == this.timetableCode) {
+        timetableReturn = timetable;
       }
     }
-    return null;
+    return timetableReturn;
   }
 
   public int getHoursWeek() {
-    return hoursWeek;
+    return this.hoursWeek;
+  }
+
+  @Override
+  public String toString() {
+    return "Lecturer{" +
+        "hoursWeek=" + this.hoursWeek +
+        ", timetableCode=" + this.timetableCode +
+        '}';
   }
 }

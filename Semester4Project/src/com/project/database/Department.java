@@ -15,7 +15,7 @@ public class Department {
   /**
    * The Departments.
    */
-  public static final LinkedList<Department> departments = new LinkedList<>();
+  public static final Collection<Department> DEPARTMENTS = new LinkedList<>();
   /**
    * The Code.
    */
@@ -45,17 +45,24 @@ public class Department {
    * @param schoolCode
    *     the school code
    */
-  public Department(
+  private Department(
       final String code,
       final String name,
       final String head,
       final String schoolCode
   ) {
-    this.setCode(code);
-    this.setName(name);
-    this.setHead(head);
-    this.setSchoolCode(schoolCode);
+    this.code = code;
+    this.name = name;
+    this.head = head;
+    this.schoolCode = schoolCode;
   }
+
+  public static Department createDepartment(
+      final String code,
+      final String name,
+      final String head,
+      final String schoolCode
+  ) {return new Department(code, name, head, schoolCode);}
 
   /**
    * Gets code.
@@ -63,7 +70,7 @@ public class Department {
    * @return the code
    */
   public String getCode() {
-    return code;
+    return this.code;
   }
 
   /**
@@ -72,7 +79,7 @@ public class Department {
    * @param code
    *     the code
    */
-  void setCode(final String code) {
+  final void setCode(final String code) {
     this.code = code;
   }
 
@@ -82,7 +89,7 @@ public class Department {
    * @return the name
    */
   public String getName() {
-    return name;
+    return this.name;
   }
 
   /**
@@ -91,7 +98,7 @@ public class Department {
    * @param name
    *     the name
    */
-  void setName(final String name) {
+  final void setName(final String name) {
     this.name = name;
   }
 
@@ -101,7 +108,7 @@ public class Department {
    * @return the head
    */
   public String getHead() {
-    return head;
+    return this.head;
   }
 
   /**
@@ -110,18 +117,18 @@ public class Department {
    * @param head
    *     the head
    */
-  void setHead(final String head) {
+  final void setHead(final String head) {
     this.head = head;
   }
 
   /**
    * Gets school code.
-   * compare to existing schools, if non-existent
+   * compare to existing SCHOOLS, if non-existent
    *
    * @return the school code
    */
   public String getSchoolCode() {
-    return schoolCode;
+    return this.schoolCode;
   }
 
   /**
@@ -130,7 +137,17 @@ public class Department {
    * @param schoolCode
    *     the school code
    */
-  void setSchoolCode(final String schoolCode) {
+  final void setSchoolCode(final String schoolCode) {
     this.schoolCode = schoolCode;
+  }
+
+  @Override
+  public String toString() {
+    return "Department{" +
+        "code='" + this.code + '\'' +
+        ", name='" + this.name + '\'' +
+        ", head='" + this.head + '\'' +
+        ", schoolCode='" + this.schoolCode + '\'' +
+        '}';
   }
 }

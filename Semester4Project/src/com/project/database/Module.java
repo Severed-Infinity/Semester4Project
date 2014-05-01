@@ -15,7 +15,11 @@ public class Module {
   /**
    * The Modules.
    */
-  public static LinkedList<Module> modules = new LinkedList<>();
+  public static final Collection<Module> MODULES = new LinkedList<>();
+  private final int /**
+   * The Course code.
+   */
+      courseCode;
   /**
    * The Name.
    */
@@ -23,39 +27,37 @@ public class Module {
   /**
    * The Code.
    */
-  private int code, /**
-   * The Course code.
-   */
-  courseCode, /**
+  private int code;
+  private int /**
    * The Semester.
    */
-  semester, /**
+      semester;
+  private int /**
    * The Weekly hours.
    */
-  weeklyHours, /**
+      weeklyHours;
+  private int /**
    * The Lecturers.
    */
-  lecturers;
-
-  /**
-   * Gets course code.
-   *
-   * @return the course code
-   */
-  public int getCourseCode() {
-    return courseCode;
-  }
+      lecturers;
 
   /**
    * Instantiates a new Module.
-   * @param code      the code
-   * @param name      the name
-   * @param semester      the semester
-   * @param weeklyHours      the weekly hours
-   * @param lecturers the lecturers
-   * @param courseCode the course code
+   *
+   * @param code
+   *     the code
+   * @param name
+   *     the name
+   * @param semester
+   *     the semester
+   * @param weeklyHours
+   *     the weekly hours
+   * @param lecturers
+   *     the LECTURERS
+   * @param courseCode
+   *     the course code
    */
-  public Module(
+  private Module(
       final int code,
       final String name,
       final int semester,
@@ -64,12 +66,30 @@ public class Module {
       final int courseCode
   ) {
 
-    this.setCode(code);
-    this.setName(name);
-    this.setSemester(semester);
-    this.setWeeklyHours(weeklyHours);
-    this.setLecturers(lecturers);
+    this.code = code;
+    this.name = name;
+    this.semester = semester;
+    this.weeklyHours = weeklyHours;
+    this.lecturers = lecturers;
     this.courseCode = courseCode;
+  }
+
+  public static Module createModule(
+      final int code,
+      final String name,
+      final int semester,
+      final int weeklyHours,
+      final int lecturers,
+      final int courseCode
+  ) {return new Module(code, name, semester, weeklyHours, lecturers, courseCode);}
+
+  /**
+   * Gets course code.
+   *
+   * @return the course code
+   */
+  public int getCourseCode() {
+    return this.courseCode;
   }
 
   /**
@@ -78,15 +98,16 @@ public class Module {
    * @return the code
    */
   public int getCode() {
-    return code;
+    return this.code;
   }
 
   /**
    * Sets code.
    *
-   * @param code      the code
+   * @param code
+   *     the code
    */
-  void setCode(final int code) {
+  final void setCode(final int code) {
     this.code = code;
   }
 
@@ -96,15 +117,16 @@ public class Module {
    * @return the name
    */
   public String getName() {
-    return name;
+    return this.name;
   }
 
   /**
    * Sets name.
    *
-   * @param name      the name
+   * @param name
+   *     the name
    */
-  void setName(final String name) {
+  final void setName(final String name) {
     this.name = name;
   }
 
@@ -114,15 +136,16 @@ public class Module {
    * @return the semester
    */
   public int getSemester() {
-    return semester;
+    return this.semester;
   }
 
   /**
    * Sets semester.
    *
-   * @param semester      the semester
+   * @param semester
+   *     the semester
    */
-  void setSemester(final int semester) {
+  final void setSemester(final int semester) {
     this.semester = semester;
   }
 
@@ -132,33 +155,47 @@ public class Module {
    * @return the weekly hours
    */
   public int getWeeklyHours() {
-    return weeklyHours;
+    return this.weeklyHours;
   }
 
   /**
    * Sets weekly hours.
    *
-   * @param weeklyHours      the weekly hours
+   * @param weeklyHours
+   *     the weekly hours
    */
-  void setWeeklyHours(final int weeklyHours) {
+  final void setWeeklyHours(final int weeklyHours) {
     this.weeklyHours = weeklyHours;
   }
 
   /**
-   * Gets lecturers.
+   * Gets LECTURERS.
    *
-   * @return the lecturers
+   * @return the LECTURERS
    */
   public int getLecturers() {
-    return lecturers;
+    return this.lecturers;
   }
 
   /**
-   * Sets lecturers.
+   * Sets LECTURERS.
    *
-   * @param lecturers      the lecturers
+   * @param lecturers
+   *     the LECTURERS
    */
-  void setLecturers(final int lecturers) {
+  final void setLecturers(final int lecturers) {
     this.lecturers = lecturers;
+  }
+
+  @Override
+  public String toString() {
+    return "Module{" +
+        "courseCode=" + this.courseCode +
+        ", name='" + this.name + '\'' +
+        ", code=" + this.code +
+        ", semester=" + this.semester +
+        ", weeklyHours=" + this.weeklyHours +
+        ", lecturers=" + this.lecturers +
+        '}';
   }
 }

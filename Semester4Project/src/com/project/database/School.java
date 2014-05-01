@@ -15,27 +15,39 @@ public class School {
   /**
    * The Schools.
    */
-  public static final LinkedList<School> schools = new LinkedList<>();
+  public static final Collection<School> SCHOOLS = new LinkedList<>();
   private String code, name;
 
-  public School(final String code, final String name) {
-    this.setCode(code);
-    this.setName(name);
+  private School(final String code, final String name) {
+    this.code = code;
+    this.name = name;
+  }
+
+  public static School createSchool(final String code, final String name) {
+    return new School(code, name);
   }
 
   public String getCode() {
-    return code;
+    return this.code;
   }
 
-  void setCode(final String code) {
+  final void setCode(final String code) {
     this.code = code;
   }
 
   public String getName() {
-    return name;
+    return this.name;
   }
 
-  void setName(final String name) {
+  final void setName(final String name) {
     this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return "School{" +
+        "code='" + this.code + '\'' +
+        ", name='" + this.name + '\'' +
+        '}';
   }
 }

@@ -3,14 +3,12 @@ package com.project.main;
 import com.project.gui.*;
 
 final class TimetableMain {
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
 
     try {
-      TimetableLogin login = new TimetableLogin();
+      final TimetableLogin login = TimetableLogin.createTimetableLogin();
       login.setVisible(true);
-    } catch (Exception e) {
-      e.printStackTrace();
-    } catch (Throwable throwable) {
+    } catch (final Throwable throwable) {
       throwable.printStackTrace();
     }
 

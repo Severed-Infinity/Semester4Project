@@ -12,34 +12,14 @@ import java.util.*;
  * Created by david on 4/30/2014.
  */
 public class Room {
-  public static LinkedList<Room> rooms;
-  private int roomNumber;
-  private int roomSeating;
-  private String departmentCode;
-  private boolean lab;
-  private int shareRoomNumber;
+  public static final Deque<Room> ROOMS = null;
+  private final int roomNumber;
+  private final int roomSeating;
+  private final String departmentCode;
+  private final boolean lab;
+  private final int shareRoomNumber;
 
-  public int getRoomNumber() {
-    return roomNumber;
-  }
-
-  public int getRoomSeating() {
-    return roomSeating;
-  }
-
-  public String getDepartmentCode() {
-    return departmentCode;
-  }
-
-  public boolean isLab() {
-    return lab;
-  }
-
-  public int getShareRoomNumber() {
-    return shareRoomNumber;
-  }
-
-  public Room(
+  private Room(
       final int roomNumber,
       final int roomSeating,
       final String departmentCode,
@@ -52,5 +32,44 @@ public class Room {
     this.departmentCode = departmentCode;
     this.lab = lab;
     this.shareRoomNumber = shareRoomNumber;
+  }
+
+  public static Room createRoom(
+      final int roomNumber,
+      final int roomSeating,
+      final String departmentCode,
+      final boolean lab,
+      final int shareRoomNumber
+  ) {return new Room(roomNumber, roomSeating, departmentCode, lab, shareRoomNumber);}
+
+  public int getRoomNumber() {
+    return this.roomNumber;
+  }
+
+  public int getRoomSeating() {
+    return this.roomSeating;
+  }
+
+  public String getDepartmentCode() {
+    return this.departmentCode;
+  }
+
+  public boolean isLab() {
+    return this.lab;
+  }
+
+  public int getShareRoomNumber() {
+    return this.shareRoomNumber;
+  }
+
+  @Override
+  public String toString() {
+    return "Room{" +
+        "roomNumber=" + this.roomNumber +
+        ", roomSeating=" + this.roomSeating +
+        ", departmentCode='" + this.departmentCode + '\'' +
+        ", lab=" + this.lab +
+        ", shareRoomNumber=" + this.shareRoomNumber +
+        '}';
   }
 }

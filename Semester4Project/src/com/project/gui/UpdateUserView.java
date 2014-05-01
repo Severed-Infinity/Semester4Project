@@ -1,5 +1,7 @@
 package com.project.gui;
 
+import com.project.constants.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
@@ -8,10 +10,13 @@ import java.awt.*;
  * Created by david on 3/12/14.
  */
 class UpdateUserView extends UserView {
-  public UpdateUserView() {
+  private static final long serialVersionUID = 2857026444504054612L;
+
+  UpdateUserView() {
+    super();
     //        setSize( getParent().getWidth(), getParent().getHeight() );
-    setLayout(new GridBagLayout());
-    GridBagConstraints constraints = new GridBagConstraints();
+    this.setLayout(new GridBagLayout());
+    final GridBagConstraints constraints = new GridBagConstraints();
 
     /**
      constraints
@@ -20,7 +25,7 @@ class UpdateUserView extends UserView {
     constraints.weightx = 1.0;
     constraints.weighty = 1.0;
     //        constraints.gridwidth = 1;
-    constraints.anchor = GridBagConstraints.NORTHEAST;
+    constraints.anchor = GridBagConstraints.FIRST_LINE_END;
     constraints.fill = GridBagConstraints.HORIZONTAL;
     constraints.insets = new Insets(15, 15, 0, 2);
     constraints.ipadx = 5;
@@ -28,35 +33,36 @@ class UpdateUserView extends UserView {
 
     //Todo add all components to the view
     //Todo apply constraints to components
-    setBorder(new TitledBorder(UIManager.getBorder("TitleBorder.border"), "Add New Course",
+    this.setBorder(new TitledBorder(UIManager.getBorder("TitleBorder.border"),
+        StringConstants.ADD_NEW_COURSE,
         TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
 
     //labels
 
-    typeOf = new JLabel("Type of User");
+    this.typeOf = new JLabel(StringConstants.TYPE_OF_USER);
     constraints.gridx = 0;
     constraints.gridy = 0;
-    add(typeOf, constraints);
+    this.add(this.typeOf, constraints);
 
-    nameOf = new JLabel("Name of User");
+    this.nameOf = new JLabel(StringConstants.NAME_OF_USER);
     constraints.gridx = 0;
     constraints.gridy = 1;
-    add(nameOf, constraints);
+    this.add(this.nameOf, constraints);
 
-    codeFor = new JLabel("ID");
+    this.codeFor = new JLabel(StringConstants.TYPECODE);
     constraints.gridx = 2;
     constraints.gridy = 1;
-    add(codeFor, constraints);
+    this.add(this.codeFor, constraints);
 
-    final JLabel passwordOf = new JLabel("Password");
+    final JLabel passwordOf = new JLabel(StringConstants.PASSWORD);
     constraints.gridx = 2;
     constraints.gridy = 2;
-    add(passwordOf, constraints);
+    this.add(passwordOf, constraints);
 
-    yearOf = new JLabel("Date of Birth");
+    this.yearOf = new JLabel(StringConstants.DATE_OF_BIRTH);
     constraints.gridx = 0;
     constraints.gridy = 2;
-    add(yearOf, constraints);
+    this.add(this.yearOf, constraints);
 
     /**
      * search condition for drop downs
@@ -64,104 +70,104 @@ class UpdateUserView extends UserView {
      * of 2 years, etc.
      * max 4, min 2.
      */
-    lengthOf = new JLabel("Length of Course");
+    this.lengthOf = new JLabel(StringConstants.LENGTH_OF_COURSE);
     constraints.gridx = 0;
     constraints.gridy = 3;
-    add(lengthOf, constraints);
+    this.add(this.lengthOf, constraints);
 
-    semesters = new JLabel("Number of Semesters");
+    this.semesters = new JLabel(StringConstants.NUMBER_OF_SEMESTERS);
     constraints.gridx = 2;
     constraints.gridy = 3;
-    add(semesters, constraints);
+    this.add(this.semesters, constraints);
 
-    departmentContaining = new JLabel("Department");
+    this.departmentContaining = new JLabel(StringConstants.DEPARTMENT);
     constraints.gridx = 0;
     constraints.gridy = 4;
-    add(departmentContaining, constraints);
+    this.add(this.departmentContaining, constraints);
 
-    selectComponent = new JLabel("Select Course");
+    this.selectComponent = new JLabel(StringConstants.SELECT_COURSE);
     constraints.gridx = 0;
     constraints.gridy = 5;
-    add(selectComponent, constraints);
+    this.add(this.selectComponent, constraints);
 
     //        constraints.fill = GridBagConstraints.REMAINDER;
     //        constraints.insets = new Insets( 10, 10, 0, 100 );
 
     //textfields'
-    name = new JTextField(15);
+    this.name = new JTextField(15);
     constraints.gridx = 1;
     constraints.gridy = 1;
-    add(name, constraints);
+    this.add(this.name, constraints);
 
-    code = new JTextField(15);
+    this.code = new JTextField(15);
     constraints.gridx = 3;
     constraints.gridy = 1;
-    add(code, constraints);
+    this.add(this.code, constraints);
 
     final JTextField password = new JTextField(15);
     constraints.gridx = 3;
     constraints.gridy = 2;
-    add(password, constraints);
+    this.add(password, constraints);
 
-    year = new JTextField(15);
+    this.year = new JTextField(15);
     constraints.gridx = 1;
     constraints.gridy = 2;
-    add(year, constraints);
+    this.add(this.year, constraints);
 
-    length = new JTextField(15);
+    this.length = new JTextField(15);
     constraints.gridx = 1;
     constraints.gridy = 3;
-    add(length, constraints);
+    this.add(this.length, constraints);
 
-    semester = new JTextField(15);
+    this.semester = new JTextField(15);
     constraints.gridx = 3;
     constraints.gridy = 3;
-    add(semester, constraints);
+    this.add(this.semester, constraints);
 
     //combo boxes
     //todo get do get type
-    typeOptions = new JComboBox<>(new DefaultComboBoxModel<>(new String[] {
-        "Administrator",
-        "Lecturer",
-        "Student"}));
+    this.typeOptions = new JComboBox<>(new DefaultComboBoxModel<String>(new String[] {
+        StringConstants.ADMINISTRATOR,
+        StringConstants.LECTURER,
+        StringConstants.STUDENT}));
     constraints.gridx = 1;
     constraints.gridy = 0;
-    add(typeOptions, constraints);
+    this.add(this.typeOptions, constraints);
 
-    //todo get departments
-    parentComponent = new JComboBox<>();
+    //todo get DEPARTMENTS
+    this.parentComponent = new JComboBox<>();
     constraints.gridx = 1;
     constraints.gridy = 4;
-    add(parentComponent, constraints);
+    this.add(this.parentComponent, constraints);
 
-    //todo get modules
-    subComponent = new JComboBox<>();
+    //todo get MODULES
+    this.subComponent = new JComboBox<>();
     constraints.gridx = 1;
     constraints.gridy = 5;
-    add(subComponent, constraints);
+    this.add(this.subComponent, constraints);
 
     //button components
-    addComponent = new JButton("Add Course");
+    this.addComponent = new JButton(StringConstants.ADD_COURSE);
     constraints.gridx = 2;
     constraints.gridy = 5;
-    add(addComponent, constraints);
+    this.add(this.addComponent, constraints);
 
-    confirm = new JButton("Confirm");
+    this.confirm = new JButton(StringConstants.CONFIRM);
     constraints.fill = GridBagConstraints.REMAINDER;
     constraints.insets = new Insets(130, 0, 10, 10);
     constraints.gridx = 3;
     constraints.gridy = 7;
-    add(confirm, constraints);
+    this.add(this.confirm, constraints);
 
-    clear = new JButton("Clear");
+    this.clear = new JButton(StringConstants.CLEAR);
     constraints.gridx = 4;
     constraints.gridy = 7;
-    add(clear, constraints);
+    this.add(this.clear, constraints);
 
-    cancel = new JButton("Cancel");
+    this.cancel = new JButton(StringConstants.CANCEL);
     constraints.gridx = 5;
     constraints.gridy = 7;
-    add(cancel, constraints);
+    this.add(this.cancel, constraints);
 
   }
 }

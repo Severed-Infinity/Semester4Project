@@ -401,7 +401,7 @@ VALUES (231, 42, 'DOC', 'true', NULL);
 INSERT INTO TIMETABLE_ROOM (ROOM_NUMBER, ROOM_SEATING, DEPARTMENT_ID, LAB, SHARED_ROOM_NUMBER)
 VALUES (233, 32, 'DOC', 'true', NULL);
 
---sample users
+--sample USERS
 INSERT INTO TIMETABLE_USERS (USER_ID, USER_OBJ) VALUES ('1', TIMETABLE_USER_OBJ('david',
                                                                                 'swift',
                                                                                 '1991-12-03',
@@ -433,7 +433,7 @@ VALUES ('timetable', TIMETABLE_USER_OBJ_ADMIN('admin',
                                               'timetable',
                                               'Default Access'));
 
--- timetables inserts
+-- TIMETABLES inserts
 INSERT INTO TIMETABLE.TIMETABLE_TIMETABLE (TIMETABLE_ID, TIME_SLOT) VALUES (1, NULL);
 
 -- course inserts

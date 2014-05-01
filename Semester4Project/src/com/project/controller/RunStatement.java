@@ -11,8 +11,8 @@ import java.sql.*;
  *
  * Created by david on 3/25/2014.
  */
-public class RunStatement {
-  protected String sqlStatement;
+class RunStatement {
+  private String sqlStatement;
   /**
    * The Query type.
    */
@@ -35,8 +35,8 @@ public class RunStatement {
    *
    * @return the query type
    */
-  public Statement getQueryType() {
-    return queryType;
+  Statement getQueryType() {
+    return this.queryType;
   }
 
   /**
@@ -45,7 +45,7 @@ public class RunStatement {
    * @param queryType
    *     the query type
    */
-  public void setQueryType(final Statement queryType) {
+  void setQueryType(final Statement queryType) {
     this.queryType = queryType;
   }
 
@@ -54,8 +54,8 @@ public class RunStatement {
    *
    * @return the result set
    */
-  public ResultSet getResultSet() {
-    return resultSet;
+  ResultSet getResultSet() {
+    return this.resultSet;
   }
 
   /**
@@ -64,7 +64,7 @@ public class RunStatement {
    * @param resultSet
    *     the result set
    */
-  public void setResultSet(final ResultSet resultSet) {
+  void setResultSet(final ResultSet resultSet) {
     this.resultSet = resultSet;
   }
 
@@ -74,7 +74,7 @@ public class RunStatement {
    * @return the query preparation
    */
   public PreparedStatement getQueryPreparation() {
-    return queryPreparation;
+    return this.queryPreparation;
   }
 
   /**
@@ -93,7 +93,7 @@ public class RunStatement {
    * @return the ddl
    */
   public GetDatabaseDDL getDdl() {
-    return ddl;
+    return this.ddl;
   }
 
   /**
@@ -106,4 +106,14 @@ public class RunStatement {
     this.ddl = ddl;
   }
 
+  @Override
+  public String toString() {
+    return "RunStatement{" +
+        "sqlStatement='" + this.sqlStatement + '\'' +
+        ", queryType=" + this.queryType +
+        ", ddl=" + this.ddl +
+        ", queryPreparation=" + this.queryPreparation +
+        ", resultSet=" + this.resultSet +
+        '}';
+  }
 }

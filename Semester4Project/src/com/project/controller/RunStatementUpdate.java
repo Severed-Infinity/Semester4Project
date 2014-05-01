@@ -9,6 +9,6 @@ package com.project.controller;
  *
  * Created by david on 4/30/2014.
  */
-public class RunStatementUpdate extends RunStatement {
+class RunStatementUpdate extends RunStatement {
   //todo update queries
 }

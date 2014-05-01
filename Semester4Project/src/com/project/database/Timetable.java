@@ -13,21 +13,35 @@ import java.util.*;
  * Created by david on 4/29/2014.
  */
 public class Timetable {
-  public static final LinkedList<Timetable> timetables = new LinkedList<>();
-  private int timeSlot;
+  public static final Collection<Timetable> TIMETABLES = new LinkedList<>();
+  private static final String COULD_NOT_LOAD_A_VIEW = "Could not load a View";
   private int code;
 
-  public Timetable() {
-    JTextField unknownLogin = new JTextField();
-    unknownLogin.setText("Could not load a View");
+  private Timetable() {
+    final JTextField unknownLogin = new JTextField();
+    unknownLogin.setText(COULD_NOT_LOAD_A_VIEW);
   }
 
-  public Timetable(final int code, final int timeSlots) {
+  private Timetable(final int code, final int timeSlots) {
     this.code = code;
-    this.timeSlot = timeSlots;
+    final int timeSlot = timeSlots;
   }
+
+  public static Timetable createTimetable() {return new Timetable();}
+
+  public static Timetable createTimetable(
+      final int code,
+      final int timeSlots
+  ) {return new Timetable(code, timeSlots);}
 
   public int getCode() {
-    return code;
+    return this.code;
+  }
+
+  @Override
+  public String toString() {
+    return "Timetable{" +
+        "code=" + this.code +
+        '}';
   }
 }

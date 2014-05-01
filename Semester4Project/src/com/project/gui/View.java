@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 @SuppressWarnings ("serial")
-public abstract class View extends JPanel {
+public class View extends JPanel {
   /**
    * Inputs for the Views, they relate directly to components of similar names
    */
@@ -58,23 +58,55 @@ public abstract class View extends JPanel {
 
   //    protected ArrayList<View> views = new ArrayList<>();
 
-  public View() {
-    setBackground(Color.white);
+  protected View() {
+    super();
+    this.setBackground(Color.white);
   }
 
   JFrame getCreateNewPanel() {
-    return createNewPanel;
+    return this.createNewPanel;
   }
 
   void setCreateNewPanel(final JFrame createNewPanel) {
     this.createNewPanel = createNewPanel;
-    getCreateNewPanel().setSize(900, 500);
-    getCreateNewPanel().setLocationRelativeTo(null);
-    getCreateNewPanel().setVisible(true);
+    this.createNewPanel.setSize(900, 500);
+    this.createNewPanel.setLocationRelativeTo(null);
+    this.createNewPanel.setVisible(true);
   }
 
   //    public ArrayList<View> getViews () {
   //        return views;
   //    }
 
+  @Override
+  public String toString() {
+    return "View{" +
+        "name=" + this.name +
+        ", code=" + this.code +
+        ", length=" + this.length +
+        ", head=" + this.head +
+        ", year=" + this.year +
+        ", semester=" + this.semester +
+        ", confirm=" + this.confirm +
+        ", cancel=" + this.cancel +
+        ", clear=" + this.clear +
+        ", createNew=" + this.createNew +
+        ", addComponent=" + this.addComponent +
+        ", typeOf=" + this.typeOf +
+        ", nameOf=" + this.nameOf +
+        ", codeFor=" + this.codeFor +
+        ", lengthOf=" + this.lengthOf +
+        ", departmentContaining=" + this.departmentContaining +
+        ", headOf=" + this.headOf +
+        ", selectComponent=" + this.selectComponent +
+        ", listOf=" + this.listOf +
+        ", yearOf=" + this.yearOf +
+        ", semesters=" + this.semesters +
+        ", typeOptions=" + this.typeOptions +
+        ", subComponent=" + this.subComponent +
+        ", parentComponent=" + this.parentComponent +
+        ", subComponents=" + this.subComponents +
+        ", createNewPanel=" + this.createNewPanel +
+        '}';
+  }
 }

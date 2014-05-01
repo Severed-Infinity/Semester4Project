@@ -7,6 +7,7 @@ package com.project.controller;
 
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 /**
  * ATTENTION: SQL file must not contain column names, etc. including comment signs (#, --, /* etc.)
@@ -14,13 +15,16 @@ import java.util.*;
  * out of the query string the same is true for every characters surrounded by /* and
  */
 public class GetDatabaseDDL {
+  private static final char POUNDSIGN = '#';
+  private static final Pattern COMPILE = Pattern.compile(";");
+
   /**
    * Instantiates a new Get database dDL.
    *
    * @param path
    *     the path
    */
-  public GetDatabaseDDL(final String path) {
+  private GetDatabaseDDL(final String path) {
     createQueries(path);
 
   }
@@ -33,87 +37,86 @@ public class GetDatabaseDDL {
    *
    * @return List of query strings
    */
-  ArrayList<String> createQueries(String path) {
+  static List<String> createQueries(final String path) {
 
-    String queryLine;
-    StringBuilder stringBuilder = new StringBuilder();
-    final ArrayList<String> listOfQueries = new ArrayList<>();
+    final StringBuilder stringBuilder = new StringBuilder();
+    final List<String> listOfQueries = new ArrayList<>(10000);
 
     try {
-      FileReader fileReader = new FileReader(new File(path));
-      BufferedReader bufferedReader = new BufferedReader(fileReader);
+      final FileReader fileReader = new FileReader(new File(path));
+      final BufferedReader bufferedReader = new BufferedReader(fileReader);
 
       //read the SQL file line by line
+      String queryLine;
       while ((queryLine = bufferedReader.readLine()) != null) {
         // ignore comments beginning with #
-        int indexOfCommentSign = queryLine.indexOf('#');
+        int indexOfCommentSign = queryLine.indexOf(POUNDSIGN);
         if (indexOfCommentSign != -1) {
-          if (queryLine.startsWith("#")) {
-            queryLine = "";
-          } else {
-            queryLine = queryLine.substring(0, indexOfCommentSign - 1);
-          }
+          queryLine = queryLine.startsWith("#") ? "" : queryLine.substring(0,
+              indexOfCommentSign - 1);
         }
         // ignore comments beginning with --
         indexOfCommentSign = queryLine.indexOf("--");
         if (indexOfCommentSign != -1) {
-          if (queryLine.startsWith("--")) {
-            queryLine = "";
-          } else {
-            queryLine = queryLine.substring(0, indexOfCommentSign - 1);
-          }
+          queryLine = queryLine.startsWith("--") ? "" : queryLine.substring(0,
+              indexOfCommentSign - 1);
         }
         // ignore comments surrounded by /* */
         indexOfCommentSign = queryLine.indexOf("/*");
         if (indexOfCommentSign != -1) {
-          if (queryLine.startsWith("#")) {
-            queryLine = "";
-          } else {
-            queryLine = queryLine.substring(0, indexOfCommentSign - 1);
-          }
+          queryLine = queryLine.startsWith("#") ? "" : queryLine.substring(0,
+              -1);
+        }
 
-          stringBuilder.append(queryLine).append(" ");
-          // ignore all characters within the comment
-          do {
-            queryLine = bufferedReader.readLine();
-          }
-          while (queryLine != null && !queryLine.contains("*/"));
-          indexOfCommentSign = queryLine.indexOf("*/");
-          if (indexOfCommentSign != -1) {
-            if (queryLine.endsWith("*/")) {
-              queryLine = "";
-            } else {
-              queryLine = queryLine.substring(indexOfCommentSign + 2, queryLine.length() - 1);
-            }
-          }
+        final StringBuilder builder = stringBuilder.append(queryLine);
+        builder.append(' ');
+        // ignore all characters within the comment
+        do {
+          queryLine = bufferedReader.readLine();
+        }
+        while (queryLine != null && !queryLine.contains("*/"));
+        indexOfCommentSign = queryLine.indexOf("*/");
+        if (indexOfCommentSign != -1) {
+          queryLine = queryLine.endsWith("*/") ? "" : queryLine.substring(+2,
+              queryLine.length() - 1);
         }
 
         //  the + " " is necessary, because otherwise the content before and after a line break
         // are concatenated
         // like e.g. a.xyz FROM becomes a.xyzFROM otherwise and can not be executed
         if (queryLine != null) {
-          stringBuilder.append(queryLine).append(" ");
+          builder.append(' ');
         }
       }
       bufferedReader.close();
 
       // here is our splitter ! We use ";" as a delimiter for each request
-      String[] splittedQueries = stringBuilder.toString().split(";");
+      final String[] splittedQueries = COMPILE.split(stringBuilder.toString());
 
       // filter out empty statements
       for (final String splittedQuery : splittedQueries) {
-        if (!splittedQuery.trim().equals("") && !splittedQuery.trim().equals("\t")) {
+        final String trim = splittedQuery.trim();
+        if (trim != null && !trim.isEmpty() && !"\t".equals(
+            trim)) {
           listOfQueries.add(splittedQuery);
         }
       }
-    } catch (Exception e) {
-      System.out.println("*** Error : " + e.toString());
+    } catch (final FileNotFoundException exception) {
+      exception.printStackTrace();
+    } catch (final IOException exception) {
+      exception.printStackTrace();
+    } catch (final RuntimeException exception) {
+      System.out.println("*** Error : " + exception.toString());
       System.out.println("*** ");
       System.out.println("*** Error : ");
-      e.printStackTrace();
+      exception.printStackTrace();
       System.out.println("################################################");
       System.out.println(stringBuilder.toString());
     }
     return listOfQueries;
+  }
+
+  public static GetDatabaseDDL createGetDatabaseDDL(final String path) {
+    return new GetDatabaseDDL(path);
   }
 }

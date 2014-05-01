@@ -12,21 +12,34 @@ import java.util.*;
  * Created by david on 4/30/2014.
  */
 public class ModuleLecturer {
-  public static LinkedList<ModuleLecturer> moduleLectuers;
-  private int moduleCode;
-  private int userCode;
+  public static final Deque<ModuleLecturer> MODULE_LECTURERS = null;
+  private final int moduleCode;
+  private final int userCode;
 
-  public ModuleLecturer(final int moduleCode, final int userCode) {
+  private ModuleLecturer(final int moduleCode, final int userCode) {
 
     this.moduleCode = moduleCode;
     this.userCode = userCode;
   }
 
+  public static ModuleLecturer createModuleLecturer(
+      final int moduleCode,
+      final int userCode
+  ) {return new ModuleLecturer(moduleCode, userCode);}
+
   public int getModuleCode() {
-    return moduleCode;
+    return this.moduleCode;
   }
 
   public int getUserCode() {
-    return userCode;
+    return this.userCode;
+  }
+
+  @Override
+  public String toString() {
+    return "ModuleLecturer{" +
+        "moduleCode=" + this.moduleCode +
+        ", userCode=" + this.userCode +
+        '}';
   }
 }
