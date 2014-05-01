@@ -36,7 +36,8 @@ class UserView extends View {
     //Todo apply constraints to components
     this.setBorder(
         new TitledBorder(UIManager.getBorder("TitleBorder.border"), StringConstants.ADD_NEW_COURSE,
-            TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+            TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0))
+    );
 
     //labels
 

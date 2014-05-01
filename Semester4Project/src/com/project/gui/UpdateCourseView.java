@@ -37,7 +37,8 @@ class UpdateCourseView extends CourseView {
     //Todo apply constraints to components
     this.setBorder(
         new TitledBorder(UIManager.getBorder("TitleBorder.border"), StringConstants.ADD_NEW_COURSE,
-            TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+            TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0))
+    );
 
     //labels
 
@@ -129,7 +130,8 @@ class UpdateCourseView extends CourseView {
     //todo get do get type
     this.typeOptions = new JComboBox<>(
         new DefaultComboBoxModel<>(new String[] {StringConstants.FULL_TIME,
-            StringConstants.PART_TIME}));
+            StringConstants.PART_TIME})
+    );
     constraints.gridx = 1;
     constraints.gridy = 0;
     this.add(this.typeOptions, constraints);
