@@ -8,13 +8,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698aa514-53e5-46ab-8866-4f2a2d58e51e" name="Default" comment="Commiting un registered commits">
-      <change type="MOVED" beforePath="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\assets\IT-Tallaght-Logo.gif" afterPath="$PROJECT_DIR$/src/resources/IT-Tallaght-Logo.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
+      <change type="DELETED" beforePath="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\com\project\controller\DatabaseConnection.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\com\project\gui\TimetableLogin.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\lib\ojdbc6.jar" afterPath="$PROJECT_DIR$/src/resources/ojdbc6.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" afterPath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Course.java" afterPath="$PROJECT_DIR$/src/com/project/database/Course.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Department.java" afterPath="$PROJECT_DIR$/src/com/project/database/Department.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" afterPath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" afterPath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Module.java" afterPath="$PROJECT_DIR$/src/com/project/database/Module.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" afterPath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Room.java" afterPath="$PROJECT_DIR$/src/com/project/database/Room.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/School.java" afterPath="$PROJECT_DIR$/src/com/project/database/School.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Semester4Project.iml" afterPath="$PROJECT_DIR$/Semester4Project.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/constants/StringConstants.java" afterPath="$PROJECT_DIR$/src/com/project/constants/StringConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Student.java" afterPath="$PROJECT_DIR$/src/com/project/user/Student.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TIMETABLE.DDL" afterPath="$PROJECT_DIR$/TIMETABLE.DDL" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" afterPath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/User.java" afterPath="$PROJECT_DIR$/src/com/project/database/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" afterPath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UserView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Semester4Project.iws" />
@@ -78,8 +99,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -139,91 +160,137 @@
       <file leaf-file-name="RunStatementSelect.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="2672">
-              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
-              <folding>
-                <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
-                <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
-                <marker date="1399023759666" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
-                <marker date="1399023759666" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
-                <marker date="1399023759666" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
-                <marker date="1399023759666" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
-                <marker date="1399023759666" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
-                <marker date="1399023759666" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
-                <marker date="1399023759666" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="1792">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1680" max-vertical-offset="5984">
+              <caret line="286" column="42" selection-start-line="286" selection-start-column="42" selection-end-line="286" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
-                <element signature="method#createConnection#0;class#DatabaseConnection#0" expanded="true" />
-                <element signature="method#userReturn#0;class#DatabaseConnection#0" expanded="true" />
-                <element signature="method#endConnection#0;class#DatabaseConnection#0" expanded="true" />
-                <element signature="method#toString#0;class#DatabaseConnection#0" expanded="true" />
+                <element signature="docComment;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_LAST_NAME#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_DATE_OF_BIRTH#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_PASSWORD#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_COURSE_CODE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_REPEATING#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#STUDENT_TYPE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_TIMETABLE_TIMETABLE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#ALL_FROM_DEPARTMENT#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_TIMETABLE_SCHOOL#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#ALL_FROM_COURSE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_TIMETABLE_MODULE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_CLASS_PERIOD#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_COURSE_MODULE#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_MODULE_LECTURER#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;field#SELECT_FROM_TIMETABLE_ROOM#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#RunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#RunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#createRunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#createRunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryUsers#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryUsers#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryLecturers#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryLecturers#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryStudents#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryStudents#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryTimetables#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryTimetables#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryDepartment#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryDepartment#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#querySchool#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#querySchool#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryModule#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryClassPeriod#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryClassPeriod#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryCourseModule#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryCourseModule#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryModuleLecturer#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryModuleLecturer#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="docComment;method#queryRoom#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryRoom#0;class#RunStatementSelect#0" expanded="true" />
+                <marker date="1399062425513" expanded="true" signature="1515:1548" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
+                <marker date="1399062425513" expanded="true" signature="1655:1699" placeholder="SELECT * FRO..TIMETABLE_DEPARTMENT..." />
+                <marker date="1399062425513" expanded="true" signature="1824:1854" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
+                <marker date="1399062425513" expanded="true" signature="1953:1993" placeholder="SELECT * FRO..TIMETABLE_COURSE..." />
+                <marker date="1399062425513" expanded="true" signature="2118:2148" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
+                <marker date="1399062425513" expanded="true" signature="2265:2291" placeholder="SELECT * FRO..CLASS_PERIOD..." />
+                <marker date="1399062425513" expanded="true" signature="2410:2437" placeholder="SELECT * FRO..COURSE_MODULE..." />
+                <marker date="1399062425513" expanded="true" signature="2560:2589" placeholder="SELECT * FRO..MODULE_LECTURER..." />
+                <marker date="1399062425513" expanded="true" signature="2710:2738" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
+                <marker date="1399062425513" expanded="true" signature="3709:4253" placeholder="SELECT USER_..TIMETABLE_USERS..." />
+                <marker date="1399062425513" expanded="true" signature="5054:5552" placeholder="SELECT USER_..TIMETABLE_USERS..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimetableLogin.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <file leaf-file-name="Login.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/Login.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="2800">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="928">
+              <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1248">
+              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
               <folding>
-                <element signature="e#277#305#0" expanded="true" />
-                <element signature="method#TimetableLogin#0;class#TimetableLogin#0" expanded="true" />
-                <element signature="method#query#0;class#TimetableLogin#0" expanded="true" />
-                <element signature="method#login#0;class#TimetableLogin#0" expanded="true" />
-                <element signature="method#toString#0;class#TimetableLogin#0" expanded="true" />
+                <element signature="e#2061#2332#0" expanded="true" />
+                <element signature="e#2325#2326#0" expanded="true" />
+                <element signature="e#2456#2615#0" expanded="true" />
+                <element signature="e#2608#2609#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetDatabaseDDL.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
+      <file leaf-file-name="UserView.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1808">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.70533645" vertical-offset="1696" max-vertical-offset="2400">
+              <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunStatementAdd.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="docComment;class#GetDatabaseDDL#0" expanded="true" />
-                <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
-                <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
-                <element signature="method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
-                <element signature="e#2775#2862#0" expanded="true" />
-                <element signature="method#createGetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
+                <element signature="method#createRunStatementAdd#0;class#RunStatementAdd#0" expanded="true" />
+                <element signature="method#addModule#0;class#RunStatementAdd#0" expanded="true" />
+                <element signature="method#addDepartment#0;class#RunStatementAdd#0" expanded="true" />
+                <marker date="1399063987769" expanded="true" signature="763:886" placeholder="INSERT INTO TIMETABLE_USERS..." />
+                <marker date="1399063987769" expanded="true" signature="1922:2044" placeholder="INSERT INTO TIMETABLE_USERS..." />
+                <marker date="1399063987769" expanded="true" signature="3084:3204" placeholder="INSERT INTO TIMETABLE_USERS..." />
+                <marker date="1399063987769" expanded="true" signature="4185:4414" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+                <marker date="1399063987769" expanded="true" signature="5515:5659" placeholder="INSERT INTO TIMETABLE_MODULE..." />
+                <marker date="1399063987769" expanded="true" signature="6493:6626" placeholder="INSERT INTO TIMETABLE_DEPARTMENT..." />
+                <marker date="1399063987769" expanded="true" signature="7306:7396" placeholder="INSERT INTO CLASS_PERIOD..." />
+                <marker date="1399063987769" expanded="true" signature="8045:8152" placeholder="INSERT INTO COURSE_MODULE..." />
+                <marker date="1399063987769" expanded="true" signature="8852:8938" placeholder="INSERT INTO MODULE_LECTURER..." />
+                <marker date="1399063987769" expanded="true" signature="9593:9727" placeholder="INSERT INTO TIMETABLE_ROOM..." />
+                <marker date="1399063987769" expanded="true" signature="10473:10562" placeholder="INSERT INTO TIMETABLE_SCHOOL..." />
+                <marker date="1399063987769" expanded="true" signature="11072:11165" placeholder="INSERT INTO TIMETABLE_TIMETABLE..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/user/Admin.java">
+      <file leaf-file-name="CourseView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding>
-                <element signature="method#Admin#0;class#Admin#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Timetable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1776" max-vertical-offset="2480">
+              <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="141" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -232,56 +299,16 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3328">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2810" max-vertical-offset="3568">
+              <caret line="206" column="64" selection-start-line="206" selection-start-column="64" selection-end-line="206" selection-end-column="64" />
               <folding>
                 <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
                 <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
-                <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
+                <element signature="docComment;class#MainView#0;class#MainWindow#0" expanded="true" />
+                <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
                 <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-                <element signature="e#6896#6981#0" expanded="true" />
                 <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunStatementAdd.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1328">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-              <folding>
-                <element signature="method#addCourse#0;class#RunStatementAdd#0" expanded="true" />
-                <marker date="1398983202010" expanded="true" signature="4101:4350" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                <marker date="1398983202010" expanded="true" signature="4101:4312" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassPeriod.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/project/database/ClassPeriod.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33231708" vertical-offset="115" max-vertical-offset="752">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#ClassPeriod#0" expanded="true" />
-                <element signature="method#toString#0;class#ClassPeriod#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TIMETABLE.DDL" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="5776">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -299,14 +326,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_SCHOOL" />
-        <option value="dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_ROOM" />
-        <option value="$PROJECT_DIR$/src/TimetableMain.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/DatabaseConnection.java" />
         <option value="dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.SYS.SYSTEM_PRIVILEGE_MAP" />
         <option value="$PROJECT_DIR$/src/com/project/database/RunStatement.java" />
-        <option value="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" />
         <option value="dbtable:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/.TIMETABLE.TIMETABLE_USERS" />
         <option value="db-console:/8cb057b8/632fe7bd-1828-4698-bc12-0825a2688553/" />
         <option value="dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_USERS" />
@@ -314,27 +336,17 @@
         <option value="dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_COURSE" />
         <option value="db-console:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/" />
         <option value="dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.CLASS_PERIOD" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" />
         <option value="$PROJECT_DIR$/src/lib/TODO" />
         <option value="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/Staff.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/Admin.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
         <option value="$PROJECT_DIR$/src/com/project/constants/TimetableLogin.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
-        <option value="$PROJECT_DIR$/src/com/project/constants/StringConstants.java" />
-        <option value="$PROJECT_DIR$/src/com/project/database/CourseModule.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/Department.java" />
-        <option value="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
-        <option value="$PROJECT_DIR$/src/com/project/database/Module.java" />
-        <option value="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/Room.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/School.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/Student.java" />
@@ -342,14 +354,29 @@
         <option value="$PROJECT_DIR$/src/com/project/database/User.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
-        <option value="$PROJECT_DIR$/src/com/project/database/Course.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
-        <option value="$PROJECT_DIR$/TIMETABLE.DDL" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
         <option value="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
+        <option value="$PROJECT_DIR$/src/com/project/constants/StringConstants.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
+        <option value="$PROJECT_DIR$/src/com/project/database/Course.java" />
+        <option value="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" />
+        <option value="$PROJECT_DIR$/src/reference/code/databaseConnnection" />
+        <option value="$PROJECT_DIR$/src/reference/code/timetableLogin" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/DatabaseConnectionTest.groovy" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/Login.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
+        <option value="$PROJECT_DIR$/TIMETABLE.DDL" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java" />
+        <option value="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
+        <option value="$PROJECT_DIR$/src/com/project/database/CourseModule.java" />
+        <option value="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" />
+        <option value="$PROJECT_DIR$/src/com/project/database/Module.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
       </list>
     </option>
   </component>
@@ -444,6 +471,76 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Production">
           <PATH>
@@ -508,72 +605,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Semester4Project" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -584,7 +615,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Java" />
+    <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="options.splitter.main.proportions" value="0.3025" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -592,7 +623,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/DB CA2 - Semester 2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/ojdbc6.jar!/" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="true" />
@@ -609,14 +640,15 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="SearchEverywhereHistoryKey" value="ad&#9;FILE&#9;file://C:/Users/david/Development/Git Repositories/Semester4Project/Semester4Project/src/com/project/user/Admin.java&#10;Closed&#9;PSI&#9;JAVA://oracle.jdbc.driver.ClosedConnection&#10;System.&#9;null&#9;null&#10;System.exit()&#9;null&#9;null" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveMembersDialog.RECENTS_KEY">
-      <recent name="com.project.controller.RunStatementSelect" />
-      <recent name="com.project.constants.StringConstants" />
-      <recent name="com.project.gui.TimetableLogin" />
-      <recent name="com.project.database.User" />
-      <recent name="com.project.database.Module" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="groovy.util.GroovyTestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.project.controller" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="com.project.constants.StringConstants" />
@@ -625,19 +657,27 @@
       <recent name="com.project.gui.UpdateUserView" />
       <recent name="com.project.gui.UpdateModuleView" />
     </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.project.gui.Login" />
+      <recent name="java.awt.event.ActionListener" />
+      <recent name="com.project.controller.RunStatementSelect" />
+      <recent name="com.project.constants.StringConstants" />
+      <recent name="com.project.gui.TimetableLogin" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.gui" />
       <recent name="com.project.controller" />
       <recent name="com.project.database" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.project.constants" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\com\project\controller" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\resources" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\assets" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\lib" />
-      <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.project.constants" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TimetableMain">
@@ -872,10 +912,19 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -898,19 +947,10 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="1">
@@ -985,7 +1025,8 @@
       <workItem from="1398601646931" duration="14972000" />
       <workItem from="1398626360300" duration="11815000" />
       <workItem from="1398770198842" duration="67702000" />
-      <workItem from="1399019294744" duration="4405000" />
+      <workItem from="1399019294744" duration="10469000" />
+      <workItem from="1399039092387" duration="19875000" />
     </task>
     <task id="LOCAL-00001" summary="Commiting un registered commits">
       <created>1398969948377</created>
@@ -995,7 +1036,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="358799000" />
+    <option name="totallyTimeSpent" value="384738000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1034,10 +1075,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21406959" sideWeight="0.49691358" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21406959" sideWeight="0.49691358" order="2" side_tool="false" content_ui="combo" x="494" y="70" width="315" height="628" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47763577" sideWeight="0.50378215" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26677316" sideWeight="0.50378215" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3881789" sideWeight="0.50832075" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44704992" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,9 +1090,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39456868" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3881789" sideWeight="0.50832075" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40015128" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1089,8 +1130,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40015128" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256579" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -1119,7 +1160,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1127,111 +1168,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://db-console:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32234433" vertical-offset="0" max-vertical-offset="546">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_USERS">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE</OriginalElement>
-          <nodes>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_COURSE</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_USERS</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.COURSE_MODULE</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_SCHOOL</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.587551867219917" x="572.0" y="411.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Columns</Category>
-            <Category>Key columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.CLASS_PERIOD">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="656">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-          <folding>
-            <element signature="method#TimetableView#0;class#TimetableView#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="192">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="27256" max-vertical-offset="30624">
-          <caret line="1711" column="32" selection-start-line="1711" selection-start-column="32" selection-end-line="1711" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/com/project/database/GetDatabaseDDL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2" vertical-offset="1623" max-vertical-offset="4048">
-          <caret line="108" column="6" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/WarningPanes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="384">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/user/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
@@ -1244,22 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277592" vertical-offset="2089" max-vertical-offset="2688">
-          <caret line="154" column="56" selection-start-line="154" selection-start-column="56" selection-end-line="154" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1277,11 +1197,11 @@
         <state vertical-scroll-proportion="0.65217394" vertical-offset="2282" max-vertical-offset="2880">
           <caret line="167" column="46" selection-start-line="167" selection-start-column="46" selection-end-line="167" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#UpdateUserView#0" expanded="true" />
-            <element signature="e#858#895#0" expanded="true" />
-            <element signature="e#2757#2815#0" expanded="true" />
-            <element signature="e#3698#3711#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;class#UpdateUserView#0" expanded="false" />
+            <element signature="e#858#895#0" expanded="false" />
+            <element signature="e#2757#2815#0" expanded="false" />
+            <element signature="e#3698#3711#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1291,7 +1211,7 @@
         <state vertical-scroll-proportion="0.33277592" vertical-offset="2233" max-vertical-offset="3056">
           <caret line="163" column="49" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
           <folding>
-            <element signature="docComment;class#UpdateCourseView#0" expanded="true" />
+            <element signature="docComment;class#UpdateCourseView#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1301,7 +1221,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1145" max-vertical-offset="3232">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
           <folding>
-            <element signature="e#4828#4887#0" expanded="true" />
+            <element signature="e#4828#4887#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1311,7 +1231,7 @@
         <state vertical-scroll-proportion="0.33277592" vertical-offset="1849" max-vertical-offset="3280">
           <caret line="138" column="70" selection-start-line="138" selection-start-column="70" selection-end-line="138" selection-end-column="70" />
           <folding>
-            <element signature="docComment;class#UpdateModuleView#0" expanded="true" />
+            <element signature="docComment;class#UpdateModuleView#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1345,14 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1232">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/package-info.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10702341" vertical-offset="0" max-vertical-offset="598">
@@ -1361,73 +1273,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13675214" vertical-offset="0" max-vertical-offset="2976">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="method#CourseView#0;class#CourseView#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/CourseModule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="768">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="776" max-vertical-offset="1120">
-          <caret line="146" column="25" selection-start-line="146" selection-start-column="25" selection-end-line="146" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/user/Lecturer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="704">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="method#toString#0;class#Lecturer#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1536">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#toString#0;class#Module#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="544">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/database/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="520" max-vertical-offset="864">
           <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1437,7 +1288,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="544">
           <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1447,49 +1298,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="880">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <element signature="method#getCourseCode#0;class#Student#0" expanded="true" />
-            <element signature="method#toString#0;class#Student#0" expanded="true" />
+            <element signature="method#toString#0;class#Student#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1152">
-          <caret line="81" column="19" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="992">
-          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.666087" vertical-offset="545" max-vertical-offset="1120">
-          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.335958" vertical-offset="243" max-vertical-offset="864">
-          <caret line="126" column="1" selection-start-line="126" selection-start-column="1" selection-end-line="126" selection-end-column="1" />
-          <folding>
-            <element signature="method#setQueryPreparation#0;class#RunStatement#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/IT-Tallaght-Logo.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/TODO">
@@ -1503,119 +1314,16 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/Course.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/IT-Tallaght-Logo.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2274" max-vertical-offset="2560">
-          <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="312" max-vertical-offset="704">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="5776">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3328">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
-            <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#6896#6981#0" expanded="true" />
-            <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1328">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="method#addCourse#0;class#RunStatementAdd#0" expanded="true" />
-            <marker date="1398983202010" expanded="true" signature="4101:4350" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-            <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-            <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-            <marker date="1398983202010" expanded="true" signature="4101:4312" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="2672">
-          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
-          <folding>
-            <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
-            <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
-            <marker date="1399023759666" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
-            <marker date="1399023759666" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
-            <marker date="1399023759666" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
-            <marker date="1399023759666" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
-            <marker date="1399023759666" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
-            <marker date="1399023759666" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
-            <marker date="1399023759666" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="1792">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#createConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#userReturn#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#endConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#toString#0;class#DatabaseConnection#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="2800">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-          <folding>
-            <element signature="e#277#305#0" expanded="true" />
-            <element signature="method#TimetableLogin#0;class#TimetableLogin#0" expanded="true" />
-            <element signature="method#query#0;class#TimetableLogin#0" expanded="true" />
-            <element signature="method#login#0;class#TimetableLogin#0" expanded="true" />
-            <element signature="method#toString#0;class#TimetableLogin#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1808">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="docComment;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="e#2775#2862#0" expanded="true" />
-            <element signature="method#createGetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1623,21 +1331,557 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75384617" vertical-offset="535" max-vertical-offset="1120">
+          <caret line="61" column="85" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16053511" vertical-offset="0" max-vertical-offset="598">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
-            <element signature="method#Admin#0;class#Admin#0" expanded="true" />
+            <element signature="method#TimetableView#0;class#TimetableView#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/main/TimetableMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="352">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/database/ClassPeriod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33231708" vertical-offset="115" max-vertical-offset="752">
+        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="752">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/code/timetableLogin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3120">
+          <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/lib/ojdbc6.jar!/oracle/jdbc/pool/OracleDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15535714" vertical-offset="2169" max-vertical-offset="3008">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="299">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reference/code/databaseConnnection">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14201184" vertical-offset="560" max-vertical-offset="2080">
+          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1168">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="method#toString#0;class#View#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="107" max-vertical-offset="1744">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="docComment;class#GetDatabaseDDL#0" expanded="false" />
+            <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="false" />
+            <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="false" />
+            <element signature="method#createQueries#0;class#GetDatabaseDDL#0" expanded="false" />
+            <element signature="e#2775#2862#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4384">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="297" max-vertical-offset="992">
+          <caret line="96" column="3" selection-start-line="96" selection-start-column="3" selection-end-line="96" selection-end-column="3" />
+          <folding>
+            <element signature="docComment;class#RunStatement#0" expanded="false" />
+            <element signature="docComment;field#queryType#0;class#RunStatement#0" expanded="false" />
+            <element signature="e#583#584#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#749#750#0" expanded="false" />
+            <element signature="e#785#786#0" expanded="false" />
+            <element signature="e#882#883#0" expanded="false" />
+            <element signature="e#913#914#0" expanded="false" />
+            <element signature="e#1048#1049#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
+            <element signature="e#1088#1147#0" expanded="false" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder="/**...*/" />
+            <marker date="1399059484783" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder=" { " />
+            <marker date="1399059484783" expanded="false" signature="-1:-1" placeholder=" }" />
+            <marker date="1399059484783" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1399059484783" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3989" max-vertical-offset="12176">
+          <caret line="261" column="46" selection-start-line="261" selection-start-column="46" selection-end-line="261" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/src.zip!/java/sql/ResultSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3315508" vertical-offset="2804" max-vertical-offset="11248">
+          <caret line="1116" column="13" selection-start-line="1116" selection-start-column="9" selection-end-line="1116" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE</OriginalElement>
+          <nodes>
+            <node x="83.25" y="638.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD</node>
+            <node x="86.75" y="796.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
+            <node x="288.0" y="316.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_COURSE</node>
+            <node x="993.9999999999999" y="404.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_USERS</node>
+            <node x="160.84166666666658" y="125.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
+            <node x="910.925" y="649.5">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER</node>
+            <node x="541.5916666666666" y="627.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.COURSE_MODULE</node>
+            <node x="693.0" y="360.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE</node>
+            <node x="0.0" y="371.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM</node>
+            <node x="206.34166666666658" y="0.0">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_SCHOOL</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.COURSE_MODULE" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="59.25" y="-59.5" />
+              <point x="719.3416666666666" y="607.0" />
+              <point x="833.5" y="607.0" />
+              <point x="0.0" y="81.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_SCHOOL">
+              <point x="0.0" y="-70.5" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="-50.25" y="-37.0" />
+              <point x="961.175" y="607.0" />
+              <point x="927.1666666666667" y="607.0" />
+              <point x="93.66666666666674" y="81.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_COURSE" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+              <point x="0.0" y="-125.5" />
+              <point x="480.5" y="291.0" />
+              <point x="385.0916666666666" y="291.0" />
+              <point x="74.75" y="70.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE">
+              <point x="50.75" y="-48.5" />
+              <point x="235.5" y="597.0" />
+              <point x="739.8333333333334" y="597.0" />
+              <point x="-93.66666666666663" y="81.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_TIMETABLE" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD">
+              <point x="0.0" y="-37.5" />
+              <point x="0.0" y="48.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_USERS">
+              <point x="50.25" y="-37.0" />
+              <point x="1061.6750000000002" y="607.0" />
+              <point x="1089.5" y="607.0" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT">
+              <point x="0.0" y="-70.5" />
+              <point x="134.0" y="291.0" />
+              <point x="235.59166666666658" y="291.0" />
+              <point x="-74.75" y="70.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM">
+              <point x="-50.75" y="-48.5" />
+              <point x="0.0" y="70.5" />
+            </edge>
+            <edge source="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.COURSE_MODULE" target="73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_COURSE">
+              <point x="-59.25" y="-59.5" />
+              <point x="600.8416666666666" y="587.0" />
+              <point x="480.5" y="587.0" />
+              <point x="0.0" y="125.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.587551867219917" x="398.47457627118644" y="358.06002824858757" />
+          <SelectedNodes>
+            <node>73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3310" max-vertical-offset="4064">
+          <caret line="186" column="2" selection-start-line="186" selection-start-column="2" selection-end-line="186" selection-end-column="2" />
+          <folding>
+            <element signature="docComment;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateLecturers#0;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateStudent#0;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateAdmin#0;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateCourse#0;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateModule#0;class#RunStatementUpdate#0" expanded="true" />
+            <element signature="method#updateTimetable#0;class#RunStatementUpdate#0" expanded="true" />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+            <marker date="1399060337233" expanded="true" signature="-1:-1" placeholder="UPDATE TIMET..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5450" max-vertical-offset="5792">
+          <caret line="118" column="91" selection-start-line="118" selection-start-column="91" selection-end-line="118" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27972028" vertical-offset="0" max-vertical-offset="512">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/user/Lecturer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="832">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="method#getTimetable#0;class#Lecturer#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/CourseModule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.19398" vertical-offset="0" max-vertical-offset="816">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#976#977#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.13377926" vertical-offset="120" max-vertical-offset="672">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1505017" vertical-offset="56" max-vertical-offset="608">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+          <folding>
+            <element signature="method#ModuleLecturer#0;class#ModuleLecturer#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87762237" vertical-offset="2725" max-vertical-offset="3264">
+          <caret line="186" column="14" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ClassPeriod#0" expanded="true" />
-            <element signature="method#toString#0;class#ClassPeriod#0" expanded="true" />
+            <element signature="docComment;class#Module#0" expanded="true" />
+            <element signature="docComment;field#MODULES#0;class#Module#0" expanded="true" />
+            <element signature="docComment;field#courseCode#0;class#Module#0" expanded="true" />
+            <element signature="docComment;field#name#0;class#Module#0" expanded="true" />
+            <element signature="docComment;field#code#0;class#Module#0" expanded="true" />
+            <element signature="docComment;method#Module#0;class#Module#0" expanded="true" />
+            <element signature="method#Module#0;class#Module#0" expanded="true" />
+            <element signature="method#createModule#0;class#Module#0" expanded="true" />
+            <element signature="docComment;method#getCourseCode#0;class#Module#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1797#1798#0" expanded="true" />
+            <element signature="docComment;method#getCode#0;class#Module#0" expanded="true" />
+            <element signature="e#1878#1879#0" expanded="true" />
+            <element signature="e#1904#1905#0" expanded="true" />
+            <element signature="docComment;method#setCode#0;class#Module#0" expanded="true" />
+            <element signature="e#2012#2013#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="docComment;method#getName#0;class#Module#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2148#2149#0" expanded="true" />
+            <element signature="docComment;method#setName#0;class#Module#0" expanded="true" />
+            <element signature="e#2259#2260#0" expanded="true" />
+            <element signature="e#2285#2286#0" expanded="true" />
+            <element signature="docComment;method#getSemester#0;class#Module#0" expanded="true" />
+            <element signature="e#2378#2379#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="docComment;method#setSemester#0;class#Module#0" expanded="true" />
+            <element signature="e#2536#2537#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="docComment;method#getWeeklyHours#0;class#Module#0" expanded="true" />
+            <element signature="e#2674#2675#0" expanded="true" />
+            <element signature="e#2707#2708#0" expanded="true" />
+            <element signature="docComment;method#setWeeklyHours#0;class#Module#0" expanded="true" />
+            <element signature="e#2852#2853#0" expanded="true" />
+            <element signature="e#2892#2893#0" expanded="true" />
+            <element signature="docComment;method#getLecturers#0;class#Module#0" expanded="true" />
+            <element signature="e#2988#2989#0" expanded="true" />
+            <element signature="e#3019#3020#0" expanded="true" />
+            <element signature="docComment;method#setLecturers#0;class#Module#0" expanded="true" />
+            <element signature="e#3152#3153#0" expanded="true" />
+            <element signature="e#3188#3189#0" expanded="true" />
+            <element signature="method#toString#0;class#Module#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementDelete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1965" max-vertical-offset="2784">
+          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteUser#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteTimetable#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteCourse#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteCourseModule#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteModuleLecturer#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteClassPeriod#0;class#RunStatementDelete#0" expanded="true" />
+            <element signature="method#deleteModuleLecturer#1;class#RunStatementDelete#0" expanded="true" />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1399062544339" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_USERS">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="928">
+          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2810" max-vertical-offset="3568">
+          <caret line="206" column="64" selection-start-line="206" selection-start-column="64" selection-end-line="206" selection-end-column="64" />
+          <folding>
+            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
+            <element signature="docComment;class#MainView#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#MainView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/CourseView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1776" max-vertical-offset="2480">
+          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="141" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/AdminView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1248">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="e#2061#2332#0" expanded="true" />
+            <element signature="e#2325#2326#0" expanded="true" />
+            <element signature="e#2456#2615#0" expanded="true" />
+            <element signature="e#2608#2609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1760">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="method#createRunStatementAdd#0;class#RunStatementAdd#0" expanded="true" />
+            <element signature="method#addModule#0;class#RunStatementAdd#0" expanded="true" />
+            <element signature="method#addDepartment#0;class#RunStatementAdd#0" expanded="true" />
+            <marker date="1399063987769" expanded="true" signature="763:886" placeholder="INSERT INTO TIMETABLE_USERS..." />
+            <marker date="1399063987769" expanded="true" signature="1922:2044" placeholder="INSERT INTO TIMETABLE_USERS..." />
+            <marker date="1399063987769" expanded="true" signature="3084:3204" placeholder="INSERT INTO TIMETABLE_USERS..." />
+            <marker date="1399063987769" expanded="true" signature="4185:4414" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+            <marker date="1399063987769" expanded="true" signature="5515:5659" placeholder="INSERT INTO TIMETABLE_MODULE..." />
+            <marker date="1399063987769" expanded="true" signature="6493:6626" placeholder="INSERT INTO TIMETABLE_DEPARTMENT..." />
+            <marker date="1399063987769" expanded="true" signature="7306:7396" placeholder="INSERT INTO CLASS_PERIOD..." />
+            <marker date="1399063987769" expanded="true" signature="8045:8152" placeholder="INSERT INTO COURSE_MODULE..." />
+            <marker date="1399063987769" expanded="true" signature="8852:8938" placeholder="INSERT INTO MODULE_LECTURER..." />
+            <marker date="1399063987769" expanded="true" signature="9593:9727" placeholder="INSERT INTO TIMETABLE_ROOM..." />
+            <marker date="1399063987769" expanded="true" signature="10473:10562" placeholder="INSERT INTO TIMETABLE_SCHOOL..." />
+            <marker date="1399063987769" expanded="true" signature="11072:11165" placeholder="INSERT INTO TIMETABLE_TIMETABLE..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4381" max-vertical-offset="5984">
+          <caret line="286" column="42" selection-start-line="286" selection-start-column="42" selection-end-line="286" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_LAST_NAME#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_DATE_OF_BIRTH#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_PASSWORD#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_COURSE_CODE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_REPEATING#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#STUDENT_TYPE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_TIMETABLE_TIMETABLE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#ALL_FROM_DEPARTMENT#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_TIMETABLE_SCHOOL#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#ALL_FROM_COURSE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_TIMETABLE_MODULE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_CLASS_PERIOD#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_COURSE_MODULE#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_MODULE_LECTURER#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;field#SELECT_FROM_TIMETABLE_ROOM#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#RunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#RunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#createRunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#createRunStatementSelect#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryUsers#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryUsers#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryLecturers#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryLecturers#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryStudents#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryStudents#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryTimetables#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryTimetables#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryDepartment#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryDepartment#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#querySchool#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#querySchool#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryModule#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryClassPeriod#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryClassPeriod#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryCourseModule#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryCourseModule#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryModuleLecturer#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryModuleLecturer#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="docComment;method#queryRoom#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryRoom#0;class#RunStatementSelect#0" expanded="true" />
+            <marker date="1399062425513" expanded="true" signature="1515:1548" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
+            <marker date="1399062425513" expanded="true" signature="1655:1699" placeholder="SELECT * FRO..TIMETABLE_DEPARTMENT..." />
+            <marker date="1399062425513" expanded="true" signature="1824:1854" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
+            <marker date="1399062425513" expanded="true" signature="1953:1993" placeholder="SELECT * FRO..TIMETABLE_COURSE..." />
+            <marker date="1399062425513" expanded="true" signature="2118:2148" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
+            <marker date="1399062425513" expanded="true" signature="2265:2291" placeholder="SELECT * FRO..CLASS_PERIOD..." />
+            <marker date="1399062425513" expanded="true" signature="2410:2437" placeholder="SELECT * FRO..COURSE_MODULE..." />
+            <marker date="1399062425513" expanded="true" signature="2560:2589" placeholder="SELECT * FRO..MODULE_LECTURER..." />
+            <marker date="1399062425513" expanded="true" signature="2710:2738" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
+            <marker date="1399062425513" expanded="true" signature="3709:4253" placeholder="SELECT USER_..TIMETABLE_USERS..." />
+            <marker date="1399062425513" expanded="true" signature="5054:5552" placeholder="SELECT USER_..TIMETABLE_USERS..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/UserView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70533645" vertical-offset="1696" max-vertical-offset="2400">
+          <caret line="136" column="0" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1710,7 +1954,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

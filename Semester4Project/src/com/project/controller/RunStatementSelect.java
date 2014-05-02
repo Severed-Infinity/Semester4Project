@@ -23,18 +23,18 @@ public class RunStatementSelect extends RunStatement {
   /**
    * The constant STUDENT_DATE_OF_BIRTH.
    */
-  private static final String STUDENT_DATE_OF_BIRTH = String.format(
-      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).DATE_OF_BIRTH, ");
+  private static final String STUDENT_DATE_OF_BIRTH = "treat(USER_OBJ AS " +
+      "TIMETABLE_USER_OBJ_STUDENT).DATE_OF_BIRTH, ";
   /**
    * The constant STUDENT_PASSWORD.
    */
-  private static final String STUDENT_PASSWORD = String.format(
-      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).USER_PASSWORD, ");
+  private static final String STUDENT_PASSWORD = "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT)" +
+      ".USER_PASSWORD, ";
   /**
    * The constant STUDENT_COURSE_CODE.
    */
-  private static final String STUDENT_COURSE_CODE = String.format(
-      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_STUDENT).COURSE_CODE, ");
+  private static final String STUDENT_COURSE_CODE = "treat(USER_OBJ AS " +
+      "TIMETABLE_USER_OBJ_STUDENT).COURSE_CODE, ";
   /**
    * The constant STUDENT_REPEATING.
    */
@@ -44,8 +44,7 @@ public class RunStatementSelect extends RunStatement {
    * The constant STUDENT_TYPE.
    */
   private static final String
-      STUDENT_TYPE = String.format(
-      "TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_STUDENT)");
+      STUDENT_TYPE = "TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_STUDENT)";
   /**
    * The constant SELECT_FROM_TIMETABLE_TIMETABLE.
    */
@@ -53,8 +52,7 @@ public class RunStatementSelect extends RunStatement {
   /**
    * The constant ALL_FROM_DEPARTMENT.
    */
-  private static final String ALL_FROM_DEPARTMENT = String.format(
-      "SELECT * FROM TIMETABLE.TIMETABLE_DEPARTMENT");
+  private static final String ALL_FROM_DEPARTMENT = "SELECT * FROM TIMETABLE.TIMETABLE_DEPARTMENT";
   /**
    * The constant SELECT_FROM_TIMETABLE_SCHOOL.
    */
@@ -62,8 +60,7 @@ public class RunStatementSelect extends RunStatement {
   /**
    * The constant ALL_FROM_COURSE.
    */
-  private static final String ALL_FROM_COURSE = String.format(
-      "SELECT * FROM TIMETABLE.TIMETABLE_COURSE");
+  private static final String ALL_FROM_COURSE = "SELECT * FROM TIMETABLE.TIMETABLE_COURSE";
   /**
    * The constant SELECT_FROM_TIMETABLE_MODULE.
    */
@@ -100,36 +97,34 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query USERS.
    */
-  public void queryUsers() {
+  public void queryUsers(final Connection connection) {
     System.out.println("Querying Users");
-    this.queryStudents();
-    this.queryLecturers();
-    this.queryAdmins();
+    this.queryStudents(connection);
+    this.queryLecturers(connection);
+    this.queryAdmins(connection);
     User.USERS.addAll(User.STUDENTS);
     User.USERS.addAll(User.LECTURERS);
     User.USERS.addAll(User.ADMINS);
     for (final User user : User.USERS) {
-      user.toString();
+      System.out.println(user.toString());
     }
   }
 
   /**
    * Query LECTURERS.
    */
-  public void queryLecturers() {
+  void queryLecturers(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(
           this.getQueryType().executeQuery(
-              String.format(
-                  "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
-                      ".USER_NAME_FIRST, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
-                      ".USER_NAME_LAST, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
-                      ".DATE_OF_BIRTH, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
-                      ".USER_PASSWORD, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER).HOURS_WEEK " +
-                      "FROM TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF " +
-                      "(TIMETABLE_USER_OBJ_LECTURER)"
-              )
+              "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
+                  ".USER_NAME_FIRST, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
+                  ".USER_NAME_LAST, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
+                  ".DATE_OF_BIRTH, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER)" +
+                  ".USER_PASSWORD, treat(USER_OBJ AS TIMETABLE_USER_OBJ_LECTURER).HOURS_WEEK " +
+                  "FROM TIMETABLE.TIMETABLE_USERS WHERE USER_OBJ IS OF " +
+                  "(TIMETABLE_USER_OBJ_LECTURER)"
           )
       );
       while (this.getResultSet().next()) {
@@ -148,19 +143,17 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query ADMINS.
    */
-  void queryAdmins() {
+  void queryAdmins(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(
           this.getQueryType().executeQuery(
-              String.format(
-                  "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_FIRST, " +
-                      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_LAST, " +
-                      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).DATE_OF_BIRTH, " +
-                      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_PASSWORD, " +
-                      "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).TITLE FROM TIMETABLE" +
-                      ".TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_ADMIN)"
-              )
+              "SELECT USER_ID, treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_FIRST, " +
+                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_NAME_LAST, " +
+                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).DATE_OF_BIRTH, " +
+                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).USER_PASSWORD, " +
+                  "treat(USER_OBJ AS TIMETABLE_USER_OBJ_ADMIN).TITLE FROM TIMETABLE" +
+                  ".TIMETABLE_USERS WHERE USER_OBJ IS OF (TIMETABLE_USER_OBJ_ADMIN)"
           )
       );
       while (this.getResultSet().next()) {
@@ -179,9 +172,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query STUDENTS.
    */
-  void queryStudents() {
+  void queryStudents(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(
           this.getQueryType().executeQuery(
               String.format(
@@ -209,9 +202,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query TIMETABLES.
    */
-  public void queryTimetables() {
+  public void queryTimetables(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_TIMETABLE));
       while (this.getResultSet().next()) {
         final Timetable timetable = Timetable.createTimetable(this.getResultSet().getInt(1),
@@ -226,9 +219,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query department.
    */
-  public void queryDepartment() {
+  public void queryDepartment(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(ALL_FROM_DEPARTMENT));
       while (this.getResultSet().next()) {
         final Department department = Department.createDepartment(this.getResultSet().getString(1),
@@ -244,9 +237,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query school.
    */
-  public void querySchool() {
+  public void querySchool(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_SCHOOL));
       while (this.getResultSet().next()) {
         final School school = School.createSchool(this.getResultSet().getString(1),
@@ -261,9 +254,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query course.
    */
-  public void queryCourse() {
+  public void queryCourse(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(ALL_FROM_COURSE));
       while (this.getResultSet().next()) {
         final Course course = Course.createCourse(this.getResultSet().getString(1),
@@ -282,16 +275,16 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query module.
    */
-  public void queryModule() {
+  public void queryModule(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_MODULE));
       while (this.getResultSet().next()) {
         final Module module = Module.createModule(this.getResultSet().getInt(1),
             this.getResultSet().getString(2),
             this.getResultSet().getInt(3), this.getResultSet().getInt(4),
             this.getResultSet().getInt(5),
-            this.getResultSet().getInt(6));
+            this.getResultSet().getString(6));
         Module.MODULES.add(module);
       }
     } catch (final SQLException exception) {
@@ -302,9 +295,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query class period.
    */
-  public void queryClassPeriod() {
+  public void queryClassPeriod(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_CLASS_PERIOD));
       while (this.getResultSet().next()) {
         final ClassPeriod classPeriod = ClassPeriod.createClassPeriod(this.getResultSet().getInt(1),
@@ -319,9 +312,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query course module.
    */
-  public void queryCourseModule() {
+  public void queryCourseModule(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_COURSE_MODULE));
       while (this.getResultSet().next()) {
         final CourseModule courseModule = CourseModule.createCourseModule(
@@ -338,14 +331,14 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query module lecturer.
    */
-  public void queryModuleLecturer() {
+  public void queryModuleLecturer(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_MODULE_LECTURER));
       while (this.getResultSet().next()) {
         final ModuleLecturer moduleLecturer = ModuleLecturer.createModuleLecturer(
             this.getResultSet().getInt(1),
-            this.getResultSet().getInt(2));
+            this.getResultSet().getString(2));
         ModuleLecturer.MODULE_LECTURERS.add(moduleLecturer);
       }
     } catch (final SQLException exception) {
@@ -356,9 +349,9 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query room.
    */
-  public void queryRoom() {
+  public void queryRoom(final Connection connection) {
     try {
-      this.setQueryType(this.getConnection().createStatement());
+      this.setQueryType(connection.createStatement());
       this.setResultSet(this.getQueryType().executeQuery(SELECT_FROM_TIMETABLE_ROOM));
       while (this.getResultSet().next()) {
         final Room room = Room.createRoom(this.getResultSet().getInt(1),

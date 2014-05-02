@@ -29,18 +29,21 @@ public class ClassPeriod {
       final String time,
       final int roomNumber
   ) {return new ClassPeriod(module, time, roomNumber);}
-
-  public int getModule() {
-    return this.module;
-  }
-
-  public String getTime() {
-    return this.time;
-  }
-
-  public int getRoomNumber() {
-    return this.roomNumber;
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getModule() {
+  //    return this.module;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public String getTime() {
+  //    return this.time;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getRoomNumber() {
+  //    return this.roomNumber;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 
   @Override
   public String toString() {

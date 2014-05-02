@@ -34,22 +34,24 @@ public class Student extends User {
   ) {
     return new Student(code, firstName, lastName, dateOfBirth, password, courseCode, repeatStudent);
   }
-
-  public boolean isRepeatStudent() {
-    return this.repeatStudent;
-  }
-
-  public Course getCourseCode() {
-    Course courseReturn = null;
-    for (final Course course : Course.COURSES) {
-      final String code = course.getCode();
-      if (code.equals(this.courseCode)) {
-        courseReturn = course;
-
-      }
-    }
-    return courseReturn;
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public boolean isRepeatStudent() {
+  //    return this.repeatStudent;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public Course getCourseCode() {
+  //    Course courseReturn = null;
+  //    for (final Course course : Course.COURSES) {
+  //      final String code = course.getCode();
+  //      if (code.equals(this.courseCode)) {
+  //        courseReturn = course;
+  //
+  //      }
+  //    }
+  //    return courseReturn;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 
   @Override
   public String toString() {

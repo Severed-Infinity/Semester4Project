@@ -17,7 +17,8 @@ public class School {
    * The Schools.
    */
   public static final Collection<School> SCHOOLS = new LinkedList<>();
-  private String code, name;
+  private final String code;
+  private final String name;
 
   private School(final String code, final String name) {
     this.code = code;
@@ -27,22 +28,26 @@ public class School {
   public static School createSchool(final String code, final String name) {
     return new School(code, name);
   }
-
-  public String getCode() {
-    return this.code;
-  }
-
-  final void setCode(final String code) {
-    this.code = code;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
-  final void setName(final String name) {
-    this.name = name;
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public String getCode() {
+  //    return this.code;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  final void setCode(final String code) {
+  //    this.code = code;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public String getName() {
+  //    return this.name;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  final void setName(final String name) {
+  //    this.name = name;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 
   @Override
   public String toString() {

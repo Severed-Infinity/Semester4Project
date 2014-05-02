@@ -1,0 +1,124 @@
+package com.project.controller;
+
+import com.project.database.*;
+import oracle.jdbc.pool.*;
+
+import java.sql.*;
+
+/**
+ * Project Semester4Project
+ *
+ * This class is part of a project that is aimed at improving ITT's timetable
+ * system
+ *
+ * Created by david on 3/18/14.
+ */
+public class DatabaseConnection {
+  public User userExists;
+  /**
+   * The Path.
+   */
+  private String path;
+  private User user;
+
+  private DatabaseConnection() {}
+
+  /**
+   * Create database connection.
+   *
+   * @param user
+   *     the user
+   */
+  //todo have this return a connection
+  public static Connection createConnection(
+      final String user,
+      final String password
+  ) throws SQLException {
+    createDatabaseConnection();
+    final OracleDataSource dataSource = new OracleDataSource();
+    //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
+    dataSource.setURL("jdbc:oracle:thin://@localhost:1521:XE");
+    // college source
+    // dataSource.setURL("jdbc:oracle:thin:@//10.10.2.7:1521/global1");
+    dataSource.setUser(user);
+    dataSource.setPassword(password);
+    Connection connectionReturn = null;
+    //    if (userReturn(user, password) != null) {
+    connectionReturn = dataSource.getConnection();
+    //    }
+    return connectionReturn;
+  }
+
+  public static DatabaseConnection createDatabaseConnection() {return new DatabaseConnection();}
+
+// --Commented out by Inspection START (5/2/2014 12:40 PM):
+//  /**
+//   * Check password.
+//   *
+//   * @param user
+//   *     the user
+//   * @param password
+//   *     the password
+//   *
+//   * @return boolean boolean
+//   */
+//  private static User userReturn(
+//      final String user,
+//      final String password
+//  ) {
+//    RunStatementSelect.createRunStatementSelect().queryUsers();
+//    User userReturn = null;
+//    for (final User userCheck : User.USERS) {
+//      if (user.equals(userCheck.getCode()) && password.equals(userCheck.getPassword())) {
+//        //        changeView(userCheck);
+//        userReturn = userCheck;
+//        userExists = userCheck;
+//      }
+//    }
+//    JOptionPane.showMessageDialog(null, "User ID or Password is incorrect", "Login Error",
+//        JOptionPane.WARNING_MESSAGE, null);
+//    return userReturn;
+//  }
+// --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+
+// --Commented out by Inspection START (5/2/2014 12:40 PM):
+//  /**
+//   * Sets path.
+//   */
+//  private void setPath() {
+//    this.path = "TIMETABLE.DDL";
+//  }
+// --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+
+// --Commented out by Inspection START (5/2/2014 12:40 PM):
+//  /**
+//   * Gets path.
+//   *
+//   * @return the path
+//   */
+//  private String getPath() {
+//    return this.path;
+//  }
+// --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+
+// --Commented out by Inspection START (5/2/2014 12:40 PM):
+//  public User getUser() {
+//    return this.user;
+//  }
+// --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+
+// --Commented out by Inspection START (5/2/2014 12:40 PM):
+//  void setUser(final User user) {
+//    this.user = user;
+//  }
+// --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+
+  @Override
+  public String toString() {
+    return "DatabaseConnection{" +
+        "userExists=" + userExists +
+        ", path='" + path + '\'' +
+        ", user=" + user +
+        '}';
+  }
+}

@@ -95,8 +95,6 @@ public class GetDatabaseDDL {
           listOfQueries.add(splittedQuery);
         }
       }
-    } catch (final FileNotFoundException exception) {
-      exception.printStackTrace();
     } catch (final IOException exception) {
       exception.printStackTrace();
     } catch (final RuntimeException exception) {
@@ -109,8 +107,9 @@ public class GetDatabaseDDL {
     }
     return listOfQueries;
   }
-
-  public static GetDatabaseDDL createGetDatabaseDDL(final String path) {
-    return new GetDatabaseDDL(path);
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public static GetDatabaseDDL createGetDatabaseDDL(final String path) {
+  //    return new GetDatabaseDDL(path);
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 }

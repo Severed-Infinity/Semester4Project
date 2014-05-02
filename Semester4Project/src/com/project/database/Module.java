@@ -17,10 +17,10 @@ public class Module {
    * The Modules.
    */
   public static final Collection<Module> MODULES = new LinkedList<>();
-  private final int /**
+  /**
    * The Course code.
    */
-      courseCode;
+  private final String courseCode;
   /**
    * The Name.
    */
@@ -64,7 +64,7 @@ public class Module {
       final int semester,
       final int weeklyHours,
       final int lecturers,
-      final int courseCode
+      final String courseCode
   ) {
     this.code = code;
     this.name = name;
@@ -80,7 +80,7 @@ public class Module {
       final int semester,
       final int weeklyHours,
       final int lecturers,
-      final int courseCode
+      final String courseCode
   ) {return new Module(code, name, semester, weeklyHours, lecturers, courseCode);}
 
   /**
@@ -88,7 +88,7 @@ public class Module {
    *
    * @return the course code
    */
-  public int getCourseCode() {
+  public String getCourseCode() {
     return this.courseCode;
   }
 

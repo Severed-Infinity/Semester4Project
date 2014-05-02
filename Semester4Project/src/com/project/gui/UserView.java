@@ -5,6 +5,7 @@ import com.project.constants.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Created by david on 3/12/14.
@@ -32,7 +33,7 @@ class UserView extends View {
     //Todo add all components to the view
     //Todo apply constraints to components
     this.setBorder(
-        new TitledBorder(UIManager.getBorder("TitleBorder.border"), StringConstants.ADD_NEW_COURSE,
+        new TitledBorder(UIManager.getBorder("TitleBorder.border"), StringConstants.CREATE_NEW_USER,
             TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0))
     );
     //labels
@@ -130,6 +131,12 @@ class UserView extends View {
     constraints.gridy = 5;
     this.add(this.addComponent, constraints);
     this.confirm = new JButton(StringConstants.CONFIRM);
+    confirm.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+
+      }
+    });
     constraints.fill = GridBagConstraints.REMAINDER;
     constraints.insets = new Insets(130, 0, 10, 10);
     constraints.gridx = 3;

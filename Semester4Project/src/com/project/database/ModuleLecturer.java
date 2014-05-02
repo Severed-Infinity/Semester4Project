@@ -15,23 +15,23 @@ import java.util.*;
 public class ModuleLecturer {
   public static final Deque<ModuleLecturer> MODULE_LECTURERS = null;
   private final int moduleCode;
-  private final int userCode;
+  private final String userCode;
 
-  private ModuleLecturer(final int moduleCode, final int userCode) {
+  private ModuleLecturer(final int moduleCode, final String userCode) {
     this.moduleCode = moduleCode;
     this.userCode = userCode;
   }
 
   public static ModuleLecturer createModuleLecturer(
       final int moduleCode,
-      final int userCode
+      final String userCode
   ) {return new ModuleLecturer(moduleCode, userCode);}
 
   public int getModuleCode() {
     return this.moduleCode;
   }
 
-  public int getUserCode() {
+  public String getUserCode() {
     return this.userCode;
   }
 

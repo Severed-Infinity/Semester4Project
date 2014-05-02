@@ -58,7 +58,7 @@ public class StringConstants {
   public static final String LECTURERS = "Lecturers:";
 
   private StringConstants() {}
-
-  public static StringConstants createStringConstants() {return new StringConstants();}
+  // --Commented out by Inspection (5/2/2014 12:40 PM):public static StringConstants
+  // createStringConstants() {return new StringConstants();}
 
 }

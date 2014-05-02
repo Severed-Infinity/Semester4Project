@@ -36,6 +36,10 @@ public class Lecturer extends Staff {
     return new Lecturer(code, firstName, lastName, dateOfBirth, password, hoursWeek, timetableCode);
   }
 
+  public int getTimetableCode() {
+    return timetableCode;
+  }
+
   public Timetable getTimetable() {
     Timetable timetableReturn = null;
     for (final Timetable timetable : Timetable.TIMETABLES) {
@@ -45,10 +49,11 @@ public class Lecturer extends Staff {
     }
     return timetableReturn;
   }
-
-  public int getHoursWeek() {
-    return this.hoursWeek;
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getHoursWeek() {
+  //    return this.hoursWeek;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 
   @Override
   public String toString() {

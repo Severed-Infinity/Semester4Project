@@ -41,26 +41,31 @@ public class Room {
       final boolean lab,
       final int shareRoomNumber
   ) {return new Room(roomNumber, roomSeating, departmentCode, lab, shareRoomNumber);}
-
-  public int getRoomNumber() {
-    return this.roomNumber;
-  }
-
-  public int getRoomSeating() {
-    return this.roomSeating;
-  }
-
-  public String getDepartmentCode() {
-    return this.departmentCode;
-  }
-
-  public boolean isLab() {
-    return this.lab;
-  }
-
-  public int getShareRoomNumber() {
-    return this.shareRoomNumber;
-  }
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getRoomNumber() {
+  //    return this.roomNumber;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getRoomSeating() {
+  //    return this.roomSeating;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public String getDepartmentCode() {
+  //    return this.departmentCode;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public boolean isLab() {
+  //    return this.lab;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
+  // --Commented out by Inspection START (5/2/2014 12:40 PM):
+  //  public int getShareRoomNumber() {
+  //    return this.shareRoomNumber;
+  //  }
+  // --Commented out by Inspection STOP (5/2/2014 12:40 PM)
 
   @Override
   public String toString() {

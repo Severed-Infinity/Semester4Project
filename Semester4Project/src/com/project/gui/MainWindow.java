@@ -1,7 +1,6 @@
 package com.project.gui;
 
 import com.project.constants.*;
-import com.project.controller.*;
 import com.project.database.*;
 import com.project.user.*;
 
@@ -15,17 +14,14 @@ import java.text.*;
 /**
  * Created by david on 3/12/14.
  */
-class MainWindow extends JFrame {
+public class MainWindow extends JFrame {
   private static final long serialVersionUID = 7506769863584558072L;
   private final User user;
 
   /**
    * Instantiates a new Main window.
-   *
-   * @param databaseConnection
-   *     the database connection
    */
-  MainWindow(final DatabaseConnection databaseConnection, final User user) {
+  private MainWindow(final User user) {
     super();
     this.setTitle("Timetable");
     this.setResizable(false);
@@ -58,7 +54,13 @@ class MainWindow extends JFrame {
          * The Home.
          */
     final JButton home = new JButton("Home");
-    // header.add( home );
+    home.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+        MainView mainView = new MainView(user, MainView.getCurrentView());
+        mainView.changeView(user);
+      }
+    });
 
         /*
          * The Logout.
@@ -67,13 +69,12 @@ class MainWindow extends JFrame {
     logout.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(final ActionEvent actionEvente) {
-        databaseConnection.endConnection();
-        final TimetableLogin login = TimetableLogin.createTimetableLogin();
+        Login login = Login.createLogin();
         login.setVisible(true);
         MainWindow.this.dispose();
       }
     });
-    // header.add( logout );
+
 
         /*
          * The Search field.
@@ -187,6 +188,8 @@ class MainWindow extends JFrame {
     return mainMenu;
   }
 
+  public static MainWindow createMainWindow(final User user) {return new MainWindow(user);}
+
   @Override
   public String toString() {
     return MessageFormat.format("MainWindow'{'user={0}'}'", this.user);
@@ -195,43 +198,51 @@ class MainWindow extends JFrame {
   /**
    * Created by david on 3/12/14.
    */
-  private static class MainView extends View {
+  public static class MainView extends View {
     private static final long serialVersionUID = -821318304586697996L;
+    private static View currentView;
     private final User user;
-    private View currentView;
     private View previousView;
 
-    private MainView(final User user, final View currentView) {
+    protected MainView(final User user, final View currentView) {
       super();
       this.setLayout(new BorderLayout());
-      this.currentView = currentView;
+      this.setCurrentView(currentView);
       this.user = user;
       this.add(this.changeView(user), BorderLayout.CENTER);
     }
 
     public final View changeView(final User user) {
       if (user instanceof Student) {
-        this.previousView = this.currentView;
-        this.currentView = new TimetableView(Timetable.createTimetable());
+        this.previousView = this.getCurrentView();
+        this.setCurrentView(new TimetableView(Timetable.createTimetable()));
         //        return this.currentView = new TimetableView(((Student)user).getCourseCode()
         // .getTimetable());
       }
       if (user instanceof Admin) {
-        this.previousView = this.currentView;
-        this.currentView = new AdminView();
+        this.previousView = this.getCurrentView();
+        this.setCurrentView(new AdminView(user));
       }
       if (user instanceof Lecturer) {
-        this.previousView = this.currentView;
-        this.currentView = new TimetableView(((Lecturer)user).getTimetable());
+        this.previousView = this.getCurrentView();
+        this.setCurrentView(new TimetableView(((Lecturer)user).getTimetable()));
       }
-      return this.currentView;
+      return this.getCurrentView();
+    }
+
+    public static View getCurrentView() {
+      return currentView;
+    }
+
+    public void setCurrentView(final View currentView) {
+      this.currentView = currentView;
     }
 
     @Override
     public String toString() {
       return MessageFormat.format("MainView'{'user={0}, currentView={1}, previousView={2}'}'",
           this.user,
-          this.currentView, this.previousView);
+          this.getCurrentView(), this.previousView);
     }
   }
 }

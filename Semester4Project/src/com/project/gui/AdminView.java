@@ -1,9 +1,12 @@
 package com.project.gui;
 
 import com.project.constants.*;
+import com.project.database.*;
+import com.project.gui.MainWindow.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
 /**
  * Created by david on 3/11/14.
@@ -11,7 +14,7 @@ import java.awt.*;
 class AdminView extends View {
   private static final long serialVersionUID = 5635241602578233675L;
 
-  AdminView() {
+  AdminView(User user) {
     super();
     this.setLayout(new GridBagLayout());
     final GridBagConstraints constraints = new GridBagConstraints();
@@ -57,8 +60,22 @@ class AdminView extends View {
     final JPanel userPanel = new JPanel();
     adminView.addTab(StringConstants.USER, userPanel);
     this.createNew = new JButton(StringConstants.CREATE_NEW_USER);
+    createNew.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+        AdminView.this.setCreateNewPanel(new JFrame());
+        final JFrame newPanel = AdminView.this.getCreateNewPanel();
+        newPanel.add(new UserView());
+      }
+    });
     userPanel.add(this.createNew);
     update = new JButton(StringConstants.UPDATE_A_USER);
+    update.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(final ActionEvent e) {
+        new MainView(user, new UpdateUserView());
+      }
+    });
     userPanel.add(update);
   }
 
