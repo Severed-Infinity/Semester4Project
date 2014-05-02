@@ -8,8 +8,6 @@ import java.awt.*;
 import java.sql.*;
 import java.text.*;
 
-import static com.project.controller.GetDatabaseDDL.*;
-
 /**
  * Project Semester4Project
  *
@@ -29,19 +27,9 @@ public class DatabaseConnection {
   private String path;
   private User user;
 
-  /**
-   * Instantiates a new Database connection.
-   *
-   * @param user
-   *     the user
-   * @param password
-   *     the password
-   */
-  private DatabaseConnection(final String user, final String password) {
-    this.createConnection(user, password);
-    this.setPath();
-    //    createDatabaseFromDDL(this.path);
-  }
+  private DatabaseConnection() {}
+
+  public static DatabaseConnection createDatabaseConnection() {return new DatabaseConnection();}
 
   /**
    * Sets path.
@@ -58,7 +46,8 @@ public class DatabaseConnection {
    * @param password
    *     the password
    */
-  private void createConnection(final String user, final String password) {
+  //todo have this return a connection
+  public void createConnection(final String user, final String password) {
     try {
       final OracleDataSource dataSource = new OracleDataSource();
       //        dataSource.setURL("jdbc:oracle:thin:timetable//@localhost:1521:XE");
@@ -142,22 +131,6 @@ public class DatabaseConnection {
     }
 
   }
-
-  /**
-   * Create database from dDL.
-   *
-   * @param path
-   *     the path
-   */
-  private static void createDatabaseFromDDL(final String path) {
-    createQueries(path);
-
-  }
-
-  public static DatabaseConnection createDatabaseConnection(
-      final String user,
-      final String password
-  ) {return new DatabaseConnection(user, password);}
 
   /**
    * Gets path.

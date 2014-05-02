@@ -148,7 +148,7 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query ADMINS.
    */
-  public void queryAdmins() {
+  void queryAdmins() {
     try {
       this.setQueryType(this.getConnection().createStatement());
       this.setResultSet(
@@ -179,7 +179,7 @@ public class RunStatementSelect extends RunStatement {
   /**
    * Query STUDENTS.
    */
-  public void queryStudents() {
+  void queryStudents() {
     try {
       this.setQueryType(this.getConnection().createStatement());
       this.setResultSet(

@@ -8,38 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="698aa514-53e5-46ab-8866-4f2a2d58e51e" name="Default" comment="Commiting un registered commits">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/AdminView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" afterPath="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Course.java" afterPath="$PROJECT_DIR$/src/com/project/database/Course.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/CourseModule.java" afterPath="$PROJECT_DIR$/src/com/project/database/CourseModule.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/CourseView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/CourseView.java" />
+      <change type="MOVED" beforePath="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\assets\IT-Tallaght-Logo.gif" afterPath="$PROJECT_DIR$/src/resources/IT-Tallaght-Logo.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Department.java" afterPath="$PROJECT_DIR$/src/com/project/database/Department.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" afterPath="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" afterPath="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" afterPath="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Module.java" afterPath="$PROJECT_DIR$/src/com/project/database/Module.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" afterPath="$PROJECT_DIR$/src/com/project/database/ModuleLecturer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/ModuleView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Room.java" afterPath="$PROJECT_DIR$/src/com/project/database/Room.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" afterPath="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/School.java" afterPath="$PROJECT_DIR$/src/com/project/database/School.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/user/Student.java" afterPath="$PROJECT_DIR$/src/com/project/user/Student.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TIMETABLE.DDL" afterPath="$PROJECT_DIR$/TIMETABLE.DDL" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/Timetable.java" afterPath="$PROJECT_DIR$/src/com/project/database/Timetable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" afterPath="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" afterPath="$PROJECT_DIR$/src/com/project/main/TimetableMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/TimetableView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateCourseView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UpdateUserView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/database/User.java" afterPath="$PROJECT_DIR$/src/com/project/database/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/UserView.java" afterPath="$PROJECT_DIR$/src/com/project/gui/UserView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/View.java" afterPath="$PROJECT_DIR$/src/com/project/gui/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" afterPath="$PROJECT_DIR$/src/com/project/gui/WarningPanes.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Semester4Project.iws" />
@@ -103,8 +78,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -160,102 +135,158 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.70423603">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="TimetableLogin.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="601" max-vertical-offset="1504">
-                  <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-                  <folding>
-                    <element signature="method#setUserPassword#0;class#TimetableLogin#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RunStatementAdd.java" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.8131673" vertical-offset="263" max-vertical-offset="944">
-                  <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
-                  <folding>
-                    <marker date="1398983202010" expanded="true" signature="4101:4350" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                    <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                    <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                    <marker date="1398983202010" expanded="true" signature="4101:4312" placeholder="INSERT INTO TIMETABLE_COURSE..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TIMETABLE.DDL" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="5410" max-vertical-offset="5696">
-                  <caret line="350" column="75" selection-start-line="350" selection-start-column="75" selection-end-line="350" selection-end-column="75" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TODO" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/lib/TODO">
-              <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-                <state />
-              </provider>
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-12.407408" vertical-offset="65" max-vertical-offset="496">
-                  <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Course.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/project/database/Course.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="2274" max-vertical-offset="2560">
-                  <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="docComment;class#Course#0" expanded="true" />
-                    <element signature="docComment;method#Course#0;class#Course#0" expanded="true" />
-                    <element signature="method#Course#0;class#Course#0" expanded="true" />
-                    <element signature="method#createCourse#0;class#Course#0" expanded="true" />
-                    <element signature="e#3205#3206#0" expanded="true" />
-                    <element signature="e#3241#3242#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="RunStatementSelect.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.60683763" vertical-offset="989" max-vertical-offset="1824">
-                  <caret line="273" column="72" selection-start-line="273" selection-start-column="72" selection-end-line="273" selection-end-column="72" />
-                  <folding>
-                    <marker date="1398983201990" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
-                    <marker date="1398983201990" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
-                    <marker date="1398983201990" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
-                    <marker date="1398983201990" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
-                    <marker date="1398983201990" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
-                    <marker date="1398983201990" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
-                    <marker date="1398983201990" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="RunStatementSelect.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="2672">
+              <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+              <folding>
+                <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+                <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+                <marker date="1399023759666" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
+                <marker date="1399023759666" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
+                <marker date="1399023759666" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
+                <marker date="1399023759666" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
+                <marker date="1399023759666" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
+                <marker date="1399023759666" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
+                <marker date="1399023759666" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseConnection.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="1792">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
+                <element signature="method#createConnection#0;class#DatabaseConnection#0" expanded="true" />
+                <element signature="method#userReturn#0;class#DatabaseConnection#0" expanded="true" />
+                <element signature="method#endConnection#0;class#DatabaseConnection#0" expanded="true" />
+                <element signature="method#toString#0;class#DatabaseConnection#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimetableLogin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="2800">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <folding>
+                <element signature="e#277#305#0" expanded="true" />
+                <element signature="method#TimetableLogin#0;class#TimetableLogin#0" expanded="true" />
+                <element signature="method#query#0;class#TimetableLogin#0" expanded="true" />
+                <element signature="method#login#0;class#TimetableLogin#0" expanded="true" />
+                <element signature="method#toString#0;class#TimetableLogin#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetDatabaseDDL.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1808">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="docComment;class#GetDatabaseDDL#0" expanded="true" />
+                <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
+                <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
+                <element signature="method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
+                <element signature="e#2775#2862#0" expanded="true" />
+                <element signature="method#createGetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/user/Admin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="method#Admin#0;class#Admin#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Timetable.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainWindow.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3328">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding>
+                <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
+                <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
+                <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
+                <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+                <element signature="e#6896#6981#0" expanded="true" />
+                <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunStatementAdd.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1328">
+              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+              <folding>
+                <element signature="method#addCourse#0;class#RunStatementAdd#0" expanded="true" />
+                <marker date="1398983202010" expanded="true" signature="4101:4350" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+                <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+                <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+                <marker date="1398983202010" expanded="true" signature="4101:4312" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassPeriod.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/project/database/ClassPeriod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33231708" vertical-offset="115" max-vertical-offset="752">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#ClassPeriod#0" expanded="true" />
+                <element signature="method#toString#0;class#ClassPeriod#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TIMETABLE.DDL" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="5776">
+              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -299,9 +330,7 @@
         <option value="$PROJECT_DIR$/src/com/project/gui/UpdateModuleView.java" />
         <option value="$PROJECT_DIR$/src/com/project/constants/StringConstants.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/CourseModule.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/Department.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
         <option value="$PROJECT_DIR$/src/com/project/user/Lecturer.java" />
         <option value="$PROJECT_DIR$/src/com/project/gui/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/Module.java" />
@@ -314,11 +343,13 @@
         <option value="$PROJECT_DIR$/src/com/project/gui/View.java" />
         <option value="$PROJECT_DIR$/src/com/project/database/ClassPeriod.java" />
         <option value="$PROJECT_DIR$/src/com/project/controller/RunStatement.java" />
-        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
-        <option value="$PROJECT_DIR$/TIMETABLE.DDL" />
         <option value="$PROJECT_DIR$/src/com/project/database/Course.java" />
-        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
         <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java" />
+        <option value="$PROJECT_DIR$/TIMETABLE.DDL" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java" />
+        <option value="$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java" />
       </list>
     </option>
   </component>
@@ -477,7 +508,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -506,7 +536,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,12 +554,27 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Semester4Project" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -566,13 +611,6 @@
     <property name="SearchEverywhereHistoryKey" value="ad&#9;FILE&#9;file://C:/Users/david/Development/Git Repositories/Semester4Project/Semester4Project/src/com/project/user/Admin.java&#10;Closed&#9;PSI&#9;JAVA://oracle.jdbc.driver.ClosedConnection&#10;System.&#9;null&#9;null&#10;System.exit()&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="IntroduceConstantDialog.RECENTS_KEY">
-      <recent name="com.project.constants.StringConstants" />
-      <recent name="com.project.gui.WarningPanes" />
-      <recent name="com.project.gui.UserView" />
-      <recent name="com.project.gui.UpdateUserView" />
-      <recent name="com.project.gui.UpdateModuleView" />
-    </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.project.controller.RunStatementSelect" />
       <recent name="com.project.constants.StringConstants" />
@@ -580,19 +618,26 @@
       <recent name="com.project.database.User" />
       <recent name="com.project.database.Module" />
     </key>
+    <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="com.project.constants.StringConstants" />
+      <recent name="com.project.gui.WarningPanes" />
+      <recent name="com.project.gui.UserView" />
+      <recent name="com.project.gui.UpdateUserView" />
+      <recent name="com.project.gui.UpdateModuleView" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.controller" />
       <recent name="com.project.database" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.project.constants" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\resources" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\assets" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src\lib" />
       <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\src" />
-      <recent name="C:\Users\david\Development\Git Repositories\Semester4Project\Semester4Project\lib" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.project.constants" />
     </key>
   </component>
   <component name="RunManager" selected="Application.TimetableMain">
@@ -827,19 +872,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -862,10 +898,19 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="1">
@@ -939,7 +984,8 @@
       <workItem from="1398529888771" duration="1197000" />
       <workItem from="1398601646931" duration="14972000" />
       <workItem from="1398626360300" duration="11815000" />
-      <workItem from="1398770198842" duration="67506000" />
+      <workItem from="1398770198842" duration="67702000" />
+      <workItem from="1399019294744" duration="4405000" />
     </task>
     <task id="LOCAL-00001" summary="Commiting un registered commits">
       <created>1398969948377</created>
@@ -949,7 +995,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="354198000" />
+    <option name="totallyTimeSpent" value="358799000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -992,7 +1038,7 @@
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47763577" sideWeight="0.50378215" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Code Iris" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44704992" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44704992" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1002,7 +1048,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3258786" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39456868" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3881789" sideWeight="0.50832075" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1028,7 +1074,7 @@
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47763577" sideWeight="0.50378215" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47763577" sideWeight="0.50378215" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3881789" sideWeight="0.50832075" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Code Iris" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44704992" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -1043,8 +1089,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24960381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.40015128" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256579" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39456868" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Duplicates" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3256579" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="UpdateCopyrightCheckinHandler">
@@ -1081,34 +1127,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_TIMETABLE">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://db-console:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32234433" vertical-offset="0" max-vertical-offset="546">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.TIMETABLE_USERS">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="uml://DATABASE/73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE">
@@ -1117,37 +1150,37 @@
           <ID>DATABASE</ID>
           <OriginalElement>73e46b25-d60d-40d4-8d43-cf865b23100f.schema:TIMETABLE</OriginalElement>
           <nodes>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_TIMETABLE</node>
+            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.CLASS_PERIOD</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_COURSE</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_USERS</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_DEPARTMENT</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.COURSE_MODULE</node>
+            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.MODULE_LECTURER</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_MODULE</node>
-            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM</node>
             <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_SCHOOL</node>
+            <node x="" y="">73e46b25-d60d-40d4-8d43-cf865b23100f.table:TIMETABLE.TIMETABLE_ROOM</node>
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.587551867219917" x="572.0762711864406" y="410.9272598870057" />
+          <settings layout="Hierarchic Group" zoom="0.587551867219917" x="572.0" y="411.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Key columns</Category>
             <Category>Columns</Category>
+            <Category>Key columns</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/8cb057b8/73e46b25-d60d-40d4-8d43-cf865b23100f/.TIMETABLE.CLASS_PERIOD">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="96">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementUpdate.java">
@@ -1180,7 +1213,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="27256" max-vertical-offset="30624">
           <caret line="1711" column="32" selection-start-line="1711" selection-start-column="32" selection-end-line="1711" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1288,7 +1320,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="575">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,7 +1327,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.043360434" vertical-offset="0" max-vertical-offset="369">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,7 +1334,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="394">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,21 +1377,6 @@
           <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1656" max-vertical-offset="1984">
-          <caret line="200" column="9" selection-start-line="200" selection-start-column="9" selection-end-line="200" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#DatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#createConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#userReturn#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#endConnection#0;class#DatabaseConnection#0" expanded="true" />
-            <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1439,17 +1453,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="544">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-          <folding>
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/gui/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1152">
@@ -1458,64 +1461,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1187" max-vertical-offset="3328">
-          <caret line="101" column="20" selection-start-line="101" selection-start-column="20" selection-end-line="101" selection-end-column="20" />
-          <folding>
-            <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
-            <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-            <element signature="e#6896#6981#0" expanded="true" />
-            <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/constants/StringConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="664" max-vertical-offset="992">
           <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="835" max-vertical-offset="1808">
-          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="docComment;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
-            <element signature="e#2767#2854#0" expanded="true" />
-            <element signature="method#createGetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/user/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="method#Admin#0;class#Admin#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/database/ClassPeriod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="339" max-vertical-offset="784">
-          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ClassPeriod#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="method#toString#0;class#ClassPeriod#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1537,76 +1487,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+    <entry file="file://$PROJECT_DIR$/src/resources/IT-Tallaght-Logo.gif">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.407408" vertical-offset="65" max-vertical-offset="496">
+        <state vertical-scroll-proportion="-14.814815" vertical-offset="0" max-vertical-offset="496">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="601" max-vertical-offset="1504">
-          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
-          <folding>
-            <element signature="method#setUserPassword#0;class#TimetableLogin#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5410" max-vertical-offset="5696">
-          <caret line="350" column="75" selection-start-line="350" selection-start-column="75" selection-end-line="350" selection-end-column="75" />
-          <folding />
-        </state>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/database/Course.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2274" max-vertical-offset="2560">
           <caret line="283" column="8" selection-start-line="283" selection-start-column="8" selection-end-line="283" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Course#0" expanded="true" />
-            <element signature="docComment;method#Course#0;class#Course#0" expanded="true" />
-            <element signature="method#Course#0;class#Course#0" expanded="true" />
-            <element signature="method#createCourse#0;class#Course#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-            <element signature="e#3241#3242#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
+    <entry file="file://$PROJECT_DIR$/TIMETABLE.DDL">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60683763" vertical-offset="989" max-vertical-offset="1824">
-          <caret line="273" column="72" selection-start-line="273" selection-start-column="72" selection-end-line="273" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="5776">
+          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/Timetable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="512">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/MainWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3328">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding>
-            <marker date="1398983201990" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
-            <marker date="1398983201990" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
-            <marker date="1398983201990" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
-            <marker date="1398983201990" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
-            <marker date="1398983201990" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
-            <marker date="1398983201990" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
-            <marker date="1398983201990" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
+            <element signature="method#MainWindow#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#addMenu#0;class#MainWindow#0" expanded="true" />
+            <element signature="class#MainView#0;class#MainWindow#0" expanded="true" />
+            <element signature="method#changeView#0;class#MainView#0;class#MainWindow#0" expanded="true" />
+            <element signature="e#6896#6981#0" expanded="true" />
+            <element signature="method#toString#0;class#MainView#0;class#MainWindow#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementAdd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8131673" vertical-offset="263" max-vertical-offset="944">
-          <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1328">
+          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
+            <element signature="method#addCourse#0;class#RunStatementAdd#0" expanded="true" />
             <marker date="1398983202010" expanded="true" signature="4101:4350" placeholder="INSERT INTO TIMETABLE_COURSE..." />
             <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
             <marker date="1398983202010" expanded="true" signature="4101:4330" placeholder="INSERT INTO TIMETABLE_COURSE..." />
             <marker date="1398983202010" expanded="true" signature="4101:4312" placeholder="INSERT INTO TIMETABLE_COURSE..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/RunStatementSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="2672">
+          <caret line="122" column="30" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="30" />
+          <folding>
+            <element signature="method#queryAdmins#0;class#RunStatementSelect#0" expanded="true" />
+            <element signature="method#queryCourse#0;class#RunStatementSelect#0" expanded="true" />
+            <marker date="1399023759666" expanded="true" signature="1570:1603" placeholder="SELECT * FRO..TIMETABLE_TIMETABLE..." />
+            <marker date="1399023759666" expanded="true" signature="1901:1931" placeholder="SELECT * FRO..TIMETABLE_SCHOOL..." />
+            <marker date="1399023759666" expanded="true" signature="2217:2247" placeholder="SELECT * FRO..TIMETABLE_MODULE..." />
+            <marker date="1399023759666" expanded="true" signature="2364:2390" placeholder="SELECT * FRO..CLASS_PERIOD..." />
+            <marker date="1399023759666" expanded="true" signature="2509:2536" placeholder="SELECT * FRO..COURSE_MODULE..." />
+            <marker date="1399023759666" expanded="true" signature="2659:2688" placeholder="SELECT * FRO..MODULE_LECTURER..." />
+            <marker date="1399023759666" expanded="true" signature="2809:2837" placeholder="SELECT * FRO..TIMETABLE_ROOM..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="1792">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createDatabaseConnection#0;class#DatabaseConnection#0" expanded="true" />
+            <element signature="method#createConnection#0;class#DatabaseConnection#0" expanded="true" />
+            <element signature="method#userReturn#0;class#DatabaseConnection#0" expanded="true" />
+            <element signature="method#endConnection#0;class#DatabaseConnection#0" expanded="true" />
+            <element signature="method#toString#0;class#DatabaseConnection#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/gui/TimetableLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="67" max-vertical-offset="2800">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding>
+            <element signature="e#277#305#0" expanded="true" />
+            <element signature="method#TimetableLogin#0;class#TimetableLogin#0" expanded="true" />
+            <element signature="method#query#0;class#TimetableLogin#0" expanded="true" />
+            <element signature="method#login#0;class#TimetableLogin#0" expanded="true" />
+            <element signature="method#toString#0;class#TimetableLogin#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/controller/GetDatabaseDDL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="403" max-vertical-offset="1808">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="docComment;class#GetDatabaseDDL#0" expanded="true" />
+            <element signature="method#GetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
+            <element signature="docComment;method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
+            <element signature="method#createQueries#0;class#GetDatabaseDDL#0" expanded="true" />
+            <element signature="e#2775#2862#0" expanded="true" />
+            <element signature="method#createGetDatabaseDDL#0;class#GetDatabaseDDL#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/user/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="592">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="method#Admin#0;class#Admin#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/project/database/ClassPeriod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33231708" vertical-offset="115" max-vertical-offset="752">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ClassPeriod#0" expanded="true" />
+            <element signature="method#toString#0;class#ClassPeriod#0" expanded="true" />
           </folding>
         </state>
       </provider>

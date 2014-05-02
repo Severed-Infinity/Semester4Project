@@ -38,7 +38,7 @@ public class GetDatabaseDDL {
    *
    * @return List of query strings
    */
-  static List<String> createQueries(final String path) {
+  private static List<String> createQueries(final String path) {
     final StringBuilder stringBuilder = new StringBuilder();
     final List<String> listOfQueries = new ArrayList<>(10000);
     try {

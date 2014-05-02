@@ -22,21 +22,18 @@ public final class TimetableLogin extends JFrame {
   private final RunStatementSelect runStatementSelect = RunStatementSelect
       .createRunStatementSelect();
   /**
-   * The Database connection.
-   */
-  private DatabaseConnection databaseConnection;
-  /**
    * The User name.
    */
-  private JTextField userName;
+  private final JTextField userName;
   /**
    * The User password.
    */
-  private JPasswordField userPassword;
+  private final JPasswordField userPassword;
   /**
    * The Login.
    */
-  private JButton login, /**
+  private final JButton login;
+  private final JButton /**
    * The Cancel.
    */
   cancel;
@@ -64,10 +61,7 @@ public final class TimetableLogin extends JFrame {
    */
     Image iTTLogo = null;
     try {
-      iTTLogo = ImageIO.read(new File(
-          "C:\\Users\\david\\Development\\Git " +
-              "Repositories\\Semester4Project\\Semester4Project\\assets\\IT-Tallaght-Logo.gif"
-      ));
+      iTTLogo = ImageIO.read(this.getClass().getResource("/resources/IT-Tallaght-Logo.gif"));
     } catch (final IOException exception) {
       exception.printStackTrace();
     }
@@ -146,7 +140,7 @@ public final class TimetableLogin extends JFrame {
   /**
    * Query void.
    */
-  private void query() {
+  protected void query() {
     this.runStatementSelect.querySchool();
     this.runStatementSelect.queryDepartment();
     this.runStatementSelect.queryCourse();
@@ -167,10 +161,10 @@ public final class TimetableLogin extends JFrame {
  /*
   * create a database connection and try to connect
   */
+    /**
+     * The Database connection.
+     */
     try {
-      this.databaseConnection = DatabaseConnection.createDatabaseConnection(this.userName.getText(),
-          String.valueOf(this.userPassword.getPassword()));
-
     } catch (final RuntimeException ignored) {
       //            System.out.println( e.getMessage() );
     } finally {
@@ -179,11 +173,9 @@ public final class TimetableLogin extends JFrame {
        * followed by closing this window
        */
       //todo rework this portion of code, returns null pointer. Change to runstatement
-      final Connection connection = this.databaseConnection.getDatabaseConnection();
       final boolean isOpen = !connection.isClosed();
       if (isOpen) {
-        final MainWindow mainWindow = new MainWindow(this.databaseConnection,
-            this.databaseConnection.getUser());
+        final MainWindow mainWindow = new MainWindow();
         mainWindow.setVisible(true);
         this.dispose();
       } else {
@@ -196,82 +188,6 @@ public final class TimetableLogin extends JFrame {
   }
 
   public static TimetableLogin createTimetableLogin() {return new TimetableLogin();}
-
-  /**
-   * Gets user name.
-   *
-   * @return the user name
-   */
-  final JTextField getUserName() {
-    return this.userName;
-  }
-
-  /**
-   * Sets user name.
-   *
-   * @param userName
-   *     the user name
-   */
-  final void setUserName(final JTextField userName) {
-    this.userName = userName;
-  }
-
-  /**
-   * Gets user password.
-   *
-   * @return the user password
-   */
-  final JPasswordField getUserPassword() {
-    return this.userPassword;
-  }
-
-  /**
-   * Sets user password.
-   *
-   * @param userPassword
-   *     the user password
-   */
-  final void setUserPassword(final JPasswordField userPassword) {
-    this.userPassword = userPassword;
-  }
-
-  /**
-   * Gets login.
-   *
-   * @return the login
-   */
-  final JButton getLogin() {
-    return this.login;
-  }
-
-  /**
-   * Sets login.
-   *
-   * @param login
-   *     the login
-   */
-  final void setLogin(final JButton login) {
-    this.login = login;
-  }
-
-  /**
-   * Gets cancel.
-   *
-   * @return the cancel
-   */
-  final JButton getCancel() {
-    return this.cancel;
-  }
-
-  /**
-   * Sets cancel.
-   *
-   * @param cancel
-   *     the cancel
-   */
-  final void setCancel(final JButton cancel) {
-    this.cancel = cancel;
-  }
 
   @Override
   public String toString() {
